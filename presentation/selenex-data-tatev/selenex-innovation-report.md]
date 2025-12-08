@@ -1,0 +1,155 @@
+## 1. Purpose
+
+The **Synthetic Data Engine (SDE)** is the **foundation of SeleneX’s innovation**. It is designed to solve three systemic bottlenecks in oncology AI:
+
+1. **Scarcity** — too few early-stage ovarian cancer cases exist to train reliable models.
+2. **Bias** — real datasets are skewed toward geography, demographics, and socioeconomic profiles.
+3. **Privacy** — strict regulations prevent data sharing across hospitals and borders.
+
+The SDE is not just a supporting component — it is a **moonshot innovation in itself**. It must:
+
+- **Expand** the patient universe (10k–100k+ synthetic patients per cancer type).
+- **Guarantee fairness** by enabling on-demand generation of underrepresented groups.
+- **Prove privacy** with rigorous non-leakage audits.
+- **Be open-sourced**, auditable, and trusted by NGOs, hospitals, and researchers globally.
+
+The long-term goal: a **transparent, audited synthetic oncology data backbone** that becomes the **standard for AI-ready cancer datasets**.
+
+---
+
+## 2. Functional Scope
+
+The SDE will generate **multi-modal, multi-format synthetic data** that is **fusion-ready**:
+
+- **Tabular:** biomarkers, demographics, risk factors.
+- **Imaging:** ovarian/pelvic ultrasound (first), then CT/MRI.
+- **Text/EHR:** radiology notes, pathology reports, clinical records.
+- **Linked cohorts:** synthetic patients with tabular, imaging, and textual data combined.
+
+Every synthetic output must be:
+
+- **Conditioned** on demographics and clinical context.
+- **Audited** for realism, fairness, and leakage.
+- **Aligned** across modalities (e.g., synthetic ultrasound + corresponding synthetic report).
+
+---
+
+## 3. Critical Evaluation of Methods
+
+The SDE must **benchmark multiple model classes** per modality — we must avoid reliance on a single method (e.g., only GANs).
+
+### Tabular Data
+
+- **CTGAN/TVAE:** reliable baselines, widely used.
+- **Diffusion models (TabDDPM):** stronger fidelity for rare cases.
+- **Autoregressive transformers (GPT-style):** capture mixed-type variables with conditioning.
+- **Copulas:** lightweight, interpretable fallback.
+
+⚠️ *GANs are prone to mode collapse on rare subgroups → diffusion & transformers must be prioritized.*
+
+---
+
+### Imaging Data (Ultrasound → CT/MRI roadmap)
+
+- **cGANs:** conditioned augmentation by label/demographics.
+- **StyleGAN-variants:** realism + controllability.
+- **Latent diffusion (DDPM):** fidelity + explicit conditioning.
+- **Score-based models:** preserve fine tumor textures.
+
+⚠️ *StyleGANs risk memorization; diffusion is slower but more privacy-preserving.*
+
+---
+
+### Text/EHR Data
+
+- **Domain-specific LLMs:** BioGPT, ClinicalBERT, MedPaLM.
+- **Template + LLM hybrids:** balance realism with structure.
+- **PII filters:** NER + regex + adversarial red-teaming.
+
+⚠️ *LLMs hallucinate; hybrid pipelines must enforce structure and prevent PII leakage.*
+
+---
+
+## 4. Governance & Trust-by-Design
+
+**Trust is non-negotiable.** Governance must be embedded:
+
+- **Fairness:** subgroup AUC gaps ≤ 0.05.
+- **Privacy:** membership inference success ≤ 1%.
+- **Distribution similarity:** KL/JS divergence ≤ 0.15.
+- **Clinician realism review:** ≥ 4/5 in blinded evaluation.
+- **Transparency:** every model has a **model card** and every dataset a **data card**.
+- **Audit-readiness:** configs, seeds, logs published for reproducibility.
+
+⚠️ *Unlike most synthetic data projects, fairness + governance are first-class features, not afterthoughts.*
+
+---
+
+## 5. Deliverables
+
+The SDE must deliver:
+
+1. **Synthetic ovarian cohort:**
+    - 10k+ synthetic tabular patients.
+    - 5k+ synthetic ultrasound patches.
+    - Linked synthetic reports/notes.
+2. **Open-source codebase:** modular, config-driven, reproducible.
+3. **Auditing suite:** fairness, leakage, drift, similarity checks.
+4. **Documentation:**
+    - Data cards & model cards.
+    - Privacy + fairness governance reports.
+    - Tutorials for external use.
+5. **Demo notebooks:**
+    - Generate tabular cohort.
+    - Generate ultrasound images.
+    - Generate multimodal (tabular+image+text) cohorts.
+
+---
+
+## 6. Repository Architecture
+
+```jsx
+seleneX-sde/
+├─ README.md              # Overview, goals, roadmap
+├─ /docs/                 # Data cards, model cards, audits
+├─ /tabular/              # Tabular generators (GANs, transformers, diffusion)
+├─ /imaging/              # Imaging generators (cGAN, StyleGAN, diffusion)
+├─ /text/                 # Text/EHR generators with filters
+├─ /fusion/               # Scripts for linking multimodal data
+├─ /auditing/             # Fairness, privacy, leakage testing
+├─ /notebooks/            # Example workflows
+├─ /configs/              # YAML/JSON configs for reproducibility
+└─ /outputs/              # Generated datasets, reports
+
+```
+
+## 7. Moonshot Vision
+
+The SeleneX SDE is designed to:
+
+- Be the **first open-source, audited synthetic oncology data engine**.
+- Extend from ovarian → breast, prostate, colorectal cancers.
+- Generate **conditional, multimodal synthetic populations**.
+- Power SeleneX’s multimodal AI and federated learning framework.
+- Be usable as a **standalone tool** by NGOs, hospitals, insurers.
+
+---
+
+## 8. Innovation vs. Existing Solutions
+
+- **Existing tools**: closed, modality-limited, weak on fairness/privacy.
+- **SeleneX SDE**: multi-modal, fairness-audited, fully open-source, designed for regulatory-grade use.
+- **Existing tools**: produce augmentation datasets.
+- **SeleneX SDE**: produces *entire synthetic populations* for global oncology equity.
+
+---
+
+## 9. Research Mandate for AI Engineer
+
+The engineer working on Epic 2 must:
+
+- **Survey**: 2023–2025 literature on synthetic healthcare data.
+- **Benchmark**: at least 3 model classes per modality.
+- **Document**: trade-offs, limitations, risks.
+- **Propose**: recommended models with justifications.
+- **Implement**: governance + audit baked into pipelines.

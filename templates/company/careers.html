@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SeleneX | Careers</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'sans-serif'] },
+            colors: {
+              brand: {
+                50: '#f5f3ff',
+                100: '#ede9fe',
+                200: '#ddd6fe',
+                300: '#c4b5fd',
+                400: '#a78bfa',
+                500: '#8b5cf6',
+                600: '#7c3aed',
+                700: '#6d28d9',
+                800: '#5b21b6',
+                900: '#4c1d95',
+                950: '#2e1065',
+              },
+            },
+            animation: {
+              'fade-up': 'fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'fade-up-slow':
+                'fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'blur-in': 'blurIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'scale-up': 'scaleUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              fadeUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              blurIn: {
+                '0%': { opacity: '0', filter: 'blur(10px)' },
+                '100%': { opacity: '1', filter: 'blur(0)' },
+              },
+              scaleUp: {
+                '0%': { transform: 'scale(0.95)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              shimmer: {
+                '100%': { transform: 'translateX(200%)' },
+              },
+              'pulse-glow': {
+                '0%, 100%': {
+                  boxShadow: '0 0 0 0 rgba(124, 58, 237, 0.4)',
+                },
+                '50%': { boxShadow: '0 0 20px 0 rgba(124, 58, 237, 0.7)' },
+              },
+            },
+          },
+        },
+        plugins: [
+          function ({ addUtilities }) {
+            const newUtilities = {
+              '.rotate-y-0': { transform: 'rotateY(0deg)' },
+              '.rotate-y-12': { transform: 'rotateY(12deg)' },
+              '.-rotate-y-12': { transform: 'rotateY(-12deg)' },
+              '.translate-z-10': { transform: 'translateZ(10px)' },
+              '.translate-z-20': { transform: 'translateZ(20px)' },
+              '.perspective-1000': { perspective: '1000px' },
+              '.transform-style-3d': { transformStyle: 'preserve-3d' },
+              '.backface-hidden': { backfaceVisibility: 'hidden' },
+            };
+            addUtilities(newUtilities);
+          },
+        ],
+      };
+    </script>
+    <link rel="stylesheet" href="assets/selenex.css" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .reveal-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body class="bg-black text-white font-sans antialiased selection:bg-purple-500/30">
+    {{NAVBAR}}
+
+    <main
+      class="pt-32 pb-20 px-6 min-h-screen flex flex-col items-center justify-center text-center"
+    >
+      <h1 class="text-5xl md:text-7xl font-medium tracking-tighter mb-6">
+        Careers
+      </h1>
+      <p class="text-neutral-400 text-lg max-w-2xl">
+        This page is currently under construction. Check back soon for updates.
+      </p>
+    </main>
+
+    {{FOOTER}}
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px',
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              if (entry.target.classList.contains('animate-on-scroll')) {
+                entry.target.style.animationPlayState = 'running';
+              }
+            }
+          });
+        }, observerOptions);
+
+        document
+          .querySelectorAll('.reveal-on-scroll')
+          .forEach((el) => observer.observe(el));
+        document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+          el.style.animationPlayState = 'paused';
+          observer.observe(el);
+        });
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        if (window.lucide && lucide.createIcons) {
+          lucide.createIcons();
+        }
+
+        const techTrigger = document.getElementById('tech-trigger');
+        const techMenu = document.getElementById('tech-menu');
+        const techChevron = document.getElementById('tech-chevron');
+        const techDropdown = document.getElementById('tech-dropdown');
+
+        const companyTrigger = document.getElementById('company-trigger');
+        const companyMenu = document.getElementById('company-menu');
+        const companyChevron = document.getElementById('company-chevron');
+        const companyDropdown = document.getElementById('company-dropdown');
+
+        function openMenu(menu, chevron) {
+          menu.classList.remove(
+            'opacity-0',
+            'invisible',
+            '-translate-y-3'
+          );
+          menu.classList.add('opacity-100', 'visible', 'translate-y-0');
+          chevron.classList.add('rotate-180');
+        }
+
+        function closeMenu(menu, chevron) {
+          menu.classList.add('opacity-0', 'invisible', '-translate-y-3');
+          menu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+          chevron.classList.remove('rotate-180');
+        }
+
+        if (techDropdown && techTrigger && techMenu && techChevron) {
+          techDropdown.addEventListener('mouseenter', () =>
+            openMenu(techMenu, techChevron)
+          );
+          techDropdown.addEventListener('mouseleave', () =>
+            closeMenu(techMenu, techChevron)
+          );
+          techTrigger.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (techMenu.classList.contains('opacity-0')) {
+              openMenu(techMenu, techChevron);
+            } else {
+              closeMenu(techMenu, techChevron);
+            }
+          });
+        }
+
+        if (companyDropdown && companyTrigger && companyMenu && companyChevron) {
+          companyDropdown.addEventListener('mouseenter', () =>
+            openMenu(companyMenu, companyChevron)
+          );
+          companyDropdown.addEventListener('mouseleave', () =>
+            closeMenu(companyMenu, companyChevron)
+          );
+          companyTrigger.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (companyMenu.classList.contains('opacity-0')) {
+              openMenu(companyMenu, companyChevron);
+            } else {
+              closeMenu(companyMenu, companyChevron);
+            }
+          });
+        }
+
+        document.addEventListener('click', function (e) {
+          if (techDropdown && !techDropdown.contains(e.target)) {
+            closeMenu(techMenu, techChevron);
+          }
+          if (companyDropdown && !companyDropdown.contains(e.target)) {
+            closeMenu(companyMenu, companyChevron);
+          }
+        });
+
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileOverlay = document.getElementById('mobile-menu-overlay');
+
+        function toggleMobileMenu() {
+          if (!mobileMenu || !mobileMenuPanel) return;
+          if (mobileMenu.classList.contains('opacity-0')) {
+            mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+            mobileMenuPanel.classList.remove('-translate-y-full');
+            mobileMenuPanel.classList.add('translate-y-0');
+          } else {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+            mobileMenuPanel.classList.add('-translate-y-full');
+            mobileMenuPanel.classList.remove('translate-y-0');
+          }
+        }
+
+        if (mobileMenuBtn) {
+          mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        }
+        if (mobileOverlay) {
+          mobileOverlay.addEventListener('click', toggleMobileMenu);
+        }
+
+        const glowBtn = document.getElementById('footer-waitlist-btn');
+        if (glowBtn) {
+          glowBtn.addEventListener('mousemove', (e) => {
+            const rect = glowBtn.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            glowBtn.style.setProperty('--x', x + 'px');
+            glowBtn.style.setProperty('--y', y + 'px');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
