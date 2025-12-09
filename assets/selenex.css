@@ -233,19 +233,19 @@ html {
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-/* Desktop dropdown liquid glass panels - Gray elegant style */
+/* Desktop dropdown liquid glass panels - Matching index.html styling */
 .dropdown-glass {
   background: linear-gradient(180deg,
-      rgba(45, 45, 45, 0.92),
-      rgba(35, 35, 35, 0.88));
-  backdrop-filter: blur(48px) saturate(180%);
-  -webkit-backdrop-filter: blur(48px) saturate(180%);
+      rgba(55, 55, 55, 0.65),
+      rgba(40, 40, 40, 0.6));
+  backdrop-filter: blur(32px) saturate(180%);
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
   border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 /* Dropdown wrapper for proper sizing */
