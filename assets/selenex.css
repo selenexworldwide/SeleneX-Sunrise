@@ -23,12 +23,17 @@ html {
   background: #525252;
 }
 
-/* Top Gradient Blur */
+/* Top Gradient Blur - positioned BELOW navbar to not interfere */
 .gradient-blur {
   position: fixed;
-  z-index: 25;
-  inset: 0 0 auto 0;
-  height: 12%;
+  z-index: 15;
+  /* Below navbar z-index of 9999 */
+  top: 90px;
+  /* Start below navbar */
+  left: 0;
+  right: 0;
+  height: 80px;
+  /* Smaller effective height */
   pointer-events: none;
 }
 
@@ -43,70 +48,44 @@ html {
   content: '';
   z-index: 1;
   backdrop-filter: blur(0.5px);
-  mask: linear-gradient(to top,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 1) 12.5%,
-      rgba(0, 0, 0, 1) 25%,
-      rgba(0, 0, 0, 0) 37.5%);
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .gradient-blur>div:nth-of-type(1) {
   z-index: 2;
   backdrop-filter: blur(1px);
-  mask: linear-gradient(to top,
-      rgba(0, 0, 0, 0) 12.5%,
-      rgba(0, 0, 0, 1) 25%,
-      rgba(0, 0, 0, 1) 37.5%,
-      rgba(0, 0, 0, 0) 50%);
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 80%);
 }
 
 .gradient-blur>div:nth-of-type(2) {
   z-index: 3;
   backdrop-filter: blur(2px);
-  mask: linear-gradient(to top,
-      rgba(0, 0, 0, 0) 25%,
-      rgba(0, 0, 0, 1) 37.5%,
-      rgba(0, 0, 0, 1) 50%,
-      rgba(0, 0, 0, 0) 62.5%);
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%);
 }
 
 .gradient-blur>div:nth-of-type(3) {
   z-index: 4;
   backdrop-filter: blur(4px);
-  mask: linear-gradient(to top,
-      rgba(0, 0, 0, 0) 37.5%,
-      rgba(0, 0, 0, 1) 50%,
-      rgba(0, 0, 0, 1) 62.5%,
-      rgba(0, 0, 0, 0) 75%);
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 40%);
 }
 
 .gradient-blur>div:nth-of-type(4) {
   z-index: 5;
-  backdrop-filter: blur(8px);
-  mask: linear-gradient(to top,
-      rgba(0, 0, 0, 0) 50%,
-      rgba(0, 0, 0, 1) 62.5%,
-      rgba(0, 0, 0, 1) 75%,
-      rgba(0, 0, 0, 0) 87.5%);
+  backdrop-filter: blur(6px);
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 30%);
 }
 
 .gradient-blur>div:nth-of-type(5) {
   z-index: 6;
-  backdrop-filter: blur(16px);
-  mask: linear-gradient(to top,
-      rgba(0, 0, 0, 0) 62.5%,
-      rgba(0, 0, 0, 1) 75%,
-      rgba(0, 0, 0, 1) 87.5%,
-      rgba(0, 0, 0, 0) 100%);
+  backdrop-filter: blur(8px);
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 20%);
 }
 
 .gradient-blur::after {
   content: '';
   z-index: 8;
-  backdrop-filter: blur(32px);
-  mask: linear-gradient(to top,
-      rgba(0, 0, 0, 0) 87.5%,
-      rgba(0, 0, 0, 1) 100%);
+  backdrop-filter: blur(10px);
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 10%);
 }
 
 @keyframes float {
@@ -219,11 +198,19 @@ html {
   animation: pulse-slower 6s ease-in-out infinite;
 }
 
-/* Navbar glass effect - Adaptive liquid glass */
+/* Navbar glass effect - Adaptive liquid glass - SUPREME z-index */
 /* Base transition styles - actual colors applied via nav-glass-light/dark classes */
 .nav-glass {
+  position: relative;
+  z-index: 9999;
+  /* Absolute supremacy over all other elements */
+  isolation: isolate;
+  /* Create isolated stacking context - immune to external filters */
   transition: background 0.4s ease, backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
   -webkit-transition: background 0.4s ease, -webkit-backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
+  /* Ensure navbar is never affected by external backdrop-filters */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 /* Light mode - visible on white backgrounds */
@@ -237,15 +224,15 @@ html {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Dark mode - transparent glass on dark backgrounds */
+/* Dark mode - dark tinted transparent glass */
 .nav-glass-dark {
   background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.08),
-      rgba(255, 255, 255, 0.04));
+      rgba(20, 20, 25, 0.55),
+      rgba(15, 15, 20, 0.45));
   backdrop-filter: blur(40px) saturate(150%);
   -webkit-backdrop-filter: blur(40px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Desktop dropdown liquid glass panels - Matching index.html styling */
@@ -265,9 +252,13 @@ html {
 
 /* Dropdown wrapper for proper sizing */
 .dropdown-wrapper {
+  position: fixed;
+  z-index: 100;
   min-width: 900px;
   max-width: 1200px;
   width: max-content;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Dropdown container - spacious layout */

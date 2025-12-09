@@ -107,12 +107,17 @@
       background: #525252;
     }
 
-    /* Top Gradient Blur */
+    /* Top Gradient Blur - positioned BELOW navbar to not interfere */
     .gradient-blur {
       position: fixed;
-      z-index: 25;
-      inset: 0 0 auto 0;
-      height: 12%;
+      z-index: 15;
+      /* Below navbar z-index of 50 */
+      top: 90px;
+      /* Start below navbar */
+      left: 0;
+      right: 0;
+      height: 80px;
+      /* Smaller effective height */
       pointer-events: none;
     }
 
@@ -127,44 +132,44 @@
       content: "";
       z-index: 1;
       backdrop-filter: blur(0.5px);
-      mask: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 37.5%);
+      mask: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
     }
 
     .gradient-blur>div:nth-of-type(1) {
       z-index: 2;
       backdrop-filter: blur(1px);
-      mask: linear-gradient(to top, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 0) 50%);
+      mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 80%);
     }
 
     .gradient-blur>div:nth-of-type(2) {
       z-index: 3;
       backdrop-filter: blur(2px);
-      mask: linear-gradient(to top, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 62.5%);
+      mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%);
     }
 
     .gradient-blur>div:nth-of-type(3) {
       z-index: 4;
       backdrop-filter: blur(4px);
-      mask: linear-gradient(to top, rgba(0, 0, 0, 0) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 0) 75%);
+      mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 40%);
     }
 
     .gradient-blur>div:nth-of-type(4) {
       z-index: 5;
-      backdrop-filter: blur(8px);
-      mask: linear-gradient(to top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 87.5%);
+      backdrop-filter: blur(6px);
+      mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 30%);
     }
 
     .gradient-blur>div:nth-of-type(5) {
       z-index: 6;
-      backdrop-filter: blur(16px);
-      mask: linear-gradient(to top, rgba(0, 0, 0, 0) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 0) 100%);
+      backdrop-filter: blur(8px);
+      mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 20%);
     }
 
     .gradient-blur::after {
       content: "";
       z-index: 8;
-      backdrop-filter: blur(32px);
-      mask: linear-gradient(to top, rgba(0, 0, 0, 0) 87.5%, rgba(0, 0, 0, 1) 100%);
+      backdrop-filter: blur(10px);
+      mask: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 10%);
     }
 
     @keyframes float {
@@ -309,10 +314,18 @@
       animation: pulse-slower 6s ease-in-out infinite;
     }
 
-    /* Navbar glass effect - Adaptive liquid glass */
+    /* Navbar glass effect - Adaptive liquid glass - SUPREME z-index */
     .nav-glass {
+      position: relative;
+      z-index: 9999;
+      /* Absolute supremacy over all other elements */
+      isolation: isolate;
+      /* Create isolated stacking context - immune to external filters */
       transition: background 0.4s ease, backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
       -webkit-transition: background 0.4s ease, -webkit-backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
+      /* Ensure navbar is never affected by external backdrop-filters */
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
     }
 
     /* Light mode - visible on white backgrounds */
@@ -326,15 +339,15 @@
       box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
     }
 
-    /* Dark mode - transparent glass on dark backgrounds */
+    /* Dark mode - dark tinted transparent glass */
     .nav-glass-dark {
       background: linear-gradient(180deg,
-          rgba(255, 255, 255, 0.08),
-          rgba(255, 255, 255, 0.04));
+          rgba(20, 20, 25, 0.55),
+          rgba(15, 15, 20, 0.45));
       backdrop-filter: blur(40px) saturate(150%);
       -webkit-backdrop-filter: blur(40px) saturate(150%);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
     }
 
     /* Desktop dropdown liquid glass panels - Dark elegant style matching navbar */
@@ -1167,9 +1180,13 @@
 
   <!-- Main Wrapper -->
   <div class="w-full min-h-screen overflow-hidden relative">
-    <!-- Navigation -->
-    <div class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 pt-4 sm:pt-6">
-      <nav class="max-w-7xl mx-auto nav-glass rounded-full px-2 py-2">
+    <!-- Navigation - SUPREME z-index, immune to all other styling -->
+    <div class="fixed top-0 left-0 right-0 z-[9999] px-4 sm:px-6 pt-4 sm:pt-6 isolate" style="isolation: isolate;">
+      <!-- Navbar backdrop - blurs and hides section corners bleeding through -->
+      <div id="navbar-backdrop" class="absolute inset-0 -z-10 pointer-events-none" style="backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); 
+               mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+               -webkit-mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);"></div>
+      <nav class="max-w-7xl mx-auto nav-glass nav-glass-dark rounded-full px-2 py-2">
         <div class="flex items-center justify-between">
           <!-- Logo -->
           <div class="flex items-center gap-2.5 pl-3">
@@ -1667,75 +1684,80 @@
     </section>
 
     <!-- Intro / Story Section -->
-    <section class="bg-white md:py-32 px-6 md:px-12 pt-20 pb-20 max-w-7xl mx-auto">
-      <div class="flex gap-3 mb-12">
-        <span class="px-5 py-2 rounded-full bg-brand-50 text-brand-700 text-sm font-medium border border-brand-100">
-          Our Mission
-        </span>
-        <span class="px-5 py-2 rounded-full bg-neutral-100 text-neutral-600 text-sm font-medium">
-          Technology
-        </span>
-      </div>
+    <section class="relative py-20 md:py-32" data-navbar-theme="light" style="background-color: #ffffff;">
+      <!-- Solid white background layer to ensure navbar detection works -->
+      <div class="absolute inset-0 bg-white" style="z-index: -1;"></div>
 
-      <h2
-        class="text-4xl md:text-6xl font-medium tracking-tight text-neutral-900 mb-16 max-w-4xl leading-[1.1] reveal-on-scroll transition-all duration-700">
-        Where Data Meets
-        <br />
-        <span class="text-neutral-400">Biological Reality.</span>
-      </h2>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
-        <!-- Large Visual Card -->
-        <div class="lg:col-span-5 relative h-[500px] lg:h-auto rounded-[2rem] overflow-hidden group">
-          <img
-            src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&amp;w=2000&amp;auto=format&amp;fit=crop"
-            class="transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover grayscale hover:grayscale-0"
-            alt="Medical Analysis" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-10 flex flex-col justify-end">
-            <h3 class="text-white text-2xl font-medium mb-2">
-              Multi-modal Fusion
-            </h3>
-            <p class="text-white/70 text-sm">
-              Combining radiology with pathology.
-            </p>
-          </div>
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="flex gap-3 mb-12">
+          <span class="px-5 py-2 rounded-full bg-brand-50 text-brand-700 text-sm font-medium border border-brand-100">
+            Our Mission
+          </span>
+          <span class="px-5 py-2 rounded-full bg-neutral-100 text-neutral-600 text-sm font-medium">
+            Technology
+          </span>
         </div>
 
-        <!-- Right Content -->
-        <div class="lg:col-span-7 flex flex-col gap-8">
-          <!-- Image Card -->
-          <div class="h-[350px] rounded-[2rem] overflow-hidden relative group">
+        <h2
+          class="text-4xl md:text-6xl font-medium tracking-tight text-neutral-900 mb-16 max-w-4xl leading-[1.1] reveal-on-scroll transition-all duration-700">
+          Where Data Meets
+          <br />
+          <span class="text-neutral-400">Biological Reality.</span>
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
+          <!-- Large Visual Card -->
+          <div class="lg:col-span-5 relative h-[500px] lg:h-auto rounded-[2rem] overflow-hidden group">
             <img
-              src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&amp;w=2000&amp;auto=format&amp;fit=crop"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              alt="Lab Research" />
-            <div class="absolute top-6 right-6 bg-white/90 backdrop-blur rounded-full p-4 shadow-xl">
-              <i data-lucide="activity" class="w-6 h-6 text-brand-600"></i>
+              src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&amp;w=2000&amp;auto=format&amp;fit=crop"
+              class="transition-transform duration-700 group-hover:scale-110 w-full h-full object-cover grayscale hover:grayscale-0"
+              alt="Medical Analysis" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-10 flex flex-col justify-end">
+              <h3 class="text-white text-2xl font-medium mb-2">
+                Multi-modal Fusion
+              </h3>
+              <p class="text-white/70 text-sm">
+                Combining radiology with pathology.
+              </p>
             </div>
           </div>
 
-          <!-- Text Block -->
-          <div class="bg-white rounded-[2rem] p-10 md:p-12 border border-neutral-100">
-            <p class="text-lg md:text-xl text-neutral-600 leading-relaxed mb-10 font-light">
-              Founded in
-              <span class="text-brand-600 font-medium">2023</span>
-              , SeleneX has analyzed over
-              <span class="text-brand-600 font-medium">2M+</span>
-              patient cases. We don't just detect anomalies; we contextualize
-              them, reducing false positives by 40% in early-stage screenings.
-            </p>
-            <button
-              class="flex items-center gap-3 bg-neutral-900 text-white px-8 py-4 rounded-full text-sm font-medium hover:bg-brand-600 transition-all group">
-              VIEW PLATFORM
-              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-            </button>
+          <!-- Right Content -->
+          <div class="lg:col-span-7 flex flex-col gap-8">
+            <!-- Image Card -->
+            <div class="h-[350px] rounded-[2rem] overflow-hidden relative group">
+              <img
+                src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&amp;w=2000&amp;auto=format&amp;fit=crop"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                alt="Lab Research" />
+              <div class="absolute top-6 right-6 bg-white/90 backdrop-blur rounded-full p-4 shadow-xl">
+                <i data-lucide="activity" class="w-6 h-6 text-brand-600"></i>
+              </div>
+            </div>
+
+            <!-- Text Block -->
+            <div class="bg-white rounded-[2rem] p-10 md:p-12 border border-neutral-100 shadow-sm">
+              <p class="text-lg md:text-xl text-neutral-600 leading-relaxed mb-10 font-light">
+                Founded in
+                <span class="text-brand-600 font-medium">2023</span>
+                , SeleneX has analyzed over
+                <span class="text-brand-600 font-medium">2M+</span>
+                patient cases. We don't just detect anomalies; we contextualize
+                them, reducing false positives by 40% in early-stage screenings.
+              </p>
+              <button
+                class="flex items-center gap-3 bg-neutral-900 text-white px-8 py-4 rounded-full text-sm font-medium hover:bg-brand-600 transition-all group">
+                VIEW PLATFORM
+                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Dark Dashboard / Features Section -->
-    <section id="technology"
+    <section id="technology" data-navbar-theme="dark"
       class="bg-neutral-900 text-white py-24 md:py-32 rounded-[3rem] mx-2 md:mx-4 mb-20 overflow-hidden relative">
       <!-- Grain Texture -->
       <div class="opacity-20 absolute inset-0 pointer-events-none mix-blend-overlay"
@@ -3737,130 +3759,7 @@
       }
     });
 
-    // Adaptive Navbar Theme - Background Color Sampling (section-independent)
-    (function () {
-      const navbar = document.querySelector('.nav-glass');
-      if (!navbar) return;
-
-      // Start with dark mode
-      navbar.classList.add('nav-glass-dark');
-
-      let currentMode = 'dark';
-      let ticking = false;
-
-      // Helper: Check if element is part of navbar/dropdown
-      function isNavbarElement(element) {
-        if (!element) return true;
-        // Check if element is inside navbar or is a dropdown
-        return navbar.contains(element) ||
-          element.closest('.dropdown-glass') ||
-          element.closest('[id$="-menu"]') ||
-          element.closest('.nav-glass');
-      }
-
-      // Helper: Get the computed background color of an element (traverses up if transparent)
-      function getEffectiveBackgroundColor(element) {
-        try {
-          while (element && element !== document.body && element !== document.documentElement) {
-            const style = window.getComputedStyle(element);
-            const bg = style.backgroundColor;
-
-            // Check if background is not transparent
-            if (bg && bg !== 'transparent' && bg !== 'rgba(0, 0, 0, 0)') {
-              return bg;
-            }
-            element = element.parentElement;
-          }
-          // Default to body background
-          return window.getComputedStyle(document.body).backgroundColor || 'rgb(255, 255, 255)';
-        } catch (e) {
-          return 'rgb(255, 255, 255)'; // Safe fallback
-        }
-      }
-
-      // Helper: Determine if a color is "light" (close to white)
-      function isLightColor(rgbString) {
-        try {
-          // Parse rgb/rgba string
-          const match = rgbString.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
-          if (!match) return true; // default to light if can't parse
-
-          const r = parseInt(match[1]);
-          const g = parseInt(match[2]);
-          const b = parseInt(match[3]);
-
-          // Calculate luminance (weighted by human perception)
-          const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-
-          // If luminance > 0.6, it's a light background
-          return luminance > 0.6;
-        } catch (e) {
-          return true; // Safe fallback to light
-        }
-      }
-
-      function updateNavbarTheme() {
-        try {
-          // Get navbar position
-          const navRect = navbar.getBoundingClientRect();
-          const sampleX = navRect.left + navRect.width / 2;
-          const sampleY = navRect.bottom + 10; // Just below navbar
-
-          // Ensure sample point is within viewport
-          if (sampleX < 0 || sampleY < 0 || sampleX > window.innerWidth || sampleY > window.innerHeight) {
-            ticking = false;
-            return;
-          }
-
-          // Temporarily hide navbar to get element behind it
-          const originalVisibility = navbar.style.visibility;
-          navbar.style.visibility = 'hidden';
-
-          // Get element at that position
-          const elementBehind = document.elementFromPoint(sampleX, sampleY);
-
-          // Restore navbar visibility
-          navbar.style.visibility = originalVisibility;
-
-          // Skip if no element found or if it's a navbar-related element
-          if (!elementBehind || isNavbarElement(elementBehind)) {
-            ticking = false;
-            return;
-          }
-
-          // Get effective background color
-          const bgColor = getEffectiveBackgroundColor(elementBehind);
-          const isLight = isLightColor(bgColor);
-
-          // Only update if mode changed
-          const newMode = isLight ? 'light' : 'dark';
-          if (newMode !== currentMode) {
-            navbar.classList.remove('nav-glass-' + currentMode);
-            navbar.classList.add('nav-glass-' + newMode);
-            currentMode = newMode;
-          }
-        } catch (e) {
-          // Silently handle any unexpected errors
-        }
-
-        ticking = false;
-      }
-
-      function onScroll() {
-        if (!ticking) {
-          requestAnimationFrame(updateNavbarTheme);
-          ticking = true;
-        }
-      }
-
-      // Use scroll with RAF throttling (more accurate than Intersection Observer for this case)
-      window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('load', updateNavbarTheme);
-      window.addEventListener('resize', updateNavbarTheme);
-
-      // Initial update
-      updateNavbarTheme();
-    })();
+    // Navbar theme is now permanently set via CSS classes - no JavaScript needed
   </script>
 </body>
 
