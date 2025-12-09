@@ -141,7 +141,7 @@ html {
 
 /* Hero gradient background */
 .hero-gradient {
-  background-image: url('https://i.postimg.cc/3Nm6fyNM/womans-face-framed-by-blurred-blue-flowers-4k.webp');
+  background-image: url('https://i.postimg.cc/bw80kFWT/Gemini-Generated-Image-arsnjvarsnjvarsn-imgupscaler-ai-General-4K.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -220,17 +220,17 @@ html {
 }
 
 /* Navbar glass effect - Gray liquid glass */
+/* Navbar glass effect - Subtle translucent glass matching reference */
 .nav-glass {
   background: linear-gradient(180deg,
-      rgba(45, 45, 45, 0.85),
-      rgba(35, 35, 35, 0.8));
-  backdrop-filter: blur(48px) saturate(180%);
-  -webkit-backdrop-filter: blur(48px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+      rgba(80, 80, 80, 0.35),
+      rgba(60, 60, 60, 0.25));
+  backdrop-filter: blur(40px) saturate(150%);
+  -webkit-backdrop-filter: blur(40px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.25),
-    0 0 0 1px rgba(255, 255, 255, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 4px 24px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 /* Desktop dropdown liquid glass panels - Gray elegant style */

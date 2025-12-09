@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -233,7 +233,7 @@
 
     /* Hero gradient background */
     .hero-gradient {
-      background-image: url('https://i.postimg.cc/RZnLk53C/Gemini-Generated-Image-arsnjvarsnjvarsn-imgupscaler-ai-General-4K.jpg');
+      background-image: url('assets/hero-background.jpg');
       background-size: cover;
       background-position: center;
     }
@@ -311,16 +311,18 @@
 
     /* Navbar glass effect - Gray liquid glass */
     .nav-glass {
-      background: linear-gradient(180deg,
-          rgba(55, 55, 55, 0.4),
-          rgba(40, 40, 40, 0.35));
-      backdrop-filter: blur(24px) saturate(180%);
-      -webkit-backdrop-filter: blur(24px) saturate(180%);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.25),
-        0 0 0 1px rgba(255, 255, 255, 0.05),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      /* Changed from dark gradient to subtle transparent white */
+      background: rgba(255, 255, 255, 0.01);
+
+      /* Stronger blur for better contrast on transparent background */
+      backdrop-filter: blur(32px);
+      -webkit-backdrop-filter: blur(32px);
+
+      /* Lighter border to match the transparency */
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
+      /* Optional: Subtle shadow to separate it from the background */
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     }
 
     /* Desktop dropdown liquid glass panels - Gray elegant style */
@@ -1160,7 +1162,7 @@
           <!-- Logo -->
           <div class="flex items-center gap-2.5 pl-3">
             <img src="https://i.postimg.cc/5X1g0HCq/Selene-X-Transparent-Background.webp" alt="SeleneX Logo"
-              class="w-auto h-7" />
+              class="w-auto h-7">
             <span class="text-lg font-medium text-white tracking-tight">
               SeleneX
             </span>
@@ -1179,7 +1181,8 @@
                   <path d="m6 9 6 6 6-6"></path>
                 </svg>
               </button>
-              <div class="dropdown-wrapper opacity-0 invisible" id="tech-menu">
+              <div class="dropdown-wrapper opacity-0 invisible" id="tech-menu"
+                style="top: 90px; left: 50%; max-width: 1200px; transform: translateX(-50%); max-height: 0px;">
                 <div class="pt-2">
                   <div class="dropdown-glass shadow-2xl shadow-neutral-900/50 overflow-hidden">
                     <div class="dropdown-container">
@@ -1194,28 +1197,28 @@
                           </p>
                         </div>
                         <div class="dropdown-cards-grid">
-                          <a href="/technology/technology.html" class="dropdown-card group">
+                          <a href="technology/technology" class="dropdown-card group">
                             <div class="relative overflow-hidden rounded-lg">
                               <img
                                 src="assets/navbar-menu-images/Selection/fba5101b-3f79-421e-85cd-3bfd94dcd647_3840w.jpg"
-                                alt="AI Technology Platform" class="dropdown-card-image" />
+                                alt="AI Technology Platform" class="dropdown-card-image">
                               <div class="dropdown-card-overlay"></div>
                             </div>
                             <div class="dropdown-card-label">Platform</div>
                           </a>
-                          <a href="/technology/ethics-security.html" class="dropdown-card group">
+                          <a href="technology/ethics-security" class="dropdown-card group">
                             <div class="relative overflow-hidden rounded-lg">
                               <img
                                 src="assets/navbar-menu-images/Selection/223529a8-3655-4526-9daa-40b68dff304a_3840w.jpg"
-                                alt="Ethics & Security" class="dropdown-card-image" />
+                                alt="Ethics &amp; Security" class="dropdown-card-image">
                               <div class="dropdown-card-overlay"></div>
                             </div>
                             <div class="dropdown-card-label">Security</div>
                           </a>
-                          <a href="/research.html" class="dropdown-card group">
+                          <a href="research" class="dropdown-card group">
                             <div class="relative overflow-hidden rounded-lg">
                               <img src="assets/navbar-menu-images/Selection/Gemini_Generated_Image_v7080av7080av708.png"
-                                alt="Research Hub" class="dropdown-card-image" />
+                                alt="Research Hub" class="dropdown-card-image">
                               <div class="dropdown-card-overlay"></div>
                             </div>
                             <div class="dropdown-card-label">Research</div>
@@ -1235,7 +1238,7 @@
                             patient data sovereignty.
                           </p>
                           <div class="mt-6">
-                            <a href="/company/contact.html"
+                            <a href="company/contact"
                               class="dropdown-cta-button inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium text-white bg-white/10 hover:bg-white/20 border border-white/20 transition-all duration-[400ms] hover:scale-105 hover:shadow-lg hover:shadow-white/10">
                               Get started
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
@@ -1249,7 +1252,7 @@
                         </div>
                         <div class="mt-auto">
                           <img src="assets/navbar-menu-images/Selection/Gemini_Generated_Image_x6wpglx6wpglx6wp.png"
-                            alt="Medical Technology" class="dropdown-featured-image" />
+                            alt="Medical Technology" class="dropdown-featured-image">
                         </div>
                       </div>
                     </div>
@@ -1268,7 +1271,7 @@
                   <path d="m6 9 6 6 6-6"></path>
                 </svg>
               </button>
-              <div class="dropdown-wrapper opacity-0 invisible" id="company-menu">
+              <div class="dropdown-wrapper opacity-0 invisible" id="company-menu" style="max-height: 0px;">
                 <div class="pt-2">
                   <div class="dropdown-glass shadow-2xl shadow-neutral-900/50 overflow-hidden">
                     <div class="dropdown-container">
@@ -1279,60 +1282,61 @@
                           <p class="dropdown-description">
                             Founded by scientists from MIT, Stanford, and ETH Zurich. We're building the next generation
                             of early cancer detection technology from our base in Armenia, combining world-class
-                            research with global healthcare impact.
+                            research
+                            with global healthcare impact.
                           </p>
                         </div>
                         <div class="dropdown-cards-grid">
-                          <a href="/company/about.html" class="dropdown-card group">
+                          <a href="company/about" class="dropdown-card group">
                             <div class="relative overflow-hidden rounded-lg">
                               <img
                                 src="assets/navbar-menu-images/Selection/1076a5f5-2a47-4d11-9371-5e803783c5f3_3840w.jpg"
-                                alt="About SeleneX" class="dropdown-card-image" />
+                                alt="About SeleneX" class="dropdown-card-image">
                               <div class="dropdown-card-overlay"></div>
                             </div>
                             <div class="dropdown-card-label">About</div>
                           </a>
-                          <a href="/company/careers.html" class="dropdown-card group">
+                          <a href="company/careers" class="dropdown-card group">
                             <div class="relative overflow-hidden rounded-lg">
                               <img
                                 src="assets/navbar-menu-images/Selection/02473057-6060-440e-a47e-2532cb86b2ae_3840w.jpg"
-                                alt="Careers at SeleneX" class="dropdown-card-image" />
+                                alt="Careers at SeleneX" class="dropdown-card-image">
                               <div class="dropdown-card-overlay"></div>
                             </div>
                             <div class="dropdown-card-label">Careers</div>
                           </a>
-                          <a href="/company/why-armenia.html" class="dropdown-card group">
+                          <a href="company/why-armenia" class="dropdown-card group">
                             <div class="relative overflow-hidden rounded-lg">
                               <img
                                 src="assets/navbar-menu-images/Selection/66fd54d3-3e94-4d42-a1ae-81176b0fec0f_3840w.jpg"
-                                alt="Why Armenia" class="dropdown-card-image" />
+                                alt="Why Armenia" class="dropdown-card-image">
                               <div class="dropdown-card-overlay"></div>
                             </div>
                             <div class="dropdown-card-label">Locations</div>
                           </a>
-                          <a href="/company/team.html" class="dropdown-card group">
+                          <a href="company/team" class="dropdown-card group">
                             <div class="relative overflow-hidden rounded-lg">
                               <img
                                 src="assets/navbar-menu-images/Selection/81852547-c6ce-420f-8e08-7bd79b6af67e_3840w.jpg"
-                                alt="Our Team" class="dropdown-card-image" />
+                                alt="Our Team" class="dropdown-card-image">
                               <div class="dropdown-card-overlay"></div>
                             </div>
                             <div class="dropdown-card-label">Team</div>
                           </a>
-                          <a href="/company/partnerships.html" class="dropdown-card group">
+                          <a href="company/partnerships" class="dropdown-card group">
                             <div class="relative overflow-hidden rounded-lg">
                               <img
                                 src="assets/navbar-menu-images/Selection/1ac66cb8-bbbe-440a-b0ef-e4804d3737c4_3840w.jpg"
-                                alt="Partnerships" class="dropdown-card-image" />
+                                alt="Partnerships" class="dropdown-card-image">
                               <div class="dropdown-card-overlay"></div>
                             </div>
                             <div class="dropdown-card-label">Partnerships</div>
                           </a>
-                          <a href="/company/contact.html" class="dropdown-card group">
+                          <a href="company/contact" class="dropdown-card group">
                             <div class="relative overflow-hidden rounded-lg">
                               <img
                                 src="assets/navbar-menu-images/Selection/d14dc069-558a-4c51-8aad-5cc237f9b61d_3840w.jpg"
-                                alt="Contact Us" class="dropdown-card-image" />
+                                alt="Contact Us" class="dropdown-card-image">
                               <div class="dropdown-card-overlay"></div>
                             </div>
                             <div class="dropdown-card-label">Contact</div>
@@ -1352,7 +1356,7 @@
                             accessible globally.
                           </p>
                           <div class="mt-6">
-                            <a href="/company/careers.html"
+                            <a href="company/careers"
                               class="dropdown-cta-button inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium text-white bg-white/10 hover:bg-white/20 border border-white/20 transition-all duration-[400ms] hover:scale-105 hover:shadow-lg hover:shadow-white/10">
                               View open roles
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
@@ -1366,7 +1370,7 @@
                         </div>
                         <div class="mt-auto">
                           <img src="assets/navbar-menu-images/Selection/building-future-of-precision-medicine.png"
-                            alt="Company Culture" class="dropdown-featured-image" />
+                            alt="Company Culture" class="dropdown-featured-image">
                         </div>
                       </div>
                     </div>
@@ -1374,7 +1378,7 @@
                 </div>
               </div>
             </div>
-            <a href="#research"
+            <a href="research"
               class="px-5 py-2 text-sm font-normal text-white/95 hover:text-white transition-colors duration-300">
               Research
             </a>
@@ -1592,7 +1596,6 @@
         </button>
       </div>
     </div>
-
     <!-- Hero Section -->
     <header class="md:h-[850px] w-full h-[90vh] relative overflow-hidden group hero-gradient">
       <!-- Gradient Overlay -->
@@ -2223,7 +2226,8 @@
                         d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
                       </path>
                       <path d="m9 12 2 2 4-4"></path>
-                    </svg></div>
+                    </svg>
+                  </div>
                   <h3 id="feature-title"
                     class="text-2xl font-semibold text-neutral-900 mb-2 transition-all duration-300"
                     style="opacity: 1;">Secure Intake &amp; Encoding</h3>
@@ -2385,7 +2389,7 @@
           </div>
 
           <div class="mt-1 flex items-center justify-between text-xs text-neutral-500">
-            <span>Auto-indexing enabled • 4 regions</span>
+            <span>Auto-indexing enabled â€¢ 4 regions</span>
             <span>Latency: 37ms</span>
           </div>
         </div>
@@ -2437,7 +2441,7 @@
                 <div class="text-right">
                   <p class="text-[0.7rem] text-neutral-500">ID: #8921</p>
                   <p class="text-[0.7rem] text-brand-400">
-                    Processing • 0.09s
+                    Processing â€¢ 0.09s
                   </p>
                 </div>
               </div>
@@ -2621,7 +2625,7 @@
               </span>
               <div>
                 <p class="text-xs text-white">Mayo Clinic</p>
-                <p class="text-[0.65rem] text-neutral-500">USA • T+0</p>
+                <p class="text-[0.65rem] text-neutral-500">USA â€¢ T+0</p>
               </div>
             </div>
             <span class="text-xs text-green-400">+842</span>
@@ -2633,7 +2637,7 @@
               </span>
               <div>
                 <p class="text-xs text-white">Johns Hopkins</p>
-                <p class="text-[0.65rem] text-neutral-500">USA • Instant</p>
+                <p class="text-[0.65rem] text-neutral-500">USA â€¢ Instant</p>
               </div>
             </div>
             <span class="text-xs text-green-400">+5,104</span>
@@ -3339,7 +3343,7 @@
         <div
           class="flex flex-col md:flex-row [animation:fadeSlideIn_1s_ease-out_0.5s_both] animate-on-scroll border-white/5 border-t pt-8 gap-x-4 gap-y-4 items-center justify-between">
           <p class="text-xs text-white/70 font-medium font-sans">
-            © 2026 SeleneX. All rights reserved.
+            Â© 2026 SeleneX. All rights reserved.
           </p>
         </div>
 
