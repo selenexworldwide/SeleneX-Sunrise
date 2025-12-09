@@ -219,18 +219,33 @@ html {
   animation: pulse-slower 6s ease-in-out infinite;
 }
 
-/* Navbar glass effect - Gray liquid glass */
-/* Navbar glass effect - Subtle translucent glass matching reference */
+/* Navbar glass effect - Adaptive liquid glass */
+/* Base transition styles - actual colors applied via nav-glass-light/dark classes */
 .nav-glass {
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
+  -webkit-transition: background 0.4s ease, -webkit-backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Light mode - visible on white backgrounds */
+.nav-glass-light {
   background: linear-gradient(180deg,
-      rgba(80, 80, 80, 0.35),
-      rgba(60, 60, 60, 0.25));
+      rgba(50, 50, 55, 0.65),
+      rgba(40, 40, 45, 0.55));
   backdrop-filter: blur(40px) saturate(150%);
   -webkit-backdrop-filter: blur(40px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(80, 80, 85, 0.4);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark mode - transparent glass on dark backgrounds */
+.nav-glass-dark {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.04));
+  backdrop-filter: blur(40px) saturate(150%);
+  -webkit-backdrop-filter: blur(40px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* Desktop dropdown liquid glass panels - Matching index.html styling */

@@ -309,35 +309,47 @@
       animation: pulse-slower 6s ease-in-out infinite;
     }
 
-    /* Navbar glass effect - Gray liquid glass */
+    /* Navbar glass effect - Adaptive liquid glass */
     .nav-glass {
-      /* Changed from dark gradient to subtle transparent white */
-      background: rgba(255, 255, 255, 0.01);
-
-      /* Stronger blur for better contrast on transparent background */
-      backdrop-filter: blur(32px);
-      -webkit-backdrop-filter: blur(32px);
-
-      /* Lighter border to match the transparency */
-      border: 1px solid rgba(255, 255, 255, 0.08);
-
-      /* Optional: Subtle shadow to separate it from the background */
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      transition: background 0.4s ease, backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
+      -webkit-transition: background 0.4s ease, -webkit-backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
     }
 
-    /* Desktop dropdown liquid glass panels - Gray elegant style */
+    /* Light mode - visible on white backgrounds */
+    .nav-glass-light {
+      background: linear-gradient(180deg,
+          rgba(50, 50, 55, 0.65),
+          rgba(40, 40, 45, 0.55));
+      backdrop-filter: blur(40px) saturate(150%);
+      -webkit-backdrop-filter: blur(40px) saturate(150%);
+      border: 1px solid rgba(80, 80, 85, 0.4);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Dark mode - transparent glass on dark backgrounds */
+    .nav-glass-dark {
+      background: linear-gradient(180deg,
+          rgba(255, 255, 255, 0.08),
+          rgba(255, 255, 255, 0.04));
+      backdrop-filter: blur(40px) saturate(150%);
+      -webkit-backdrop-filter: blur(40px) saturate(150%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Desktop dropdown liquid glass panels - Dark elegant style matching navbar */
     .dropdown-glass {
       background: linear-gradient(180deg,
-          rgba(55, 55, 55, 0.65),
-          rgba(40, 40, 40, 0.6));
-      backdrop-filter: blur(32px) saturate(180%);
-      -webkit-backdrop-filter: blur(32px) saturate(180%);
+          rgba(28, 28, 32, 0.92),
+          rgba(22, 22, 26, 0.88));
+      backdrop-filter: blur(40px) saturate(150%);
+      -webkit-backdrop-filter: blur(40px) saturate(150%);
       border-radius: 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(255, 255, 255, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        0 25px 80px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
     /* Dropdown wrapper for proper sizing and viewport centering */
@@ -3724,6 +3736,131 @@
         updateActiveTab(0);
       }
     });
+
+    // Adaptive Navbar Theme - Background Color Sampling (section-independent)
+    (function () {
+      const navbar = document.querySelector('.nav-glass');
+      if (!navbar) return;
+
+      // Start with dark mode
+      navbar.classList.add('nav-glass-dark');
+
+      let currentMode = 'dark';
+      let ticking = false;
+
+      // Helper: Check if element is part of navbar/dropdown
+      function isNavbarElement(element) {
+        if (!element) return true;
+        // Check if element is inside navbar or is a dropdown
+        return navbar.contains(element) ||
+          element.closest('.dropdown-glass') ||
+          element.closest('[id$="-menu"]') ||
+          element.closest('.nav-glass');
+      }
+
+      // Helper: Get the computed background color of an element (traverses up if transparent)
+      function getEffectiveBackgroundColor(element) {
+        try {
+          while (element && element !== document.body && element !== document.documentElement) {
+            const style = window.getComputedStyle(element);
+            const bg = style.backgroundColor;
+
+            // Check if background is not transparent
+            if (bg && bg !== 'transparent' && bg !== 'rgba(0, 0, 0, 0)') {
+              return bg;
+            }
+            element = element.parentElement;
+          }
+          // Default to body background
+          return window.getComputedStyle(document.body).backgroundColor || 'rgb(255, 255, 255)';
+        } catch (e) {
+          return 'rgb(255, 255, 255)'; // Safe fallback
+        }
+      }
+
+      // Helper: Determine if a color is "light" (close to white)
+      function isLightColor(rgbString) {
+        try {
+          // Parse rgb/rgba string
+          const match = rgbString.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+          if (!match) return true; // default to light if can't parse
+
+          const r = parseInt(match[1]);
+          const g = parseInt(match[2]);
+          const b = parseInt(match[3]);
+
+          // Calculate luminance (weighted by human perception)
+          const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+          // If luminance > 0.6, it's a light background
+          return luminance > 0.6;
+        } catch (e) {
+          return true; // Safe fallback to light
+        }
+      }
+
+      function updateNavbarTheme() {
+        try {
+          // Get navbar position
+          const navRect = navbar.getBoundingClientRect();
+          const sampleX = navRect.left + navRect.width / 2;
+          const sampleY = navRect.bottom + 10; // Just below navbar
+
+          // Ensure sample point is within viewport
+          if (sampleX < 0 || sampleY < 0 || sampleX > window.innerWidth || sampleY > window.innerHeight) {
+            ticking = false;
+            return;
+          }
+
+          // Temporarily hide navbar to get element behind it
+          const originalVisibility = navbar.style.visibility;
+          navbar.style.visibility = 'hidden';
+
+          // Get element at that position
+          const elementBehind = document.elementFromPoint(sampleX, sampleY);
+
+          // Restore navbar visibility
+          navbar.style.visibility = originalVisibility;
+
+          // Skip if no element found or if it's a navbar-related element
+          if (!elementBehind || isNavbarElement(elementBehind)) {
+            ticking = false;
+            return;
+          }
+
+          // Get effective background color
+          const bgColor = getEffectiveBackgroundColor(elementBehind);
+          const isLight = isLightColor(bgColor);
+
+          // Only update if mode changed
+          const newMode = isLight ? 'light' : 'dark';
+          if (newMode !== currentMode) {
+            navbar.classList.remove('nav-glass-' + currentMode);
+            navbar.classList.add('nav-glass-' + newMode);
+            currentMode = newMode;
+          }
+        } catch (e) {
+          // Silently handle any unexpected errors
+        }
+
+        ticking = false;
+      }
+
+      function onScroll() {
+        if (!ticking) {
+          requestAnimationFrame(updateNavbarTheme);
+          ticking = true;
+        }
+      }
+
+      // Use scroll with RAF throttling (more accurate than Intersection Observer for this case)
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('load', updateNavbarTheme);
+      window.addEventListener('resize', updateNavbarTheme);
+
+      // Initial update
+      updateNavbarTheme();
+    })();
   </script>
 </body>
 

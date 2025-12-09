@@ -206,18 +206,32 @@
     }
 
 
-    /* Navbar glass effect - Gray liquid glass */
+    /* Navbar glass effect - Adaptive liquid glass */
     .nav-glass {
+      transition: background 0.4s ease, backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
+      -webkit-transition: background 0.4s ease, -webkit-backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    /* Light mode - visible on white backgrounds */
+    .nav-glass-light {
       background: linear-gradient(180deg,
-          rgba(55, 55, 55, 0.4),
-          rgba(40, 40, 40, 0.35));
-      backdrop-filter: blur(24px) saturate(180%);
-      -webkit-backdrop-filter: blur(24px) saturate(180%);
+          rgba(50, 50, 55, 0.65),
+          rgba(40, 40, 45, 0.55));
+      backdrop-filter: blur(40px) saturate(150%);
+      -webkit-backdrop-filter: blur(40px) saturate(150%);
+      border: 1px solid rgba(80, 80, 85, 0.4);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Dark mode - transparent glass on dark backgrounds */
+    .nav-glass-dark {
+      background: linear-gradient(180deg,
+          rgba(255, 255, 255, 0.08),
+          rgba(255, 255, 255, 0.04));
+      backdrop-filter: blur(40px) saturate(150%);
+      -webkit-backdrop-filter: blur(40px) saturate(150%);
       border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.25),
-        0 0 0 1px rgba(255, 255, 255, 0.05),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
     }
 
     /* Desktop dropdown liquid glass panels - Gray elegant style */
@@ -2665,6 +2679,7 @@
       }
     });
   </script>
+  <script src="../assets/navbar-theme.js"></script>
 </body>
 
 </html>
