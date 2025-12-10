@@ -11,6 +11,7 @@
         rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -135,6 +136,15 @@
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1)
         }
 
+        .team-card img {
+            filter: grayscale(100%);
+            transition: filter 0.4s ease;
+        }
+
+        .team-card:hover img {
+            filter: grayscale(0%);
+        }
+
         .team-card:hover {
             transform: translateY(-6px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3)
@@ -200,6 +210,36 @@
         .pipeline-box:hover {
             transform: translateY(-8px);
             box-shadow: 0 16px 40px rgba(124, 58, 237, 0.2)
+        }
+
+        @keyframes logoMarquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .logo-slider {
+            animation: logoMarquee 20s linear infinite;
+        }
+
+        .logo-slider:hover {
+            animation-play-state: paused;
+        }
+
+        .logo-slider iconify-icon {
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+            opacity: 0.4;
+        }
+
+        .logo-slider iconify-icon:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -267,7 +307,7 @@
         </div>
 
         <!-- Part B: Bento Grid Section -->
-        <div class="bg-zinc-950 py-24 px-6 relative">
+        <div class="bg-zinc-950 py-[66px] px-6 relative">
             <div class="absolute inset-0 bg-gradient-to-b from-black to-zinc-950"></div>
             <div class="max-w-7xl mx-auto relative z-10">
                 <!-- Section Header -->
@@ -277,8 +317,8 @@
                         <h2 class="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white">
                             The First GenAI Super-Agent for<br />
                             <span
-                                class="bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent">Ovarian
-                                Cancer Care</span>
+                                class="bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent">Synthetic
+                                Data Generation</span>
                         </h2>
                     </div>
                 </div>
@@ -311,9 +351,16 @@
                             class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         </div>
                         <div class="relative z-10">
-                            <div
-                                class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-cyan-500/30 transition-all duration-300">
-                                <i data-lucide="database" class="w-6 h-6 text-cyan-400"></i>
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-500/30 transition-all duration-300">
+                                    <i data-lucide="database" class="w-6 h-6 text-cyan-400"></i>
+                                </div>
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-xs font-medium">
+                                    <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                                    Open-Source
+                                </span>
                             </div>
                             <h3
                                 class="text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
@@ -361,71 +408,118 @@
                     </div>
                 </div>
 
-                <!-- Partners Section -->
-                <div class="reveal reveal-delay-4 mt-16">
-                    <p class="text-white/40 text-xs uppercase tracking-widest mb-8 text-center">Trusted Partners &
-                        Featured In</p>
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                        <!-- UNICEF -->
+                <!-- Partners & Featured Section - Premium Design -->
+                <div class="reveal reveal-delay-4 mt-20">
+                    <div class="text-center mb-12">
+                        <p class="text-white/30 text-xs uppercase tracking-[0.25em] mb-3">Trusted By Industry Leaders
+                        </p>
+                        <h3 class="text-2xl md:text-3xl font-medium text-white/90">Partners & Featured In</h3>
+                    </div>
+
+                    <!-- Premium Logo Grid -->
+                    <div class="relative">
+                        <!-- Subtle glow effect -->
                         <div
-                            class="group glass-card rounded-xl p-5 flex flex-col items-center justify-center hover:bg-white/10 transition-all duration-300 cursor-pointer">
-                            <div
-                                class="h-10 mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <svg viewBox="0 0 100 30" class="h-8 w-auto">
-                                    <text x="50" y="24" text-anchor="middle" font-family="Arial, sans-serif"
-                                        font-size="24" font-weight="bold" fill="#1CABE2">UNICEF</text>
-                                </svg>
-                            </div>
-                            <p class="text-white/60 text-xs text-center">UN Children's Fund</p>
+                            class="absolute inset-0 bg-gradient-to-r from-brand-500/5 via-transparent to-cyan-500/5 rounded-3xl blur-2xl">
                         </div>
-                        <!-- Forbes -->
+
                         <div
-                            class="group glass-card rounded-xl p-5 flex flex-col items-center justify-center hover:bg-white/10 transition-all duration-300 cursor-pointer">
-                            <div
-                                class="h-10 mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <svg viewBox="0 0 80 30" class="h-7 w-auto">
-                                    <text x="40" y="24" text-anchor="middle" font-family="Georgia, serif" font-size="24"
-                                        font-style="italic" fill="white">Forbes</text>
-                                </svg>
+                            class="relative bg-white/[0.02] backdrop-blur-sm border border-white/[0.06] rounded-3xl p-10 md:p-12">
+                            <!-- Row 1: Forbes, Google, Microsoft, Nvidia, freeCodeCamp -->
+                            <div class="grid grid-cols-5 gap-6 md:gap-10 mb-10 items-center justify-items-center">
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/Forbes.png" alt="Forbes"
+                                        class="h-10 md:h-12 w-auto max-w-[140px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/Google.png" alt="Google"
+                                        class="h-14 md:h-20 w-auto max-w-[180px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/microsoft.png" alt="Microsoft"
+                                        class="h-14 md:h-20 w-auto max-w-[180px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/nvidia.png" alt="NVIDIA"
+                                        class="h-14 md:h-20 w-auto max-w-[180px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/freeCodeCamp.png" alt="freeCodeCamp"
+                                        class="h-12 md:h-16 w-auto max-w-[180px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
                             </div>
-                            <p class="text-white/60 text-xs text-center">Featured Publication</p>
-                        </div>
-                        <!-- IESE -->
-                        <div
-                            class="group glass-card rounded-xl p-5 flex flex-col items-center justify-center hover:bg-white/10 transition-all duration-300 cursor-pointer">
-                            <div
-                                class="h-10 mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <svg viewBox="0 0 60 30" class="h-7 w-auto">
-                                    <text x="30" y="24" text-anchor="middle" font-family="Georgia, serif" font-size="24"
-                                        font-weight="bold" fill="#4169E1">IESE</text>
-                                </svg>
+
+                            <!-- Divider -->
+                            <div class="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-8">
                             </div>
-                            <p class="text-white/60 text-xs text-center">Business School</p>
-                        </div>
-                        <!-- UT Austin -->
-                        <div
-                            class="group glass-card rounded-xl p-5 flex flex-col items-center justify-center hover:bg-white/10 transition-all duration-300 cursor-pointer">
-                            <div
-                                class="h-10 mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <svg viewBox="0 0 40 40" class="h-10 w-10">
-                                    <circle cx="20" cy="20" r="18" fill="#BF5700" stroke="white" stroke-width="2" />
-                                    <text x="20" y="26" text-anchor="middle" font-family="Georgia, serif" font-size="16"
-                                        font-weight="bold" fill="white">UT</text>
-                                </svg>
+
+                            <!-- Row 2: Texas, Erasmus, Tilburg, UNCW, OpenAI -->
+                            <div class="grid grid-cols-5 gap-6 md:gap-10 mb-10 items-center justify-items-center">
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/The University of Texas at Austin.png" alt="University of Texas"
+                                        class="h-14 md:h-20 w-auto max-w-[160px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/Erasmus University.png" alt="Erasmus University"
+                                        class="h-14 md:h-20 w-auto max-w-[160px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/Tilburg University.png" alt="Tilburg University"
+                                        class="h-14 md:h-20 w-auto max-w-[160px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/UNCW.png" alt="UNCW"
+                                        class="h-14 md:h-20 w-auto max-w-[160px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/IESE.png" alt="IESE Business School"
+                                        class="h-10 md:h-12 w-auto max-w-[140px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
                             </div>
-                            <p class="text-white/60 text-xs text-center">University of Texas</p>
-                        </div>
-                        <!-- Insight Arcs -->
-                        <div
-                            class="group glass-card rounded-xl p-5 flex flex-col items-center justify-center hover:bg-white/10 transition-all duration-300 cursor-pointer">
+
+                            <!-- Divider -->
                             <div
-                                class="h-10 mb-3 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <svg viewBox="0 0 40 40" class="h-10 w-10">
-                                    <circle cx="20" cy="20" r="16" fill="none" stroke="#14B8A6" stroke-width="3" />
-                                    <path d="M12 20 L20 12 L28 20 L20 28 Z" fill="#14B8A6" />
-                                </svg>
+                                class="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-10">
                             </div>
-                            <p class="text-white/60 text-xs text-center">Insight Arcs GmbH</p>
+
+                            <!-- Row 3: Anthropic, Bloomberg, Benzinga, Entrepreneur, Webflow -->
+                            <div class="grid grid-cols-5 gap-6 md:gap-10 items-center justify-items-center">
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/anthropic.png" alt="Anthropic"
+                                        class="h-8 md:h-10 w-auto max-w-[160px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/Bloomberg.png" alt="Bloomberg"
+                                        class="h-8 md:h-10 w-auto max-w-[160px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/Benzinga.png" alt="Benzinga"
+                                        class="h-8 md:h-10 w-auto max-w-[160px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/Entrepreneur.png" alt="Entrepreneur"
+                                        class="h-8 md:h-10 w-auto max-w-[160px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
+                                <div
+                                    class="group flex items-center justify-center h-20 md:h-24 opacity-80 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                    <img src="new-logos/Webflow.png" alt="Webflow"
+                                        class="h-8 md:h-10 w-auto max-w-[140px] object-contain filter brightness-100 group-hover:brightness-125 group-hover:scale-110 transition-all duration-500" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -437,7 +531,7 @@
 
     <!-- SLIDE 2: The Problem -->
     <section id="slide-1"
-        class="min-h-screen bg-gradient-to-br from-neutral-100 to-white py-12 relative overflow-hidden flex items-center">
+        class="min-h-screen bg-gradient-to-br from-neutral-100 to-white py-[66px] relative overflow-hidden flex items-center">
         <!-- Background Elements -->
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-red-500/5 rounded-full blur-[120px]"></div>
@@ -537,12 +631,64 @@
                     </div>
                 </div>
 
-                <!-- Row 2: 2 Cards Centered -->
+                <!-- Row 2: 2 Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
 
-                    <!-- CARD 4: Data Bias -->
+                    <!-- CARD 4: Over-Reliance on Imaging -->
                     <div
                         class="reveal reveal-delay-3 group p-8 hover:translate-y-[-4px] transition-all duration-300 bg-white/60 backdrop-blur-xl border-white/40 border rounded-[32px] relative flex flex-col shadow-lg hover:shadow-xl hover:bg-white/80">
+                        <span
+                            class="absolute -top-4 left-8 inline-flex items-center px-4 py-1.5 rounded-full border border-white/50 bg-white/80 backdrop-blur-md text-xs text-neutral-800 font-medium tracking-tight shadow-sm">
+                            CRITICAL RISK
+                        </span>
+                        <div
+                            class="relative h-44 rounded-2xl bg-white/30 border border-white/40 overflow-hidden flex items-center justify-center shadow-inner mb-6">
+                            <div class="text-center relative">
+                                <div class="absolute inset-0 bg-rose-500/20 blur-2xl rounded-full animate-pulse">
+                                </div>
+                                <i data-lucide="image" class="w-16 h-16 text-rose-500 mb-2 relative z-10"></i>
+                                <div
+                                    class="text-xs text-neutral-500 uppercase tracking-widest font-medium relative z-10">
+                                    Image-Only Diagnosis</div>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl text-neutral-900 font-medium tracking-tighter">Over-Reliance on
+                            Imaging</h3>
+                        <p class="mt-2 text-sm text-neutral-600 tracking-tight">Single-modality approaches miss critical
+                            biomarkers, increasing risk of missed diagnoses and patient mortality.</p>
+                    </div>
+
+                    <!-- CARD 5: Lack of Personalization -->
+                    <div
+                        class="reveal reveal-delay-4 group p-8 hover:translate-y-[-4px] transition-all duration-300 bg-white/60 backdrop-blur-xl border-white/40 border rounded-[32px] relative flex flex-col shadow-lg hover:shadow-xl hover:bg-white/80">
+                        <span
+                            class="absolute -top-4 left-8 inline-flex items-center px-4 py-1.5 rounded-full border border-white/50 bg-white/80 backdrop-blur-md text-xs text-neutral-800 font-medium tracking-tight shadow-sm">
+                            CARE GAP
+                        </span>
+                        <div
+                            class="relative h-44 rounded-2xl bg-white/30 border border-white/40 overflow-hidden flex items-center justify-center shadow-inner mb-6">
+                            <div class="text-center relative">
+                                <div class="absolute inset-0 bg-amber-500/20 blur-2xl rounded-full animate-pulse">
+                                </div>
+                                <i data-lucide="users" class="w-16 h-16 text-amber-500 mb-2 relative z-10"></i>
+                                <div
+                                    class="text-xs text-neutral-500 uppercase tracking-widest font-medium relative z-10">
+                                    One-Size-Fits-All</div>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl text-neutral-900 font-medium tracking-tighter">Lack of
+                            Personalization</h3>
+                        <p class="mt-2 text-sm text-neutral-600 tracking-tight">Generic protocols ignore individual
+                            patient trajectories, leading to delayed interventions and preventable deaths.</p>
+                    </div>
+                </div>
+
+                <!-- Row 3: 2 Cards Centered -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-6">
+
+                    <!-- CARD 6: Data Bias -->
+                    <div
+                        class="reveal reveal-delay-5 group p-8 hover:translate-y-[-4px] transition-all duration-300 bg-white/60 backdrop-blur-xl border-white/40 border rounded-[32px] relative flex flex-col shadow-lg hover:shadow-xl hover:bg-white/80">
                         <span
                             class="absolute -top-4 left-8 inline-flex items-center px-4 py-1.5 rounded-full border border-white/50 bg-white/80 backdrop-blur-md text-xs text-neutral-800 font-medium tracking-tight shadow-sm">
                             DATA GAP
@@ -563,9 +709,9 @@
                             available datasets limit AI fairness and accuracy.</p>
                     </div>
 
-                    <!-- CARD 5: The SeleneX Shift -->
+                    <!-- CARD 7: The SeleneX Shift -->
                     <div
-                        class="reveal reveal-delay-4 group p-8 hover:translate-y-[-4px] transition-all duration-300 bg-white/60 backdrop-blur-xl border-white/40 border rounded-[32px] relative flex flex-col shadow-lg hover:shadow-xl hover:bg-white/80">
+                        class="reveal reveal-delay-5 group p-8 hover:translate-y-[-4px] transition-all duration-300 bg-white/60 backdrop-blur-xl border-white/40 border rounded-[32px] relative flex flex-col shadow-lg hover:shadow-xl hover:bg-white/80">
                         <span
                             class="absolute -top-4 left-8 inline-flex items-center px-4 py-1.5 rounded-full border border-white/50 bg-white/80 backdrop-blur-md text-xs text-neutral-800 font-medium tracking-tight shadow-sm">
                             THE SOLUTION
@@ -666,7 +812,8 @@
                                         Multimodal Fusion</h3>
                                     <p
                                         class="tab-desc text-xs sm:text-sm text-neutral-400 group-hover:text-neutral-500 transition-colors mt-1">
-                                        Deep integration of CT/MRI, breath VOCs, and cfDNA methylation.</p>
+                                        Deep integration of multiple data sources into a unified, predictive patient
+                                        view.</p>
                                 </div>
                             </div>
                         </button>
@@ -686,7 +833,8 @@
                                         Generative Simulation</h3>
                                     <p
                                         class="tab-desc text-xs sm:text-sm text-neutral-400 group-hover:text-neutral-500 transition-colors mt-1">
-                                        Filling data voids in rare subtypes with EHDS-compliant synthetic augmentation.
+                                        Filling data voids in rare subtypes with EHDS-compliant synthetic augmentation
+                                        and Synthetic Data Generation Engine.
                                     </p>
                                 </div>
                             </div>
@@ -1256,12 +1404,16 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
                                             class="text-emerald-600">
-                                            <path d="M12 2v6m0 4v8"></path>
-                                            <circle cx="12" cy="11" r="3"></circle>
+                                            <path
+                                                d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2">
+                                            </path>
+                                            <rect x="9" y="3" width="6" height="4" rx="1"></rect>
+                                            <path d="M9 12h6"></path>
+                                            <path d="M9 16h6"></path>
                                         </svg>
                                     </div>
-                                    <p class="text-[10px] font-semibold text-zinc-700">Breath VOCs</p>
-                                    <p class="text-[9px] text-zinc-400">Non-invasive</p>
+                                    <p class="text-[10px] font-semibold text-zinc-700">EHR & Anamnesis</p>
+                                    <p class="text-[9px] text-zinc-400">Patient history</p>
                                 </div>
                                 <!-- Arrow -->
                                 <div class="flex-shrink-0">
@@ -1278,14 +1430,16 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
                                             class="text-blue-600">
-                                            <path
-                                                d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z">
-                                            </path>
-                                            <circle cx="12" cy="13" r="3"></circle>
+                                            <path d="M14 2v6a2 2 0 0 0 2 2h6"></path>
+                                            <path d="M4 13.5V4a2 2 0 0 1 2-2h8l6 6v5.5"></path>
+                                            <path d="M8 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                                            <path d="M16 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                                            <path d="M12 17v-5"></path>
+                                            <path d="M8 19h8"></path>
                                         </svg>
                                     </div>
                                     <p class="text-[10px] font-semibold text-zinc-700">Biomarkers</p>
-                                    <p class="text-[9px] text-zinc-400">Urine analysis</p>
+                                    <p class="text-[9px] text-zinc-400">Blood & Urine</p>
                                 </div>
                                 <!-- Arrow -->
                                 <div class="flex-shrink-0">
@@ -1905,9 +2059,9 @@
                         SDGE Pipeline <span
                             class="bg-gradient-to-r from-brand-600 to-purple-600 bg-clip-text text-transparent">Architecture</span>
                     </h2>
-                    <p class="reveal reveal-delay-1 text-lg text-neutral-500 max-w-2xl mx-auto">
+                    <p class="reveal reveal-delay-1 text-lg text-neutral-500 max-w-3xl mx-auto">
                         Modular design combining GANs, diffusion models, and latent-space transformations for
-                        high-fidelity synthetic data generation
+                        high-fidelity synthetic data generation—integrated with FL for privacy
                     </p>
                 </div>
 
@@ -1923,11 +2077,11 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
+                    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 relative z-10">
                         <!-- Module 1 -->
                         <div class="group relative">
                             <div
-                                class="relative bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm hover:shadow-xl hover:border-brand-200 hover:-translate-y-2 transition-all duration-300">
+                                class="relative bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm hover:shadow-xl hover:border-brand-200 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
                                 <!-- Top Badge -->
                                 <div class="absolute -top-3 left-1/2 -translate-x-1/2">
                                     <div
@@ -1948,9 +2102,9 @@
 
                                 <h4 class="font-semibold text-neutral-900 text-center mb-2">Data Ingestion</h4>
                                 <p class="text-xs text-neutral-500 text-center mb-4 leading-relaxed">Real Ultrasound +
-                                    Clinical Biomarkers</p>
+                                    Clinical Biomarkers, Omics, Text</p>
 
-                                <div class="flex justify-center">
+                                <div class="flex justify-center mt-auto">
                                     <span
                                         class="text-[10px] font-medium px-3 py-1 rounded-full bg-brand-50 text-brand-600 border border-brand-100">
                                         Reference Distribution
@@ -1962,7 +2116,7 @@
                         <!-- Module 2 -->
                         <div class="group relative">
                             <div
-                                class="relative bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm hover:shadow-xl hover:border-cyan-200 hover:-translate-y-2 transition-all duration-300">
+                                class="relative bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm hover:shadow-xl hover:border-cyan-200 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
                                 <div class="absolute -top-3 left-1/2 -translate-x-1/2">
                                     <div
                                         class="px-3 py-1 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full text-white text-xs font-bold shadow-lg shadow-cyan-500/25">
@@ -1983,7 +2137,7 @@
                                 <p class="text-xs text-neutral-500 text-center mb-4 leading-relaxed">Clinical Structure
                                     Synthesis</p>
 
-                                <div class="flex justify-center">
+                                <div class="flex justify-center mt-auto">
                                     <span
                                         class="text-[10px] font-medium px-3 py-1 rounded-full bg-cyan-50 text-cyan-600 border border-cyan-100">
                                         Structured Synthetic
@@ -1995,7 +2149,7 @@
                         <!-- Module 3A -->
                         <div class="group relative">
                             <div
-                                class="relative bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm hover:shadow-xl hover:border-blue-200 hover:-translate-y-2 transition-all duration-300">
+                                class="relative bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm hover:shadow-xl hover:border-blue-200 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
                                 <div class="absolute -top-3 left-1/2 -translate-x-1/2">
                                     <div
                                         class="px-3 py-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full text-white text-xs font-bold shadow-lg shadow-blue-500/25">
@@ -2018,7 +2172,7 @@
                                 <p class="text-xs text-neutral-500 text-center mb-4 leading-relaxed">Diffusion-based
                                     Profile Generation</p>
 
-                                <div class="flex justify-center">
+                                <div class="flex justify-center mt-auto">
                                     <span
                                         class="text-[10px] font-medium px-3 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-100">
                                         High-Fidelity Profiles
@@ -2030,7 +2184,7 @@
                         <!-- Module 3B -->
                         <div class="group relative">
                             <div
-                                class="relative bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm hover:shadow-xl hover:border-purple-200 hover:-translate-y-2 transition-all duration-300">
+                                class="relative bg-white rounded-2xl border border-neutral-200 p-6 shadow-sm hover:shadow-xl hover:border-purple-200 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
                                 <div class="absolute -top-3 left-1/2 -translate-x-1/2">
                                     <div
                                         class="px-3 py-1 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full text-white text-xs font-bold shadow-lg shadow-purple-500/25">
@@ -2054,7 +2208,7 @@
                                 <p class="text-xs text-neutral-500 text-center mb-4 leading-relaxed">Omics & High-Dim
                                     Data</p>
 
-                                <div class="flex justify-center">
+                                <div class="flex justify-center mt-auto">
                                     <span
                                         class="text-[10px] font-medium px-3 py-1 rounded-full bg-purple-50 text-purple-600 border border-purple-100">
                                         Complex Biomarkers
@@ -2063,10 +2217,48 @@
                             </div>
                         </div>
 
+                        <!-- NEW Module: Federated Learning & DP-SGD -->
+                        <div class="group relative">
+                            <div
+                                class="relative bg-white rounded-2xl border-2 border-indigo-200 p-6 shadow-sm hover:shadow-xl hover:border-indigo-300 hover:-translate-y-2 transition-all duration-300 bg-gradient-to-b from-white to-indigo-50/50 h-full flex flex-col">
+                                <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                                    <div
+                                        class="px-3 py-1 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full text-white text-xs font-bold shadow-lg shadow-indigo-500/25 flex items-center gap-1">
+                                        <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg>
+                                        4
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-indigo-100 to-indigo-200 border border-indigo-300 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-7 h-7 text-indigo-600" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <path d="M9 12l2 2 4-4"></path>
+                                    </svg>
+                                </div>
+
+                                <h4 class="font-semibold text-neutral-900 text-center mb-2">FL & DP-SGD</h4>
+                                <p class="text-xs text-neutral-500 text-center mb-4 leading-relaxed">Privacy-Preserving
+                                    Aggregation (ε ≤8)</p>
+
+                                <div class="flex justify-center mt-auto">
+                                    <span
+                                        class="text-[10px] font-medium px-3 py-1 rounded-full bg-indigo-100 text-indigo-700 border border-indigo-200">
+                                        Secure Synthetic Data
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Evaluation -->
                         <div class="group relative">
                             <div
-                                class="relative bg-white rounded-2xl border-2 border-emerald-200 p-6 shadow-sm hover:shadow-xl hover:border-emerald-300 hover:-translate-y-2 transition-all duration-300 bg-gradient-to-b from-white to-emerald-50/50">
+                                class="relative bg-white rounded-2xl border-2 border-emerald-200 p-6 shadow-sm hover:shadow-xl hover:border-emerald-300 hover:-translate-y-2 transition-all duration-300 bg-gradient-to-b from-white to-emerald-50/50 h-full flex flex-col">
                                 <div class="absolute -top-3 left-1/2 -translate-x-1/2">
                                     <div
                                         class="px-3 py-1 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full text-white text-xs font-bold shadow-lg shadow-emerald-500/25 flex items-center gap-1">
@@ -2091,7 +2283,7 @@
                                 <p class="text-xs text-neutral-500 text-center mb-4 leading-relaxed">Quality Assurance
                                     Suite</p>
 
-                                <div class="flex flex-wrap justify-center gap-1">
+                                <div class="flex flex-wrap justify-center gap-1 mt-auto">
                                     <span
                                         class="text-[9px] font-medium px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 border border-emerald-200">Plausibility</span>
                                     <span
@@ -2109,31 +2301,64 @@
                     </div>
                 </div>
 
-                <!-- Stats Bar -->
-                <div class="reveal reveal-delay-3 mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="text-center p-6 rounded-2xl bg-white border border-neutral-200 shadow-sm">
-                        <p
-                            class="text-3xl font-bold bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
-                            5</p>
-                        <p class="text-sm text-neutral-500 mt-1">Pipeline Modules</p>
+                <!-- Open-Source Bullet -->
+                <div class="reveal reveal-delay-3 mt-12 flex justify-center">
+                    <div
+                        class="inline-flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-6 py-4 bg-white rounded-2xl border border-neutral-200 shadow-sm">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-neutral-700" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            <span class="font-semibold text-neutral-900">Open-Source Core:</span>
+                        </div>
+                        <span class="text-sm text-neutral-600">Generators & Evaluation under <span
+                                class="font-mono text-xs bg-neutral-100 px-1.5 py-0.5 rounded">GPL v3</span></span>
+                        <span class="hidden sm:inline text-neutral-300">|</span>
+                        <span class="text-sm text-neutral-600"><span class="font-medium">Proprietary:</span> Hosted
+                            FL/API</span>
                     </div>
-                    <div class="text-center p-6 rounded-2xl bg-white border border-neutral-200 shadow-sm">
-                        <p
-                            class="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-cyan-500 bg-clip-text text-transparent">
-                            99.2%</p>
-                        <p class="text-sm text-neutral-500 mt-1">Fidelity Score</p>
+                </div>
+
+                <!-- Milestone Footer -->
+                <div class="reveal reveal-delay-4 mt-10">
+                    <div class="text-center mb-4">
+                        <span class="text-xs font-semibold text-neutral-400 uppercase tracking-wider">Development
+                            Milestones</span>
                     </div>
-                    <div class="text-center p-6 rounded-2xl bg-white border border-neutral-200 shadow-sm">
-                        <p
-                            class="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-500 bg-clip-text text-transparent">
-                            &lt;2min</p>
-                        <p class="text-sm text-neutral-500 mt-1">Generation Time</p>
-                    </div>
-                    <div class="text-center p-6 rounded-2xl bg-white border border-neutral-200 shadow-sm">
-                        <p
-                            class="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
-                            100%</p>
-                        <p class="text-sm text-neutral-500 mt-1">GDPR Compliant</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div
+                            class="text-center p-4 rounded-xl bg-white border border-neutral-200 shadow-sm hover:border-brand-200 hover:shadow-md transition-all duration-300">
+                            <div
+                                class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-100 text-brand-600 text-xs font-bold mb-2">
+                                Q1</div>
+                            <p class="text-sm font-medium text-neutral-900">Tabular v1</p>
+                            <p class="text-[10px] text-neutral-500">Core generators</p>
+                        </div>
+                        <div
+                            class="text-center p-4 rounded-xl bg-white border border-neutral-200 shadow-sm hover:border-cyan-200 hover:shadow-md transition-all duration-300">
+                            <div
+                                class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-cyan-100 text-cyan-600 text-xs font-bold mb-2">
+                                Q2</div>
+                            <p class="text-sm font-medium text-neutral-900">Imaging GAN</p>
+                            <p class="text-[10px] text-neutral-500">Visual synthesis</p>
+                        </div>
+                        <div
+                            class="text-center p-4 rounded-xl bg-white border border-neutral-200 shadow-sm hover:border-purple-200 hover:shadow-md transition-all duration-300">
+                            <div
+                                class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 text-purple-600 text-xs font-bold mb-2">
+                                Q3</div>
+                            <p class="text-sm font-medium text-neutral-900">FL Scale</p>
+                            <p class="text-[10px] text-neutral-500">Multi-site deployment</p>
+                        </div>
+                        <div
+                            class="text-center p-4 rounded-xl bg-white border border-neutral-200 shadow-sm hover:border-emerald-200 hover:shadow-md transition-all duration-300">
+                            <div
+                                class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 text-xs font-bold mb-2">
+                                Q4</div>
+                            <p class="text-sm font-medium text-neutral-900">Open Release</p>
+                            <p class="text-[10px] text-neutral-500">Public availability</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2339,7 +2564,7 @@
                         </div>
 
                         <!-- Stats Grid -->
-                        <div class="reveal reveal-delay-4 grid grid-cols-3 gap-4">
+                        <div class="reveal reveal-delay-4 grid grid-cols-2 gap-4">
                             <div
                                 class="p-4 rounded-xl bg-white/5 border border-white/10 text-center group hover:bg-white/10 transition-colors">
                                 <div class="text-2xl font-bold text-white mb-1">5</div>
@@ -2350,25 +2575,39 @@
                                 <div class="text-2xl font-bold text-white mb-1">3GB+</div>
                                 <div class="text-xs text-white/50">Datasets</div>
                             </div>
-                            <div
-                                class="p-4 rounded-xl bg-white/5 border border-white/10 text-center group hover:bg-white/10 transition-colors">
-                                <div class="text-2xl font-bold text-white mb-1">MIT</div>
-                                <div class="text-xs text-white/50">License</div>
-                            </div>
                         </div>
 
                         <!-- Technologies -->
-                        <div class="reveal reveal-delay-5 flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1.5 rounded-lg bg-brand-500/20 text-brand-300 text-xs font-medium border border-brand-500/30">PyTorch</span>
-                            <span
-                                class="px-3 py-1.5 rounded-lg bg-cyan-500/20 text-cyan-300 text-xs font-medium border border-cyan-500/30">CTGAN</span>
-                            <span
-                                class="px-3 py-1.5 rounded-lg bg-purple-500/20 text-purple-300 text-xs font-medium border border-purple-500/30">Diffusers</span>
-                            <span
-                                class="px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-300 text-xs font-medium border border-emerald-500/30">FastAPI</span>
-                            <span
-                                class="px-3 py-1.5 rounded-lg bg-amber-500/20 text-amber-300 text-xs font-medium border border-amber-500/30">Docker</span>
+                        <div class="reveal reveal-delay-5 space-y-2">
+                            <!-- Row 1: 5 tags -->
+                            <div class="flex flex-wrap gap-2 justify-center">
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-brand-500/20 text-brand-300 text-xs font-medium border border-brand-500/30">PyTorch</span>
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-cyan-500/20 text-cyan-300 text-xs font-medium border border-cyan-500/30">CTGAN</span>
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-purple-500/20 text-purple-300 text-xs font-medium border border-purple-500/30">Diffusers</span>
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-300 text-xs font-medium border border-emerald-500/30">FastAPI</span>
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-amber-500/20 text-amber-300 text-xs font-medium border border-amber-500/30">Docker</span>
+                            </div>
+                            <!-- Row 2: 3 tags -->
+                            <div class="flex flex-wrap gap-2 justify-center">
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-rose-500/20 text-rose-300 text-xs font-medium border border-rose-500/30">VAE</span>
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-indigo-500/20 text-indigo-300 text-xs font-medium border border-indigo-500/30">Diffusion</span>
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-pink-500/20 text-pink-300 text-xs font-medium border border-pink-500/30">StyleGANs</span>
+                            </div>
+                            <!-- Row 3: 2 tags -->
+                            <div class="flex flex-wrap gap-2 justify-center">
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-neutral-500/20 text-neutral-300 text-xs font-medium border border-neutral-500/30">Git</span>
+                                <span
+                                    class="px-3 py-1.5 rounded-lg bg-red-500/20 text-red-300 text-xs font-medium border border-red-500/30">Streamlit</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2377,270 +2616,159 @@
     </section>
 
     <!-- SLIDE 7: Prototype -->
-    <section id="slide-6" class="min-h-screen bg-gradient-to-b from-neutral-50 to-white py-24 relative overflow-hidden">
+    <!-- SLIDE 7: Prototype Gallery -->
+    <section id="slide-6" class="min-h-screen bg-zinc-950 py-24 relative overflow-hidden">
         <!-- Background Elements -->
         <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/5 rounded-full blur-[120px]"></div>
-            <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-[120px]"></div>
+            <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px]"></div>
         </div>
 
         <div class="container mx-auto px-8 relative z-10">
             <div class="max-w-7xl mx-auto">
                 <!-- Header -->
-                <div class="text-center mb-16">
+                <div class="text-center mb-12">
                     <div
-                        class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-neutral-200 rounded-full shadow-sm mb-6">
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full shadow-sm mb-6 backdrop-blur-sm">
                         <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                        <span class="text-xs font-semibold text-neutral-600 uppercase tracking-wider">Live
-                            Prototype</span>
+                        <span class="text-xs font-semibold text-white/80 uppercase tracking-wider">Live Platform</span>
                     </div>
-                    <h2
-                        class="reveal text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-neutral-900 mb-4">
-                        Prototype <span
-                            class="bg-gradient-to-r from-brand-600 to-cyan-600 bg-clip-text text-transparent">Walkthrough</span>
+                    <h2 class="reveal text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-4">
+                        Platform <span
+                            class="bg-gradient-to-r from-brand-400 to-cyan-400 bg-clip-text text-transparent">Gallery</span>
                     </h2>
-                    <p class="reveal reveal-delay-1 text-lg text-neutral-500 max-w-2xl mx-auto">
-                        Built for hospitals, NGOs & researchers — a complete workflow from data upload to validated
-                        synthetic output
+                    <p class="reveal reveal-delay-1 text-lg text-white/50 max-w-2xl mx-auto">
+                        Explore the end-to-end workflow of the SeleneX platform, from data ingestion to synthetic
+                        generation.
                     </p>
                 </div>
 
-                <!-- Interactive Steps -->
-                <div class="reveal reveal-delay-2 mb-16">
-                    <div class="relative">
-                        <!-- Connection Line -->
+                <!-- Gallery Component -->
+                <div class="reveal reveal-delay-2">
+                    <!-- Main Viewer -->
+                    <div class="relative w-full max-w-6xl mx-auto mb-8 group">
+                        <!-- Shadow/Glow Effect -->
                         <div
-                            class="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-brand-200 via-cyan-200 via-blue-200 via-purple-200 to-emerald-200">
+                            class="absolute -inset-1 bg-gradient-to-r from-brand-500/20 via-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500">
                         </div>
 
-                        <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
-                            <!-- Step 1 -->
-                            <div class="group relative flex flex-col items-center">
-                                <div
-                                    class="relative z-10 w-16 h-16 rounded-2xl bg-white border-2 border-brand-200 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:border-brand-400 group-hover:scale-110 transition-all duration-300">
-                                    <svg class="w-7 h-7 text-brand-600" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                        <polyline points="17 8 12 3 7 8"></polyline>
-                                        <line x1="12" y1="3" x2="12" y2="15"></line>
-                                    </svg>
-                                </div>
-                                <div class="mt-4 text-center">
-                                    <span class="text-[10px] font-bold text-brand-600 uppercase tracking-wider">Step
-                                        1</span>
-                                    <h4 class="font-semibold text-neutral-900 mt-1">Upload</h4>
-                                    <p class="text-xs text-neutral-500 mt-1">CSV, DICOM, FASTA</p>
-                                </div>
-                            </div>
+                        <div
+                            class="relative bg-zinc-900 rounded-2xl border border-white/10 overflow-hidden shadow-2xl aspect-[16/10] md:aspect-[16/9] flex items-center justify-center">
+                            <img id="gallery-main-image" src="selenex-app-presentation/Step 1.png"
+                                alt="Platform Screenshot"
+                                class="w-full h-full object-contain bg-zinc-950 transition-opacity duration-300">
 
-                            <!-- Step 2 -->
-                            <div class="group relative flex flex-col items-center">
+                            <!-- Loading State (managed by JS) -->
+                            <div id="gallery-loader"
+                                class="absolute inset-0 flex items-center justify-center bg-zinc-900 z-10 hidden">
                                 <div
-                                    class="relative z-10 w-16 h-16 rounded-2xl bg-white border-2 border-cyan-200 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:border-cyan-400 group-hover:scale-110 transition-all duration-300">
-                                    <svg class="w-7 h-7 text-cyan-600" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                        <path
-                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <div class="mt-4 text-center">
-                                    <span class="text-[10px] font-bold text-cyan-600 uppercase tracking-wider">Step
-                                        2</span>
-                                    <h4 class="font-semibold text-neutral-900 mt-1">Configure</h4>
-                                    <p class="text-xs text-neutral-500 mt-1">Set parameters</p>
-                                </div>
-                            </div>
-
-                            <!-- Step 3 -->
-                            <div class="group relative flex flex-col items-center">
-                                <div
-                                    class="relative z-10 w-16 h-16 rounded-2xl bg-white border-2 border-blue-200 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:border-blue-400 group-hover:scale-110 transition-all duration-300">
-                                    <svg class="w-7 h-7 text-blue-600" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                                        <path d="M2 17l10 5 10-5"></path>
-                                        <path d="M2 12l10 5 10-5"></path>
-                                    </svg>
-                                </div>
-                                <div class="mt-4 text-center">
-                                    <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Step
-                                        3</span>
-                                    <h4 class="font-semibold text-neutral-900 mt-1">Generate</h4>
-                                    <p class="text-xs text-neutral-500 mt-1">Synthetic data</p>
-                                </div>
-                            </div>
-
-                            <!-- Step 4 -->
-                            <div class="group relative flex flex-col items-center">
-                                <div
-                                    class="relative z-10 w-16 h-16 rounded-2xl bg-white border-2 border-purple-200 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:border-purple-400 group-hover:scale-110 transition-all duration-300">
-                                    <svg class="w-7 h-7 text-purple-600" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0-6 0"></path>
-                                        <path d="M12.5 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7.5"></path>
-                                        <path d="M16 19h6"></path>
-                                        <path d="M19 16v6"></path>
-                                    </svg>
-                                </div>
-                                <div class="mt-4 text-center">
-                                    <span class="text-[10px] font-bold text-purple-600 uppercase tracking-wider">Step
-                                        4</span>
-                                    <h4 class="font-semibold text-neutral-900 mt-1">Audit</h4>
-                                    <p class="text-xs text-neutral-500 mt-1">Quality check</p>
-                                </div>
-                            </div>
-
-                            <!-- Step 5 -->
-                            <div class="group relative flex flex-col items-center">
-                                <div
-                                    class="relative z-10 w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                                    <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                        <polyline points="7 10 12 15 17 10"></polyline>
-                                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                                    </svg>
-                                </div>
-                                <div class="mt-4 text-center">
-                                    <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">Step
-                                        5</span>
-                                    <h4 class="font-semibold text-neutral-900 mt-1">Export</h4>
-                                    <p class="text-xs text-neutral-500 mt-1">Download ready</p>
+                                    class="w-8 h-8 border-2 border-brand-500 border-t-transparent rounded-full animate-spin">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Mock UI Preview -->
-                <div class="reveal reveal-delay-3 max-w-5xl mx-auto">
-                    <div class="relative">
-                        <!-- Shadow/Glow -->
-                        <div
-                            class="absolute -inset-4 bg-gradient-to-r from-brand-500/10 via-cyan-500/10 to-purple-500/10 rounded-[2rem] blur-2xl">
+                    <!-- Thumbnails / Filmstrip -->
+                    <div class="relative max-w-6xl mx-auto">
+                        <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide px-2" id="gallery-thumbnails">
+                            <!-- Thumbnails injected by JS -->
                         </div>
 
-                        <!-- Main Card -->
-                        <div class="relative rounded-2xl overflow-hidden border border-neutral-200 bg-white shadow-2xl">
-                            <!-- Window Header -->
-                            <div
-                                class="h-12 flex items-center justify-between px-4 bg-neutral-100 border-b border-neutral-200">
-                                <div class="flex items-center gap-2">
-                                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                                    <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                    <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                                </div>
-                                <div class="flex-1 mx-4">
-                                    <div
-                                        class="max-w-md mx-auto flex items-center gap-2 px-4 py-1.5 bg-white rounded-lg border border-neutral-200 text-xs text-neutral-500">
-                                        <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2">
-                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                        </svg>
-                                        <span>selenex.ai/sdge-prototype</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                                    <span class="text-xs text-emerald-600 font-medium">Connected</span>
-                                </div>
-                            </div>
-
-                            <!-- App Content -->
-                            <div class="flex">
-                                <!-- Sidebar -->
-                                <div class="w-56 bg-neutral-50 border-r border-neutral-200 p-4 hidden md:block">
-                                    <div class="flex items-center gap-2 mb-6">
-                                        <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center">
-                                            <span class="text-white font-bold text-sm">S</span>
-                                        </div>
-                                        <span class="font-semibold text-neutral-900">SDGE Console</span>
-                                    </div>
-                                    <nav class="space-y-1">
-                                        <div
-                                            class="flex items-center gap-2 px-3 py-2 rounded-lg bg-brand-50 text-brand-600 text-sm font-medium">
-                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                stroke-width="2">
-                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                            </svg>
-                                            Dashboard
-                                        </div>
-                                        <div
-                                            class="flex items-center gap-2 px-3 py-2 rounded-lg text-neutral-600 text-sm hover:bg-neutral-100">
-                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                stroke-width="2">
-                                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z">
-                                                </path>
-                                                <polyline points="14 2 14 8 20 8"></polyline>
-                                            </svg>
-                                            Datasets
-                                        </div>
-                                        <div
-                                            class="flex items-center gap-2 px-3 py-2 rounded-lg text-neutral-600 text-sm hover:bg-neutral-100">
-                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                stroke-width="2">
-                                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                                                <path d="M2 17l10 5 10-5"></path>
-                                            </svg>
-                                            Generate
-                                        </div>
-                                        <div
-                                            class="flex items-center gap-2 px-3 py-2 rounded-lg text-neutral-600 text-sm hover:bg-neutral-100">
-                                            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                stroke-width="2">
-                                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                            </svg>
-                                            Validation
-                                        </div>
-                                    </nav>
-                                </div>
-
-                                <!-- Main Content -->
-                                <div class="flex-1 p-6 bg-neutral-50/50">
-                                    <div class="grid grid-cols-3 gap-4 mb-6">
-                                        <div class="p-4 rounded-xl bg-white border border-neutral-200">
-                                            <div class="text-2xl font-bold text-neutral-900">12,450</div>
-                                            <div class="text-xs text-neutral-500">Records Generated</div>
-                                        </div>
-                                        <div class="p-4 rounded-xl bg-white border border-neutral-200">
-                                            <div class="text-2xl font-bold text-emerald-600">99.2%</div>
-                                            <div class="text-xs text-neutral-500">Fidelity Score</div>
-                                        </div>
-                                        <div class="p-4 rounded-xl bg-white border border-neutral-200">
-                                            <div class="text-2xl font-bold text-brand-600">0.01%</div>
-                                            <div class="text-xs text-neutral-500">Privacy Risk</div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Progress Animation -->
-                                    <div class="p-6 rounded-xl bg-white border border-neutral-200">
-                                        <div class="flex items-center justify-between mb-4">
-                                            <span class="font-medium text-neutral-900">Generation Progress</span>
-                                            <span class="text-sm text-emerald-600 font-medium">Complete</span>
-                                        </div>
-                                        <div class="h-3 rounded-full bg-neutral-100 overflow-hidden">
-                                            <div
-                                                class="h-full w-full bg-gradient-to-r from-brand-500 via-cyan-500 to-emerald-500 rounded-full animate-pulse">
-                                            </div>
-                                        </div>
-                                        <div class="flex justify-between mt-2 text-xs text-neutral-500">
-                                            <span>Tabular</span>
-                                            <span>Imaging</span>
-                                            <span>Omics</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- Scroll Indicators (Optional, visible if needed) -->
+                        <div
+                            class="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-zinc-950 to-transparent pointer-events-none">
+                        </div>
+                        <div
+                            class="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-zinc-950 to-transparent pointer-events-none">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // Gallery Data and Logic
+        const galleryImages = [
+            // Core Workflow (Steps 1-6 Coherent)
+            { src: 'selenex-app-presentation/Step 1.png', label: 'Step 1: Welcome' },
+            { src: 'selenex-app-presentation/Step 2.png', label: 'Step 2: Setup' },
+            { src: 'selenex-app-presentation/Step 3.png', label: 'Step 3: Configuration' },
+            { src: 'selenex-app-presentation/Step 4.png', label: 'Step 4: Processing' },
+            { src: 'selenex-app-presentation/Step 5.png', label: 'Step 5: Validation' },
+            { src: 'selenex-app-presentation/Step 6.png', label: 'Step 6: Complete' },
+
+            // Detailed Views & Deep Dives
+            { src: 'selenex-app-presentation/Choose Model.png', label: 'Setup: Choose Model' },
+            { src: 'selenex-app-presentation/Model & Modality - Info tab.png', label: 'Config: Model Info' },
+            { src: 'selenex-app-presentation/Preview Output.png', label: 'Process: Preview' },
+            { src: 'selenex-app-presentation/Audit.png', label: 'Validation: Audit' },
+            { src: 'selenex-app-presentation/Compare.png', label: 'Validation: Compare' },
+            { src: 'selenex-app-presentation/Clasification System.png', label: 'Classification System' },
+            { src: 'selenex-app-presentation/Clasification System - 1.png', label: 'Classification Detail I' },
+            { src: 'selenex-app-presentation/Clasification System - 2.png', label: 'Classification Detail II' },
+            { src: 'selenex-app-presentation/Patient card.png', label: 'Patient Card' },
+            { src: 'selenex-app-presentation/Export.png', label: 'Export Data' },
+            { src: 'selenex-app-presentation/View all.png', label: 'View All Datasets' }
+        ];
+
+        const mainImage = document.getElementById('gallery-main-image');
+        const thumbnailsContainer = document.getElementById('gallery-thumbnails');
+        let currentImageIndex = 0;
+
+        function initGallery() {
+            if (!mainImage || !thumbnailsContainer) return;
+
+            // Clear existing items to prevent duplicates if function runs twice
+            thumbnailsContainer.innerHTML = '';
+
+            // Render Thumbnails
+            galleryImages.forEach((img, index) => {
+                const btn = document.createElement('button');
+                btn.className = `flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group ${index === 0 ? 'border-brand-500 ring-2 ring-brand-500/20' : 'border-white/10 hover:border-white/30'}`;
+                btn.onclick = () => setGalleryImage(index);
+
+                btn.innerHTML = `
+                    <img src="${img.src}" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity" alt="${img.label}">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                        <span class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">${img.label}</span>
+                    </div>
+                `;
+                thumbnailsContainer.appendChild(btn);
+            });
+        }
+
+        function setGalleryImage(index) {
+            if (index < 0 || index >= galleryImages.length) return;
+            currentImageIndex = index;
+
+            // Update Main Image
+            mainImage.style.opacity = '0';
+            setTimeout(() => {
+                mainImage.src = galleryImages[index].src;
+                mainImage.onload = () => {
+                    mainImage.style.opacity = '1';
+                };
+            }, 200);
+
+            // Update Active Thumbnail Styling
+            const thumbs = thumbnailsContainer.children;
+            for (let i = 0; i < thumbs.length; i++) {
+                if (i === index) {
+                    thumbs[i].className = 'flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 border-brand-500 ring-2 ring-brand-500/20 transition-all duration-200 scale-105 z-10';
+                    thumbs[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                } else {
+                    thumbs[i].className = 'flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 border-white/10 hover:border-white/30 transition-all duration-200 opacity-60 hover:opacity-100';
+                }
+            }
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', initGallery);
+
+        // Also run immediately in case we are inserting into an already loaded page (though script location at bottom helps)
+        initGallery();
+    </script>
 
     <!-- SLIDE 8: Team -->
     <section id="slide-7" class="min-h-screen bg-white py-24 relative">
@@ -2660,55 +2788,78 @@
                 <div class="reveal reveal-delay-2 mb-16">
                     <h3 class="text-xl font-bold text-neutral-900 mb-2 flex items-center gap-3"><span
                             class="w-8 h-8 rounded-full bg-brand-500 text-white flex items-center justify-center text-sm font-bold">A</span>Core
-                        SeleneX SDG Team</h3>
-                    <p class="text-neutral-500 text-sm mb-6">Grant-funded, hands-on build team</p>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                        SeleneX SDGE Team</h3>
+                    <p class="text-neutral-500 text-sm mb-6">The Core team that will build and maintain the SDGE</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div
-                            class="team-card bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-brand-300">
-                            <img src="team/tatev-aslanyan.webp" alt="Tatev Aslanyan" class="w-full h-48 object-cover" />
-                            <div class="p-4">
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-brand-300 flex flex-col">
+                            <img src="team/tatev-aslanyan.webp" alt="Tatev Aslanyan"
+                                class="w-full h-80 object-cover object-center" />
+                            <div class="p-4 flex-1">
                                 <h4 class="font-semibold text-neutral-900">Tatev Aslanyan</h4>
                                 <p class="text-brand-600 text-sm">CEO, Chief AI Architect & Co-Founder</p>
                                 <p class="text-neutral-400 text-xs mt-2">9+ yrs AI & data science</p>
                             </div>
                         </div>
                         <div
-                            class="team-card bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-brand-300">
-                            <img src="team/vahe-aslanyan.webp" alt="Vahe Aslanyan" class="w-full h-48 object-cover" />
-                            <div class="p-4">
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-brand-300 flex flex-col">
+                            <img src="team/vahe-aslanyan.webp" alt="Vahe Aslanyan"
+                                class="w-full h-80 object-cover object-center" />
+                            <div class="p-4 flex-1">
                                 <h4 class="font-semibold text-neutral-900">Vahe Aslanyan</h4>
                                 <p class="text-brand-600 text-sm">CTO & Co-Founder</p>
                                 <p class="text-neutral-400 text-xs mt-2">9+ yrs ML systems & infra</p>
                             </div>
                         </div>
+
                         <div
-                            class="team-card bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-brand-300">
-                            <img src="team/bernardo-torres-santillana.webp" alt="Bernardo Torres"
-                                class="w-full h-48 object-cover" />
-                            <div class="p-4">
-                                <h4 class="font-semibold text-neutral-900">Bernardo Torres Santillana</h4>
-                                <p class="text-brand-600 text-sm">Product & UX/UI Designer</p>
-                                <p class="text-neutral-400 text-xs mt-2">Spain/Mexico</p>
-                            </div>
-                        </div>
-                        <div
-                            class="team-card bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-brand-300">
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-brand-300 flex flex-col">
                             <img src="team/seryozha-hovsepyan.webp" alt="Seryozha Hovsepyan"
-                                class="w-full h-48 object-cover" />
-                            <div class="p-4">
+                                class="w-full h-80 object-cover object-center" />
+                            <div class="p-4 flex-1">
                                 <h4 class="font-semibold text-neutral-900">Seryozha Hovsepyan</h4>
                                 <p class="text-brand-600 text-sm">AI Engineer</p>
                                 <p class="text-neutral-400 text-xs mt-2">DL, NLP, CV, LLMs</p>
                             </div>
                         </div>
                         <div
-                            class="team-card bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-brand-300">
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-brand-300 flex flex-col">
                             <img src="team/vahagn-tovmasyan.webp" alt="Vahagn Tovmasyan"
-                                class="w-full h-48 object-cover" />
-                            <div class="p-4">
+                                class="w-full h-80 object-cover object-center" />
+                            <div class="p-4 flex-1">
                                 <h4 class="font-semibold text-neutral-900">Vahagn Tovmasyan</h4>
                                 <p class="text-brand-600 text-sm">AI Engineer</p>
                                 <p class="text-neutral-400 text-xs mt-2">ML & AI Systems</p>
+                            </div>
+                        </div>
+                        <div
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-brand-300 flex flex-col">
+                            <img src="team/bernardo-torres-santillana.webp" alt="Bernardo Torres"
+                                class="w-full h-80 object-cover object-center" />
+                            <div class="p-4 flex-1">
+                                <h4 class="font-semibold text-neutral-900">Bernardo Torres Santillana</h4>
+                                <p class="text-brand-600 text-sm">Product & UX/UI Designer</p>
+                                <p class="text-neutral-400 text-xs mt-2">Spain/Mexico</p>
+                            </div>
+                        </div>
+                        <div
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-brand-300 flex flex-col">
+                            <img src="team/latha-shree-k-p.webp" alt="Latha Shree K P"
+                                class="w-full h-80 object-cover object-center" />
+                            <div class="p-4 flex-1">
+                                <h4 class="font-semibold text-neutral-900">Latha Shree K P</h4>
+                                <p class="text-brand-600 text-sm">Software Engineering Apprentice</p>
+                                <p class="text-neutral-400 text-xs mt-2">Software Development</p>
+                            </div>
+                        </div>
+                        <div
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-brand-300 flex flex-col">
+                            <img src="team/Farnia-Ghanizadehseraj.jpeg" alt="Farnia Ghanizadehseraj"
+                                class="w-full h-80 object-cover object-center" />
+                            <div class="p-4 flex-1">
+                                <h4 class="font-semibold text-neutral-900">Farnia Ghanizadehseraj</h4>
+                                <p class="text-brand-600 text-sm">AI Engineering Fellow</p>
+                                <p class="text-neutral-400 text-xs mt-2">AI & Machine Learning</p>
                             </div>
                         </div>
                     </div>
@@ -2719,55 +2870,85 @@
                             class="w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center text-sm font-bold">B</span>Clinical
                         & Scientific Expert Council</h3>
                     <p class="text-neutral-500 text-sm mb-6">Advisory via MoUs — 15+ PhDs</p>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div
-                            class="team-card bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
-                            <img src="team/oksana-korolova.jpeg" alt="Dr. Oksana Korolova"
-                                class="w-full h-48 object-cover" />
-                            <div class="p-4">
-                                <h4 class="font-semibold text-neutral-900">Dr. Oksana Korolova</h4>
-                                <p class="text-blue-600 text-sm">Oncology & Clinical Research</p>
-                                <p class="text-neutral-400 text-xs mt-2">PhD, 12+ yrs experience</p>
-                            </div>
-                        </div>
-                        <div
-                            class="team-card bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
-                            <img src="team/Dr-Nadiia-Voronkova-MD.webp" alt="Dr. Nadiia Voronkova"
-                                class="w-full h-48 object-cover" style="object-position: center 20%;" />
-                            <div class="p-4">
-                                <h4 class="font-semibold text-neutral-900">Dr. Nadiia Voronkova</h4>
-                                <p class="text-blue-600 text-sm">Gynecology & Onco-Gyn</p>
-                                <p class="text-neutral-400 text-xs mt-2">MD, 10+ yrs clinical</p>
-                            </div>
-                        </div>
-                        <div
-                            class="team-card bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 flex flex-col">
                             <img src="team/Dr-Kostan-Galumyan-MD-PhD.webp" alt="Dr. Kostan Galumyan"
                                 class="w-full h-48 object-cover" />
-                            <div class="p-4">
+                            <div class="p-4 flex-1">
                                 <h4 class="font-semibold text-neutral-900">Dr. Kostan Galumyan</h4>
                                 <p class="text-blue-600 text-sm">Head Radiologist of Armenia</p>
                                 <p class="text-neutral-400 text-xs mt-2">MD, PhD, Radiology</p>
                             </div>
                         </div>
                         <div
-                            class="team-card bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                            <img src="team/oksana-korolova.jpeg" alt="Dr. Oksana Korolova"
+                                class="w-full h-48 object-cover" />
+                            <div class="p-4 flex-1">
+                                <h4 class="font-semibold text-neutral-900">Dr. Oksana Korolova</h4>
+                                <p class="text-blue-600 text-sm">Oncology & Clinical Research</p>
+                                <p class="text-neutral-400 text-xs mt-2">PhD, 12+ yrs experience</p>
+                            </div>
+                        </div>
+                        <div
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                            <img src="team/Dr-Nadiia-Voronkova-MD.webp" alt="Dr. Nadiia Voronkova"
+                                class="w-full h-48 object-cover" style="object-position: center 20%;" />
+                            <div class="p-4 flex-1">
+                                <h4 class="font-semibold text-neutral-900">Dr. Nadiia Voronkova</h4>
+                                <p class="text-blue-600 text-sm">Gynecology & Onco-Gyn</p>
+                                <p class="text-neutral-400 text-xs mt-2">MD, 10+ yrs clinical</p>
+                            </div>
+                        </div>
+                        <div
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 flex flex-col">
                             <img src="team/dr-tiago-moreira.webp" alt="Dr. Tiago Moreira"
                                 class="w-full h-48 object-cover" />
-                            <div class="p-4">
+                            <div class="p-4 flex-1">
                                 <h4 class="font-semibold text-neutral-900">Dr. Tiago Moreira</h4>
                                 <p class="text-blue-600 text-sm">Bioinformatics & AI</p>
                                 <p class="text-neutral-400 text-xs mt-2">PhD, Computational Biology</p>
                             </div>
                         </div>
                         <div
-                            class="team-card bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 flex flex-col">
                             <img src="team/Dr-Alaknanda-Dhotre-MD-MBA.webp" alt="Dr. Alaknanda Dhotre"
                                 class="w-full h-48 object-cover" />
-                            <div class="p-4">
+                            <div class="p-4 flex-1">
                                 <h4 class="font-semibold text-neutral-900">Dr. Alaknanda Dhotre</h4>
                                 <p class="text-blue-600 text-sm">Clinical Trials & Regulatory</p>
                                 <p class="text-neutral-400 text-xs mt-2">MD, MBA, Regulatory</p>
+                            </div>
+                        </div>
+                        <div
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                            <img src="team/Andreas-Behrens.webp" alt="Andreas Behrens"
+                                class="w-full h-48 object-cover" />
+                            <div class="p-4 flex-1">
+                                <h4 class="font-semibold text-neutral-900">Andreas Behrens</h4>
+                                <p class="text-blue-600 text-sm">Co-Founder, Insight Arcs GmbH</p>
+                                <p class="text-neutral-400 text-xs mt-2">15+ yrs digital-health & data governance</p>
+                            </div>
+                        </div>
+                        <div
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                            <img src="team/Danielle-Jeffery.webp" alt="Danielle Jeffery"
+                                class="w-full h-48 object-cover" />
+                            <div class="p-4 flex-1">
+                                <h4 class="font-semibold text-neutral-900">Danielle Jeffery</h4>
+                                <p class="text-blue-600 text-sm">Senior Consultant, Insight Arcs</p>
+                                <p class="text-neutral-400 text-xs mt-2">7+ yrs analytics & ML projects</p>
+                            </div>
+                        </div>
+                        <div
+                            class="team-card h-full bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 flex flex-col">
+                            <img src="team/Dr-Anton-Hlebov-MD-PhD.webp" alt="Dr. Anton Hlebov"
+                                class="w-full h-48 object-cover" />
+                            <div class="p-4 flex-1">
+                                <h4 class="font-semibold text-neutral-900">Dr. Anton Hlebov</h4>
+                                <p class="text-blue-600 text-sm">CEO & Onco-Urologist, D-Clinic</p>
+                                <p class="text-neutral-400 text-xs mt-2">MD, PhD, 15+ yrs urology</p>
                             </div>
                         </div>
                     </div>
@@ -2782,13 +2963,8 @@
                         <div
                             class="team-card bg-white rounded-2xl p-6 text-center border border-neutral-200 hover:border-purple-300 hover:shadow-lg transition-all duration-300">
                             <div
-                                class="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-neutral-900 to-neutral-700 flex items-center justify-center">
-                                <svg class="w-7 h-7 text-amber-400" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path d="M9 12l2 2 4-4"></path>
-                                    <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.12 0 4.07.74 5.62 1.98">
-                                    </path>
-                                </svg>
+                                class="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">IA</span>
                             </div>
                             <h4 class="font-semibold text-neutral-900">Insight Arcs GmbH</h4>
                             <p class="text-purple-600 text-sm">Germany</p>
@@ -2798,11 +2974,7 @@
                             class="team-card bg-white rounded-2xl p-6 text-center border border-neutral-200 hover:border-purple-300 hover:shadow-lg transition-all duration-300">
                             <div
                                 class="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-red-600 to-amber-500 flex items-center justify-center">
-                                <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                                </svg>
+                                <span class="text-white font-bold text-sm">IESE</span>
                             </div>
                             <h4 class="font-semibold text-neutral-900">IESE Business School</h4>
                             <p class="text-purple-600 text-sm">Spain</p>
@@ -2811,14 +2983,8 @@
                         <div
                             class="team-card bg-white rounded-2xl p-6 text-center border border-neutral-200 hover:border-purple-300 hover:shadow-lg transition-all duration-300">
                             <div
-                                class="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-blue-500 to-yellow-400 flex items-center justify-center">
-                                <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M8 3v3a2 2 0 0 1-2 2H3"></path>
-                                    <path d="M21 8h-3a2 2 0 0 1-2-2V3"></path>
-                                    <path d="M3 16h3a2 2 0 0 1 2 2v3"></path>
-                                    <path d="M16 21v-3a2 2 0 0 1 2-2h3"></path>
-                                </svg>
+                                class="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center">
+                                <span class="text-white font-bold text-lg">D</span>
                             </div>
                             <h4 class="font-semibold text-neutral-900">D-Clinic</h4>
                             <p class="text-purple-600 text-sm">Ukraine</p>
@@ -2828,14 +2994,7 @@
                             class="team-card bg-white rounded-2xl p-6 text-center border border-neutral-200 hover:border-purple-300 hover:shadow-lg transition-all duration-300">
                             <div
                                 class="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                                <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                                    <path
-                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                                    </path>
-                                </svg>
+                                <span class="text-white font-bold text-sm">AND</span>
                             </div>
                             <h4 class="font-semibold text-neutral-900">ANDglobal Solutions</h4>
                             <p class="text-purple-600 text-sm">Canada/US</p>
@@ -2843,6 +3002,239 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Tech Logo Slider -->
+                <div class="mt-32 mb-32">
+                    <div class="relative w-full max-w-4xl mx-auto"
+                        style="mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);">
+                        <div class="flex min-w-max logo-slider text-neutral-900 gap-x-12 gap-y-12 items-center">
+                            <iconify-icon icon="simple-icons:openai" width="18"></iconify-icon>
+                            <iconify-icon icon="simple-icons:meta" width="20"></iconify-icon>
+                            <iconify-icon icon="simple-icons:arxiv" width="24"></iconify-icon>
+                            <iconify-icon icon="simple-icons:google" width="18"></iconify-icon>
+                            <iconify-icon icon="simple-icons:nvidia" width="20"></iconify-icon>
+                            <iconify-icon icon="simple-icons:anthropic" width="20"></iconify-icon>
+                            <iconify-icon icon="simple-icons:microsoft" width="18"></iconify-icon>
+                            <iconify-icon icon="simple-icons:x" width="18"></iconify-icon>
+                            <iconify-icon icon="simple-icons:apple" width="20"></iconify-icon>
+                            <iconify-icon icon="simple-icons:amazon" width="20"></iconify-icon>
+                            <iconify-icon icon="simple-icons:openai" width="18"></iconify-icon>
+                            <iconify-icon icon="simple-icons:meta" width="20"></iconify-icon>
+                            <iconify-icon icon="simple-icons:arxiv" width="24"></iconify-icon>
+                            <iconify-icon icon="simple-icons:google" width="18"></iconify-icon>
+                            <iconify-icon icon="simple-icons:nvidia" width="20"></iconify-icon>
+                            <iconify-icon icon="simple-icons:anthropic" width="20"></iconify-icon>
+                            <iconify-icon icon="simple-icons:microsoft" width="18"></iconify-icon>
+                            <iconify-icon icon="simple-icons:x" width="18"></iconify-icon>
+                            <iconify-icon icon="simple-icons:apple" width="20"></iconify-icon>
+                            <iconify-icon icon="simple-icons:amazon" width="20"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technology Collaboration Section -->
+                <style>
+                    @keyframes floatIcon {
+
+                        0%,
+                        100% {
+                            transform: translateY(0) rotate(0deg);
+                        }
+
+                        50% {
+                            transform: translateY(-10px) rotate(5deg);
+                        }
+                    }
+
+                    .tech-card-icon {
+                        animation: floatIcon 4s ease-in-out infinite;
+                    }
+
+                    .tech-card:nth-child(2) .tech-card-icon {
+                        animation-delay: 0.5s;
+                    }
+
+                    .tech-card:nth-child(3) .tech-card-icon {
+                        animation-delay: 1s;
+                    }
+
+                    .tech-card:nth-child(4) .tech-card-icon {
+                        animation-delay: 1.5s;
+                    }
+
+                    .tech-card::before {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        background: linear-gradient(135deg, transparent 0%, rgba(124, 58, 237, 0.03) 100%);
+                        opacity: 0;
+                        transition: opacity 0.5s ease;
+                        border-radius: inherit;
+                    }
+
+                    .tech-card:hover::before {
+                        opacity: 1;
+                    }
+                </style>
+
+                <div class="max-w-6xl mx-auto mt-24">
+                    <!-- Section Header -->
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl md:text-5xl font-medium tracking-tight text-neutral-900 mb-4">
+                            Technology Collaboration
+                        </h2>
+                        <p class="text-lg text-neutral-500 max-w-2xl mx-auto">
+                            Working alongside the world's most innovative technology companies to advance AI-powered
+                            diagnostic capabilities.
+                        </p>
+                    </div>
+
+                    <!-- Partner Cards Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                        <!-- Google Health Card -->
+                        <div
+                            class="tech-card relative bg-white border border-neutral-200 rounded-3xl p-8 md:p-10 group cursor-pointer transition-all duration-500 hover:shadow-[0_32px_64px_rgba(0,0,0,0.12)] hover:-translate-y-3 hover:border-brand-500/20 reveal overflow-hidden">
+                            <div class="flex items-start justify-between mb-6">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-neutral-100 flex items-center justify-center group-hover:bg-white group-hover:shadow-lg transition-all duration-500 tech-card-icon">
+                                    <iconify-icon icon="simple-icons:google" width="28"
+                                        class="text-neutral-700"></iconify-icon>
+                                </div>
+                                <span
+                                    class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Active
+                                    Partner</span>
+                            </div>
+                            <h3
+                                class="text-2xl font-semibold text-neutral-900 mb-2 group-hover:text-brand-600 transition-colors">
+                                Google Health</h3>
+                            <p class="text-neutral-500 mb-6 leading-relaxed">Medical imaging AI and cloud infrastructure
+                                for scalable diagnostic solutions.</p>
+                            <div class="flex items-center gap-4">
+                                <span class="text-sm text-neutral-400">Since 2023</span>
+                                <span class="w-1 h-1 rounded-full bg-neutral-300"></span>
+                                <span class="text-sm text-neutral-400">Imaging AI</span>
+                            </div>
+                            <div
+                                class="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-neutral-100/50 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <svg class="absolute bottom-6 right-6 w-5 h-5 text-neutral-300 group-hover:text-brand-600 group-hover:translate-x-2 transition-all duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Microsoft Research Card -->
+                        <div
+                            class="tech-card relative bg-white border border-neutral-200 rounded-3xl p-8 md:p-10 group cursor-pointer transition-all duration-500 hover:shadow-[0_32px_64px_rgba(0,0,0,0.12)] hover:-translate-y-3 hover:border-brand-500/20 reveal reveal-delay-1 overflow-hidden">
+                            <div class="flex items-start justify-between mb-6">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-neutral-100 flex items-center justify-center group-hover:bg-white group-hover:shadow-lg transition-all duration-500 tech-card-icon">
+                                    <iconify-icon icon="simple-icons:microsoft" width="28"
+                                        class="text-neutral-700"></iconify-icon>
+                                </div>
+                                <span
+                                    class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">Strategic</span>
+                            </div>
+                            <h3
+                                class="text-2xl font-semibold text-neutral-900 mb-2 group-hover:text-brand-600 transition-colors">
+                                Microsoft Research</h3>
+                            <p class="text-neutral-500 mb-6 leading-relaxed">Azure healthcare infrastructure and AI
+                                research collaboration for enterprise deployments.</p>
+                            <div class="flex items-center gap-4">
+                                <span class="text-sm text-neutral-400">Since 2023</span>
+                                <span class="w-1 h-1 rounded-full bg-neutral-300"></span>
+                                <span class="text-sm text-neutral-400">Cloud & AI</span>
+                            </div>
+                            <div
+                                class="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-neutral-100/50 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <svg class="absolute bottom-6 right-6 w-5 h-5 text-neutral-300 group-hover:text-brand-600 group-hover:translate-x-2 transition-all duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+
+                        <!-- NVIDIA Healthcare Card -->
+                        <div
+                            class="tech-card relative bg-white border border-neutral-200 rounded-3xl p-8 md:p-10 group cursor-pointer transition-all duration-500 hover:shadow-[0_32px_64px_rgba(0,0,0,0.12)] hover:-translate-y-3 hover:border-brand-500/20 reveal reveal-delay-2 overflow-hidden">
+                            <div class="flex items-start justify-between mb-6">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-neutral-100 flex items-center justify-center group-hover:bg-white group-hover:shadow-lg transition-all duration-500 tech-card-icon">
+                                    <iconify-icon icon="simple-icons:nvidia" width="32"
+                                        class="text-neutral-700"></iconify-icon>
+                                </div>
+                                <span
+                                    class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">Technical</span>
+                            </div>
+                            <h3
+                                class="text-2xl font-semibold text-neutral-900 mb-2 group-hover:text-brand-600 transition-colors">
+                                NVIDIA Healthcare</h3>
+                            <p class="text-neutral-500 mb-6 leading-relaxed">GPU acceleration and CUDA optimization for
+                                real-time medical image processing.</p>
+                            <div class="flex items-center gap-4">
+                                <span class="text-sm text-neutral-400">Since 2024</span>
+                                <span class="w-1 h-1 rounded-full bg-neutral-300"></span>
+                                <span class="text-sm text-neutral-400">GPU Compute</span>
+                            </div>
+                            <div
+                                class="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-neutral-100/50 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <svg class="absolute bottom-6 right-6 w-5 h-5 text-neutral-300 group-hover:text-brand-600 group-hover:translate-x-2 transition-all duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Amazon Web Services Card -->
+                        <div
+                            class="tech-card relative bg-white border border-neutral-200 rounded-3xl p-8 md:p-10 group cursor-pointer transition-all duration-500 hover:shadow-[0_32px_64px_rgba(0,0,0,0.12)] hover:-translate-y-3 hover:border-brand-500/20 reveal reveal-delay-3 overflow-hidden">
+                            <div class="flex items-start justify-between mb-6">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-neutral-100 flex items-center justify-center group-hover:bg-white group-hover:shadow-lg transition-all duration-500 tech-card-icon">
+                                    <iconify-icon icon="simple-icons:amazon" width="28"
+                                        class="text-neutral-700"></iconify-icon>
+                                </div>
+                                <span
+                                    class="px-3 py-1 bg-orange-100 text-orange-700 text-xs font-semibold rounded-full">Infrastructure</span>
+                            </div>
+                            <h3
+                                class="text-2xl font-semibold text-neutral-900 mb-2 group-hover:text-brand-600 transition-colors">
+                                Amazon Web Services</h3>
+                            <p class="text-neutral-500 mb-6 leading-relaxed">HIPAA-compliant cloud infrastructure and
+                                serverless computing for global scale.</p>
+                            <div class="flex items-center gap-4">
+                                <span class="text-sm text-neutral-400">Since 2023</span>
+                                <span class="w-1 h-1 rounded-full bg-neutral-300"></span>
+                                <span class="text-sm text-neutral-400">Cloud Infra</span>
+                            </div>
+                            <div
+                                class="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-neutral-100/50 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <svg class="absolute bottom-6 right-6 w-5 h-5 text-neutral-300 group-hover:text-brand-600 group-hover:translate-x-2 transition-all duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- CTA Link -->
+                    <div class="text-center reveal reveal-delay-4">
+                        <a href="../company/contact"
+                            class="inline-flex items-center gap-3 text-neutral-900 font-medium hover:text-brand-600 transition-colors group/link text-lg">
+                            Interested in partnering with us?
+                            <svg class="w-5 h-5 group-hover/link:translate-x-2 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
