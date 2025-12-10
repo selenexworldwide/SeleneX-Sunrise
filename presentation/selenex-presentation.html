@@ -2617,161 +2617,6 @@
         </div>
     </section>
 
-    <!-- SLIDE 7: Prototype -->
-    <!-- SLIDE 7: Prototype Gallery -->
-    <section id="slide-6" class="min-h-screen bg-zinc-950 py-24 relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-[120px]"></div>
-            <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px]"></div>
-        </div>
-
-        <div class="container mx-auto px-8 relative z-10">
-            <div class="max-w-7xl mx-auto">
-                <!-- Header -->
-                <div class="text-center mb-12">
-                    <div
-                        class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full shadow-sm mb-6 backdrop-blur-sm">
-                        <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                        <span class="text-xs font-semibold text-white/80 uppercase tracking-wider">Live Platform</span>
-                    </div>
-                    <h2 class="reveal text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-4">
-                        Platform <span
-                            class="bg-gradient-to-r from-brand-400 to-cyan-400 bg-clip-text text-transparent">Gallery</span>
-                    </h2>
-                    <p class="reveal reveal-delay-1 text-lg text-white/50 max-w-2xl mx-auto">
-                        Explore the end-to-end workflow of the SeleneX platform, from data ingestion to synthetic
-                        generation.
-                    </p>
-                </div>
-
-                <!-- Gallery Component -->
-                <div class="reveal reveal-delay-2">
-                    <!-- Main Viewer -->
-                    <div class="relative w-full max-w-6xl mx-auto mb-8 group">
-                        <!-- Shadow/Glow Effect -->
-                        <div
-                            class="absolute -inset-1 bg-gradient-to-r from-brand-500/20 via-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500">
-                        </div>
-
-                        <div
-                            class="relative bg-zinc-900 rounded-2xl border border-white/10 overflow-hidden shadow-2xl aspect-[16/10] md:aspect-[16/9] flex items-center justify-center">
-                            <img id="gallery-main-image" src="selenex-app-presentation/Step 1.png"
-                                alt="Platform Screenshot"
-                                class="w-full h-full object-contain bg-zinc-950 transition-opacity duration-300">
-
-                            <!-- Loading State (managed by JS) -->
-                            <div id="gallery-loader"
-                                class="absolute inset-0 flex items-center justify-center bg-zinc-900 z-10 hidden">
-                                <div
-                                    class="w-8 h-8 border-2 border-brand-500 border-t-transparent rounded-full animate-spin">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Thumbnails / Filmstrip -->
-                    <div class="relative max-w-6xl mx-auto">
-                        <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide px-2" id="gallery-thumbnails">
-                            <!-- Thumbnails injected by JS -->
-                        </div>
-
-                        <!-- Scroll Indicators (Optional, visible if needed) -->
-                        <div
-                            class="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-zinc-950 to-transparent pointer-events-none">
-                        </div>
-                        <div
-                            class="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-zinc-950 to-transparent pointer-events-none">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Gallery Data and Logic
-        const galleryImages = [
-            // Core Workflow (Steps 1-6 Coherent)
-            { src: 'selenex-app-presentation/Step 1.png', label: 'Step 1: Welcome' },
-            { src: 'selenex-app-presentation/Step 2.png', label: 'Step 2: Setup' },
-            { src: 'selenex-app-presentation/Step 3.png', label: 'Step 3: Configuration' },
-            { src: 'selenex-app-presentation/Step 4.png', label: 'Step 4: Processing' },
-            { src: 'selenex-app-presentation/Step 5.png', label: 'Step 5: Validation' },
-            { src: 'selenex-app-presentation/Step 6.png', label: 'Step 6: Complete' },
-
-            // Detailed Views & Deep Dives
-            { src: 'selenex-app-presentation/Choose Model.png', label: 'Setup: Choose Model' },
-            { src: 'selenex-app-presentation/Model & Modality - Info tab.png', label: 'Config: Model Info' },
-            { src: 'selenex-app-presentation/Preview Output.png', label: 'Process: Preview' },
-            { src: 'selenex-app-presentation/Audit.png', label: 'Validation: Audit' },
-            { src: 'selenex-app-presentation/Compare.png', label: 'Validation: Compare' },
-            { src: 'selenex-app-presentation/Clasification System.png', label: 'Classification System' },
-            { src: 'selenex-app-presentation/Clasification System - 1.png', label: 'Classification Detail I' },
-            { src: 'selenex-app-presentation/Clasification System - 2.png', label: 'Classification Detail II' },
-            { src: 'selenex-app-presentation/Patient card.png', label: 'Patient Card' },
-            { src: 'selenex-app-presentation/Export.png', label: 'Export Data' },
-            { src: 'selenex-app-presentation/View all.png', label: 'View All Datasets' }
-        ];
-
-        const mainImage = document.getElementById('gallery-main-image');
-        const thumbnailsContainer = document.getElementById('gallery-thumbnails');
-        let currentImageIndex = 0;
-
-        function initGallery() {
-            if (!mainImage || !thumbnailsContainer) return;
-
-            // Clear existing items to prevent duplicates if function runs twice
-            thumbnailsContainer.innerHTML = '';
-
-            // Render Thumbnails
-            galleryImages.forEach((img, index) => {
-                const btn = document.createElement('button');
-                btn.className = `flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group ${index === 0 ? 'border-brand-500 ring-2 ring-brand-500/20' : 'border-white/10 hover:border-white/30'}`;
-                btn.onclick = () => setGalleryImage(index);
-
-                btn.innerHTML = `
-                    <img src="${img.src}" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity" alt="${img.label}">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
-                        <span class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">${img.label}</span>
-                    </div>
-                `;
-                thumbnailsContainer.appendChild(btn);
-            });
-        }
-
-        function setGalleryImage(index) {
-            if (index < 0 || index >= galleryImages.length) return;
-            currentImageIndex = index;
-
-            // Update Main Image
-            mainImage.style.opacity = '0';
-            setTimeout(() => {
-                mainImage.src = galleryImages[index].src;
-                mainImage.onload = () => {
-                    mainImage.style.opacity = '1';
-                };
-            }, 200);
-
-            // Update Active Thumbnail Styling
-            const thumbs = thumbnailsContainer.children;
-            for (let i = 0; i < thumbs.length; i++) {
-                if (i === index) {
-                    thumbs[i].className = 'flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 border-brand-500 ring-2 ring-brand-500/20 transition-all duration-200 scale-105 z-10';
-                    thumbs[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                } else {
-                    thumbs[i].className = 'flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 border-white/10 hover:border-white/30 transition-all duration-200 opacity-60 hover:opacity-100';
-                }
-            }
-        }
-
-        // Initialize when DOM is ready
-        document.addEventListener('DOMContentLoaded', initGallery);
-
-        // Also run immediately in case we are inserting into an already loaded page (though script location at bottom helps)
-        initGallery();
-    </script>
-
     <!-- SLIDE 8: Team -->
     <section id="slide-7" class="min-h-screen bg-white py-24 relative">
         <div class="container mx-auto px-8">
@@ -3222,6 +3067,622 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Platform Gallery Section - App Workflow -->
+    <section class="reveal reveal-delay-4 relative bg-black py-20">
+        <div class="max-w-7xl mx-auto relative z-10 px-8">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full shadow-sm mb-6 backdrop-blur-sm">
+                    <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                    <span class="text-xs font-semibold text-white/80 uppercase tracking-wider">Live Platform</span>
+                </div>
+                <h2 class="reveal text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-4">
+                    Platform <span
+                        class="bg-gradient-to-r from-brand-400 to-cyan-400 bg-clip-text text-transparent">Gallery</span>
+                </h2>
+                <p class="reveal reveal-delay-1 text-lg text-white/50 max-w-2xl mx-auto">
+                    Explore the end-to-end workflow of the SeleneX platform, from data ingestion to synthetic
+                    generation.
+                </p>
+            </div>
+
+            <!-- Gallery Component -->
+            <div class="reveal reveal-delay-2">
+                <!-- Main Viewer -->
+                <div class="relative w-full max-w-6xl mx-auto mb-8 group">
+                    <!-- Shadow/Glow Effect -->
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-brand-500/20 via-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl border border-white/10 overflow-hidden shadow-2xl aspect-[16/10] md:aspect-[16/9] flex items-center justify-center">
+                        <img id="gallery-main-image" src="selenex-app-presentation/Step 1.png" alt="Platform Screenshot"
+                            class="w-full h-full object-contain bg-zinc-950 transition-opacity duration-300">
+
+                        <!-- Loading State -->
+                        <div id="gallery-loader"
+                            class="absolute inset-0 flex items-center justify-center bg-zinc-900 z-10 hidden">
+                            <div
+                                class="w-8 h-8 border-2 border-brand-500 border-t-transparent rounded-full animate-spin">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thumbnails / Filmstrip -->
+                <div class="relative max-w-6xl mx-auto">
+                    <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide px-2" id="gallery-thumbnails">
+                        <button onclick="setGalleryImage('selenex-app-presentation/Step 1.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-brand-500 ring-2 ring-brand-500/20">
+                            <img src="selenex-app-presentation/Step 1.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Step 1: Welcome">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Step
+                                    1: Welcome</span>
+                            </div>
+                        </button>
+                        <button onclick="setGalleryImage('selenex-app-presentation/Step 2.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/Step 2.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Step 2: Setup">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Step
+                                    2: Setup</span>
+                            </div>
+                        </button>
+                        <button onclick="setGalleryImage('selenex-app-presentation/Step 3.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/Step 3.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Step 3: Configuration">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Step
+                                    3: Configuration</span>
+                            </div>
+                        </button>
+                        <button onclick="setGalleryImage('selenex-app-presentation/Step 4.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/Step 4.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Step 4: Processing">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Step
+                                    4: Processing</span>
+                            </div>
+                        </button>
+                        <button onclick="setGalleryImage('selenex-app-presentation/Step 5.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/Step 5.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Step 5: Validation">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Step
+                                    5: Validation</span>
+                            </div>
+                        </button>
+                        <button onclick="setGalleryImage('selenex-app-presentation/Step 6.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/Step 6.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Step 6: Complete">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Step
+                                    6: Complete</span>
+                            </div>
+                        </button>
+                        <button onclick="setGalleryImage('selenex-app-presentation/Choose Model.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/Choose Model.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Setup: Choose Model">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Setup:
+                                    Choose Model</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setGalleryImage('selenex-app-presentation/Model & Modality - Info tab.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/Model & Modality - Info tab.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Config: Model Info">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Config:
+                                    Model Info</span>
+                            </div>
+                        </button>
+                        <button onclick="setGalleryImage('selenex-app-presentation/Preview Output.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/Preview Output.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Process: Preview">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Process:
+                                    Preview</span>
+                            </div>
+                        </button>
+                        <button onclick="setGalleryImage('selenex-app-presentation/Audit.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/Audit.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Validation: Audit">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Validation:
+                                    Audit</span>
+                            </div>
+                        </button>
+                        <button onclick="setGalleryImage('selenex-app-presentation/Compare.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/Compare.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Validation: Compare">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Validation:
+                                    Compare</span>
+                            </div>
+                        </button>
+                        <button onclick="setGalleryImage('selenex-app-presentation/Clasification System.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/Clasification System.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Classification System">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Classification
+                                    System</span>
+                            </div>
+                        </button>
+                        <button onclick="setGalleryImage('selenex-app-presentation/Patient card.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/Patient card.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Patient Card">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Patient
+                                    Card</span>
+                            </div>
+                        </button>
+                        <button onclick="setGalleryImage('selenex-app-presentation/Export.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/Export.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Export Data">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Export
+                                    Data</span>
+                            </div>
+                        </button>
+                        <button onclick="setGalleryImage('selenex-app-presentation/View all.png', this)"
+                            class="gallery-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="selenex-app-presentation/View all.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="View All Datasets">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">View
+                                    All Datasets</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Scroll Indicators -->
+                    <div
+                        class="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-zinc-950 to-transparent pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-zinc-950 to-transparent pointer-events-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Platform Gallery JavaScript -->
+        <script>
+            function setGalleryImage(src, button) {
+                const mainImage = document.getElementById('gallery-main-image');
+                const loader = document.getElementById('gallery-loader');
+
+                // Show loader
+                loader.classList.remove('hidden');
+                mainImage.style.opacity = '0';
+
+                // Update active thumbnail
+                document.querySelectorAll('.gallery-thumb').forEach(thumb => {
+                    thumb.classList.remove('border-brand-500', 'ring-2', 'ring-brand-500/20');
+                    thumb.classList.add('border-white/10');
+                });
+                button.classList.remove('border-white/10');
+                button.classList.add('border-brand-500', 'ring-2', 'ring-brand-500/20');
+
+                // Load new image
+                const tempImg = new Image();
+                tempImg.onload = function () {
+                    mainImage.src = src;
+                    mainImage.style.opacity = '1';
+                    loader.classList.add('hidden');
+                };
+                tempImg.src = src;
+            }
+        </script>
+    </section>
+
+    <!-- Code Gallery Section - Synthetic Data Engine Code Previews -->
+    <section class="reveal reveal-delay-4 relative bg-black py-20">
+        <div class="max-w-7xl mx-auto relative z-10 px-8">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full shadow-sm mb-6 backdrop-blur-sm">
+                    <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                    <span class="text-xs font-semibold text-white/80 uppercase tracking-wider">Open Source</span>
+                </div>
+                <h2 class="reveal text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-4">
+                    Code <span
+                        class="bg-gradient-to-r from-brand-400 to-cyan-400 bg-clip-text text-transparent">Gallery</span>
+                </h2>
+                <p class="reveal reveal-delay-1 text-lg text-white/50 max-w-2xl mx-auto">
+                    Explore the actual codebase powering the SeleneX Synthetic Data Generation Engine.
+                </p>
+            </div>
+
+            <!-- Gallery Component -->
+            <div class="reveal reveal-delay-2">
+                <!-- Main Viewer -->
+                <div class="relative w-full max-w-6xl mx-auto mb-8 group">
+                    <!-- Shadow/Glow Effect -->
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-brand-500/20 via-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <div
+                        class="relative bg-zinc-900 rounded-2xl border border-white/10 overflow-hidden shadow-2xl aspect-[16/10] md:aspect-[16/9] flex items-center justify-center">
+                        <img id="code-gallery-main-image" src="code-previews/Screenshot 2025-12-10 at 8.18.39 PM.png"
+                            alt="Code Preview"
+                            class="w-full h-full object-contain bg-zinc-950 transition-opacity duration-300">
+
+                        <!-- Loading State -->
+                        <div id="code-gallery-loader"
+                            class="absolute inset-0 flex items-center justify-center bg-zinc-900 z-10 hidden">
+                            <div
+                                class="w-8 h-8 border-2 border-brand-500 border-t-transparent rounded-full animate-spin">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thumbnails / Filmstrip -->
+                <div class="relative max-w-6xl mx-auto">
+                    <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide px-2" id="code-gallery-thumbnails">
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.18.39 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-brand-500 ring-2 ring-brand-500/20">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.18.39 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="SDGE Core">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">SDGE
+                                    Core</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.19.05 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.19.05 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Data Pipeline">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Data
+                                    Pipeline</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.20.01 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.20.01 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Model Architecture">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Model
+                                    Architecture</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.20.36 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.20.36 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Latent Diffusion">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Latent
+                                    Diffusion</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.20.52 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.20.52 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Training Loop">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Training
+                                    Loop</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.22.15 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.22.15 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Privacy Module">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Privacy
+                                    Module</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.35.32 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.35.32 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="DP-SGD">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">DP-SGD</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.36.11 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.36.11 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Federated Learning">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Federated
+                                    Learning</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.40.10 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.40.10 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Data Loader">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Data
+                                    Loader</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.40.22 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.40.22 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Preprocessing">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Preprocessing</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.40.36 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.40.36 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Augmentation">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Augmentation</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.42.32 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.42.32 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Validation">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Validation</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.44.11 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.44.11 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Metrics">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Metrics</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.44.31 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.44.31 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Evaluation">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Evaluation</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.44.45 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.44.45 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Quality Check">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Quality
+                                    Check</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.45.16 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.45.16 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Generator">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Generator</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.46.01 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.46.01 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Full Pipeline">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Full
+                                    Pipeline</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.46.12 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.46.12 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Export Module">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Export
+                                    Module</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.46.39 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.46.39 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="API Layer">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">API
+                                    Layer</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.47.40 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
+                            <img src="code-previews/Screenshot 2025-12-10 at 8.47.40 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="Config & Utils">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">Config
+                                    & Utils</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Scroll Indicators -->
+                    <div
+                        class="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-zinc-950 to-transparent pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-zinc-950 to-transparent pointer-events-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Code Gallery JavaScript -->
+        <script>
+            function setCodeGalleryImage(src, button) {
+                const mainImage = document.getElementById('code-gallery-main-image');
+                const loader = document.getElementById('code-gallery-loader');
+
+                // Show loader
+                loader.classList.remove('hidden');
+                mainImage.style.opacity = '0';
+
+                // Update active thumbnail
+                document.querySelectorAll('.code-thumb').forEach(thumb => {
+                    thumb.classList.remove('border-brand-500', 'ring-2', 'ring-brand-500/20');
+                    thumb.classList.add('border-white/10');
+                });
+                button.classList.remove('border-white/10');
+                button.classList.add('border-brand-500', 'ring-2', 'ring-brand-500/20');
+
+                // Load new image
+                const tempImg = new Image();
+                tempImg.onload = function () {
+                    mainImage.src = src;
+                    mainImage.style.opacity = '1';
+                    loader.classList.add('hidden');
+                };
+                tempImg.src = src;
+            }
+        </script>
     </section>
 
     <!-- Resume Team & Partnerships Section -->
