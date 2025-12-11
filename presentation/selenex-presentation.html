@@ -2647,6 +2647,10 @@
                                     <span class="flex gap-1">
                                         <iconify-icon icon="circle-flags:am" width="18" height="18"></iconify-icon>
                                         <iconify-icon icon="circle-flags:us" width="18" height="18"></iconify-icon>
+                                        <iconify-icon icon="circle-flags:nl" width="18" height="18"></iconify-icon>
+                                        <iconify-icon icon="circle-flags:gb" width="18" height="18"></iconify-icon>
+                                        <iconify-icon icon="circle-flags:ca" width="18" height="18"></iconify-icon>
+                                        <iconify-icon icon="circle-flags:it" width="18" height="18"></iconify-icon>
                                     </span>
                                 </h4>
                                 <p class="text-brand-600 text-sm">CEO, Chief AI Architect & Co-Founder</p>
@@ -2663,6 +2667,7 @@
                                         <iconify-icon icon="circle-flags:am" width="18" height="18"></iconify-icon>
                                         <iconify-icon icon="circle-flags:us" width="18" height="18"></iconify-icon>
                                         <iconify-icon icon="circle-flags:nl" width="18" height="18"></iconify-icon>
+                                        <iconify-icon icon="circle-flags:ca" width="18" height="18"></iconify-icon>
                                     </span>
                                 </h4>
                                 <p class="text-brand-600 text-sm">CTO & Co-Founder</p>
@@ -3371,7 +3376,7 @@
 
                     <div
                         class="relative bg-zinc-900 rounded-2xl border border-white/10 overflow-hidden shadow-2xl aspect-[16/10] md:aspect-[16/9] flex items-center justify-center">
-                        <img id="code-gallery-main-image" src="code-previews/Screenshot 2025-12-10 at 8.18.39 PM.png"
+                        <img id="code-gallery-main-image" src="code-previews/Screenshot 2025-12-03 at 4.14.44 PM.png"
                             alt="Code Preview"
                             class="w-full h-full object-contain bg-zinc-950 transition-opacity duration-300">
 
@@ -3389,8 +3394,21 @@
                 <div class="relative max-w-6xl mx-auto">
                     <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide px-2" id="code-gallery-thumbnails">
                         <button
-                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.18.39 PM.png', this)"
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-03 at 4.14.44 PM.png', this)"
                             class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-brand-500 ring-2 ring-brand-500/20">
+                            <img src="code-previews/Screenshot 2025-12-03 at 4.14.44 PM.png"
+                                class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
+                                alt="SDGE Overview">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
+                                <span
+                                    class="text-[10px] sm:text-xs font-medium text-white truncate w-full text-left">SDGE
+                                    Overview</span>
+                            </div>
+                        </button>
+                        <button
+                            onclick="setCodeGalleryImage('code-previews/Screenshot 2025-12-10 at 8.18.39 PM.png', this)"
+                            class="code-thumb flex-shrink-0 relative w-32 md:w-40 aspect-video rounded-lg overflow-hidden border-2 transition-all duration-200 group border-white/10 hover:border-white/30">
                             <img src="code-previews/Screenshot 2025-12-10 at 8.18.39 PM.png"
                                 class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity"
                                 alt="SDGE Core">
@@ -3683,217 +3701,6 @@
                 tempImg.src = src;
             }
         </script>
-    </section>
-
-    <!-- Resume Team & Partnerships Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-
-            <!-- Technology Collaboration Section -->
-            <style>
-                @keyframes floatIcon {
-
-                    0%,
-                    100% {
-                        transform: translateY(0) rotate(0deg);
-                    }
-
-                    50% {
-                        transform: translateY(-10px) rotate(5deg);
-                    }
-                }
-
-                .tech-card-icon {
-                    animation: floatIcon 4s ease-in-out infinite;
-                }
-
-                .tech-card:nth-child(2) .tech-card-icon {
-                    animation-delay: 0.5s;
-                }
-
-                .tech-card:nth-child(3) .tech-card-icon {
-                    animation-delay: 1s;
-                }
-
-                .tech-card:nth-child(4) .tech-card-icon {
-                    animation-delay: 1.5s;
-                }
-
-                .tech-card::before {
-                    content: '';
-                    position: absolute;
-                    inset: 0;
-                    background: linear-gradient(135deg, transparent 0%, rgba(124, 58, 237, 0.03) 100%);
-                    opacity: 0;
-                    transition: opacity 0.5s ease;
-                    border-radius: inherit;
-                }
-
-                .tech-card:hover::before {
-                    opacity: 1;
-                }
-            </style>
-
-            <div class="max-w-6xl mx-auto mt-24">
-                <!-- Section Header -->
-                <div class="text-center mb-16 reveal">
-                    <h2 class="text-3xl md:text-5xl font-medium tracking-tight text-neutral-900 mb-4">
-                        Technology Collaboration
-                    </h2>
-                    <p class="text-lg text-neutral-500 max-w-2xl mx-auto">
-                        Working alongside the world's most innovative technology companies to advance AI-powered
-                        diagnostic capabilities.
-                    </p>
-                </div>
-
-                <!-- Partner Cards Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                    <!-- Google Health Card -->
-                    <div
-                        class="tech-card relative bg-white border border-neutral-200 rounded-3xl p-8 md:p-10 group cursor-pointer transition-all duration-500 hover:shadow-[0_32px_64px_rgba(0,0,0,0.12)] hover:-translate-y-3 hover:border-brand-500/20 reveal overflow-hidden">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-16 h-16 rounded-2xl bg-neutral-100 flex items-center justify-center group-hover:bg-white group-hover:shadow-lg transition-all duration-500 tech-card-icon">
-                                <iconify-icon icon="simple-icons:google" width="28"
-                                    class="text-neutral-700"></iconify-icon>
-                            </div>
-                            <span
-                                class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">Active
-                                Partner</span>
-                        </div>
-                        <h3
-                            class="text-2xl font-semibold text-neutral-900 mb-2 group-hover:text-brand-600 transition-colors">
-                            Google Health</h3>
-                        <p class="text-neutral-500 mb-6 leading-relaxed">Medical imaging AI and cloud infrastructure
-                            for scalable diagnostic solutions.</p>
-                        <div class="flex items-center gap-4">
-                            <span class="text-sm text-neutral-400">Since 2023</span>
-                            <span class="w-1 h-1 rounded-full bg-neutral-300"></span>
-                            <span class="text-sm text-neutral-400">Imaging AI</span>
-                        </div>
-                        <div
-                            class="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-neutral-100/50 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        </div>
-                        <svg class="absolute bottom-6 right-6 w-5 h-5 text-neutral-300 group-hover:text-brand-600 group-hover:translate-x-2 transition-all duration-300"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                        </svg>
-                    </div>
-
-                    <!-- Microsoft Research Card -->
-                    <div
-                        class="tech-card relative bg-white border border-neutral-200 rounded-3xl p-8 md:p-10 group cursor-pointer transition-all duration-500 hover:shadow-[0_32px_64px_rgba(0,0,0,0.12)] hover:-translate-y-3 hover:border-brand-500/20 reveal reveal-delay-1 overflow-hidden">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-16 h-16 rounded-2xl bg-neutral-100 flex items-center justify-center group-hover:bg-white group-hover:shadow-lg transition-all duration-500 tech-card-icon">
-                                <iconify-icon icon="simple-icons:microsoft" width="28"
-                                    class="text-neutral-700"></iconify-icon>
-                            </div>
-                            <span
-                                class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">Strategic</span>
-                        </div>
-                        <h3
-                            class="text-2xl font-semibold text-neutral-900 mb-2 group-hover:text-brand-600 transition-colors">
-                            Microsoft Research</h3>
-                        <p class="text-neutral-500 mb-6 leading-relaxed">Azure healthcare infrastructure and AI
-                            research collaboration for enterprise deployments.</p>
-                        <div class="flex items-center gap-4">
-                            <span class="text-sm text-neutral-400">Since 2023</span>
-                            <span class="w-1 h-1 rounded-full bg-neutral-300"></span>
-                            <span class="text-sm text-neutral-400">Cloud & AI</span>
-                        </div>
-                        <div
-                            class="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-neutral-100/50 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        </div>
-                        <svg class="absolute bottom-6 right-6 w-5 h-5 text-neutral-300 group-hover:text-brand-600 group-hover:translate-x-2 transition-all duration-300"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                        </svg>
-                    </div>
-
-                    <!-- NVIDIA Healthcare Card -->
-                    <div
-                        class="tech-card relative bg-white border border-neutral-200 rounded-3xl p-8 md:p-10 group cursor-pointer transition-all duration-500 hover:shadow-[0_32px_64px_rgba(0,0,0,0.12)] hover:-translate-y-3 hover:border-brand-500/20 reveal reveal-delay-2 overflow-hidden">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-16 h-16 rounded-2xl bg-neutral-100 flex items-center justify-center group-hover:bg-white group-hover:shadow-lg transition-all duration-500 tech-card-icon">
-                                <iconify-icon icon="simple-icons:nvidia" width="32"
-                                    class="text-neutral-700"></iconify-icon>
-                            </div>
-                            <span
-                                class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">Technical</span>
-                        </div>
-                        <h3
-                            class="text-2xl font-semibold text-neutral-900 mb-2 group-hover:text-brand-600 transition-colors">
-                            NVIDIA Healthcare</h3>
-                        <p class="text-neutral-500 mb-6 leading-relaxed">GPU acceleration and CUDA optimization for
-                            real-time medical image processing.</p>
-                        <div class="flex items-center gap-4">
-                            <span class="text-sm text-neutral-400">Since 2024</span>
-                            <span class="w-1 h-1 rounded-full bg-neutral-300"></span>
-                            <span class="text-sm text-neutral-400">GPU Compute</span>
-                        </div>
-                        <div
-                            class="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-neutral-100/50 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        </div>
-                        <svg class="absolute bottom-6 right-6 w-5 h-5 text-neutral-300 group-hover:text-brand-600 group-hover:translate-x-2 transition-all duration-300"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                        </svg>
-                    </div>
-
-                    <!-- Amazon Web Services Card -->
-                    <div
-                        class="tech-card relative bg-white border border-neutral-200 rounded-3xl p-8 md:p-10 group cursor-pointer transition-all duration-500 hover:shadow-[0_32px_64px_rgba(0,0,0,0.12)] hover:-translate-y-3 hover:border-brand-500/20 reveal reveal-delay-3 overflow-hidden">
-                        <div class="flex items-start justify-between mb-6">
-                            <div
-                                class="w-16 h-16 rounded-2xl bg-neutral-100 flex items-center justify-center group-hover:bg-white group-hover:shadow-lg transition-all duration-500 tech-card-icon">
-                                <iconify-icon icon="simple-icons:amazon" width="28"
-                                    class="text-neutral-700"></iconify-icon>
-                            </div>
-                            <span
-                                class="px-3 py-1 bg-orange-100 text-orange-700 text-xs font-semibold rounded-full">Infrastructure</span>
-                        </div>
-                        <h3
-                            class="text-2xl font-semibold text-neutral-900 mb-2 group-hover:text-brand-600 transition-colors">
-                            Amazon Web Services</h3>
-                        <p class="text-neutral-500 mb-6 leading-relaxed">HIPAA-compliant cloud infrastructure and
-                            serverless computing for global scale.</p>
-                        <div class="flex items-center gap-4">
-                            <span class="text-sm text-neutral-400">Since 2023</span>
-                            <span class="w-1 h-1 rounded-full bg-neutral-300"></span>
-                            <span class="text-sm text-neutral-400">Cloud Infra</span>
-                        </div>
-                        <div
-                            class="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-neutral-100/50 to-transparent rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        </div>
-                        <svg class="absolute bottom-6 right-6 w-5 h-5 text-neutral-300 group-hover:text-brand-600 group-hover:translate-x-2 transition-all duration-300"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- CTA Link -->
-                <div class="text-center reveal reveal-delay-4">
-                    <a href="../company/contact"
-                        class="inline-flex items-center gap-3 text-neutral-900 font-medium hover:text-brand-600 transition-colors group/link text-lg">
-                        Interested in partnering with us?
-                        <svg class="w-5 h-5 group-hover/link:translate-x-2 transition-transform" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-        </div>
     </section>
 
     <!-- SLIDE 9: Business Model -->
