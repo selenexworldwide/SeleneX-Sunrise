@@ -2827,11 +2827,205 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- SECOND VIDEO: Codebase Walkthrough -->
+                <div class="mt-24">
+                    <!-- Section Header -->
+                    <div class="text-center mb-12">
+                        <span
+                            class="inline-block px-3 py-1 rounded-full text-xs font-medium tracking-widest uppercase text-cyan-400 bg-cyan-500/20 border border-cyan-500/30 mb-6">
+                            Technical Deep Dive
+                        </span>
+                        <h2 class="reveal text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-4">
+                            Codebase <span class="text-cyan-400">Walkthrough</span>
+                        </h2>
+                        <p class="reveal reveal-delay-1 text-lg text-white/60 max-w-2xl mx-auto">
+                            A comprehensive tour of the SDGE codebase — exploring architecture, modules, and
+                            implementation details.
+                        </p>
+                    </div>
+
+                    <!-- Video Player Container 2 -->
+                    <div class="reveal reveal-delay-2">
+                        <div id="video-player-container-2"
+                            class="relative rounded-3xl overflow-hidden bg-black/50 backdrop-blur-xl border border-white/10 shadow-2xl shadow-cyan-500/10 group">
+                            <!-- Video Element -->
+                            <video id="demo-video-2" class="w-full aspect-video object-contain bg-black" poster=""
+                                preload="metadata">
+                                <source src="video/Codebase walkthrough.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+
+                            <!-- Video Overlay (Play button for initial state) -->
+                            <div id="video-overlay-2"
+                                class="absolute inset-0 bg-black/40 flex items-center justify-center cursor-pointer transition-all duration-300 group-hover:bg-black/30">
+                                <div id="big-play-btn-2"
+                                    class="w-24 h-24 rounded-full bg-cyan-500/90 backdrop-blur-sm flex items-center justify-center shadow-lg shadow-cyan-500/50 transform transition-all duration-300 hover:scale-110 hover:bg-cyan-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                        fill="white" class="ml-1">
+                                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Custom Video Controls -->
+                            <div id="video-controls-2"
+                                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent px-6 py-4 transform translate-y-full opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                                <!-- Progress Bar -->
+                                <div class="mb-4">
+                                    <div id="progress-container-2"
+                                        class="relative h-1.5 bg-white/20 rounded-full cursor-pointer group/progress hover:h-2 transition-all duration-200">
+                                        <div id="progress-bar-2"
+                                            class="absolute left-0 top-0 h-full bg-gradient-to-r from-cyan-500 to-emerald-400 rounded-full transition-all duration-100"
+                                            style="width: 0%;"></div>
+                                        <div id="progress-buffered-2"
+                                            class="absolute left-0 top-0 h-full bg-white/20 rounded-full"
+                                            style="width: 0%;"></div>
+                                        <div id="progress-thumb-2"
+                                            class="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white rounded-full shadow-lg opacity-0 group-hover/progress:opacity-100 transition-opacity duration-200"
+                                            style="left: 0%;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Controls Row -->
+                                <div class="flex items-center justify-between">
+                                    <!-- Left Controls -->
+                                    <div class="flex items-center gap-4">
+                                        <!-- Play/Pause Button -->
+                                        <button id="play-pause-btn-2"
+                                            class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors duration-200">
+                                            <svg id="play-icon-2" xmlns="http://www.w3.org/2000/svg" width="18"
+                                                height="18" viewBox="0 0 24 24" fill="white">
+                                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                            </svg>
+                                            <svg id="pause-icon-2" xmlns="http://www.w3.org/2000/svg" width="18"
+                                                height="18" viewBox="0 0 24 24" fill="white" class="hidden">
+                                                <rect x="6" y="4" width="4" height="16"></rect>
+                                                <rect x="14" y="4" width="4" height="16"></rect>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Volume Controls -->
+                                        <div class="flex items-center gap-2 group/volume">
+                                            <button id="mute-btn-2"
+                                                class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-200">
+                                                <svg id="volume-icon-2" xmlns="http://www.w3.org/2000/svg" width="16"
+                                                    height="16" viewBox="0 0 24 24" fill="none" stroke="white"
+                                                    stroke-width="2">
+                                                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                                                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                                                </svg>
+                                                <svg id="muted-icon-2" xmlns="http://www.w3.org/2000/svg" width="16"
+                                                    height="16" viewBox="0 0 24 24" fill="none" stroke="white"
+                                                    stroke-width="2" class="hidden">
+                                                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                                    <line x1="23" y1="9" x2="17" y2="15"></line>
+                                                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                                                </svg>
+                                            </button>
+                                            <div
+                                                class="w-0 overflow-hidden group-hover/volume:w-20 transition-all duration-300">
+                                                <input id="volume-slider-2" type="range" min="0" max="100" value="100"
+                                                    class="w-full h-1 bg-white/20 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full">
+                                            </div>
+                                        </div>
+
+                                        <!-- Time Display -->
+                                        <div class="text-white/70 text-sm font-mono">
+                                            <span id="current-time-2">0:00</span>
+                                            <span class="mx-1 text-white/40">/</span>
+                                            <span id="duration-2">0:00</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right Controls -->
+                                    <div class="flex items-center gap-3">
+                                        <!-- Playback Speed -->
+                                        <div class="relative group/speed">
+                                            <button id="speed-btn-2"
+                                                class="px-3 py-1.5 rounded-lg bg-white/10 text-white/70 text-sm font-medium hover:bg-white/20 transition-colors duration-200">
+                                                1x
+                                            </button>
+                                            <div
+                                                class="absolute bottom-full right-0 mb-2 py-2 bg-zinc-800/95 backdrop-blur-sm rounded-xl border border-white/10 shadow-xl opacity-0 invisible group-hover/speed:opacity-100 group-hover/speed:visible transition-all duration-200">
+                                                <button data-speed="0.5"
+                                                    class="speed-option-2 block w-full px-4 py-1.5 text-sm text-white/70 hover:bg-white/10 hover:text-white text-left">0.5x</button>
+                                                <button data-speed="0.75"
+                                                    class="speed-option-2 block w-full px-4 py-1.5 text-sm text-white/70 hover:bg-white/10 hover:text-white text-left">0.75x</button>
+                                                <button data-speed="1"
+                                                    class="speed-option-2 block w-full px-4 py-1.5 text-sm text-white/70 hover:bg-white/10 hover:text-white text-left">1x</button>
+                                                <button data-speed="1.25"
+                                                    class="speed-option-2 block w-full px-4 py-1.5 text-sm text-white/70 hover:bg-white/10 hover:text-white text-left">1.25x</button>
+                                                <button data-speed="1.5"
+                                                    class="speed-option-2 block w-full px-4 py-1.5 text-sm text-white/70 hover:bg-white/10 hover:text-white text-left">1.5x</button>
+                                                <button data-speed="2"
+                                                    class="speed-option-2 block w-full px-4 py-1.5 text-sm text-white/70 hover:bg-white/10 hover:text-white text-left">2x</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Fullscreen Button -->
+                                        <button id="fullscreen-btn-2"
+                                            class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors duration-200">
+                                            <svg id="expand-icon-2" xmlns="http://www.w3.org/2000/svg" width="18"
+                                                height="18" viewBox="0 0 24 24" fill="none" stroke="white"
+                                                stroke-width="2">
+                                                <polyline points="15 3 21 3 21 9"></polyline>
+                                                <polyline points="9 21 3 21 3 15"></polyline>
+                                                <line x1="21" y1="3" x2="14" y2="10"></line>
+                                                <line x1="3" y1="21" x2="10" y2="14"></line>
+                                            </svg>
+                                            <svg id="compress-icon-2" xmlns="http://www.w3.org/2000/svg" width="18"
+                                                height="18" viewBox="0 0 24 24" fill="none" stroke="white"
+                                                stroke-width="2" class="hidden">
+                                                <polyline points="4 14 10 14 10 20"></polyline>
+                                                <polyline points="20 10 14 10 14 4"></polyline>
+                                                <line x1="14" y1="10" x2="21" y2="3"></line>
+                                                <line x1="3" y1="21" x2="10" y2="14"></line>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Description for Codebase Walkthrough -->
+                        <div class="mt-8 grid md:grid-cols-3 gap-6">
+                            <div
+                                class="reveal reveal-delay-3 p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                                <div class="w-10 h-10 rounded-xl bg-cyan-500/20 flex items-center justify-center mb-3">
+                                    <i data-lucide="code" class="w-5 h-5 text-cyan-400"></i>
+                                </div>
+                                <h4 class="text-white font-medium mb-1">Modular Architecture</h4>
+                                <p class="text-white/50 text-sm">Clean, maintainable code structure for scalability</p>
+                            </div>
+                            <div
+                                class="reveal reveal-delay-4 p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-3">
+                                    <i data-lucide="git-branch" class="w-5 h-5 text-emerald-400"></i>
+                                </div>
+                                <h4 class="text-white font-medium mb-1">Open Source</h4>
+                                <p class="text-white/50 text-sm">Fully documented & community-ready codebase</p>
+                            </div>
+                            <div
+                                class="reveal reveal-delay-5 p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center mb-3">
+                                    <i data-lucide="layers" class="w-5 h-5 text-purple-400"></i>
+                                </div>
+                                <h4 class="text-white font-medium mb-1">Production Ready</h4>
+                                <p class="text-white/50 text-sm">Battle-tested with Docker & CI/CD pipelines</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Video Player JavaScript -->
+        <!-- Video Player JavaScript for BOTH videos -->
         <script>
+
             (function () {
                 const video = document.getElementById('demo-video');
                 const videoOverlay = document.getElementById('video-overlay');
@@ -2981,6 +3175,112 @@
                         case 'f':
                             fullscreenBtn.click();
                             break;
+                    }
+                });
+            })();
+
+            // SECOND VIDEO PLAYER CONTROLLER
+            (function () {
+                const video = document.getElementById('demo-video-2');
+                const videoOverlay = document.getElementById('video-overlay-2');
+                const bigPlayBtn = document.getElementById('big-play-btn-2');
+                const playPauseBtn = document.getElementById('play-pause-btn-2');
+                const playIcon = document.getElementById('play-icon-2');
+                const pauseIcon = document.getElementById('pause-icon-2');
+                const muteBtn = document.getElementById('mute-btn-2');
+                const volumeIcon = document.getElementById('volume-icon-2');
+                const mutedIcon = document.getElementById('muted-icon-2');
+                const volumeSlider = document.getElementById('volume-slider-2');
+                const progressContainer = document.getElementById('progress-container-2');
+                const progressBar = document.getElementById('progress-bar-2');
+                const progressThumb = document.getElementById('progress-thumb-2');
+                const currentTimeEl = document.getElementById('current-time-2');
+                const durationEl = document.getElementById('duration-2');
+                const speedBtn = document.getElementById('speed-btn-2');
+                const speedOptions = document.querySelectorAll('.speed-option-2');
+                const fullscreenBtn = document.getElementById('fullscreen-btn-2');
+                const expandIcon = document.getElementById('expand-icon-2');
+                const compressIcon = document.getElementById('compress-icon-2');
+                const playerContainer = document.getElementById('video-player-container-2');
+
+                function formatTime(seconds) {
+                    const mins = Math.floor(seconds / 60);
+                    const secs = Math.floor(seconds % 60);
+                    return `${mins}:${secs.toString().padStart(2, '0')}`;
+                }
+
+                function togglePlay() {
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                }
+
+                video.addEventListener('play', () => {
+                    videoOverlay.classList.add('opacity-0', 'pointer-events-none');
+                    playIcon.classList.add('hidden');
+                    pauseIcon.classList.remove('hidden');
+                });
+
+                video.addEventListener('pause', () => {
+                    playIcon.classList.remove('hidden');
+                    pauseIcon.classList.add('hidden');
+                });
+
+                video.addEventListener('ended', () => {
+                    videoOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                    playIcon.classList.remove('hidden');
+                    pauseIcon.classList.add('hidden');
+                });
+
+                videoOverlay.addEventListener('click', togglePlay);
+                playPauseBtn.addEventListener('click', togglePlay);
+                video.addEventListener('click', togglePlay);
+
+                video.addEventListener('loadedmetadata', () => {
+                    durationEl.textContent = formatTime(video.duration);
+                });
+
+                video.addEventListener('timeupdate', () => {
+                    const progress = (video.currentTime / video.duration) * 100;
+                    progressBar.style.width = `${progress}%`;
+                    progressThumb.style.left = `${progress}%`;
+                    currentTimeEl.textContent = formatTime(video.currentTime);
+                });
+
+                progressContainer.addEventListener('click', (e) => {
+                    const rect = progressContainer.getBoundingClientRect();
+                    const percent = (e.clientX - rect.left) / rect.width;
+                    video.currentTime = percent * video.duration;
+                });
+
+                muteBtn.addEventListener('click', () => {
+                    video.muted = !video.muted;
+                    volumeIcon.classList.toggle('hidden', video.muted);
+                    mutedIcon.classList.toggle('hidden', !video.muted);
+                });
+
+                volumeSlider.addEventListener('input', (e) => {
+                    video.volume = e.target.value / 100;
+                    video.muted = e.target.value === '0';
+                    volumeIcon.classList.toggle('hidden', video.muted);
+                    mutedIcon.classList.toggle('hidden', !video.muted);
+                });
+
+                speedOptions.forEach(option => {
+                    option.addEventListener('click', () => {
+                        const speed = parseFloat(option.dataset.speed);
+                        video.playbackRate = speed;
+                        speedBtn.textContent = `${speed}x`;
+                    });
+                });
+
+                fullscreenBtn.addEventListener('click', () => {
+                    if (document.fullscreenElement) {
+                        document.exitFullscreen();
+                    } else {
+                        playerContainer.requestFullscreen();
                     }
                 });
             })();
