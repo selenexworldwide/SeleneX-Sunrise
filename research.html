@@ -550,48 +550,18 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    /* Elegant Pink Footer - Glassmorphism - Liquid Rose Deep */
-    .footer-pink {
-      /* Three-layer liquid shader */
-      background:
-        /* Specular highlight at the top */
-        radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.4) 0%, transparent 60%),
-        /* Deep rose bottom bias */
-        radial-gradient(circle at 80% 100%, rgba(190, 24, 93, 0.4) 0%, transparent 50%),
-        /* Primary vibrant rose gradient */
-        linear-gradient(180deg,
-          rgba(236, 72, 153, 0.2),
-          rgba(219, 39, 119, 0.35) 40%,
-          rgba(157, 23, 77, 0.45)) !important;
-
-      backdrop-filter: blur(60px) saturate(280%) !important;
-      -webkit-backdrop-filter: blur(60px) saturate(280%) !important;
-
-      /* High-end glass border */
-      border: 1px solid rgba(255, 255, 255, 0.35) !important;
-      border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
-
-      /* Complex depth shadows */
+    /* Footer gray liquid glass matching navbar */
+    .footer-blue {
+      background: linear-gradient(180deg,
+          rgba(55, 55, 55, 0.4),
+          rgba(40, 40, 40, 0.35)) !important;
+      backdrop-filter: blur(24px) saturate(180%) !important;
+      -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
       box-shadow:
-        0 -20px 60px rgba(190, 24, 93, 0.25),
-        /* Outer magenta glow */
-        inset 0 1px 0 rgba(255, 255, 255, 0.5),
-        /* Top edge reflection */
-        inset 0 -15px 30px rgba(0, 0, 0, 0.15) !important;
-      /* Bottom depth shadow */
-
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Visibility fix for text on pink background */
-    .footer-pink h2,
-    .footer-pink h3,
-    .footer-pink p,
-    .footer-pink a,
-    .footer-pink span:not(.icon-box *) {
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-      letter-spacing: 0.01em;
+        0 -8px 32px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.08) !important;
     }
 
     /* Footer button variant - dark background with white text */
@@ -644,7 +614,7 @@
           rgba(255, 255, 255, 0.1) 45%,
           transparent 70%),
         radial-gradient(140px 140px at var(--x) var(--y),
-          rgba(236, 72, 153, 0.4) 0%,
+          rgba(192, 132, 252, 0.4) 0%,
           transparent 75%);
       mix-blend-mode: screen;
     }
@@ -653,7 +623,7 @@
       inset: -8px !important;
       border-radius: inherit !important;
       background: radial-gradient(200px 200px at var(--x) var(--y),
-          rgba(236, 72, 153, 0.3) 0%,
+          rgba(192, 132, 252, 0.3) 0%,
           transparent 80%);
       filter: blur(20px);
       z-index: -2;
@@ -3930,7 +3900,7 @@
   <!-- Shared SeleneX footer used across all pages -->
 
   <div class="footer-white-wrapper">
-    <footer id="contact" class="footer-pink text-white rounded-[3rem] px-8 md:px-16 py-16">
+    <footer id="contact" class="footer-blue text-white rounded-[3rem] px-8 md:px-16 py-16">
 
       <div
         class="[animation:fadeSlideIn_0.8s_ease-out_0.1s_both] animate-on-scroll max-w-7xl mr-auto ml-auto pr-6 pl-6">
