@@ -206,46 +206,56 @@
     }
 
 
-    /* Navbar glass effect - Adaptive liquid glass */
+    /* Navbar glass effect - Pink liquid glass */
     .nav-glass {
+      background: linear-gradient(180deg,
+          rgba(219, 39, 119, 0.2),
+          rgba(236, 72, 153, 0.15)) !important;
+      backdrop-filter: blur(40px) saturate(220%) !important;
+      -webkit-backdrop-filter: blur(40px) saturate(220%) !important;
+      border: 1px solid rgba(236, 72, 153, 0.3) !important;
+      box-shadow:
+        0 8px 32px rgba(190, 24, 93, 0.15),
+        0 0 0 1px rgba(236, 72, 153, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
       transition: background 0.4s ease, backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
       -webkit-transition: background 0.4s ease, -webkit-backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
     }
 
-    /* Light mode - visible on white backgrounds */
+    /* Light mode - visible on white backgrounds - Pink Tinted */
     .nav-glass-light {
       background: linear-gradient(180deg,
-          rgba(50, 50, 55, 0.65),
-          rgba(40, 40, 45, 0.55));
-      backdrop-filter: blur(40px) saturate(150%);
-      -webkit-backdrop-filter: blur(40px) saturate(150%);
-      border: 1px solid rgba(80, 80, 85, 0.4);
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+          rgba(219, 39, 119, 0.2),
+          rgba(236, 72, 153, 0.15)) !important;
+      backdrop-filter: blur(40px) saturate(220%) !important;
+      -webkit-backdrop-filter: blur(40px) saturate(220%) !important;
+      border: 1px solid rgba(236, 72, 153, 0.3) !important;
+      box-shadow: 0 4px 24px rgba(190, 24, 93, 0.15);
     }
 
-    /* Dark mode - transparent glass on dark backgrounds */
+    /* Dark mode - transparent glass on dark backgrounds - Pink Tinted */
     .nav-glass-dark {
       background: linear-gradient(180deg,
-          rgba(255, 255, 255, 0.08),
-          rgba(255, 255, 255, 0.04));
-      backdrop-filter: blur(40px) saturate(150%);
-      -webkit-backdrop-filter: blur(40px) saturate(150%);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+          rgba(20, 20, 25, 0.65),
+          rgba(190, 24, 93, 0.15)) !important;
+      backdrop-filter: blur(40px) saturate(220%) !important;
+      -webkit-backdrop-filter: blur(40px) saturate(220%) !important;
+      border: 1px solid rgba(236, 72, 153, 0.2) !important;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
     }
 
-    /* Desktop dropdown liquid glass panels - Gray elegant style */
+    /* Desktop dropdown liquid glass panels - Pink Tinted */
     .dropdown-glass {
       background: linear-gradient(180deg,
-          rgba(55, 55, 55, 0.65),
-          rgba(40, 40, 40, 0.6));
-      backdrop-filter: blur(32px) saturate(180%);
-      -webkit-backdrop-filter: blur(32px) saturate(180%);
+          rgba(28, 28, 32, 0.95),
+          rgba(190, 24, 93, 0.2)) !important;
+      backdrop-filter: blur(60px) saturate(280%) !important;
+      -webkit-backdrop-filter: blur(60px) saturate(280%) !important;
       border-radius: 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(236, 72, 153, 0.25) !important;
       box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 0 0 1px rgba(236, 72, 153, 0.1),
         inset 0 1px 0 rgba(255, 255, 255, 0.12);
     }
 
@@ -643,18 +653,48 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    /* Footer gray liquid glass matching navbar */
-    .footer-blue {
-      background: linear-gradient(180deg,
-          rgba(55, 55, 55, 0.4),
-          rgba(40, 40, 40, 0.35)) !important;
-      backdrop-filter: blur(24px) saturate(180%) !important;
-      -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    /* Elegant Pink Footer - Glassmorphism - Liquid Rose Deep */
+    .footer-pink {
+      /* Three-layer liquid shader */
+      background:
+        /* Specular highlight at the top */
+        radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.4) 0%, transparent 60%),
+        /* Deep rose bottom bias */
+        radial-gradient(circle at 80% 100%, rgba(190, 24, 93, 0.4) 0%, transparent 50%),
+        /* Primary vibrant rose gradient */
+        linear-gradient(180deg,
+          rgba(236, 72, 153, 0.2),
+          rgba(219, 39, 119, 0.35) 40%,
+          rgba(157, 23, 77, 0.45)) !important;
+
+      backdrop-filter: blur(60px) saturate(280%) !important;
+      -webkit-backdrop-filter: blur(60px) saturate(280%) !important;
+
+      /* High-end glass border */
+      border: 1px solid rgba(255, 255, 255, 0.35) !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+
+      /* Complex depth shadows */
       box-shadow:
-        0 -8px 32px rgba(0, 0, 0, 0.25),
-        0 0 0 1px rgba(255, 255, 255, 0.05),
-        inset 0 -1px 0 rgba(255, 255, 255, 0.08) !important;
+        0 -20px 60px rgba(190, 24, 93, 0.25),
+        /* Outer magenta glow */
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        /* Top edge reflection */
+        inset 0 -15px 30px rgba(0, 0, 0, 0.15) !important;
+      /* Bottom depth shadow */
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Visibility fix for text on pink background */
+    .footer-pink h2,
+    .footer-pink h3,
+    .footer-pink p,
+    .footer-pink a,
+    .footer-pink span:not(.icon-box *) {
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+      letter-spacing: 0.01em;
     }
 
     /* Footer button variant - dark background with white text */
@@ -707,7 +747,7 @@
           rgba(255, 255, 255, 0.1) 45%,
           transparent 70%),
         radial-gradient(140px 140px at var(--x) var(--y),
-          rgba(192, 132, 252, 0.4) 0%,
+          rgba(236, 72, 153, 0.4) 0%,
           transparent 75%);
       mix-blend-mode: screen;
     }
@@ -716,7 +756,7 @@
       inset: -8px !important;
       border-radius: inherit !important;
       background: radial-gradient(200px 200px at var(--x) var(--y),
-          rgba(192, 132, 252, 0.3) 0%,
+          rgba(236, 72, 153, 0.3) 0%,
           transparent 80%);
       filter: blur(20px);
       z-index: -2;
@@ -882,7 +922,8 @@
                       <div>
                         <h3 class="dropdown-title">Company</h3>
                         <p class="dropdown-description">
-                          Founded by scientists from MIT, Stanford, and ETH Zurich. We're building the next generation
+                          Built by an international team of 15+ PhDs and senior clinicians. We're building the next
+                          generation
                           of early cancer detection technology from our base in Armenia, combining world-class research
                           with global healthcare impact.
                         </p>
@@ -2218,7 +2259,7 @@
   <!-- Shared SeleneX footer used across all pages -->
 
   <div class="footer-white-wrapper">
-    <footer id="contact" class="footer-blue text-white rounded-[3rem] px-8 md:px-16 py-16">
+    <footer id="contact" class="footer-pink text-white rounded-[3rem] px-8 md:px-16 py-16">
 
       <div
         class="[animation:fadeSlideIn_0.8s_ease-out_0.1s_both] animate-on-scroll max-w-7xl mr-auto ml-auto pr-6 pl-6">

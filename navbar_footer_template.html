@@ -1,214 +1,205 @@
 <!-- Navbar -->
 <div id="navbar-bg"
-    class="flex bg-transparent w-full border-white/5 border-b py-6 px-8 fixed top-0 z-50 backdrop-blur-xl items-center justify-between transition-all duration-300">
-    <!-- Logo Section -->
-    <a href="selenex-landing" class="flex items-center gap-2.5 z-20 shrink-0">
-        <img src="assets/SeleneX_Transparent_Background.webp" alt="SeleneX Logo" class="h-8 w-auto">
-        <span class="text-lg font-medium tracking-tight text-white">SeleneX</span>
-    </a>
+  class="flex bg-transparent w-full border-white/5 border-b py-6 px-8 fixed top-0 z-50 backdrop-blur-xl items-center justify-between transition-all duration-300">
+  <!-- Logo Section -->
+  <a href="selenex-landing" class="flex items-center gap-2.5 z-20 shrink-0">
+    <img src="assets/SeleneX_Transparent_Background.webp" alt="SeleneX Logo" class="h-8 w-auto">
+    <span class="text-lg font-medium tracking-tight text-white">SeleneX</span>
+  </a>
 
-    <!-- Centered Navigation -->
-    <nav class="hidden md:flex -translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 items-center gap-1">
+  <!-- Centered Navigation -->
+  <nav class="hidden md:flex -translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 items-center gap-1">
 
-        <!-- Technology Dropdown -->
-        <div class="relative group">
-            <button
-                class="px-4 py-2 text-xs font-medium text-neutral-400 hover:text-white transition-colors flex items-center gap-1 group-hover:text-white">
-                Technology
-                <iconify-icon icon="lucide:chevron-down" width="12"
-                    class="group-hover:rotate-180 transition-transform duration-200 ease-out"></iconify-icon>
-            </button>
+    <!-- Technology Dropdown -->
+    <div class="relative group">
+      <button
+        class="px-4 py-2 text-xs font-medium text-neutral-400 hover:text-white transition-colors flex items-center gap-1 group-hover:text-white">
+        Technology
+        <iconify-icon icon="lucide:chevron-down" width="12"
+          class="group-hover:rotate-180 transition-transform duration-200 ease-out"></iconify-icon>
+      </button>
+      <div
+        class="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-[400px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform origin-top -translate-y-3 group-hover:translate-y-0">
+        <div
+          class="bg-[#0A0A0A] border border-white/10 rounded-2xl shadow-2xl backdrop-blur-xl overflow-hidden p-6 grid gap-6">
+          <a href="technology" class="flex items-center gap-3 group/item">
             <div
-                class="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-[400px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform origin-top -translate-y-3 group-hover:translate-y-0">
-                <div
-                    class="bg-[#0A0A0A] border border-white/10 rounded-2xl shadow-2xl backdrop-blur-xl overflow-hidden p-6 grid gap-6">
-                    <a href="technology" class="flex items-center gap-3 group/item">
-                        <div
-                            class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 group-hover/item:bg-purple-500/20 transition-colors border border-purple-500/10">
-                            <iconify-icon icon="lucide:cpu" width="16"></iconify-icon>
-                        </div>
-                        <div>
-                            <div
-                                class="text-sm font-medium text-white group-hover/item:text-purple-300 transition-colors">
-                                Technology</div>
-                            <p class="text-[11px] text-neutral-500">Our core tech.</p>
-                        </div>
-                    </a>
-                    <a href="ethics-security" class="flex items-center gap-3 group/item">
-                        <div
-                            class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover/item:bg-blue-500/20 transition-colors border border-blue-500/10">
-                            <iconify-icon icon="lucide:shield" width="16"></iconify-icon>
-                        </div>
-                        <div>
-                            <div
-                                class="text-sm font-medium text-white group-hover/item:text-blue-300 transition-colors">
-                                Ethics & Security</div>
-                            <p class="text-[11px] text-neutral-500">Our commitment to safety.</p>
-                        </div>
-                    </a>
-                </div>
+              class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 group-hover/item:bg-purple-500/20 transition-colors border border-purple-500/10">
+              <iconify-icon icon="lucide:cpu" width="16"></iconify-icon>
             </div>
-        </div>
-
-        <!-- Company Dropdown -->
-        <div class="relative group">
-            <button
-                class="px-4 py-2 text-xs font-medium text-neutral-400 hover:text-white transition-colors flex items-center gap-1 group-hover:text-white">
-                Company
-                <iconify-icon icon="lucide:chevron-down" width="12"
-                    class="group-hover:rotate-180 transition-transform duration-200 ease-out"></iconify-icon>
-            </button>
+            <div>
+              <div class="text-sm font-medium text-white group-hover/item:text-purple-300 transition-colors">
+                Technology</div>
+              <p class="text-[11px] text-neutral-500">Our core tech.</p>
+            </div>
+          </a>
+          <a href="ethics-security" class="flex items-center gap-3 group/item">
             <div
-                class="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-[500px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform origin-top -translate-y-3 group-hover:translate-y-0">
-                <div
-                    class="bg-[#0A0A0A] border border-white/10 rounded-2xl shadow-2xl backdrop-blur-xl overflow-hidden">
-                    <div class="p-6 grid grid-cols-2 gap-6">
-                        <a href="about" class="block group/item">
-                            <div class="flex items-start gap-3">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-white group-hover/item:bg-neutral-700 transition-colors border border-white/5">
-                                    <iconify-icon icon="lucide:info" width="16"></iconify-icon>
-                                </div>
-                                <div>
-                                    <div
-                                        class="text-sm font-medium text-white mb-1 group-hover/item:text-neutral-300 transition-colors">
-                                        About</div>
-                                    <p class="text-[11px] text-neutral-500 leading-snug">Our mission.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="team" class="block group/item">
-                            <div class="flex items-start gap-3">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-white group-hover/item:bg-neutral-700 transition-colors border border-white/5">
-                                    <iconify-icon icon="lucide:users" width="16"></iconify-icon>
-                                </div>
-                                <div>
-                                    <div
-                                        class="text-sm font-medium text-white mb-1 group-hover/item:text-neutral-300 transition-colors">
-                                        Team</div>
-                                    <p class="text-[11px] text-neutral-500 leading-snug">Meet the builders.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="partnerships" class="block group/item">
-                            <div class="flex items-start gap-3">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-white group-hover/item:bg-neutral-700 transition-colors border border-white/5">
-                                    <iconify-icon icon="lucide:handshake" width="16"></iconify-icon>
-                                </div>
-                                <div>
-                                    <div
-                                        class="text-sm font-medium text-white mb-1 group-hover/item:text-neutral-300 transition-colors">
-                                        Partnerships</div>
-                                    <p class="text-[11px] text-neutral-500 leading-snug">Work with us.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="why-armenia" class="block group/item">
-                            <div class="flex items-start gap-3">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-white group-hover/item:bg-neutral-700 transition-colors border border-white/5">
-                                    <iconify-icon icon="lucide:map-pin" width="16"></iconify-icon>
-                                </div>
-                                <div>
-                                    <div
-                                        class="text-sm font-medium text-white mb-1 group-hover/item:text-neutral-300 transition-colors">
-                                        Why Armenia</div>
-                                    <p class="text-[11px] text-neutral-500 leading-snug">Our location.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="careers" class="block group/item">
-                            <div class="flex items-start gap-3">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-white group-hover/item:bg-neutral-700 transition-colors border border-white/5">
-                                    <iconify-icon icon="lucide:briefcase" width="16"></iconify-icon>
-                                </div>
-                                <div>
-                                    <div
-                                        class="text-sm font-medium text-white mb-1 group-hover/item:text-neutral-300 transition-colors">
-                                        Careers</div>
-                                    <p class="text-[11px] text-neutral-500 leading-snug">Join us.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="contact" class="block group/item">
-                            <div class="flex items-start gap-3">
-                                <div
-                                    class="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-white group-hover/item:bg-neutral-700 transition-colors border border-white/5">
-                                    <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
-                                </div>
-                                <div>
-                                    <div
-                                        class="text-sm font-medium text-white mb-1 group-hover/item:text-neutral-300 transition-colors">
-                                        Contact</div>
-                                    <p class="text-[11px] text-neutral-500 leading-snug">Get in touch.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+              class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover/item:bg-blue-500/20 transition-colors border border-blue-500/10">
+              <iconify-icon icon="lucide:shield" width="16"></iconify-icon>
             </div>
+            <div>
+              <div class="text-sm font-medium text-white group-hover/item:text-blue-300 transition-colors">
+                Ethics & Security</div>
+              <p class="text-[11px] text-neutral-500">Our commitment to safety.</p>
+            </div>
+          </a>
         </div>
-
-        <a href="insights"
-            class="px-4 py-2 text-xs font-medium text-neutral-400 hover:text-white transition-colors">Insights</a>
-    </nav>
-
-    <!-- Right Actions -->
-    <div class="flex items-center gap-4 z-20 shrink-0">
-        <!-- Waitlist Button -->
-        <div class="inline-block group text-sm rounded-full relative">
-            <button id="waitlist-btn"
-                class="group inline-flex min-w-[120px] cursor-pointer transition-all duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)] hover:-translate-y-[3px] hover:scale-[1.1] hover:text-white border-gradient before:rounded-full text-xs font-semibold text-white tracking-tight bg-transparent rounded-full pt-[12px] pr-[17px] pb-[12px] pl-[17px] relative backdrop-blur-xl items-center justify-center">
-                <span class="z-10 text-sm font-medium rounded-full mr-2 relative">Get on waitlist</span>
-                <span aria-hidden="true"
-                    class="-translate-x-1/2 transition-all duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)] group-hover:opacity-80 text-xs opacity-20 w-[70%] h-[1px] rounded-full absolute bottom-0 left-1/2"
-                    style="background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);"></span><svg
-                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                    data-lucide="arrow-right" class="lucide lucide-arrow-right lucide-play w-[16px] h-[16px]"
-                    style="width: 16px; height: 16px; color: rgb(241, 245, 249);">
-                    <path d="M5 12h14" class=""></path>
-                    <path d="m12 5 7 7-7 7" class=""></path>
-                </svg>
-            </button>
-            <span
-                class="pointer-events-none absolute -bottom-3 left-1/2 z-0 h-6 w-44 -translate-x-1/2 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 rounded-full text-sm"
-                style="background: radial-gradient(60% 100% at 50% 50%, rgba(255,255,255,.55), rgba(255,255,255,.28) 35%, transparent 70%); filter: blur(10px) saturate(120%);"
-                aria-hidden="true"></span>
-            <style>
-                .border-gradient {
-                    position: relative;
-                }
-
-                .border-gradient::before {
-                    content: "";
-                    position: absolute;
-                    inset: 0;
-                    border-radius: inherit;
-                    padding: 1px;
-                    -webkit-mask: linear-gradient(#fff 0 0) content-box,
-                        linear-gradient(#fff 0 0);
-                    -webkit-mask-composite: xor;
-                    mask-composite: exclude;
-                    background: linear-gradient(225deg,
-                            rgba(255, 255, 255, 0.0) 0%,
-                            rgba(255, 255, 255, 0.2) 50%,
-                            rgba(255, 255, 255, 0.0) 100%);
-                    pointer-events: none;
-                }
-            </style>
-        </div>
+      </div>
     </div>
+
+    <!-- Company Dropdown -->
+    <div class="relative group">
+      <button
+        class="px-4 py-2 text-xs font-medium text-neutral-400 hover:text-white transition-colors flex items-center gap-1 group-hover:text-white">
+        Company
+        <iconify-icon icon="lucide:chevron-down" width="12"
+          class="group-hover:rotate-180 transition-transform duration-200 ease-out"></iconify-icon>
+      </button>
+      <div
+        class="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-[500px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out transform origin-top -translate-y-3 group-hover:translate-y-0">
+        <div class="bg-[#0A0A0A] border border-white/10 rounded-2xl shadow-2xl backdrop-blur-xl overflow-hidden">
+          <div class="p-6 grid grid-cols-2 gap-6">
+            <a href="about" class="block group/item">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-white group-hover/item:bg-neutral-700 transition-colors border border-white/5">
+                  <iconify-icon icon="lucide:info" width="16"></iconify-icon>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-white mb-1 group-hover/item:text-neutral-300 transition-colors">
+                    About</div>
+                  <p class="text-[11px] text-neutral-500 leading-snug">Our mission.</p>
+                </div>
+              </div>
+            </a>
+            <a href="team" class="block group/item">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-white group-hover/item:bg-neutral-700 transition-colors border border-white/5">
+                  <iconify-icon icon="lucide:users" width="16"></iconify-icon>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-white mb-1 group-hover/item:text-neutral-300 transition-colors">
+                    Team</div>
+                  <p class="text-[11px] text-neutral-500 leading-snug">Meet the builders.</p>
+                </div>
+              </div>
+            </a>
+            <a href="partnerships" class="block group/item">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-white group-hover/item:bg-neutral-700 transition-colors border border-white/5">
+                  <iconify-icon icon="lucide:handshake" width="16"></iconify-icon>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-white mb-1 group-hover/item:text-neutral-300 transition-colors">
+                    Partnerships</div>
+                  <p class="text-[11px] text-neutral-500 leading-snug">Work with us.</p>
+                </div>
+              </div>
+            </a>
+            <a href="why-armenia" class="block group/item">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-white group-hover/item:bg-neutral-700 transition-colors border border-white/5">
+                  <iconify-icon icon="lucide:map-pin" width="16"></iconify-icon>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-white mb-1 group-hover/item:text-neutral-300 transition-colors">
+                    Why Armenia</div>
+                  <p class="text-[11px] text-neutral-500 leading-snug">Our location.</p>
+                </div>
+              </div>
+            </a>
+            <a href="careers" class="block group/item">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-white group-hover/item:bg-neutral-700 transition-colors border border-white/5">
+                  <iconify-icon icon="lucide:briefcase" width="16"></iconify-icon>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-white mb-1 group-hover/item:text-neutral-300 transition-colors">
+                    Careers</div>
+                  <p class="text-[11px] text-neutral-500 leading-snug">Join us.</p>
+                </div>
+              </div>
+            </a>
+            <a href="contact" class="block group/item">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-8 h-8 rounded-lg bg-neutral-800 flex items-center justify-center text-white group-hover/item:bg-neutral-700 transition-colors border border-white/5">
+                  <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-white mb-1 group-hover/item:text-neutral-300 transition-colors">
+                    Contact</div>
+                  <p class="text-[11px] text-neutral-500 leading-snug">Get in touch.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="insights"
+      class="px-4 py-2 text-xs font-medium text-neutral-400 hover:text-white transition-colors">Insights</a>
+  </nav>
+
+  <!-- Right Actions -->
+  <div class="flex items-center gap-4 z-20 shrink-0">
+    <!-- Waitlist Button -->
+    <div class="inline-block group text-sm rounded-full relative">
+      <button id="waitlist-btn"
+        class="group inline-flex min-w-[120px] cursor-pointer transition-all duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)] hover:-translate-y-[3px] hover:scale-[1.1] hover:text-white border-gradient before:rounded-full text-xs font-semibold text-white tracking-tight bg-transparent rounded-full pt-[12px] pr-[17px] pb-[12px] pl-[17px] relative backdrop-blur-xl items-center justify-center">
+        <span class="z-10 text-sm font-medium rounded-full mr-2 relative">Get on waitlist</span>
+        <span aria-hidden="true"
+          class="-translate-x-1/2 transition-all duration-[1000ms] ease-[cubic-bezier(0.15,0.83,0.66,1)] group-hover:opacity-80 text-xs opacity-20 w-[70%] h-[1px] rounded-full absolute bottom-0 left-1/2"
+          style="background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);"></span><svg
+          xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+          data-lucide="arrow-right" class="lucide lucide-arrow-right lucide-play w-[16px] h-[16px]"
+          style="width: 16px; height: 16px; color: rgb(241, 245, 249);">
+          <path d="M5 12h14" class=""></path>
+          <path d="m12 5 7 7-7 7" class=""></path>
+        </svg>
+      </button>
+      <span
+        class="pointer-events-none absolute -bottom-3 left-1/2 z-0 h-6 w-44 -translate-x-1/2 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 rounded-full text-sm"
+        style="background: radial-gradient(60% 100% at 50% 50%, rgba(255,255,255,.55), rgba(255,255,255,.28) 35%, transparent 70%); filter: blur(10px) saturate(120%);"
+        aria-hidden="true"></span>
+      <style>
+        .border-gradient {
+          position: relative;
+        }
+
+        .border-gradient::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: inherit;
+          padding: 1px;
+          -webkit-mask: linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          background: linear-gradient(225deg,
+              rgba(255, 255, 255, 0.0) 0%,
+              rgba(255, 255, 255, 0.2) 50%,
+              rgba(255, 255, 255, 0.0) 100%);
+          pointer-events: none;
+        }
+      </style>
+    </div>
+  </div>
 </div>
 
 <!-- Footer -->
-  <!-- Shared SeleneX footer used across all pages -->
+<!-- Shared SeleneX footer used across all pages -->
 
-  <div class="footer-white-wrapper">
-    <footer id="contact" class="footer-blue text-white rounded-[3rem] px-8 md:px-16 py-16">
+<div class="footer-white-wrapper">
+  <footer id="contact" class="footer-pink text-white rounded-[3rem] px-8 md:px-16 py-16">
 
     <div class="[animation:fadeSlideIn_0.8s_ease-out_0.1s_both] animate-on-scroll max-w-7xl mr-auto ml-auto pr-6 pl-6">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-y-12 gap-x-8 mb-16 w-full">
@@ -243,17 +234,22 @@
 
             <div class="flex items-center gap-4">
 
-            <button id="footer-waitlist-btn" class="glow-btn font-sans" style="--x: 50.5px; --y: 8.9000244140625px;">
+              <button id="footer-waitlist-btn" class="glow-btn font-sans" style="--x: 50.5px; --y: 8.9000244140625px;">
 
-              <span class="icon-box">
+                <span class="icon-box">
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    data-lucide="arrow-right" class="lucide lucide-arrow-right">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
 
-              </span>
+                </span>
 
-              Get on waitlist
+                Get on waitlist
 
-            </button>
+              </button>
 
             </div>
           </div>
@@ -381,4 +377,4 @@
     </div>
 
   </footer>
-  </div>
+</div>
