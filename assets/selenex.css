@@ -925,3 +925,81 @@ footer .glow-btn:hover::after {
     margin-right: 1rem !important;
   }
 }
+
+/* Flip Card Animation - 3D Flip Effect */
+.perspective-900 {
+  perspective: 900px;
+}
+
+.flip-card-inner {
+  transition: transform 1.2s cubic-bezier(.7, .2, .3, 1.1);
+  transform-style: preserve-3d;
+}
+
+.group:hover .flip-card-inner {
+  cursor: pointer;
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-card-front {
+  position: absolute;
+  inset: 0;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg) rotateZ(180deg);
+  position: absolute;
+  inset: 0;
+  border-radius: 2rem;
+  overflow: hidden;
+  background: linear-gradient(145deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.flip-card-back::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at top right, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.flip-card-back>* {
+  position: relative;
+  z-index: 1;
+}
+
+.flip-card-back h4 {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.flip-card-back p {
+  font-family: 'Inter', sans-serif;
+}
