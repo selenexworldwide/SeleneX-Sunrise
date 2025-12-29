@@ -1044,8 +1044,8 @@
       <!-- Subheadline -->
       <p class="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-10 reveal-on-scroll"
         style="animation-delay: 0.2s;">
-        AI-powered multimodal analysis that detects cancer earlier than ever before possible. Built for clinical
-        precision. Designed for trust.
+        A clinically-validated AI engine that detects earlier, treats smarter, and explains every step—built on
+        multimodal fusion and transparent design.
       </p>
 
       <!-- CTAs -->
@@ -1071,343 +1071,2098 @@
         </a>
       </div>
 
-      <!-- Scroll Indicator -->
-      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 reveal-on-scroll" style="animation-delay: 0.5s;">
-        <div class="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-2">
-          <div class="w-1 h-2 bg-white/50 rounded-full animate-bounce"></div>
-        </div>
-      </div>
+
     </div>
   </section>
 
-  <!-- Section 2: Platform Overview -->
-  <section id="platform-overview" class="py-24 md:py-32 bg-neutral-950">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <!-- Left: Image/Visualization -->
-        <div class="relative reveal-on-scroll">
-          <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=800&q=80" alt="AI Medical Analysis"
-              class="w-full aspect-[4/3] object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+  <!-- Section 4: How It Works - The Vertical Elder Flow -->
+  <section class="py-32 md:py-48 bg-stone-50 relative overflow-hidden">
+    <style>
+      /* ========================================
+         VERTICAL ELDER FLOW
+         A Monumental Vertical Pipeline
+      ======================================== */
+
+      /* The Vertical Spine */
+      .elder-spine {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        transform: translateX(-50%);
+        background: linear-gradient(180deg,
+            rgba(124, 58, 237, 0) 0%,
+            rgba(124, 58, 237, 0.1) 10%,
+            rgba(124, 58, 237, 0.2) 50%,
+            rgba(124, 58, 237, 0.1) 90%,
+            rgba(124, 58, 237, 0) 100%);
+        z-index: 0;
+      }
+
+      /* Luminous Core of the Spine */
+      .elder-spine::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg,
+            transparent 0%,
+            rgba(139, 92, 246, 0.4) 50%,
+            transparent 100%);
+        animation: spineBreath 8s ease-in-out infinite;
+      }
+
+      @keyframes spineBreath {
+
+        0%,
+        100% {
+          opacity: 0.3;
+          transform: scaleX(1);
+        }
+
+        50% {
+          opacity: 0.8;
+          transform: scaleX(1.5);
+        }
+      }
+
+      /* Energy Pulse travelling down */
+      .energy-pulse {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 15vh;
+        background: linear-gradient(180deg,
+            transparent 0%,
+            rgba(167, 139, 250, 0.6) 50%,
+            transparent 100%);
+        animation: pulseDown 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        filter: blur(4px);
+      }
+
+      @keyframes pulseDown {
+        0% {
+          top: -20%;
+          opacity: 0;
+        }
+
+        10% {
+          opacity: 1;
+        }
+
+        90% {
+          opacity: 1;
+        }
+
+        100% {
+          top: 120%;
+          opacity: 0;
+        }
+      }
+
+      /* Step Card Wrapper */
+      .step-card {
+        position: relative;
+        z-index: 10;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+      }
+
+      .step-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* The Node Point on the Spine */
+      .spine-node {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #fafaf9;
+        /* stone-50 matches bg */
+        border: 2px solid rgba(139, 92, 246, 0.3);
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .spine-node-inner {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #8b5cf6;
+        animation: nodePulse 3s infinite;
+      }
+
+      @keyframes nodePulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4);
+        }
+
+        70% {
+          transform: scale(1.5);
+          box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+        }
+
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+        }
+      }
+
+      /* Content Box Styling */
+      .content-box {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Number Watermark */
+      .number-watermark {
+        position: absolute;
+        top: -2rem;
+        font-size: 8rem;
+        font-weight: 800;
+        color: rgba(0, 0, 0, 0.03);
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .left-aligned .number-watermark {
+        right: 10px;
+      }
+
+      .right-aligned .number-watermark {
+        left: 10px;
+      }
+
+      /* Visual/Icon Container */
+      .visual-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.5rem;
+        background: linear-gradient(135deg, #f5f3ff 0%, #fff 100%);
+      }
+
+      .visual-container::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(#d8b4fe 1px, transparent 1px);
+        background-size: 24px 24px;
+        opacity: 0.3;
+      }
+    </style>
+
+    <!-- The Vertical Spine (Hidden on mobile, visible on lg) -->
+    <div class="hidden lg:block elder-spine">
+      <div class="energy-pulse"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+      <!-- Section Header -->
+      <div class="max-w-3xl mx-auto text-center mb-32 reveal-on-scroll">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-sm mb-8">
+          <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+          <span class="text-xs text-stone-600 font-bold uppercase tracking-widest">The Workflow</span>
+        </div>
+        <h2 class="text-5xl md:text-7xl font-bold tracking-tight text-stone-900 mb-8 font-display">
+          From Chaos to <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Clarity</span>
+        </h2>
+        <p class="text-xl text-stone-500 max-w-2xl mx-auto leading-relaxed">
+          A meticulously engineered pipeline that transforms complex multimodal data into life-saving clinical
+          insights.
+        </p>
+      </div>
+
+      <!-- Step 1: Ingestion -->
+      <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center mb-32 group">
+        <!-- Spine Node -->
+        <div class="hidden lg:flex spine-node">
+          <div class="spine-node-inner"></div>
+        </div>
+
+        <!-- Left Content (Text) -->
+        <div class="text-right lg:pr-12 step-card reveal-on-scroll left-aligned">
+          <span class="number-watermark">01</span>
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-100 text-purple-700 text-xs font-bold uppercase tracking-wider mb-6">
+            Ingestion
+          </div>
+          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Multimodal Intake</h3>
+          <p class="text-lg text-stone-500 leading-relaxed mb-6">
+            SeleneX seamlessly ingests data from disparate sources—PACS servers, genomic databases, and EHR
+            systems. Our universal adapter handles DICOM, HL7, and raw sequencing data natively.
+          </p>
+          <ul class="inline-block text-left space-y-3">
+            <li class="flex items-center gap-3 text-stone-600">
+              <iconify-icon icon="lucide:check-circle-2" class="text-green-500 text-xl"></iconify-icon>
+              <span>DICOM &amp; HL7 FHIR Compatible</span>
+            </li>
+            <li class="flex items-center gap-3 text-stone-600">
+              <iconify-icon icon="lucide:check-circle-2" class="text-green-500 text-xl"></iconify-icon>
+              <span>Real-time Stream Processing</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Content (Visual) -->
+        <div
+          class="visual-container h-80 lg:h-96 w-full shadow-2xl shadow-purple-900/5 rotate-1 hover:rotate-0 transition-transform duration-500 flex items-center justify-center border border-purple-100 reveal-on-scroll">
+          <div class="relative w-32 h-32">
+            <div class="absolute inset-0 bg-purple-600 rounded-2xl opacity-10 animate-ping"></div>
+            <div class="absolute inset-0 bg-purple-600 rounded-2xl opacity-20 transform rotate-12"></div>
+            <div
+              class="absolute inset-0 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-purple-50">
+              <iconify-icon icon="lucide:database" width="48" class="text-purple-600"></iconify-icon>
+            </div>
+            <!-- Flying icons -->
+            <iconify-icon icon="lucide:image" class="absolute -top-8 -left-8 text-stone-300 text-3xl animate-bounce"
+              style="animation-delay: 0s"></iconify-icon>
+            <iconify-icon icon="lucide:dna" class="absolute -bottom-8 -right-8 text-stone-300 text-3xl animate-bounce"
+              style="animation-delay: 0.5s"></iconify-icon>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Processing -->
+      <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center mb-32 group">
+        <!-- Spine Node -->
+        <div class="hidden lg:flex spine-node">
+          <div class="spine-node-inner bg-indigo-500"></div>
+        </div>
+
+        <!-- Left Content (Visual) -->
+        <div
+          class="visual-container h-80 lg:h-96 w-full shadow-2xl shadow-indigo-900/5 -rotate-1 hover:rotate-0 transition-transform duration-500 flex items-center justify-center border border-indigo-100 reveal-on-scroll lg:order-1 order-2">
+          <div class="relative">
+            <!-- Neural Network visual abstract -->
+            <div class="grid grid-cols-3 gap-4">
+              <div class="w-3 h-3 rounded-full bg-indigo-400 animate-pulse"></div>
+              <div class="w-3 h-3 rounded-full bg-indigo-300"></div>
+              <div class="w-3 h-3 rounded-full bg-indigo-400 animate-pulse"></div>
+              <div class="w-3 h-3 rounded-full bg-indigo-300"></div>
+              <div
+                class="w-12 h-12 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/30 col-span-1 row-span-1 mx-auto relative z-10">
+                <iconify-icon icon="lucide:brain-circuit" width="24" class="text-white"></iconify-icon>
+              </div>
+              <div class="w-3 h-3 rounded-full bg-indigo-300"></div>
+              <div class="w-3 h-3 rounded-full bg-indigo-400 animate-pulse"></div>
+              <div class="w-3 h-3 rounded-full bg-indigo-300"></div>
+              <div class="w-3 h-3 rounded-full bg-indigo-400 animate-pulse"></div>
+            </div>
+            <!-- Connecting lines svg -->
+            <svg class="absolute inset-0 w-full h-full -z-0 opacity-20" style="transform: scale(3);">
+              <path d="M10 10 L50 50 L90 10" stroke="#4f46e5" stroke-width="2" fill="none" />
+              <path d="M10 90 L50 50 L90 90" stroke="#4f46e5" stroke-width="2" fill="none" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right Content (Text) -->
+        <div class="lg:pl-12 step-card reveal-on-scroll right-aligned lg:order-2 order-1">
+          <span class="number-watermark">02</span>
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider mb-6">
+            Processing
+          </div>
+          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Fusion Engine</h3>
+          <p class="text-lg text-stone-500 leading-relaxed mb-6">
+            The core of SeleneX. Specialized sub-agents analyze specific modalities in parallel before our
+            Fusion Transformer synthesizes the findings. This replicates the consensus process of a
+            multi-disciplinary tumor board.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-stone-600">
+              <div
+                class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center text-xs font-bold text-indigo-600">
+                A</div>
+              <span>Parallel Feature Extraction</span>
+            </li>
+            <li class="flex items-center gap-3 text-stone-600">
+              <div
+                class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center text-xs font-bold text-indigo-600">
+                B</div>
+              <span>Cross-Modal Attention Mechanisms</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Step 3: Analysis -->
+      <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center mb-32 group">
+        <!-- Spine Node -->
+        <div class="hidden lg:flex spine-node">
+          <div class="spine-node-inner bg-rose-500"></div>
+        </div>
+
+        <!-- Left Content (Text) -->
+        <div class="text-right lg:pr-12 step-card reveal-on-scroll left-aligned">
+          <span class="number-watermark">03</span>
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 border border-rose-100 text-rose-700 text-xs font-bold uppercase tracking-wider mb-6">
+            Validation
+          </div>
+          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Explainable Output</h3>
+          <p class="text-lg text-stone-500 leading-relaxed mb-6">
+            Black boxes have no place in oncology. SeleneX generates heatmaps, cites specific genomic markers,
+            and provides natural language justifications for every prediction.
+          </p>
+          <ul class="inline-block text-left space-y-3">
+            <li class="flex items-center gap-3 text-stone-600">
+              <iconify-icon icon="lucide:scan-eye" class="text-rose-500 text-xl"></iconify-icon>
+              <span>Pixel-level Segmentation Maps</span>
+            </li>
+            <li class="flex items-center gap-3 text-stone-600">
+              <iconify-icon icon="lucide:book-open-check" class="text-rose-500 text-xl"></iconify-icon>
+              <span>Citation of Clinical Guidelines</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Content (Visual) -->
+        <div
+          class="visual-container h-80 lg:h-96 w-full shadow-2xl shadow-rose-900/5 rotate-1 hover:rotate-0 transition-transform duration-500 flex items-center justify-center border border-rose-100 reveal-on-scroll">
+          <div class="relative bg-white p-6 rounded-xl shadow-lg border border-stone-100 max-w-xs w-full">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-8 h-8 rounded-full bg-rose-100 flex items-center justify-center">
+                <iconify-icon icon="lucide:alert-circle" class="text-rose-600"></iconify-icon>
+              </div>
+              <div>
+                <div class="h-2 w-24 bg-stone-200 rounded mb-1"></div>
+                <div class="h-2 w-16 bg-stone-100 rounded"></div>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div
+                class="h-20 bg-rose-50 rounded-lg border border-rose-100 relative overflow-hidden group-hover:bg-rose-100 transition-colors">
+                <div
+                  class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] opacity-20">
+                </div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-rose-300">
+                  SCANNING...
+                </div>
+              </div>
+              <div class="flex justify-between items-center text-xs text-stone-400 font-mono mt-2">
+                <span>Confidence</span>
+                <span class="text-rose-600 font-bold">98.4%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Delivery -->
+      <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center group">
+        <!-- Spine Node -->
+        <div class="hidden lg:flex spine-node">
+          <div class="spine-node-inner bg-emerald-500"></div>
+        </div>
+
+        <!-- Left Content (Visual) -->
+        <div
+          class="visual-container h-80 lg:h-96 w-full shadow-2xl shadow-emerald-900/5 -rotate-1 hover:rotate-0 transition-transform duration-500 flex items-center justify-center border border-emerald-100 reveal-on-scroll lg:order-1 order-2">
+          <div class="relative w-full max-w-xs bg-white rounded-xl shadow-lg overflow-hidden border border-stone-100">
+            <div class="bg-emerald-50 px-4 py-3 border-b border-emerald-100 flex justify-between items-center">
+              <div class="flex gap-1.5">
+                <div class="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-emerald-300"></div>
+              </div>
+              <div class="text-[10px] text-emerald-700 font-bold tracking-wider">REPORT_FINAL.PDF</div>
+            </div>
+            <div class="p-4 space-y-3">
+              <div class="h-2 w-3/4 bg-stone-100 rounded"></div>
+              <div class="h-2 w-full bg-stone-100 rounded"></div>
+              <div class="h-2 w-5/6 bg-stone-100 rounded"></div>
+              <div
+                class="h-24 bg-stone-50 rounded border border-dashed border-stone-200 flex items-center justify-center text-stone-300 text-xs">
+                Visualization Embed
+              </div>
+              <div class="flex gap-2 mt-2">
+                <div class="h-8 w-full bg-emerald-600 rounded text-center text-white text-xs leading-8 font-medium">
+                  Download</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content (Text) -->
+        <div class="lg:pl-12 step-card reveal-on-scroll right-aligned lg:order-2 order-1">
+          <span class="number-watermark">04</span>
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-6">
+            Value
+          </div>
+          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Actionable Intelligence</h3>
+          <p class="text-lg text-stone-500 leading-relaxed mb-6">
+            The final output is not just a label, but a comprehensive clinical dossier. Integrated directly into
+            hospital workflows, it empowers tumor boards to make decisions hours—not weeks—after diagnosis.
+          </p>
+          <button
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-stone-900 text-white font-medium hover:bg-stone-800 transition-colors group">
+            <span>View Sample Report</span>
+            <iconify-icon icon="lucide:arrow-right"
+              class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 5 & 6: Architecture and Core Capabilities - Unified Dark Theme -->
+  <section class="py-24 md:py-32 bg-black relative overflow-hidden" id="architecture-core">
+    <style>
+      /* Architecture Section - Purple Theme Styles */
+
+      /* Floating ambient orbs */
+      @keyframes floatAmbient {
+
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+          opacity: 0.3;
+        }
+
+        25% {
+          transform: translate(20px, -30px) scale(1.1);
+          opacity: 0.5;
+        }
+
+        50% {
+          transform: translate(-10px, -50px) scale(1.05);
+          opacity: 0.4;
+        }
+
+        75% {
+          transform: translate(-20px, -20px) scale(0.95);
+          opacity: 0.35;
+        }
+      }
+
+      .arch-ambient-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        pointer-events: none;
+        animation: floatAmbient 12s ease-in-out infinite;
+      }
+
+      /* Architecture card base */
+      .arch-card {
+        position: relative;
+        background: linear-gradient(145deg,
+            rgba(88, 28, 135, 0.08) 0%,
+            rgba(30, 30, 35, 0.85) 50%,
+            rgba(15, 15, 18, 0.95) 100%);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(139, 92, 246, 0.15);
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        overflow: hidden;
+      }
+
+      .arch-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.1) 0%, transparent 60%);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      .arch-card:hover::before {
+        opacity: 1;
+      }
+
+      .arch-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(139, 92, 246, 0.4);
+        box-shadow:
+          0 20px 50px -12px rgba(139, 92, 246, 0.25),
+          0 0 0 1px rgba(139, 92, 246, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      }
+
+      /* Animated gradient border for main container */
+      @keyframes rotateGradient {
+        0% {
+          --gradient-angle: 0deg;
+        }
+
+        100% {
+          --gradient-angle: 360deg;
+        }
+      }
+
+      .arch-container {
+        position: relative;
+      }
+
+      .arch-container::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: 1.75rem;
+        padding: 2px;
+        background: linear-gradient(var(--gradient-angle, 135deg),
+            rgba(139, 92, 246, 0.5) 0%,
+            rgba(88, 28, 135, 0.2) 25%,
+            rgba(168, 85, 247, 0.4) 50%,
+            rgba(88, 28, 135, 0.2) 75%,
+            rgba(139, 92, 246, 0.5) 100%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        animation: rotateGradient 8s linear infinite;
+        opacity: 0.6;
+      }
+
+      @property --gradient-angle {
+        syntax: '<angle>';
+        inherits: false;
+        initial-value: 0deg;
+      }
+
+      /* ========================================
+         PREMIUM FLOW CONNECTOR
+         Elegant Energy Trail Between Cards  
+      ======================================== */
+
+      .flow-connector {
+        position: relative;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* The base line */
+      .flow-connector::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 2px;
+        transform: translateY(-50%);
+        background: linear-gradient(90deg,
+            rgba(139, 92, 246, 0.1) 0%,
+            rgba(139, 92, 246, 0.3) 50%,
+            rgba(139, 92, 246, 0.1) 100%);
+        border-radius: 1px;
+      }
+
+      /* Flowing energy pulse */
+      .flow-connector::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -20%;
+        width: 40%;
+        height: 2px;
+        transform: translateY(-50%);
+        background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(167, 139, 250, 0.6) 30%,
+            rgba(192, 132, 252, 0.9) 50%,
+            rgba(167, 139, 250, 0.6) 70%,
+            transparent 100%);
+        border-radius: 1px;
+        animation: flowEnergy 3s ease-in-out infinite;
+        filter: blur(0.5px);
+      }
+
+      @keyframes flowEnergy {
+        0% {
+          left: -40%;
+          opacity: 0;
+        }
+
+        10% {
+          opacity: 1;
+        }
+
+        90% {
+          opacity: 1;
+        }
+
+        100% {
+          left: 100%;
+          opacity: 0;
+        }
+      }
+
+      /* Glowing orb that travels */
+      .flow-orb {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 30% 30%,
+            rgba(216, 180, 254, 1) 0%,
+            rgba(167, 139, 250, 0.9) 40%,
+            rgba(139, 92, 246, 0.6) 70%,
+            transparent 100%);
+        box-shadow:
+          0 0 8px rgba(167, 139, 250, 0.8),
+          0 0 16px rgba(139, 92, 246, 0.4);
+        animation: orbTravel 3s ease-in-out infinite;
+      }
+
+      @keyframes orbTravel {
+        0% {
+          left: -10%;
+          opacity: 0;
+          transform: translateY(-50%) scale(0.5);
+        }
+
+        15% {
+          opacity: 1;
+          transform: translateY(-50%) scale(1);
+        }
+
+        85% {
+          opacity: 1;
+          transform: translateY(-50%) scale(1);
+        }
+
+        100% {
+          left: 110%;
+          opacity: 0;
+          transform: translateY(-50%) scale(0.5);
+        }
+      }
+
+      /* Soft glow trail behind orb */
+      .flow-trail {
+        position: absolute;
+        top: 50%;
+        left: -30%;
+        width: 60%;
+        height: 12px;
+        transform: translateY(-50%);
+        background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(139, 92, 246, 0.15) 50%,
+            transparent 100%);
+        filter: blur(6px);
+        border-radius: 6px;
+        animation: trailFlow 3s ease-in-out infinite;
+      }
+
+      @keyframes trailFlow {
+        0% {
+          left: -60%;
+          opacity: 0;
+        }
+
+        20% {
+          opacity: 0.8;
+        }
+
+        80% {
+          opacity: 0.8;
+        }
+
+        100% {
+          left: 100%;
+          opacity: 0;
+        }
+      }
+
+      /* Stagger delays for each connector */
+      .flow-connector-1::after,
+      .flow-connector-1 .flow-orb,
+      .flow-connector-1 .flow-trail {
+        animation-delay: 0s;
+      }
+
+      .flow-connector-2::after,
+      .flow-connector-2 .flow-orb,
+      .flow-connector-2 .flow-trail {
+        animation-delay: 1s;
+      }
+
+      .flow-connector-3::after,
+      .flow-connector-3 .flow-orb,
+      .flow-connector-3 .flow-trail {
+        animation-delay: 2s;
+      }
+
+      /* Icon glow animation */
+      @keyframes iconFloat {
+
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+        }
+
+        50% {
+          transform: translateY(-4px) scale(1.05);
+        }
+      }
+
+      .arch-icon-wrapper {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .arch-icon-wrapper::before {
+        content: '';
+        position: absolute;
+        inset: -8px;
+        border-radius: 50%;
+        background: radial-gradient(circle, var(--icon-glow-color, rgba(139, 92, 246, 0.3)) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .arch-card:hover .arch-icon-wrapper::before {
+        opacity: 1;
+      }
+
+      .arch-card:hover .arch-icon-wrapper {
+        animation: iconFloat 2s ease-in-out infinite;
+      }
+
+      /* Compliance badge styles */
+      .compliance-badge {
+        position: relative;
+        background: linear-gradient(145deg,
+            rgba(88, 28, 135, 0.06) 0%,
+            rgba(20, 20, 24, 0.9) 100%);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(139, 92, 246, 0.12);
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        overflow: hidden;
+      }
+
+      .compliance-badge::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.08), transparent);
+        transition: left 0.6s ease;
+      }
+
+      .compliance-badge:hover::before {
+        left: 100%;
+      }
+
+      .compliance-badge:hover {
+        transform: translateY(-4px) scale(1.02);
+        border-color: rgba(139, 92, 246, 0.35);
+        box-shadow:
+          0 12px 30px -8px rgba(139, 92, 246, 0.2),
+          0 0 20px rgba(139, 92, 246, 0.08);
+      }
+
+      /* Pulsing ring around badge icons */
+      @keyframes badgePulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.6;
+        }
+
+        100% {
+          transform: scale(1.8);
+          opacity: 0;
+        }
+      }
+
+      .badge-icon-ring {
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        border: 1px solid currentColor;
+        opacity: 0;
+      }
+
+      .compliance-badge:hover .badge-icon-ring {
+        animation: badgePulse 1.5s ease-out infinite;
+      }
+
+      /* Staggered reveal animations */
+      .arch-reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      .arch-reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .arch-reveal-delay-1 {
+        transition-delay: 0.1s;
+      }
+
+      .arch-reveal-delay-2 {
+        transition-delay: 0.2s;
+      }
+
+      .arch-reveal-delay-3 {
+        transition-delay: 0.3s;
+      }
+
+      .arch-reveal-delay-4 {
+        transition-delay: 0.4s;
+      }
+
+      /* Section header gradient text */
+      .arch-gradient-text {
+        background: linear-gradient(135deg,
+            #ffffff 0%,
+            #c4b5fd 30%,
+            #a78bfa 50%,
+            #c4b5fd 70%,
+            #ffffff 100%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradientShift 6s ease-in-out infinite;
+      }
+
+      @keyframes gradientShift {
+
+        0%,
+        100% {
+          background-position: 0% center;
+        }
+
+        50% {
+          background-position: 100% center;
+        }
+      }
+    </style>
+
+    <!-- Ambient Purple Orbs Background -->
+    <div class="arch-ambient-orb w-96 h-96 bg-purple-600/20" style="top: -10%; left: -5%; animation-delay: 0s;"></div>
+    <div class="arch-ambient-orb w-80 h-80 bg-violet-500/15" style="top: 50%; right: -10%; animation-delay: 4s;"></div>
+    <div class="arch-ambient-orb w-64 h-64 bg-fuchsia-600/10" style="bottom: -5%; left: 30%; animation-delay: 8s;">
+    </div>
+
+    <!-- Subtle grid pattern overlay -->
+    <div class="absolute inset-0 opacity-[0.02]"
+      style="background-image: linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px); background-size: 50px 50px;">
+    </div>
+
+    <!-- Gradient overlay for depth -->
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-purple-950/20 via-transparent to-violet-950/10 pointer-events-none">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <!-- Header -->
+      <div class="max-w-3xl mx-auto text-center mb-20 reveal-on-scroll visible">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8 backdrop-blur-sm">
+          <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse shadow-lg shadow-purple-500/50"></span>
+          <span class="text-xs text-purple-300 font-medium uppercase tracking-widest">Architecture</span>
+        </div>
+        <h2 class="text-4xl md:text-6xl font-medium tracking-tight mb-6">
+          <span class="text-white">Built for </span>
+          <span class="arch-gradient-text">Scale &amp; Security</span>
+        </h2>
+        <p class="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-2xl mx-auto">
+          Enterprise-grade infrastructure designed for the demands of modern healthcare —
+          <span class="text-purple-300/80">secure, scalable, and seamlessly integrated</span>.
+        </p>
+      </div>
+
+      <!-- Architecture Flow Diagram -->
+      <div
+        class="arch-container arch-reveal rounded-3xl p-8 md:p-10 bg-gradient-to-br from-neutral-900/80 via-neutral-950/90 to-black/95 backdrop-blur-xl mb-16 reveal-on-scroll visible">
+
+        <!-- Cards with flow arrows between them -->
+        <div class="flex flex-col md:flex-row items-stretch gap-4 md:gap-0">
+
+          <!-- Input Layer Card -->
+          <div
+            class="arch-card arch-reveal arch-reveal-delay-1 p-6 md:p-8 rounded-2xl text-center group reveal-on-scroll flex-1 visible">
+            <div class="arch-icon-wrapper mb-5" style="--icon-glow-color: rgba(139, 92, 246, 0.4);">
+              <iconify-icon icon="lucide:database" width="36" class="text-purple-400"></iconify-icon>
+            </div>
+            <h4 class="text-white font-semibold text-lg mb-3 group-hover:text-purple-200 transition-colors">
+              Input Layer
+            </h4>
+            <p class="text-sm text-neutral-500 leading-relaxed group-hover:text-neutral-400 transition-colors">
+              PACS,
+              EHR, Lab Data</p>
+            <div class="mt-4 flex justify-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-500/40"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-500/60"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-500/80"></span>
+            </div>
+          </div>
+
+          <!-- Flow Connector 1 -->
+          <div class="flow-connector flow-connector-1 hidden md:flex self-center">
+            <div class="flow-trail"></div>
+            <div class="flow-orb"></div>
+          </div>
+
+          <!-- Processing Card -->
+          <div
+            class="arch-card arch-reveal arch-reveal-delay-2 p-6 md:p-8 rounded-2xl text-center group reveal-on-scroll flex-1 visible"
+            style="animation-delay: 0.1s;">
+            <div class="arch-icon-wrapper mb-5" style="--icon-glow-color: rgba(16, 185, 129, 0.4);">
+              <iconify-icon icon="lucide:brain" width="36" class="text-emerald-400"></iconify-icon>
+            </div>
+            <h4 class="text-white font-semibold text-lg mb-3 group-hover:text-emerald-200 transition-colors">
+              Processing
+            </h4>
+            <p class="text-sm text-neutral-500 leading-relaxed group-hover:text-neutral-400 transition-colors">
+              Model
+              Ensemble + Edge Compute</p>
+            <div class="mt-4 flex justify-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500/40"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500/60"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500/80"></span>
+            </div>
+          </div>
+
+          <!-- Flow Connector 2 -->
+          <div class="flow-connector flow-connector-2 hidden md:flex self-center">
+            <div class="flow-trail"></div>
+            <div class="flow-orb"></div>
+          </div>
+
+          <!-- Analysis Card -->
+          <div
+            class="arch-card arch-reveal arch-reveal-delay-3 p-6 md:p-8 rounded-2xl text-center group reveal-on-scroll flex-1 visible"
+            style="animation-delay: 0.2s;">
+            <div class="arch-icon-wrapper mb-5" style="--icon-glow-color: rgba(96, 165, 250, 0.4);">
+              <iconify-icon icon="lucide:activity" width="36" class="text-blue-400"></iconify-icon>
+            </div>
+            <h4 class="text-white font-semibold text-lg mb-3 group-hover:text-blue-200 transition-colors">
+              Analysis</h4>
+            <p class="text-sm text-neutral-500 leading-relaxed group-hover:text-neutral-400 transition-colors">
+              Fusion
+              Engine + Explainability</p>
+            <div class="mt-4 flex justify-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-500/40"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-500/60"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-500/80"></span>
+            </div>
+          </div>
+
+          <!-- Flow Connector 3 -->
+          <div class="flow-connector flow-connector-3 hidden md:flex self-center">
+            <div class="flow-trail"></div>
+            <div class="flow-orb"></div>
+          </div>
+
+          <!-- Output Card -->
+          <div
+            class="arch-card arch-reveal arch-reveal-delay-4 p-6 md:p-8 rounded-2xl text-center group reveal-on-scroll flex-1 visible"
+            style="animation-delay: 0.3s;">
+            <div class="arch-icon-wrapper mb-5" style="--icon-glow-color: rgba(251, 191, 36, 0.4);">
+              <iconify-icon icon="lucide:file-check" width="36" class="text-amber-400"></iconify-icon>
+            </div>
+            <h4 class="text-white font-semibold text-lg mb-3 group-hover:text-amber-200 transition-colors">
+              Output</h4>
+            <p class="text-sm text-neutral-500 leading-relaxed group-hover:text-neutral-400 transition-colors">
+              Clinical
+              Reports + API</p>
+            <div class="mt-4 flex justify-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500/40"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500/60"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flow direction indicator -->
+        <div class="hidden md:flex items-center justify-center mt-8 gap-2 text-neutral-600">
+          <span class="text-xs font-medium uppercase tracking-wider">Data Flow</span>
+          <svg class="w-16 h-4" viewBox="0 0 64 16" fill="none">
+            <path d="M0 8h56M48 2l8 6-8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <animate attributeName="stroke-dashoffset" from="80" to="0" dur="2s" repeatCount="indefinite">
+              </animate>
+            </path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Compliance Badges Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 reveal-on-scroll visible"
+        style="animation-delay: 0.2s;">
+        <!-- HIPAA Badge -->
+        <div class="compliance-badge p-6 rounded-2xl text-center group">
+          <div class="relative inline-flex items-center justify-center mb-4">
+            <div class="badge-icon-ring text-emerald-400"></div>
+            <div
+              class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors">
+              <iconify-icon icon="lucide:shield-check" width="26" class="text-emerald-400"></iconify-icon>
+            </div>
+          </div>
+          <div class="text-white font-semibold text-lg mb-1 group-hover:text-emerald-200 transition-colors">HIPAA
+          </div>
+          <div class="text-xs text-neutral-500 group-hover:text-neutral-400 transition-colors">Compliant</div>
+        </div>
+
+        <!-- SOC 2 Badge -->
+        <div class="compliance-badge p-6 rounded-2xl text-center group">
+          <div class="relative inline-flex items-center justify-center mb-4">
+            <div class="badge-icon-ring text-blue-400"></div>
+            <div
+              class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
+              <iconify-icon icon="lucide:award" width="26" class="text-blue-400"></iconify-icon>
+            </div>
+          </div>
+          <div class="text-white font-semibold text-lg mb-1 group-hover:text-blue-200 transition-colors">SOC 2
+          </div>
+          <div class="text-xs text-neutral-500 group-hover:text-neutral-400 transition-colors">Type II</div>
+        </div>
+
+        <!-- GDPR Badge -->
+        <div class="compliance-badge p-6 rounded-2xl text-center group">
+          <div class="relative inline-flex items-center justify-center mb-4">
+            <div class="badge-icon-ring text-purple-400"></div>
+            <div
+              class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
+              <iconify-icon icon="lucide:globe" width="26" class="text-purple-400"></iconify-icon>
+            </div>
+          </div>
+          <div class="text-white font-semibold text-lg mb-1 group-hover:text-purple-200 transition-colors">GDPR
+          </div>
+          <div class="text-xs text-neutral-500 group-hover:text-neutral-400 transition-colors">Compliant</div>
+        </div>
+
+        <!-- FDA Ready Badge -->
+        <div class="compliance-badge p-6 rounded-2xl text-center group">
+          <div class="relative inline-flex items-center justify-center mb-4">
+            <div class="badge-icon-ring text-amber-400"></div>
+            <div
+              class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center group-hover:bg-amber-500/20 transition-colors">
+              <iconify-icon icon="lucide:file-badge" width="26" class="text-amber-400"></iconify-icon>
+            </div>
+          </div>
+          <div class="text-white font-semibold text-lg mb-1 group-hover:text-amber-200 transition-colors">FDA
+            Ready
+          </div>
+          <div class="text-xs text-neutral-500 group-hover:text-neutral-400 transition-colors">Class II</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider / Flow Spacer -->
+    <div class="py-20"></div>
+
+    <style>
+      /* Floating animation variants */
+      @keyframes floatCard {
+
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      @keyframes floatCardAlt {
+
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+
+        50% {
+          transform: translateY(-6px) rotate(0.5deg);
+        }
+      }
+
+      .floating-card {
+        animation: floatCard 4s ease-in-out infinite;
+      }
+
+      .floating-card-alt {
+        animation: floatCardAlt 5s ease-in-out infinite;
+      }
+
+      /* Purple shimmer effect */
+      @keyframes shimmerPurple {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+
+        50% {
+          opacity: 1;
+        }
+
+        100% {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+      }
+
+      /* Card base styles with purple enhancements */
+      .bento-card-purple {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, rgba(88, 28, 135, 0.05) 0%, rgba(15, 15, 15, 0.8) 100%);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .bento-card-purple::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, transparent 0%, rgba(139, 92, 246, 0.08) 50%, transparent 100%);
+        transform: translateX(-100%);
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .bento-card-purple:hover::before {
+        animation: shimmerPurple 0.8s ease-out;
+      }
+
+      .bento-card-purple:hover {
+        transform: translateY(-4px);
+        border-color: rgba(139, 92, 246, 0.4);
+        box-shadow: 0 20px 40px -10px rgba(139, 92, 246, 0.15),
+          0 0 0 1px rgba(139, 92, 246, 0.1);
+      }
+
+      /* Animated purple gradient border */
+      @keyframes borderGlow {
+
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+
+        50% {
+          opacity: 0.8;
+        }
+      }
+
+      .purple-border-glow {
+        position: relative;
+      }
+
+      .purple-border-glow::after {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        border-radius: inherit;
+        padding: 1px;
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.5), rgba(88, 28, 135, 0.3), rgba(139, 92, 246, 0.5));
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        animation: borderGlow 3s ease-in-out infinite;
+        pointer-events: none;
+      }
+
+      /* Floating orbs animation */
+      @keyframes floatOrb {
+
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+          opacity: 0.4;
+        }
+
+        25% {
+          transform: translate(10px, -20px) scale(1.1);
+          opacity: 0.6;
+        }
+
+        50% {
+          transform: translate(-5px, -30px) scale(1);
+          opacity: 0.5;
+        }
+
+        75% {
+          transform: translate(-15px, -10px) scale(0.9);
+          opacity: 0.4;
+        }
+      }
+
+      .purple-orb {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle at 30% 30%, rgba(139, 92, 246, 0.6) 0%, rgba(88, 28, 135, 0.3) 50%, transparent 70%);
+        filter: blur(20px);
+        pointer-events: none;
+        animation: floatOrb 8s ease-in-out infinite;
+      }
+
+      /* Icon glow effect */
+      @keyframes iconGlow {
+
+        0%,
+        100% {
+          filter: drop-shadow(0 0 0px rgba(139, 92, 246, 0));
+        }
+
+        50% {
+          filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.6));
+        }
+      }
+
+      .icon-glow:hover iconify-icon {
+        animation: iconGlow 1.5s ease-in-out infinite;
+      }
+
+      /* Card tilt on hover */
+      .tilt-card {
+        transform-style: preserve-3d;
+        transition: transform 0.3s ease;
+      }
+
+      .tilt-card:hover {
+        transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-4px);
+      }
+
+      /* Gradient text */
+      .gradient-text-purple {
+        background: linear-gradient(135deg, #c4b5fd 0%, #8b5cf6 50%, #6d28d9 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Pulsing ring */
+      @keyframes pulseRing {
+        0% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+
+        100% {
+          transform: scale(1.8);
+          opacity: 0;
+        }
+      }
+
+      .pulse-ring::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        border: 2px solid rgba(139, 92, 246, 0.5);
+        animation: pulseRing 2s ease-out infinite;
+      }
+    </style>
+
+    <!-- Background Purple Orbs -->
+    <div class="purple-orb w-64 h-64" style="top: 10%; left: 5%; animation-delay: 0s;"></div>
+    <div class="purple-orb w-48 h-48" style="top: 60%; right: 10%; animation-delay: 2s;"></div>
+    <div class="purple-orb w-32 h-32" style="bottom: 20%; left: 30%; animation-delay: 4s;"></div>
+
+    <!-- Subtle gradient overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-purple-950/20 via-transparent to-violet-950/10 pointer-events-none">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <!-- Bento Grid: 3 columns on desktop -->
+      <div class="grid gap-4 md:grid-cols-3 md:grid-rows-3">
+
+        <!-- Hero Visual Card (spans 2 cols, 2 rows) -->
+        <div
+          class="bento-card-purple group md:col-span-2 md:row-span-2 rounded-3xl border border-purple-500/20 reveal-on-scroll purple-border-glow visible">
+          <div class="relative h-full min-h-[300px] md:min-h-[400px] overflow-hidden rounded-3xl">
+            <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=800&amp;q=80"
+              alt="AI Medical Analysis"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-purple-950/30 to-transparent"></div>
+
+            <!-- Purple particles overlay -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+              <div class="absolute w-3 h-3 bg-purple-400/50 rounded-full blur-sm animate-pulse"
+                style="top: 15%; left: 20%;"></div>
+              <div class="absolute w-2 h-2 bg-violet-300/40 rounded-full blur-sm animate-pulse"
+                style="top: 35%; left: 70%; animation-delay: 1s;"></div>
+              <div class="absolute w-4 h-4 bg-purple-500/30 rounded-full blur-md animate-pulse"
+                style="top: 65%; left: 40%; animation-delay: 0.5s;"></div>
+              <div class="absolute w-2 h-2 bg-fuchsia-400/40 rounded-full blur-sm animate-pulse"
+                style="top: 50%; left: 85%; animation-delay: 2s;"></div>
+            </div>
 
             <!-- Floating Stats Card -->
             <div
-              class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-black/50 backdrop-blur-xl border border-white/10">
+              class="floating-card absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-black/80 backdrop-blur-xl border border-purple-500/30">
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-brand-500/20 flex items-center justify-center">
-                  <iconify-icon icon="lucide:brain" width="24" class="text-brand-400"></iconify-icon>
+                <div
+                  class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600/40 to-violet-500/30 flex items-center justify-center relative pulse-ring">
+                  <iconify-icon icon="lucide:brain" width="24" class="text-purple-300"></iconify-icon>
                 </div>
-                <div>
-                  <div class="text-sm text-white/60">Active Analysis</div>
-                  <div class="text-lg font-semibold text-white">Multimodal Fusion Processing</div>
+                <div class="flex-1">
+                  <div class="text-xs text-purple-300/70 font-mono tracking-wide">Multimodal Intelligence
+                  </div>
+                  <div class="text-sm font-medium text-white">Imaging • Genomics • Clinical Data</div>
                 </div>
-                <div class="ml-auto w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></div>
+                <div
+                  class="w-3 h-3 rounded-full bg-gradient-to-r from-purple-400 to-violet-500 animate-pulse shadow-lg shadow-purple-500/50">
+                </div>
               </div>
             </div>
           </div>
-
-          <!-- Decorative Glow -->
-          <div class="absolute -inset-4 bg-brand-500/10 rounded-3xl blur-3xl -z-10"></div>
         </div>
 
-        <!-- Right: Content -->
-        <div class="reveal-on-scroll" style="animation-delay: 0.2s;">
-          <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 mb-6">
-            <span class="text-xs text-brand-400 font-medium uppercase tracking-wider">Platform</span>
-          </div>
-
-          <h2 class="text-4xl md:text-5xl font-medium tracking-tight text-white mb-6">
-            Beyond Traditional Diagnostics
-          </h2>
-
-          <p class="text-lg text-neutral-400 mb-8 leading-relaxed">
-            SeleneX combines multimodal imaging, genomics, and patient history to simulate disease trajectories with
-            unprecedented accuracy. Our generative AI platform doesn't just detect—it predicts.
-          </p>
-
-          <!-- Feature List -->
-          <div class="space-y-4 mb-8">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center">
-                <iconify-icon icon="lucide:check" width="16" class="text-emerald-400"></iconify-icon>
-              </div>
-              <span class="text-white">Multimodal fusion across CT, MRI, and PET scans</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center">
-                <iconify-icon icon="lucide:check" width="16" class="text-emerald-400"></iconify-icon>
-              </div>
-              <span class="text-white">Generative simulation of disease progression</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center">
-                <iconify-icon icon="lucide:check" width="16" class="text-emerald-400"></iconify-icon>
-              </div>
-              <span class="text-white">Real-time processing at clinical speed</span>
-            </div>
-          </div>
-
-          <a href="#capabilities"
-            class="inline-flex items-center gap-2 text-brand-400 font-medium hover:text-brand-300 transition-colors">
-            Explore Capabilities
-            <iconify-icon icon="lucide:arrow-right" width="18"></iconify-icon>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 3: Core Capabilities -->
-  <section id="capabilities" class="py-24 md:py-32 bg-gradient-to-b from-neutral-950 to-neutral-900">
-    <div class="max-w-7xl mx-auto px-6">
-      <!-- Header -->
-      <div class="max-w-3xl mx-auto text-center mb-16 reveal-on-scroll">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
-          <span class="text-xs text-white/70 font-medium uppercase tracking-wider">Core Capabilities</span>
-        </div>
-        <h2 class="text-4xl md:text-5xl font-medium tracking-tight text-white mb-6">
-          What Makes SeleneX Different
-        </h2>
-        <p class="text-lg text-neutral-400">
-          Advanced AI engineered for clinical precision and designed for the realities of modern healthcare.
-        </p>
-      </div>
-
-      <!-- Capability Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Card 1: Multimodal Fusion -->
+        <!-- Headline Card -->
         <div
-          class="group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1 reveal-on-scroll">
-          <div
-            class="w-14 h-14 rounded-xl bg-brand-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <iconify-icon icon="lucide:layers" width="28" class="text-brand-400"></iconify-icon>
-          </div>
-          <h3 class="text-xl font-semibold text-white mb-3">Multimodal Fusion</h3>
-          <p class="text-neutral-400 text-sm leading-relaxed">
-            Combines CT, MRI, PET imaging with genomic and clinical data for comprehensive analysis.
-          </p>
-        </div>
-
-        <!-- Card 2: Generative Simulation -->
-        <div
-          class="group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1 reveal-on-scroll"
+          class="bento-card-purple tilt-card rounded-3xl border border-purple-500/20 p-6 flex flex-col justify-center reveal-on-scroll visible"
           style="animation-delay: 0.1s;">
           <div
-            class="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <iconify-icon icon="lucide:sparkles" width="28" class="text-emerald-400"></iconify-icon>
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-500/15 border border-purple-500/30 w-fit mb-4">
+            <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse shadow-lg shadow-purple-500/50"></span>
+            <span class="text-xs text-purple-300 font-medium uppercase tracking-wider">Platform</span>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-3">Generative Simulation</h3>
-          <p class="text-neutral-400 text-sm leading-relaxed">
-            Predicts disease progression pathways using advanced generative models trained on millions of cases.
+          <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-white mb-3">
+            What Makes SeleneX<br>
+            <span class="gradient-text-purple">Different</span>
+          </h2>
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            Not a single AI model, but a coordinated super-agent. SeleneX orchestrates multiple specialized AI
+            agents.
           </p>
         </div>
 
-        <!-- Card 3: Explainable AI -->
+        <!-- Capability Card 1: Multimodal Fusion -->
         <div
-          class="group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1 reveal-on-scroll"
+          class="bento-card-purple icon-glow tilt-card group rounded-3xl border border-purple-500/20 p-5 reveal-on-scroll visible"
+          style="animation-delay: 0.15s;">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600/30 to-violet-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-lg shadow-purple-500/20">
+            <iconify-icon icon="lucide:layers" width="20" class="text-purple-400"></iconify-icon>
+          </div>
+          <h3 class="text-base font-semibold text-white mb-2">Multimodal Fusion</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">CT, MRI, PET + genomics + clinical data unified</p>
+        </div>
+
+        <!-- Capability Card 2: Synthetic Data -->
+        <div
+          class="bento-card-purple icon-glow tilt-card group rounded-3xl border border-purple-500/20 p-5 reveal-on-scroll visible"
           style="animation-delay: 0.2s;">
           <div
-            class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <iconify-icon icon="lucide:eye" width="28" class="text-blue-400"></iconify-icon>
+            class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600/30 to-purple-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-lg shadow-violet-500/20">
+            <iconify-icon icon="lucide:sparkles" width="20" class="text-violet-400"></iconify-icon>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-3">Explainable AI</h3>
-          <p class="text-neutral-400 text-sm leading-relaxed">
-            Clear reasoning for every prediction, giving clinicians the confidence to act on results.
-          </p>
+          <h3 class="text-base font-semibold text-white mb-2">Synthetic Simulation</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Privacy-compliant data augmentation at scale</p>
         </div>
 
-        <!-- Card 4: Real-time Processing -->
+        <!-- Capability Card 3: Explainable AI -->
         <div
-          class="group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1 reveal-on-scroll"
+          class="bento-card-purple icon-glow tilt-card group rounded-3xl border border-purple-500/20 p-5 reveal-on-scroll visible"
+          style="animation-delay: 0.25s;">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-br from-fuchsia-600/30 to-violet-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-lg shadow-fuchsia-500/20">
+            <iconify-icon icon="lucide:scan-search" width="20" class="text-fuchsia-400"></iconify-icon>
+          </div>
+          <h3 class="text-base font-semibold text-white mb-2">Explainable by Design</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Every recommendation is traceable, auditable, and
+            interpretable—critical for trust, regulation, and adoption.</p>
+        </div>
+
+        <!-- Capability Card 4: Built for Real Healthcare -->
+        <div
+          class="bento-card-purple icon-glow tilt-card group rounded-3xl border border-purple-500/20 p-5 reveal-on-scroll visible"
           style="animation-delay: 0.3s;">
           <div
-            class="w-14 h-14 rounded-xl bg-amber-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <iconify-icon icon="lucide:zap" width="28" class="text-amber-400"></iconify-icon>
+            class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600/30 to-indigo-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-lg shadow-purple-500/20">
+            <iconify-icon icon="lucide:building-2" width="20" class="text-purple-400"></iconify-icon>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-3">Real-time Processing</h3>
-          <p class="text-neutral-400 text-sm leading-relaxed">
-            Sub-second inference at scale, seamlessly integrating into existing clinical workflows.
-          </p>
+          <h3 class="text-base font-semibold text-white mb-2">Built for Real Healthcare</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Designed to integrate with existing clinical
+            workflows,
+            regulatory frameworks, and data-governance requirements.</p>
         </div>
+
+        <!-- Capability Card 5: Progressive, not invasive -->
+        <div
+          class="bento-card-purple icon-glow tilt-card group rounded-3xl border border-purple-500/20 p-5 reveal-on-scroll visible"
+          style="animation-delay: 0.35s;">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600/30 to-purple-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-lg shadow-violet-500/20">
+            <iconify-icon icon="lucide:step-forward" width="20" class="text-violet-400"></iconify-icon>
+          </div>
+          <h3 class="text-base font-semibold text-white mb-2">Progressive, Not Invasive</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">The system escalates diagnostic depth only when
+            necessary,
+            reducing cost, burden, and delay.</p>
+        </div>
+
+        <!-- Capability Card 6: Digital Twins -->
+        <div
+          class="bento-card-purple icon-glow tilt-card group rounded-3xl border border-purple-500/20 p-5 reveal-on-scroll visible"
+          style="animation-delay: 0.4s;">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600/30 to-purple-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-lg shadow-indigo-500/20">
+            <iconify-icon icon="lucide:users" width="20" class="text-indigo-400"></iconify-icon>
+          </div>
+          <h3 class="text-base font-semibold text-white mb-2">Digital Twins</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Patient-specific virtual models for therapy
+            simulation</p>
+        </div>
+
+        <!-- Capability Card 7: Graph AI -->
+        <div
+          class="bento-card-purple icon-glow tilt-card group rounded-3xl border border-purple-500/20 p-5 reveal-on-scroll visible"
+          style="animation-delay: 0.45s;">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600/30 to-fuchsia-500/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-lg shadow-purple-500/20">
+            <iconify-icon icon="lucide:git-branch" width="20" class="text-purple-400"></iconify-icon>
+          </div>
+          <h3 class="text-base font-semibold text-white mb-2">Graph Neural Networks</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Knowledge graphs connecting diverse data
+            intelligently</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Section 4: How It Works -->
-  <section class="py-24 md:py-32 bg-white">
+
+  <!-- Section 6B: How SeleneX Works - Advanced Vertical Timeline -->
+  <section class="py-24 md:py-32 bg-gradient-to-b from-white via-stone-50 to-white relative overflow-hidden">
+    <style>
+      /* ========================================
+         ADVANCED VERTICAL TIMELINE
+         Elegant, Gentle, Yet Powerful
+      ======================================== */
+
+      /* Main timeline line */
+      .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(180deg,
+            transparent 0%,
+            rgba(139, 92, 246, 0.1) 5%,
+            rgba(139, 92, 246, 0.2) 50%,
+            rgba(139, 92, 246, 0.1) 95%,
+            transparent 100%);
+        transform: translateX(-50%);
+      }
+
+      /* Flowing energy pulse on timeline */
+      .timeline-pulse {
+        position: absolute;
+        left: 50%;
+        top: -100px;
+        width: 4px;
+        height: 100px;
+        background: linear-gradient(180deg,
+            transparent 0%,
+            rgba(167, 139, 250, 0.8) 50%,
+            transparent 100%);
+        transform: translateX(-50%);
+        animation: timelinePulse 4s ease-in-out infinite;
+        filter: blur(1px);
+      }
+
+      @keyframes timelinePulse {
+        0% {
+          top: -100px;
+          opacity: 0;
+        }
+
+        10% {
+          opacity: 1;
+        }
+
+        90% {
+          opacity: 1;
+        }
+
+        100% {
+          top: calc(100% + 100px);
+          opacity: 0;
+        }
+      }
+
+      /* Timeline node */
+      .timeline-node {
+        position: relative;
+        z-index: 10;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow:
+          0 0 0 4px white,
+          0 0 30px rgba(139, 92, 246, 0.3),
+          0 4px 20px rgba(139, 92, 246, 0.2);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .timeline-node:hover {
+        transform: scale(1.1);
+        box-shadow:
+          0 0 0 6px white,
+          0 0 50px rgba(139, 92, 246, 0.5),
+          0 8px 30px rgba(139, 92, 246, 0.3);
+      }
+
+      .timeline-node::after {
+        content: '';
+        position: absolute;
+        inset: -8px;
+        border-radius: 50%;
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        animation: nodeRing 3s ease-in-out infinite;
+      }
+
+      @keyframes nodeRing {
+
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.5;
+        }
+
+        50% {
+          transform: scale(1.1);
+          opacity: 0.2;
+        }
+      }
+
+      /* Stage card */
+      .stage-card {
+        background: white;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        box-shadow:
+          0 1px 3px rgba(0, 0, 0, 0.04),
+          0 4px 12px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .stage-card:hover {
+        box-shadow:
+          0 4px 20px rgba(139, 92, 246, 0.08),
+          0 8px 40px rgba(0, 0, 0, 0.06);
+        border-color: rgba(139, 92, 246, 0.15);
+        transform: translateY(-4px);
+      }
+
+      /* Stage tag */
+      .stage-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 12px;
+        border-radius: 9999px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      /* Why matters callout */
+      .why-matters {
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(167, 139, 250, 0.08) 100%);
+        border-left: 3px solid rgba(139, 92, 246, 0.4);
+        border-radius: 0 12px 12px 0;
+        padding: 16px 20px;
+        margin-top: 20px;
+      }
+
+      /* Bullet list style */
+      .stage-list li {
+        position: relative;
+        padding-left: 24px;
+        margin-bottom: 8px;
+      }
+
+      .stage-list li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+      }
+
+      /* Alternating layout */
+      .timeline-item:nth-child(odd) .timeline-content {
+        flex-direction: row;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content {
+        flex-direction: row-reverse;
+      }
+
+      @media (max-width: 768px) {
+        .timeline-line {
+          left: 28px;
+        }
+
+        .timeline-pulse {
+          left: 28px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content,
+        .timeline-item:nth-child(even) .timeline-content {
+          flex-direction: column;
+        }
+      }
+    </style>
+
+    <!-- Background decorations -->
+    <div class="absolute top-20 right-10 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-40 left-10 w-80 h-80 bg-violet-200/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative">
+
+      <!-- Section Header -->
+      <div class="max-w-3xl mx-auto text-center mb-20 reveal-on-scroll">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-100 mb-8">
+          <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+          <span class="text-xs text-brand-600 font-medium uppercase tracking-widest">The Journey</span>
+        </div>
+        <h2 class="text-4xl md:text-6xl font-medium tracking-tight text-stone-900 mb-6">
+          How <span
+            class="bg-gradient-to-r from-brand-600 via-purple-600 to-violet-600 bg-clip-text text-transparent">SeleneX</span>
+          Works
+        </h2>
+        <p class="text-lg md:text-xl text-stone-500 leading-relaxed max-w-2xl mx-auto">
+          A Trustworthy AI Super-Agent for Early Cancer Detection & Personalized Care—operating as a coordinated system
+          that reasons across medical data, patient context, and clinical guidelines.
+        </p>
+      </div>
+
+      <!-- Timeline Container -->
+      <div class="relative">
+        <!-- The Timeline Line -->
+        <div class="timeline-line hidden md:block"></div>
+        <div class="timeline-pulse hidden md:block"></div>
+
+        <!-- Stage 1 -->
+        <div class="timeline-item mb-16 md:mb-24 reveal-on-scroll">
+          <div class="timeline-content flex items-start gap-8 md:gap-12">
+            <!-- Card -->
+            <div class="flex-1 stage-card">
+              <div class="stage-tag bg-brand-50 text-brand-600 mb-4">
+                <iconify-icon icon="lucide:user-circle" width="14"></iconify-icon>
+                Stage 1 — Foundation
+              </div>
+              <h3 class="text-2xl md:text-3xl font-semibold text-stone-900 mb-3">Intelligent Patient Understanding</h3>
+              <p class="text-stone-500 text-lg mb-6 italic">Building a complete, interpretable patient picture</p>
+
+              <p class="text-stone-600 leading-relaxed mb-6">
+                SeleneX begins by creating a <strong>holistic digital understanding</strong> of the patient, not just a
+                snapshot. It securely ingests and organizes data into a <strong>Patient Knowledge Graph</strong>—a
+                structured, interpretable map.
+              </p>
+
+              <ul class="stage-list text-stone-600 mb-6">
+                <li>Medical history and electronic health records</li>
+                <li>Symptoms and patient-reported experiences</li>
+                <li>Demographics, hormonal history, and risk factors</li>
+              </ul>
+
+              <div class="why-matters">
+                <p class="text-sm font-semibold text-brand-700 mb-1">Why This Matters</p>
+                <p class="text-sm text-stone-600">Early ovarian cancer rarely presents as a single red flag. SeleneX
+                  catches <strong>patterns across weak, fragmented signals</strong> that are often missed in routine
+                  care.</p>
+              </div>
+            </div>
+
+            <!-- Node (center on desktop) -->
+            <div class="hidden md:flex flex-col items-center">
+              <div class="timeline-node">
+                <span class="text-xl font-bold text-white">1</span>
+              </div>
+            </div>
+
+            <!-- Visual (right side on desktop) -->
+            <div class="hidden lg:block flex-1">
+              <div class="bg-gradient-to-br from-stone-50 to-white rounded-2xl p-6 border border-stone-100">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 rounded-xl bg-brand-100 flex items-center justify-center">
+                    <iconify-icon icon="lucide:network" width="20" class="text-brand-600"></iconify-icon>
+                  </div>
+                  <span class="font-semibold text-stone-800">Patient Knowledge Graph</span>
+                </div>
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center">
+                      <iconify-icon icon="lucide:file-text" width="14" class="text-purple-600"></iconify-icon>
+                    </div>
+                    <div class="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
+                      <div class="h-full w-[85%] bg-gradient-to-r from-purple-400 to-purple-500 rounded-full"></div>
+                    </div>
+                    <span class="text-xs text-stone-500">EHR</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center">
+                      <iconify-icon icon="lucide:heart-pulse" width="14" class="text-emerald-600"></iconify-icon>
+                    </div>
+                    <div class="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
+                      <div class="h-full w-[70%] bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full"></div>
+                    </div>
+                    <span class="text-xs text-stone-500">Symptoms</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center">
+                      <iconify-icon icon="lucide:user" width="14" class="text-blue-600"></iconify-icon>
+                    </div>
+                    <div class="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
+                      <div class="h-full w-[60%] bg-gradient-to-r from-blue-400 to-blue-500 rounded-full"></div>
+                    </div>
+                    <span class="text-xs text-stone-500">Demographics</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="timeline-item mb-16 md:mb-24 reveal-on-scroll" style="animation-delay: 0.1s;">
+          <div class="timeline-content flex items-start gap-8 md:gap-12">
+            <!-- Visual (left side on desktop for even items) -->
+            <div class="hidden lg:block flex-1">
+              <div class="bg-gradient-to-br from-stone-50 to-white rounded-2xl p-6 border border-stone-100">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
+                    <iconify-icon icon="lucide:git-branch" width="20" class="text-emerald-600"></iconify-icon>
+                  </div>
+                  <span class="font-semibold text-stone-800">Progressive Pathway</span>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2 p-2 rounded-lg bg-stone-50 border border-stone-100">
+                    <div
+                      class="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs font-bold">
+                      1</div>
+                    <span class="text-xs text-stone-600">Initial Risk</span>
+                    <div class="flex-1"></div>
+                    <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+                  </div>
+                  <div class="flex justify-center"><iconify-icon icon="lucide:chevron-down"
+                      class="text-stone-300"></iconify-icon></div>
+                  <div class="flex items-center gap-2 p-2 rounded-lg bg-stone-50 border border-stone-100">
+                    <div
+                      class="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs font-bold">
+                      2</div>
+                    <span class="text-xs text-stone-600">Biomarkers</span>
+                    <div class="flex-1"></div>
+                    <div class="w-2 h-2 rounded-full bg-amber-400"></div>
+                  </div>
+                  <div class="flex justify-center"><iconify-icon icon="lucide:chevron-down"
+                      class="text-stone-300"></iconify-icon></div>
+                  <div class="flex items-center gap-2 p-2 rounded-lg bg-stone-50 border border-stone-100">
+                    <div
+                      class="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs font-bold">
+                      3</div>
+                    <span class="text-xs text-stone-600">Imaging</span>
+                    <div class="flex-1"></div>
+                    <div class="w-2 h-2 rounded-full bg-brand-400"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Node -->
+            <div class="hidden md:flex flex-col items-center">
+              <div class="timeline-node">
+                <span class="text-xl font-bold text-white">2</span>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="flex-1 stage-card">
+              <div class="stage-tag bg-emerald-50 text-emerald-600 mb-4">
+                <iconify-icon icon="lucide:stethoscope" width="14"></iconify-icon>
+                Stage 2 — Diagnosis
+              </div>
+              <h3 class="text-2xl md:text-3xl font-semibold text-stone-900 mb-3">Progressive Diagnostic Reasoning</h3>
+              <p class="text-stone-500 text-lg mb-6 italic">From low-invasive signals to deeper clinical certainty</p>
+
+              <p class="text-stone-600 leading-relaxed mb-6">
+                Rather than ordering every test upfront, SeleneX follows a <strong>progressive diagnostic
+                  pathway</strong> similar to expert clinicians, updating risk scores and explaining each step.
+              </p>
+
+              <ul class="stage-list text-stone-600 mb-6">
+                <li>Initial risk estimation using history and symptoms</li>
+                <li>Targeted lab and biomarker analysis when risk rises</li>
+                <li>Advanced imaging only when justified</li>
+                <li>Genomic profiling for high-confidence cases</li>
+              </ul>
+
+              <div class="why-matters">
+                <p class="text-sm font-semibold text-brand-700 mb-1">Why This Matters</p>
+                <p class="text-sm text-stone-600">SeleneX reasons dynamically, adapting its diagnostic depth to each
+                  individual—<strong>avoiding unnecessary procedures while shortening time-to-diagnosis</strong>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="timeline-item mb-16 md:mb-24 reveal-on-scroll" style="animation-delay: 0.2s;">
+          <div class="timeline-content flex items-start gap-8 md:gap-12">
+            <!-- Card -->
+            <div class="flex-1 stage-card">
+              <div class="stage-tag bg-blue-50 text-blue-600 mb-4">
+                <iconify-icon icon="lucide:brain" width="14"></iconify-icon>
+                Stage 3 — Synthesis
+              </div>
+              <h3 class="text-2xl md:text-3xl font-semibold text-stone-900 mb-3">Explainable AI Decision Synthesis</h3>
+              <p class="text-stone-500 text-lg mb-6 italic">Turning complex data into clinician-ready insight</p>
+
+              <p class="text-stone-600 leading-relaxed mb-6">
+                SeleneX synthesizes all inputs into a <strong>clear diagnostic assessment</strong> with human-readable
+                explanations, visual highlights, and confidence measures.
+              </p>
+
+              <ul class="stage-list text-stone-600 mb-6">
+                <li>Likelihood of cancer with confidence scores</li>
+                <li>Probable subtype and aggressiveness</li>
+                <li>Key drivers behind each conclusion</li>
+                <li>Visual explanation of what influenced decisions</li>
+              </ul>
+
+              <div class="why-matters">
+                <p class="text-sm font-semibold text-brand-700 mb-1">Clinician-in-the-Loop</p>
+                <p class="text-sm text-stone-600">SeleneX <strong>supports decisions, never replaces professional
+                    judgment</strong>. Every conclusion is traceable and auditable.</p>
+              </div>
+            </div>
+
+            <!-- Node -->
+            <div class="hidden md:flex flex-col items-center">
+              <div class="timeline-node">
+                <span class="text-xl font-bold text-white">3</span>
+              </div>
+            </div>
+
+            <!-- Visual -->
+            <div class="hidden lg:block flex-1">
+              <div class="bg-gradient-to-br from-stone-50 to-white rounded-2xl p-6 border border-stone-100">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center">
+                    <iconify-icon icon="lucide:file-check" width="20" class="text-blue-600"></iconify-icon>
+                  </div>
+                  <span class="font-semibold text-stone-800">Diagnostic Report</span>
+                </div>
+                <div class="bg-white rounded-xl border border-stone-100 p-4 mb-3">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs text-stone-500 uppercase tracking-wider">Confidence</span>
+                    <span class="text-lg font-bold text-brand-600">94.7%</span>
+                  </div>
+                  <div class="h-2 bg-stone-100 rounded-full overflow-hidden">
+                    <div class="h-full w-[94.7%] bg-gradient-to-r from-brand-500 to-brand-400 rounded-full"></div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-xs">
+                  <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+                  <span class="text-stone-600">Explainable • Auditable • Traceable</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 4 -->
+        <div class="timeline-item mb-16 md:mb-24 reveal-on-scroll" style="animation-delay: 0.3s;">
+          <div class="timeline-content flex items-start gap-8 md:gap-12">
+            <!-- Visual -->
+            <div class="hidden lg:block flex-1">
+              <div class="bg-gradient-to-br from-stone-50 to-white rounded-2xl p-6 border border-stone-100">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center">
+                    <iconify-icon icon="lucide:user-cog" width="20" class="text-amber-600"></iconify-icon>
+                  </div>
+                  <span class="font-semibold text-stone-800">Digital Twin</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <div class="bg-white rounded-lg border border-stone-100 p-3 text-center">
+                    <iconify-icon icon="lucide:dna" width="20" class="text-purple-500 mb-1"></iconify-icon>
+                    <div class="text-[10px] text-stone-500">Tumor Biology</div>
+                  </div>
+                  <div class="bg-white rounded-lg border border-stone-100 p-3 text-center">
+                    <iconify-icon icon="lucide:activity" width="20" class="text-emerald-500 mb-1"></iconify-icon>
+                    <div class="text-[10px] text-stone-500">Molecular Profile</div>
+                  </div>
+                  <div class="bg-white rounded-lg border border-stone-100 p-3 text-center">
+                    <iconify-icon icon="lucide:heart" width="20" class="text-red-400 mb-1"></iconify-icon>
+                    <div class="text-[10px] text-stone-500">Clinical Context</div>
+                  </div>
+                  <div class="bg-white rounded-lg border border-stone-100 p-3 text-center">
+                    <iconify-icon icon="lucide:sparkles" width="20" class="text-amber-500 mb-1"></iconify-icon>
+                    <div class="text-[10px] text-stone-500">Simulation</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Node -->
+            <div class="hidden md:flex flex-col items-center">
+              <div class="timeline-node">
+                <span class="text-xl font-bold text-white">4</span>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="flex-1 stage-card">
+              <div class="stage-tag bg-amber-50 text-amber-600 mb-4">
+                <iconify-icon icon="lucide:user-cog" width="14"></iconify-icon>
+                Stage 4 — Treatment
+              </div>
+              <h3 class="text-2xl md:text-3xl font-semibold text-stone-900 mb-3">Personalized Treatment via Digital Twin
+              </h3>
+              <p class="text-stone-500 text-lg mb-6 italic">From diagnosis to individualized therapy planning</p>
+
+              <p class="text-stone-600 leading-relaxed mb-6">
+                SeleneX creates a <strong>digital twin</strong> of the patient—a virtual model reflecting tumor biology,
+                genetic profile, and clinical context for simulation.
+              </p>
+
+              <ul class="stage-list text-stone-600 mb-6">
+                <li>Test multiple treatment strategies virtually</li>
+                <li>Forecast outcomes, side effects, and recurrence risk</li>
+                <li>Compare options based on survival & quality of life</li>
+                <li>Explore "what-if" scenarios before real decisions</li>
+              </ul>
+
+              <div class="why-matters">
+                <p class="text-sm font-semibold text-brand-700 mb-1">Why This Matters</p>
+                <p class="text-sm text-stone-600">Treatment responses vary dramatically. SeleneX moves oncology from
+                  protocol-driven care to <strong>truly individualized therapy selection</strong>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 5 -->
+        <div class="timeline-item reveal-on-scroll" style="animation-delay: 0.4s;">
+          <div class="timeline-content flex items-start gap-8 md:gap-12">
+            <!-- Card -->
+            <div class="flex-1 stage-card">
+              <div class="stage-tag bg-violet-50 text-violet-600 mb-4">
+                <iconify-icon icon="lucide:refresh-cw" width="14"></iconify-icon>
+                Stage 5 — Continuity
+              </div>
+              <h3 class="text-2xl md:text-3xl font-semibold text-stone-900 mb-3">Adaptive Follow-Up & Long-Term Care
+              </h3>
+              <p class="text-stone-500 text-lg mb-6 italic">Care doesn't stop at treatment</p>
+
+              <p class="text-stone-600 leading-relaxed mb-6">
+                SeleneX continues to support patients <strong>after treatment begins</strong>, adapting follow-up
+                intensity based on each patient's evolving risk profile.
+              </p>
+
+              <ul class="stage-list text-stone-600 mb-6">
+                <li>Monitor biomarkers, imaging, and follow-up data</li>
+                <li>Detect early signs of recurrence</li>
+                <li>Update risk models as new data arrives</li>
+                <li>Enable earlier intervention when problems emerge</li>
+              </ul>
+
+              <div class="why-matters">
+                <p class="text-sm font-semibold text-brand-700 mb-1">Continuous Adaptation</p>
+                <p class="text-sm text-stone-600">The system <strong>learns and adapts</strong> with each patient
+                  interaction, getting smarter over time.</p>
+              </div>
+            </div>
+
+            <!-- Node -->
+            <div class="hidden md:flex flex-col items-center">
+              <div class="timeline-node">
+                <span class="text-xl font-bold text-white">5</span>
+              </div>
+            </div>
+
+            <!-- Visual -->
+            <div class="hidden lg:block flex-1">
+              <div class="bg-gradient-to-br from-stone-50 to-white rounded-2xl p-6 border border-stone-100">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 rounded-xl bg-violet-100 flex items-center justify-center">
+                    <iconify-icon icon="lucide:line-chart" width="20" class="text-violet-600"></iconify-icon>
+                  </div>
+                  <span class="font-semibold text-stone-800">Long-Term Monitoring</span>
+                </div>
+                <div class="relative h-24 mb-3">
+                  <svg class="w-full h-full" viewBox="0 0 200 80" fill="none">
+                    <path d="M0 60 Q50 40, 80 45 T140 35 T200 20" stroke="url(#gradLine)" stroke-width="2"
+                      fill="none" />
+                    <defs>
+                      <linearGradient id="gradLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#8b5cf6" />
+                        <stop offset="100%" style="stop-color:#a78bfa" />
+                      </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="45" r="4" fill="#8b5cf6" />
+                    <circle cx="140" cy="35" r="4" fill="#8b5cf6" />
+                    <circle cx="200" cy="20" r="4" fill="#22c55e" />
+                  </svg>
+                </div>
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-stone-500">Treatment Start</span>
+                  <div class="flex items-center gap-1">
+                    <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+                    <span class="text-emerald-600 font-medium">Active Monitoring</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Integration Options - Light Theme -->
+  <section class="py-24 md:py-32 bg-gradient-to-b from-white to-stone-50">
     <div class="max-w-7xl mx-auto px-6">
       <!-- Header -->
-      <div class="max-w-3xl mx-auto text-center mb-20 reveal-on-scroll">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-100 border border-stone-200 mb-6">
-          <span class="text-xs text-stone-600 font-medium uppercase tracking-wider">How It Works</span>
+      <div class="max-w-3xl mx-auto text-center mb-16 reveal-on-scroll">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-100 mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
+          <span class="text-xs text-brand-600 font-medium uppercase tracking-wider">Integration</span>
         </div>
         <h2 class="text-4xl md:text-5xl font-medium tracking-tight text-stone-900 mb-6">
-          From Data to Decision
-        </h2>
-        <p class="text-lg text-stone-500">
-          A seamless clinical workflow designed for efficiency and precision.
-        </p>
-      </div>
-
-      <!-- Timeline Steps -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-        <!-- Connecting Line -->
-        <div
-          class="hidden md:block absolute top-16 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-brand-500 via-emerald-500 to-brand-500">
-        </div>
-
-        <!-- Step 1 -->
-        <div class="relative text-center reveal-on-scroll">
-          <div
-            class="w-16 h-16 rounded-2xl bg-brand-500 flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg shadow-brand-500/25">
-            <span class="text-2xl font-bold text-white">1</span>
-          </div>
-          <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mx-auto mb-4">
-            <iconify-icon icon="lucide:upload" width="24" class="text-brand-600"></iconify-icon>
-          </div>
-          <h3 class="text-lg font-semibold text-stone-900 mb-2">Image Input</h3>
-          <p class="text-sm text-stone-500">Upload CT, MRI, or PET scans via DICOM integration</p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="relative text-center reveal-on-scroll" style="animation-delay: 0.1s;">
-          <div
-            class="w-16 h-16 rounded-2xl bg-brand-500 flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg shadow-brand-500/25">
-            <span class="text-2xl font-bold text-white">2</span>
-          </div>
-          <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mx-auto mb-4">
-            <iconify-icon icon="lucide:cpu" width="24" class="text-brand-600"></iconify-icon>
-          </div>
-          <h3 class="text-lg font-semibold text-stone-900 mb-2">AI Processing</h3>
-          <p class="text-sm text-stone-500">Multi-model ensemble analysis with fusion algorithms</p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="relative text-center reveal-on-scroll" style="animation-delay: 0.2s;">
-          <div
-            class="w-16 h-16 rounded-2xl bg-brand-500 flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg shadow-brand-500/25">
-            <span class="text-2xl font-bold text-white">3</span>
-          </div>
-          <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mx-auto mb-4">
-            <iconify-icon icon="lucide:search" width="24" class="text-brand-600"></iconify-icon>
-          </div>
-          <h3 class="text-lg font-semibold text-stone-900 mb-2">Analysis & Review</h3>
-          <p class="text-sm text-stone-500">Explainable results with interactive visualizations</p>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="relative text-center reveal-on-scroll" style="animation-delay: 0.3s;">
-          <div
-            class="w-16 h-16 rounded-2xl bg-brand-500 flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg shadow-brand-500/25">
-            <span class="text-2xl font-bold text-white">4</span>
-          </div>
-          <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mx-auto mb-4">
-            <iconify-icon icon="lucide:file-text" width="24" class="text-brand-600"></iconify-icon>
-          </div>
-          <h3 class="text-lg font-semibold text-stone-900 mb-2">Report Delivery</h3>
-          <p class="text-sm text-stone-500">Clinical report with confidence scores and recommendations</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 5: Technical Architecture -->
-  <section class="py-24 md:py-32 bg-neutral-950">
-    <div class="max-w-7xl mx-auto px-6">
-      <!-- Header -->
-      <div class="max-w-3xl mx-auto text-center mb-16 reveal-on-scroll">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
-          <span class="text-xs text-white/70 font-medium uppercase tracking-wider">Architecture</span>
-        </div>
-        <h2 class="text-4xl md:text-5xl font-medium tracking-tight text-white mb-6">
-          Built for Scale & Security
-        </h2>
-        <p class="text-lg text-neutral-400">
-          Enterprise-grade infrastructure designed for the demands of modern healthcare.
-        </p>
-      </div>
-
-      <!-- Architecture Diagram -->
-      <div class="relative p-8 rounded-3xl bg-white/5 border border-white/10 mb-12 reveal-on-scroll">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-          <!-- Input -->
-          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-            <iconify-icon icon="lucide:database" width="32" class="text-brand-400 mb-4"></iconify-icon>
-            <h4 class="text-white font-semibold mb-2">Input Layer</h4>
-            <p class="text-sm text-neutral-500">PACS, EHR, Lab Data</p>
-          </div>
-
-          <!-- Processing -->
-          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-            <iconify-icon icon="lucide:brain" width="32" class="text-emerald-400 mb-4"></iconify-icon>
-            <h4 class="text-white font-semibold mb-2">Processing</h4>
-            <p class="text-sm text-neutral-500">Model Ensemble + Edge Compute</p>
-          </div>
-
-          <!-- Analysis -->
-          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-            <iconify-icon icon="lucide:activity" width="32" class="text-blue-400 mb-4"></iconify-icon>
-            <h4 class="text-white font-semibold mb-2">Analysis</h4>
-            <p class="text-sm text-neutral-500">Fusion Engine + Explainability</p>
-          </div>
-
-          <!-- Output -->
-          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-            <iconify-icon icon="lucide:file-check" width="32" class="text-amber-400 mb-4"></iconify-icon>
-            <h4 class="text-white font-semibold mb-2">Output</h4>
-            <p class="text-sm text-neutral-500">Clinical Reports + API</p>
-          </div>
-        </div>
-
-        <!-- Flow Arrows (visible on larger screens) -->
-        <div
-          class="hidden md:flex absolute top-1/2 left-[25%] -translate-y-1/2 w-[50%] justify-around pointer-events-none">
-          <iconify-icon icon="lucide:chevron-right" width="24" class="text-white/20"></iconify-icon>
-          <iconify-icon icon="lucide:chevron-right" width="24" class="text-white/20"></iconify-icon>
-          <iconify-icon icon="lucide:chevron-right" width="24" class="text-white/20"></iconify-icon>
-        </div>
-      </div>
-
-      <!-- Compliance Badges -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal-on-scroll" style="animation-delay: 0.2s;">
-        <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
-          <iconify-icon icon="lucide:shield-check" width="24" class="text-emerald-400 mb-2"></iconify-icon>
-          <div class="text-white font-semibold">HIPAA</div>
-          <div class="text-xs text-neutral-500">Compliant</div>
-        </div>
-        <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
-          <iconify-icon icon="lucide:award" width="24" class="text-blue-400 mb-2"></iconify-icon>
-          <div class="text-white font-semibold">SOC 2</div>
-          <div class="text-xs text-neutral-500">Type II</div>
-        </div>
-        <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
-          <iconify-icon icon="lucide:globe" width="24" class="text-brand-400 mb-2"></iconify-icon>
-          <div class="text-white font-semibold">GDPR</div>
-          <div class="text-xs text-neutral-500">Compliant</div>
-        </div>
-        <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
-          <iconify-icon icon="lucide:file-badge" width="24" class="text-amber-400 mb-2"></iconify-icon>
-          <div class="text-white font-semibold">FDA Ready</div>
-          <div class="text-xs text-neutral-500">Class II</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 6: Integration Options -->
-  <section class="py-24 md:py-32 bg-neutral-900">
-    <div class="max-w-7xl mx-auto px-6">
-      <!-- Header -->
-      <div class="max-w-3xl mx-auto text-center mb-16 reveal-on-scroll">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
-          <span class="text-xs text-white/70 font-medium uppercase tracking-wider">Integration</span>
-        </div>
-        <h2 class="text-4xl md:text-5xl font-medium tracking-tight text-white mb-6">
           Deploy Your Way
         </h2>
-        <p class="text-lg text-neutral-400">
+        <p class="text-lg text-stone-500">
           Flexible deployment options for any healthcare environment.
         </p>
       </div>
@@ -1416,25 +3171,26 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Cloud-Native -->
         <div
-          class="group p-8 rounded-3xl bg-gradient-to-b from-white/10 to-white/5 border border-white/10 hover:border-brand-500/30 transition-all duration-300 reveal-on-scroll">
-          <div class="w-16 h-16 rounded-2xl bg-brand-500/10 flex items-center justify-center mb-6">
-            <iconify-icon icon="lucide:cloud" width="32" class="text-brand-400"></iconify-icon>
+          class="group p-8 rounded-3xl bg-white border border-stone-200 hover:border-brand-300 hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-300 reveal-on-scroll">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-50 to-brand-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <iconify-icon icon="lucide:cloud" width="32" class="text-brand-500"></iconify-icon>
           </div>
-          <h3 class="text-2xl font-semibold text-white mb-4">Cloud-Native</h3>
-          <p class="text-neutral-400 mb-6">
+          <h3 class="text-2xl font-semibold text-stone-900 mb-4">Cloud-Native</h3>
+          <p class="text-stone-500 mb-6">
             Fully managed SaaS deployment with automatic updates and elastic scaling.
           </p>
           <ul class="space-y-3">
-            <li class="flex items-center gap-2 text-sm text-neutral-300">
-              <iconify-icon icon="lucide:check" width="16" class="text-emerald-400"></iconify-icon>
+            <li class="flex items-center gap-3 text-sm text-stone-600">
+              <iconify-icon icon="lucide:check" width="16" class="text-emerald-500"></iconify-icon>
               Auto-scaling infrastructure
             </li>
-            <li class="flex items-center gap-2 text-sm text-neutral-300">
-              <iconify-icon icon="lucide:check" width="16" class="text-emerald-400"></iconify-icon>
+            <li class="flex items-center gap-3 text-sm text-stone-600">
+              <iconify-icon icon="lucide:check" width="16" class="text-emerald-500"></iconify-icon>
               99.99% uptime SLA
             </li>
-            <li class="flex items-center gap-2 text-sm text-neutral-300">
-              <iconify-icon icon="lucide:check" width="16" class="text-emerald-400"></iconify-icon>
+            <li class="flex items-center gap-3 text-sm text-stone-600">
+              <iconify-icon icon="lucide:check" width="16" class="text-emerald-500"></iconify-icon>
               Instant updates
             </li>
           </ul>
@@ -1442,26 +3198,27 @@
 
         <!-- On-Premise -->
         <div
-          class="group p-8 rounded-3xl bg-gradient-to-b from-white/10 to-white/5 border border-white/10 hover:border-brand-500/30 transition-all duration-300 reveal-on-scroll"
+          class="group p-8 rounded-3xl bg-white border border-stone-200 hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300 reveal-on-scroll"
           style="animation-delay: 0.1s;">
-          <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6">
-            <iconify-icon icon="lucide:server" width="32" class="text-emerald-400"></iconify-icon>
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <iconify-icon icon="lucide:server" width="32" class="text-emerald-500"></iconify-icon>
           </div>
-          <h3 class="text-2xl font-semibold text-white mb-4">On-Premise</h3>
-          <p class="text-neutral-400 mb-6">
+          <h3 class="text-2xl font-semibold text-stone-900 mb-4">On-Premise</h3>
+          <p class="text-stone-500 mb-6">
             Complete data sovereignty within your own infrastructure.
           </p>
           <ul class="space-y-3">
-            <li class="flex items-center gap-2 text-sm text-neutral-300">
-              <iconify-icon icon="lucide:check" width="16" class="text-emerald-400"></iconify-icon>
+            <li class="flex items-center gap-3 text-sm text-stone-600">
+              <iconify-icon icon="lucide:check" width="16" class="text-emerald-500"></iconify-icon>
               Full data control
             </li>
-            <li class="flex items-center gap-2 text-sm text-neutral-300">
-              <iconify-icon icon="lucide:check" width="16" class="text-emerald-400"></iconify-icon>
+            <li class="flex items-center gap-3 text-sm text-stone-600">
+              <iconify-icon icon="lucide:check" width="16" class="text-emerald-500"></iconify-icon>
               Air-gapped option
             </li>
-            <li class="flex items-center gap-2 text-sm text-neutral-300">
-              <iconify-icon icon="lucide:check" width="16" class="text-emerald-400"></iconify-icon>
+            <li class="flex items-center gap-3 text-sm text-stone-600">
+              <iconify-icon icon="lucide:check" width="16" class="text-emerald-500"></iconify-icon>
               Custom hardware support
             </li>
           </ul>
@@ -1469,26 +3226,27 @@
 
         <!-- Hybrid -->
         <div
-          class="group p-8 rounded-3xl bg-gradient-to-b from-white/10 to-white/5 border border-white/10 hover:border-brand-500/30 transition-all duration-300 reveal-on-scroll"
+          class="group p-8 rounded-3xl bg-white border border-stone-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 reveal-on-scroll"
           style="animation-delay: 0.2s;">
-          <div class="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6">
-            <iconify-icon icon="lucide:git-merge" width="32" class="text-blue-400"></iconify-icon>
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <iconify-icon icon="lucide:git-merge" width="32" class="text-blue-500"></iconify-icon>
           </div>
-          <h3 class="text-2xl font-semibold text-white mb-4">Hybrid</h3>
-          <p class="text-neutral-400 mb-6">
+          <h3 class="text-2xl font-semibold text-stone-900 mb-4">Hybrid</h3>
+          <p class="text-stone-500 mb-6">
             Best of both worlds with flexible edge deployment.
           </p>
           <ul class="space-y-3">
-            <li class="flex items-center gap-2 text-sm text-neutral-300">
-              <iconify-icon icon="lucide:check" width="16" class="text-emerald-400"></iconify-icon>
+            <li class="flex items-center gap-3 text-sm text-stone-600">
+              <iconify-icon icon="lucide:check" width="16" class="text-emerald-500"></iconify-icon>
               Edge compute nodes
             </li>
-            <li class="flex items-center gap-2 text-sm text-neutral-300">
-              <iconify-icon icon="lucide:check" width="16" class="text-emerald-400"></iconify-icon>
+            <li class="flex items-center gap-3 text-sm text-stone-600">
+              <iconify-icon icon="lucide:check" width="16" class="text-emerald-500"></iconify-icon>
               Local + cloud processing
             </li>
-            <li class="flex items-center gap-2 text-sm text-neutral-300">
-              <iconify-icon icon="lucide:check" width="16" class="text-emerald-400"></iconify-icon>
+            <li class="flex items-center gap-3 text-sm text-stone-600">
+              <iconify-icon icon="lucide:check" width="16" class="text-emerald-500"></iconify-icon>
               Built-in failsafe
             </li>
           </ul>
@@ -1497,83 +3255,111 @@
     </div>
   </section>
 
-  <!-- Section 7: Performance Metrics (Bento Grid) -->
-  <section class="py-24 md:py-32 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-      <!-- Header -->
-      <div class="max-w-3xl mx-auto text-center mb-16 reveal-on-scroll">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-100 border border-stone-200 mb-6">
-          <span class="text-xs text-stone-600 font-medium uppercase tracking-wider">Performance</span>
-        </div>
-        <h2 class="text-4xl md:text-5xl font-medium tracking-tight text-stone-900 mb-6">
-          Platform Benchmarks
-        </h2>
-      </div>
+  <!-- Section 7: CTA - Premium White Design -->
+  <section class="py-24 md:py-32 bg-white relative overflow-hidden">
+    <style>
+      /* Premium CTA Animations */
+      @keyframes ctaFloat {
 
-      <!-- Bento Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-        <!-- Large Card: Inference Time -->
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+
+        50% {
+          transform: translateY(-10px) rotate(1deg);
+        }
+      }
+
+      @keyframes ctaGradient {
+
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      @keyframes ctaPulse {
+
+        0%,
+        100% {
+          opacity: 0.4;
+          transform: scale(1);
+        }
+
+        50% {
+          opacity: 0.7;
+          transform: scale(1.05);
+        }
+      }
+
+      .cta-card {
+        position: relative;
+        background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+        animation: ctaFloat 8s ease-in-out infinite;
+      }
+
+      .cta-card::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: inherit;
+        padding: 2px;
+        background: linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(139, 92, 246, 0.1), rgba(167, 139, 250, 0.3));
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        animation: ctaPulse 4s ease-in-out infinite;
+        pointer-events: none;
+      }
+
+      .cta-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(40px);
+        pointer-events: none;
+        animation: ctaPulse 6s ease-in-out infinite;
+      }
+    </style>
+
+    <!-- Decorative Orbs -->
+    <div class="cta-orb w-64 h-64 bg-purple-200/40" style="top: -10%; left: -5%; animation-delay: 0s;"></div>
+    <div class="cta-orb w-48 h-48 bg-violet-200/30" style="bottom: -5%; right: -5%; animation-delay: 2s;"></div>
+    <div class="cta-orb w-32 h-32 bg-indigo-200/30" style="top: 50%; right: 15%; animation-delay: 4s;"></div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <div class="cta-card p-12 md:p-16 rounded-3xl shadow-xl shadow-purple-500/5 border border-stone-100">
+        <!-- Icon with glow -->
         <div
-          class="col-span-2 md:col-span-1 md:row-span-2 p-8 rounded-3xl bg-gradient-to-br from-brand-500 to-brand-700 text-white reveal-on-scroll">
-          <div class="h-full flex flex-col justify-between">
-            <iconify-icon icon="lucide:timer" width="32" class="opacity-80"></iconify-icon>
-            <div>
-              <div class="text-5xl md:text-6xl font-bold mb-2">&lt;200<span class="text-3xl">ms</span></div>
-              <div class="text-white/80 text-lg">Average Inference Time</div>
-            </div>
-          </div>
+          class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-600 mb-8 shadow-lg shadow-brand-500/30">
+          <iconify-icon icon="lucide:rocket" width="32" class="text-white"></iconify-icon>
         </div>
 
-        <!-- Accuracy -->
-        <div class="p-6 rounded-3xl bg-stone-100 reveal-on-scroll" style="animation-delay: 0.1s;">
-          <div class="text-4xl font-bold text-stone-900 mb-2">99.7%</div>
-          <div class="text-stone-500">Accuracy on Lung Nodules</div>
-        </div>
-
-        <!-- Images Processed -->
-        <div class="p-6 rounded-3xl bg-stone-100 reveal-on-scroll" style="animation-delay: 0.2s;">
-          <div class="text-4xl font-bold text-stone-900 mb-2">50M+</div>
-          <div class="text-stone-500">Images Analyzed</div>
-        </div>
-
-        <!-- Earlier Detection -->
-        <div class="p-6 rounded-3xl bg-stone-100 reveal-on-scroll" style="animation-delay: 0.3s;">
-          <div class="text-4xl font-bold text-emerald-600 mb-2">40%</div>
-          <div class="text-stone-500">Earlier Detection vs Standard</div>
-        </div>
-
-        <!-- Cancer Types -->
-        <div class="p-6 rounded-3xl bg-stone-100 reveal-on-scroll" style="animation-delay: 0.4s;">
-          <div class="text-4xl font-bold text-stone-900 mb-2">100+</div>
-          <div class="text-stone-500">Cancer Types Covered</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 8: CTA -->
-  <section class="py-24 md:py-32 bg-neutral-950">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <div
-        class="p-12 md:p-16 rounded-3xl bg-gradient-to-b from-white/10 to-white/5 border border-white/10 reveal-on-scroll">
-        <iconify-icon icon="lucide:rocket" width="48" class="text-brand-400 mb-6"></iconify-icon>
-
-        <h2 class="text-3xl md:text-4xl font-medium text-white mb-4">
-          Ready to Transform Your Diagnostic Capabilities?
+        <h2 class="text-3xl md:text-5xl font-medium text-stone-900 mb-6 tracking-tight">
+          Ready to Transform Your<br>
+          <span
+            class="bg-gradient-to-r from-brand-600 via-purple-600 to-violet-600 bg-clip-text text-transparent">Diagnostic
+            Capabilities?</span>
         </h2>
 
-        <p class="text-neutral-400 text-lg mb-8 max-w-xl mx-auto">
+        <p class="text-stone-500 text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">
           See how SeleneX can integrate with your existing workflow and improve patient outcomes.
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="../company/contact"
-            class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black font-medium transition-all duration-300 hover:bg-neutral-200 hover:scale-105">
+            class="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-brand-500 to-brand-600 text-white font-medium transition-all duration-300 hover:shadow-xl hover:shadow-brand-500/25 hover:scale-105">
             Request Demo
-            <iconify-icon icon="lucide:arrow-right" width="18"></iconify-icon>
+            <iconify-icon icon="lucide:arrow-right" width="18"
+              class="transition-transform group-hover:translate-x-1"></iconify-icon>
           </a>
           <a href="../company/contact"
-            class="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-medium transition-all duration-300 hover:bg-white/5">
+            class="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-stone-200 text-stone-700 font-medium transition-all duration-300 hover:border-brand-500 hover:text-brand-600 hover:bg-brand-50">
             Contact Sales
           </a>
         </div>
