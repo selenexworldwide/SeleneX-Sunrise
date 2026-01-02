@@ -206,33 +206,21 @@
     }
 
 
-    /* Navbar glass effect - Adaptive liquid glass */
+
+    /* Navbar glass effect - Gray liquid glass */
     .nav-glass {
-      transition: background 0.4s ease, backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
-      -webkit-transition: background 0.4s ease, -webkit-backdrop-filter 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    /* Light mode - visible on white backgrounds */
-    .nav-glass-light {
       background: linear-gradient(180deg,
-          rgba(50, 50, 55, 0.65),
-          rgba(40, 40, 45, 0.55));
-      backdrop-filter: blur(40px) saturate(150%);
-      -webkit-backdrop-filter: blur(40px) saturate(150%);
-      border: 1px solid rgba(80, 80, 85, 0.4);
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Dark mode - transparent glass on dark backgrounds */
-    .nav-glass-dark {
-      background: linear-gradient(180deg,
-          rgba(255, 255, 255, 0.08),
-          rgba(255, 255, 255, 0.04));
-      backdrop-filter: blur(40px) saturate(150%);
-      -webkit-backdrop-filter: blur(40px) saturate(150%);
+          rgba(55, 55, 55, 0.4),
+          rgba(40, 40, 40, 0.35));
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
       border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
+
 
     /* Desktop dropdown liquid glass panels - Gray elegant style */
     .dropdown-glass {
@@ -783,8 +771,7 @@
             </button>
             <div class="dropdown-wrapper opacity-0 invisible" id="tech-menu">
               <div class="pt-2">
-                <div class="dropdown-glass shadow-2xl shadow-neutral-900/50 overflow-hidden"
-                  style="background: linear-gradient(180deg, rgba(35, 35, 35, 0.96), rgba(28, 28, 28, 0.94)) !important; backdrop-filter: blur(60px) saturate(180%) !important; -webkit-backdrop-filter: blur(60px) saturate(180%) !important;">
+                <div class="dropdown-glass shadow-2xl shadow-neutral-900/50 overflow-hidden">
                   <div class="dropdown-container">
                     <!-- Left Section: Title, Description, and Image Cards -->
                     <div class="dropdown-left">
@@ -874,8 +861,7 @@
             </button>
             <div class="dropdown-wrapper opacity-0 invisible" id="company-menu">
               <div class="pt-2">
-                <div class="dropdown-glass shadow-2xl shadow-neutral-900/50 overflow-hidden"
-                  style="background: linear-gradient(180deg, rgba(35, 35, 35, 0.96), rgba(28, 28, 28, 0.94)) !important; backdrop-filter: blur(60px) saturate(180%) !important; -webkit-backdrop-filter: blur(60px) saturate(180%) !important;">
+                <div class="dropdown-glass shadow-2xl shadow-neutral-900/50 overflow-hidden">
                   <div class="dropdown-container">
                     <!-- Left Section: Title, Description, and Image Cards -->
                     <div class="dropdown-left">
@@ -1896,277 +1882,6 @@
           </div>
           <div class="mt-8 pt-4 pb-4"></div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 5: Open Positions -->
-  <section id="openings" class="bg-white py-24 md:py-32 px-6 md:px-12 w-full">
-    <div class="max-w-7xl mx-auto">
-      <!-- Section Header -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-        <div class="max-w-2xl reveal-on-scroll">
-          <h2 class="text-4xl md:text-6xl font-light tracking-tight text-neutral-900 mb-6">
-            Open Roles
-          </h2>
-          <p class="text-lg md:text-xl text-neutral-500 leading-relaxed font-light">
-            SeleneX is dedicated to building a future where technology empowers
-            clinicians and is in harmony with patient privacy.
-          </p>
-        </div>
-
-        <!-- Filter Tabs (Visual Only) -->
-        <div class="flex gap-2 overflow-x-auto pb-2 md:pb-0 reveal-on-scroll">
-          <button class="px-5 py-2.5 rounded-full bg-neutral-900 text-white text-sm font-medium whitespace-nowrap">All
-            Roles</button>
-          <button
-            class="px-5 py-2.5 rounded-full bg-neu-100 text-neutral-600 border border-neutral-200 hover:border-neutral-300 text-sm font-medium whitespace-nowrap transition-colors">Engineering</button>
-          <button
-            class="px-5 py-2.5 rounded-full bg-white text-neutral-600 border border-neutral-200 hover:border-neutral-300 text-sm font-medium whitespace-nowrap transition-colors">Research</button>
-          <button
-            class="px-5 py-2.5 rounded-full bg-white text-neutral-600 border border-neutral-200 hover:border-neutral-300 text-sm font-medium whitespace-nowrap transition-colors">Clinical</button>
-        </div>
-      </div>
-
-      <!-- Job Listings Stack -->
-      <div class="space-y-4">
-        <!-- Role 1 -->
-        <a href="../company/contact" class="block group reveal-on-scroll">
-          <div
-            class="bg-white border border-neutral-200 rounded-[2rem] p-8 md:p-10 transition-all duration-500 hover:border-brand-500/30 hover:shadow-2xl hover:shadow-brand-500/10 hover:-translate-y-1 relative overflow-hidden">
-            <!-- Hover Gradient Background -->
-            <div
-              class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-
-            <div class="relative z-10 flex flex-col md:flex-row gap-8 md:items-center">
-              <div class="flex-1">
-                <div class="flex items-center gap-3 mb-3">
-                  <span
-                    class="px-3 py-1 rounded-full bg-neutral-100 text-neutral-600 text-xs font-semibold tracking-wide uppercase">Engineering</span>
-                  <span
-                    class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-semibold tracking-wide uppercase">Remote</span>
-                </div>
-                <h3
-                  class="text-2xl md:text-3xl font-normal text-neutral-900 mb-3 group-hover:text-brand-600 transition-colors">
-                  Senior AI/ML Engineer</h3>
-                <p class="text-neutral-500 font-light max-w-3xl leading-relaxed">
-                  Design and implement multimodal fusion algorithms, working with imaging, biomarkers, and clinical data
-                  to build explainable early-detection systems.
-                </p>
-              </div>
-
-              <div class="flex items-center gap-4 md:pl-8 md:border-l md:border-neutral-100">
-                <div class="flex flex-col items-end gap-1 min-w-[100px]">
-                  <span class="text-sm font-medium text-neutral-900">Full-time</span>
-                  <span class="text-xs text-neutral-400">London / Remote</span>
-                </div>
-                <div
-                  class="w-12 h-12 rounded-full border border-neutral-200 bg-white flex items-center justify-center group-hover:bg-brand-600 group-hover:border-brand-600 transition-all duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="text-neutral-400 group-hover:text-white transition-colors">
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <!-- Role 2 -->
-        <a href="../company/contact" class="block group reveal-on-scroll" style="transition-delay: 100ms;">
-          <div
-            class="bg-white border border-neutral-200 rounded-[2rem] p-8 md:p-10 transition-all duration-500 hover:border-brand-500/30 hover:shadow-2xl hover:shadow-brand-500/10 hover:-translate-y-1 relative overflow-hidden">
-            <div
-              class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-
-            <div class="relative z-10 flex flex-col md:flex-row gap-8 md:items-center">
-              <div class="flex-1">
-                <div class="flex items-center gap-3 mb-3">
-                  <span
-                    class="px-3 py-1 rounded-full bg-neutral-100 text-neutral-600 text-xs font-semibold tracking-wide uppercase">Research</span>
-                  <span
-                    class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-semibold tracking-wide uppercase">Hybrid</span>
-                </div>
-                <h3
-                  class="text-2xl md:text-3xl font-normal text-neutral-900 mb-3 group-hover:text-brand-600 transition-colors">
-                  Medical AI Researcher</h3>
-                <p class="text-neutral-500 font-light max-w-3xl leading-relaxed">
-                  Bridge the gap between clinical practice and AI innovation. Collaborate with oncologists and
-                  researchers
-                  to validate models and ensure clinical relevance.
-                </p>
-              </div>
-
-              <div class="flex items-center gap-4 md:pl-8 md:border-l md:border-neutral-100">
-                <div class="flex flex-col items-end gap-1 min-w-[100px]">
-                  <span class="text-sm font-medium text-neutral-900">Full-time</span>
-                  <span class="text-xs text-neutral-400">Boston, MA</span>
-                </div>
-                <div
-                  class="w-12 h-12 rounded-full border border-neutral-200 bg-white flex items-center justify-center group-hover:bg-brand-600 group-hover:border-brand-600 transition-all duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="text-neutral-400 group-hover:text-white transition-colors">
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <!-- Role 3 -->
-        <a href="../company/contact" class="block group reveal-on-scroll" style="transition-delay: 200ms;">
-          <div
-            class="bg-white border border-neutral-200 rounded-[2rem] p-8 md:p-10 transition-all duration-500 hover:border-brand-500/30 hover:shadow-2xl hover:shadow-brand-500/10 hover:-translate-y-1 relative overflow-hidden">
-            <div
-              class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-
-            <div class="relative z-10 flex flex-col md:flex-row gap-8 md:items-center">
-              <div class="flex-1">
-                <div class="flex items-center gap-3 mb-3">
-                  <span
-                    class="px-3 py-1 rounded-full bg-neutral-100 text-neutral-600 text-xs font-semibold tracking-wide uppercase">Legal</span>
-                  <span
-                    class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-semibold tracking-wide uppercase">Remote</span>
-                </div>
-                <h3
-                  class="text-2xl md:text-3xl font-normal text-neutral-900 mb-3 group-hover:text-brand-600 transition-colors">
-                  Privacy & Compliance Specialist</h3>
-                <p class="text-neutral-500 font-light max-w-3xl leading-relaxed">
-                  Ensure all systems meet GDPR, EU AI Act, and healthcare compliance standards. Build privacy-by-design
-                  architectures.
-                </p>
-              </div>
-
-              <div class="flex items-center gap-4 md:pl-8 md:border-l md:border-neutral-100">
-                <div class="flex flex-col items-end gap-1 min-w-[100px]">
-                  <span class="text-sm font-medium text-neutral-900">Contract</span>
-                  <span class="text-xs text-neutral-400">EU / Remote</span>
-                </div>
-                <div
-                  class="w-12 h-12 rounded-full border border-neutral-200 bg-white flex items-center justify-center group-hover:bg-brand-600 group-hover:border-brand-600 transition-all duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="text-neutral-400 group-hover:text-white transition-colors">
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <!-- Role 4 -->
-        <a href="../company/contact" class="block group reveal-on-scroll" style="transition-delay: 300ms;">
-          <div
-            class="bg-white border border-neutral-200 rounded-[2rem] p-8 md:p-10 transition-all duration-500 hover:border-brand-500/30 hover:shadow-2xl hover:shadow-brand-500/10 hover:-translate-y-1 relative overflow-hidden">
-            <div
-              class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-
-            <div class="relative z-10 flex flex-col md:flex-row gap-8 md:items-center">
-              <div class="flex-1">
-                <div class="flex items-center gap-3 mb-3">
-                  <span
-                    class="px-3 py-1 rounded-full bg-neutral-100 text-neutral-600 text-xs font-semibold tracking-wide uppercase">Engineering</span>
-                  <span
-                    class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-semibold tracking-wide uppercase">Remote</span>
-                </div>
-                <h3
-                  class="text-2xl md:text-3xl font-normal text-neutral-900 mb-3 group-hover:text-brand-600 transition-colors">
-                  Full-Stack Engineer</h3>
-                <p class="text-neutral-500 font-light max-w-3xl leading-relaxed">
-                  Build secure, scalable platforms that integrate seamlessly with hospital systems. Focus on federated
-                  learning infrastructure.
-                </p>
-              </div>
-
-              <div class="flex items-center gap-4 md:pl-8 md:border-l md:border-neutral-100">
-                <div class="flex flex-col items-end gap-1 min-w-[100px]">
-                  <span class="text-sm font-medium text-neutral-900">Full-time</span>
-                  <span class="text-xs text-neutral-400">Toronto, CA</span>
-                </div>
-                <div
-                  class="w-12 h-12 rounded-full border border-neutral-200 bg-white flex items-center justify-center group-hover:bg-brand-600 group-hover:border-brand-600 transition-all duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="text-neutral-400 group-hover:text-white transition-colors">
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <!-- Role 5 -->
-        <a href="../company/contact" class="block group reveal-on-scroll" style="transition-delay: 400ms;">
-          <div
-            class="bg-white border border-neutral-200 rounded-[2rem] p-8 md:p-10 transition-all duration-500 hover:border-brand-500/30 hover:shadow-2xl hover:shadow-brand-500/10 hover:-translate-y-1 relative overflow-hidden">
-            <div
-              class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            </div>
-
-            <div class="relative z-10 flex flex-col md:flex-row gap-8 md:items-center">
-              <div class="flex-1">
-                <div class="flex items-center gap-3 mb-3">
-                  <span
-                    class="px-3 py-1 rounded-full bg-neutral-100 text-neutral-600 text-xs font-semibold tracking-wide uppercase">Clinical</span>
-                  <span
-                    class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-semibold tracking-wide uppercase">On-site</span>
-                </div>
-                <h3
-                  class="text-2xl md:text-3xl font-normal text-neutral-900 mb-3 group-hover:text-brand-600 transition-colors">
-                  Clinical Data Scientist</h3>
-                <p class="text-neutral-500 font-light max-w-3xl leading-relaxed">
-                  Transform medical data into actionable insights. Work with EHRs, imaging, and omics data to improve
-                  early detection accuracy.
-                </p>
-              </div>
-
-              <div class="flex items-center gap-4 md:pl-8 md:border-l md:border-neutral-100">
-                <div class="flex flex-col items-end gap-1 min-w-[100px]">
-                  <span class="text-sm font-medium text-neutral-900">Full-time</span>
-                  <span class="text-xs text-neutral-400">Zurich, CH</span>
-                </div>
-                <div
-                  class="w-12 h-12 rounded-full border border-neutral-200 bg-white flex items-center justify-center group-hover:bg-brand-600 group-hover:border-brand-600 transition-all duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="text-neutral-400 group-hover:text-white transition-colors">
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Bottom CTA -->
-      <div class="mt-16 text-center reveal-on-scroll">
-        <p class="text-neutral-500 text-sm font-light mb-6">
-          Don't see a perfect fit? We're always looking for exceptional talent.
-        </p>
-        <a href="../company/contact"
-          class="inline-flex items-center justify-center gap-2 text-neutral-900 font-medium hover:text-brand-600 transition-colors border-b border-neutral-200 hover:border-brand-600 pb-0.5">
-          Send us an open application
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14"></path>
-            <path d="m12 5 7 7-7 7"></path>
-          </svg>
-        </a>
       </div>
     </div>
   </section>
