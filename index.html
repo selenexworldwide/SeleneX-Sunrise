@@ -1181,10 +1181,11 @@
     .flip-card-inner {
       transition: transform 1.2s cubic-bezier(.7, .2, .3, 1.1);
       transform-style: preserve-3d;
+      cursor: pointer;
     }
 
+    .perspective-900:hover .flip-card-inner,
     .group:hover .flip-card-inner {
-      cursor: pointer;
       transform: rotateY(180deg);
     }
 
@@ -1746,7 +1747,7 @@
 
         <h2
           class="text-4xl md:text-6xl font-medium tracking-tight text-neutral-900 mb-16 max-w-4xl leading-[1.1] reveal-on-scroll transition-all duration-700">
-          Where Data Meetss
+          Where Data Meets
           <br />
           <span class="text-neutral-400">Biological Reality.</span>
         </h2>
