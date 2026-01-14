@@ -936,9 +936,10 @@ footer .glow-btn:hover::after {
   transform-style: preserve-3d;
 }
 
-.group:hover .flip-card-inner {
+.group:hover .flip-card-inner,
+.perspective-900:hover .flip-card-inner {
   cursor: pointer;
-  transform: rotateY(180deg) rotateZ(180deg);
+  transform: rotateY(180deg);
 }
 
 .flip-card-front,
@@ -955,7 +956,7 @@ footer .glow-btn:hover::after {
 }
 
 .flip-card-back {
-  transform: rotateY(180deg) rotateZ(180deg);
+  transform: rotateY(180deg);
   position: absolute;
   inset: 0;
   border-radius: 2rem;
