@@ -4298,34 +4298,250 @@
         </div>
       </div>
 
-      <!-- Team Stats -->
-      <div
-        class="bg-gradient-to-r from-neutral-50 via-white to-neutral-50 rounded-3xl p-8 md:p-12 border border-neutral-100">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <p class="text-4xl md:text-5xl font-medium text-neutral-900 mb-2">15+</p>
-            <p class="text-sm text-neutral-500">Team Members</p>
-          </div>
-          <div>
-            <p class="text-4xl md:text-5xl font-medium text-neutral-900 mb-2">10</p>
-            <p class="text-sm text-neutral-500">Countries</p>
-          </div>
-          <div>
-            <p class="text-4xl md:text-5xl font-medium text-neutral-900 mb-2">18+</p>
-            <p class="text-sm text-neutral-500">Years Combined AI</p>
-          </div>
-          <div>
-            <p class="text-4xl md:text-5xl font-medium text-neutral-900 mb-2">2025</p>
-            <p class="text-sm text-neutral-500">Founded</p>
-          </div>
-        </div>
-        <div class="mt-8 pt-8 border-t border-neutral-100 text-center">
-          <p class="text-neutral-600 text-base max-w-2xl mx-auto">
-            Backed by a team of <span class="font-medium text-neutral-800">engineers, clinicians, and commercial
-              experts</span> across 10 countries, united by a mission to transform early cancer detection.
+      <!-- Global Team Bento Grid Section -->
+      <section class="bg-zinc-950 rounded-[2.5rem] p-8 md:p-12 lg:p-16 mt-8">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <span
+            class="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-medium text-emerald-400 mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Hiring in London & Tokyo
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-medium text-white tracking-tight mb-4">
+            A Truly Global &<br>Cross-Disciplinary Team
+          </h2>
+          <p class="text-white/50 text-base max-w-2xl mx-auto">
+            From machine learning engineers to clinical researchers, our diversity is our strength. Operating across 3
+            continents to solve healthcare's hardest problems.
           </p>
         </div>
-      </div>
+
+        <!-- Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+          <!-- Globe / Global Operations Card (spans 2 cols, 2 rows) -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-800 md:col-span-2 md:row-span-2">
+            <!-- Globe Background -->
+            <div class="absolute inset-0 opacity-30">
+              <div
+                class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(16,185,129,0.15),transparent_70%)]">
+              </div>
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 400" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="200" cy="200" r="150" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" />
+                <circle cx="200" cy="200" r="100" stroke="rgba(255,255,255,0.08)" stroke-width="0.5" />
+                <circle cx="200" cy="200" r="50" stroke="rgba(255,255,255,0.05)" stroke-width="0.5" />
+                <ellipse cx="200" cy="200" rx="150" ry="60" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" />
+                <ellipse cx="200" cy="200" rx="150" ry="100" stroke="rgba(255,255,255,0.08)" stroke-width="0.5" />
+                <!-- Location dots -->
+                <circle cx="120" cy="160" r="4" fill="#10b981" class="animate-pulse" />
+                <circle cx="280" cy="180" r="3" fill="#10b981" class="animate-pulse" style="animation-delay: 0.5s" />
+                <circle cx="200" cy="140" r="3" fill="#10b981" class="animate-pulse" style="animation-delay: 1s" />
+                <circle cx="160" cy="220" r="3" fill="#10b981" class="animate-pulse" style="animation-delay: 1.5s" />
+                <circle cx="240" cy="240" r="2" fill="#10b981" class="animate-pulse" style="animation-delay: 2s" />
+              </svg>
+            </div>
+            <div class="relative p-8 md:p-10 h-full flex flex-col justify-end min-h-[320px]">
+              <h3 class="text-2xl font-semibold text-white mb-3">Global Operations</h3>
+              <p class="text-white/50 text-sm leading-relaxed max-w-sm">
+                Hubs in San Francisco, London, and Amsterdam driving 24/7 innovation cycles across three distinct
+                timezones.
+              </p>
+            </div>
+          </div>
+
+          <!-- AI & Machine Learning Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 hover:bg-zinc-800/80 transition-colors duration-300">
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-violet-500/20 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="text-violet-400">
+                    <path
+                      d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83" />
+                  </svg>
+                </div>
+                <span class="text-[10px] font-medium text-white/30 uppercase tracking-wider">Core</span>
+              </div>
+              <p class="text-4xl font-bold text-white mb-1">35%</p>
+              <p class="text-white/50 text-sm">AI & Machine Learning</p>
+            </div>
+          </div>
+
+          <!-- Computational Biology Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 hover:bg-zinc-800/80 transition-colors duration-300">
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-pink-500/20 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="text-pink-400">
+                    <path d="M10 2v7.31" />
+                    <path d="M14 9.3V1.99" />
+                    <path d="M8.5 2h7" />
+                    <path d="M14 9.3a6.5 6.5 0 1 1-4 0" />
+                    <path d="M5.58 16.5h12.85" />
+                  </svg>
+                </div>
+                <span class="text-[10px] font-medium text-white/30 uppercase tracking-wider">Bio</span>
+              </div>
+              <p class="text-4xl font-bold text-white mb-1">20%</p>
+              <p class="text-white/50 text-sm">Computational Biology</p>
+            </div>
+          </div>
+
+          <!-- Clinical Strategy Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 hover:bg-zinc-800/80 transition-colors duration-300">
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="text-emerald-400">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                  </svg>
+                </div>
+                <span class="text-[10px] font-medium text-white/30 uppercase tracking-wider">Med</span>
+              </div>
+              <p class="text-4xl font-bold text-white mb-1">MD+</p>
+              <p class="text-white/50 text-sm">Clinical Strategy</p>
+            </div>
+          </div>
+
+          <!-- Nationalities Card (larger) -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-zinc-900 to-zinc-800 hover:from-zinc-800 hover:to-zinc-700 transition-all duration-300">
+            <div class="p-6 flex flex-col justify-between h-full min-h-[160px]">
+              <div class="flex items-center gap-3 mb-auto">
+                <span
+                  class="text-6xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">15+</span>
+              </div>
+              <p class="text-white/40 text-xs uppercase tracking-[0.2em] font-medium">Nationalities</p>
+            </div>
+          </div>
+
+          <!-- PhDs Card -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 hover:bg-zinc-800/80 transition-colors duration-300">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="flex -space-x-2">
+                  <div
+                    class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 border-2 border-zinc-900 flex items-center justify-center text-white text-xs font-medium">
+                    T</div>
+                  <div
+                    class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-zinc-900 flex items-center justify-center text-white text-xs font-medium">
+                    V</div>
+                  <div
+                    class="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 border-2 border-zinc-900 flex items-center justify-center text-white text-xs font-medium">
+                    +</div>
+                </div>
+              </div>
+              <p class="text-2xl font-bold text-white mb-1">PhDs</p>
+              <p class="text-white/40 text-xs">Leading R&D Initiatives</p>
+            </div>
+          </div>
+
+          <!-- Join the Mission CTA Card (spans 2 cols) -->
+          <div
+            class="group relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-gradient-to-r from-emerald-950/50 to-zinc-900 md:col-span-2 hover:border-emerald-500/40 transition-colors duration-300">
+            <div class="p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-2">Join the Mission</h3>
+                <p class="text-white/50 text-sm max-w-md">
+                  Help us decode the future of human health. We are looking for extraordinary talent to join our global
+                  hubs.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="#"
+                  class="inline-flex items-center gap-2 rounded-full border border-emerald-500 bg-transparent px-5 py-2.5 text-sm font-medium text-emerald-400 hover:bg-emerald-500/10 transition-colors">
+                  View Open Roles
+                </a>
+                <a href="#"
+                  class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 text-sm font-medium text-white hover:bg-white/10 transition-colors">
+                  Meet the Team
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Team Composition Details -->
+        <div class="mt-12 pt-12 border-t border-white/10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Left: Team breakdown -->
+            <div>
+              <h3 class="text-xl font-medium text-white mb-6">Our Expertise</h3>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-1.5 h-1.5 rounded-full bg-violet-400 mt-2 flex-shrink-0"></div>
+                  <p class="text-white/60 text-sm">AI/ML engineers, data scientists, and econometricians</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-1.5 h-1.5 rounded-full bg-pink-400 mt-2 flex-shrink-0"></div>
+                  <p class="text-white/60 text-sm">Oncologists, radiologists, surgeons, and infectious disease
+                    specialists</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 flex-shrink-0"></div>
+                  <p class="text-white/60 text-sm">Bioinformaticians and omics experts</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-1.5 h-1.5 rounded-full bg-amber-400 mt-2 flex-shrink-0"></div>
+                  <p class="text-white/60 text-sm">Clinical researchers, regulators, and commercialization leads</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0"></div>
+                  <p class="text-white/60 text-sm">Academic professors and institutional collaborators</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Global presence -->
+            <div>
+              <h3 class="text-xl font-medium text-white mb-6">Global Presence</h3>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-3 py-1.5 text-xs text-white/70">🇦🇲
+                  Armenia</span>
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-3 py-1.5 text-xs text-white/70">🇨🇦
+                  Canada</span>
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-3 py-1.5 text-xs text-white/70">🇺🇸
+                  United States</span>
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-3 py-1.5 text-xs text-white/70">🇵🇹
+                  Portugal</span>
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-3 py-1.5 text-xs text-white/70">🇪🇸
+                  Spain</span>
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-3 py-1.5 text-xs text-white/70">🇩🇪
+                  Germany</span>
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-3 py-1.5 text-xs text-white/70">🇺🇦
+                  Ukraine</span>
+                <span
+                  class="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-3 py-1.5 text-xs text-white/70">🇳🇱
+                  Netherlands</span>
+              </div>
+              <blockquote class="relative pl-4 border-l-2 border-emerald-500/50">
+                <p class="text-white/40 text-sm italic">
+                  "Science knows no borders—and neither does our mission."
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </div>
   </section>
