@@ -1076,11 +1076,15 @@
   </section>
 
   <!-- Section 4: How It Works - The Vertical Elder Flow -->
-  <section class="py-32 md:py-48 bg-stone-50 relative overflow-hidden">
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       TECHNOLOGY PILLARS SECTION
+       5 Core Pillars with Vertical Spine Animation
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <section class="py-32 md:py-48 bg-stone-50 relative overflow-hidden" id="technology-pillars">
     <style>
       /* ========================================
-         VERTICAL ELDER FLOW
-         A Monumental Vertical Pipeline
+         VERTICAL ELDER FLOW - ENHANCED
+         Premium Animated Pipeline
       ======================================== */
 
       /* The Vertical Spine */
@@ -1093,9 +1097,9 @@
         transform: translateX(-50%);
         background: linear-gradient(180deg,
             rgba(124, 58, 237, 0) 0%,
-            rgba(124, 58, 237, 0.1) 10%,
-            rgba(124, 58, 237, 0.2) 50%,
-            rgba(124, 58, 237, 0.1) 90%,
+            rgba(124, 58, 237, 0.15) 10%,
+            rgba(124, 58, 237, 0.25) 50%,
+            rgba(124, 58, 237, 0.15) 90%,
             rgba(124, 58, 237, 0) 100%);
         z-index: 0;
       }
@@ -1107,9 +1111,9 @@
         inset: 0;
         background: linear-gradient(180deg,
             transparent 0%,
-            rgba(139, 92, 246, 0.4) 50%,
+            rgba(139, 92, 246, 0.5) 50%,
             transparent 100%);
-        animation: spineBreath 8s ease-in-out infinite;
+        animation: spineBreath 6s ease-in-out infinite;
       }
 
       @keyframes spineBreath {
@@ -1121,8 +1125,8 @@
         }
 
         50% {
-          opacity: 0.8;
-          transform: scaleX(1.5);
+          opacity: 0.9;
+          transform: scaleX(2);
         }
       }
 
@@ -1131,44 +1135,46 @@
         position: absolute;
         left: 0;
         right: 0;
-        height: 15vh;
+        height: 20vh;
         background: linear-gradient(180deg,
             transparent 0%,
-            rgba(167, 139, 250, 0.6) 50%,
+            rgba(167, 139, 250, 0.7) 40%,
+            rgba(139, 92, 246, 0.9) 50%,
+            rgba(167, 139, 250, 0.7) 60%,
             transparent 100%);
-        animation: pulseDown 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-        filter: blur(4px);
+        animation: pulseDown 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        filter: blur(6px);
       }
 
       @keyframes pulseDown {
         0% {
-          top: -20%;
+          top: -25%;
           opacity: 0;
         }
 
-        10% {
+        5% {
           opacity: 1;
         }
 
-        90% {
+        95% {
           opacity: 1;
         }
 
         100% {
-          top: 120%;
+          top: 125%;
           opacity: 0;
         }
       }
 
-      /* Step Card Wrapper */
-      .step-card {
+      /* Pillar Card Wrapper */
+      .pillar-card {
         position: relative;
         z-index: 10;
-        transition: transform 0.5s ease, opacity 0.5s ease;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
       }
 
-      .step-card:hover {
-        transform: translateY(-5px);
+      .pillar-card:hover {
+        transform: translateY(-8px);
       }
 
       /* The Node Point on the Spine */
@@ -1177,35 +1183,35 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 24px;
-        height: 24px;
+        width: 28px;
+        height: 28px;
         border-radius: 50%;
         background: #fafaf9;
-        /* stone-50 matches bg */
-        border: 2px solid rgba(139, 92, 246, 0.3);
+        border: 3px solid rgba(139, 92, 246, 0.4);
         z-index: 5;
         display: flex;
         align-items: center;
         justify-content: center;
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
       }
 
       .spine-node-inner {
-        width: 10px;
-        height: 10px;
+        width: 12px;
+        height: 12px;
         border-radius: 50%;
         background: #8b5cf6;
-        animation: nodePulse 3s infinite;
+        animation: nodePulse 2.5s infinite;
       }
 
       @keyframes nodePulse {
         0% {
           transform: scale(1);
-          box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4);
+          box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.5);
         }
 
-        70% {
-          transform: scale(1.5);
-          box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+        50% {
+          transform: scale(1.3);
+          box-shadow: 0 0 0 12px rgba(139, 92, 246, 0);
         }
 
         100% {
@@ -1214,21 +1220,13 @@
         }
       }
 
-      /* Content Box Styling */
-      .content-box {
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(0, 0, 0, 0.05);
-        box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.05);
-      }
-
       /* Number Watermark */
       .number-watermark {
         position: absolute;
-        top: -2rem;
-        font-size: 8rem;
+        top: -2.5rem;
+        font-size: 9rem;
         font-weight: 800;
-        color: rgba(0, 0, 0, 0.03);
+        color: rgba(0, 0, 0, 0.025);
         line-height: 1;
         pointer-events: none;
         user-select: none;
@@ -1236,28 +1234,73 @@
       }
 
       .left-aligned .number-watermark {
-        right: 10px;
+        right: 0;
       }
 
       .right-aligned .number-watermark {
-        left: 10px;
+        left: 0;
       }
 
       /* Visual/Icon Container */
-      .visual-container {
+      .pillar-visual {
         position: relative;
         overflow: hidden;
-        border-radius: 1.5rem;
-        background: linear-gradient(135deg, #f5f3ff 0%, #fff 100%);
+        border-radius: 2rem;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
+        backdrop-filter: blur(20px);
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      .visual-container::before {
+      .pillar-visual::before {
         content: '';
         position: absolute;
         inset: 0;
-        background-image: radial-gradient(#d8b4fe 1px, transparent 1px);
-        background-size: 24px 24px;
-        opacity: 0.3;
+        background-image: radial-gradient(circle at 2px 2px, rgba(139, 92, 246, 0.15) 1px, transparent 0);
+        background-size: 20px 20px;
+        opacity: 0.5;
+      }
+
+      .pillar-visual:hover {
+        transform: scale(1.02);
+        box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Icon Float Animation */
+      @keyframes iconFloat {
+
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+
+        50% {
+          transform: translateY(-8px) rotate(2deg);
+        }
+      }
+
+      .icon-float {
+        animation: iconFloat 4s ease-in-out infinite;
+      }
+
+      /* Staggered animations */
+      .stagger-1 {
+        animation-delay: 0s;
+      }
+
+      .stagger-2 {
+        animation-delay: 0.2s;
+      }
+
+      .stagger-3 {
+        animation-delay: 0.4s;
+      }
+
+      .stagger-4 {
+        animation-delay: 0.6s;
+      }
+
+      .stagger-5 {
+        animation-delay: 0.8s;
       }
     </style>
 
@@ -1273,19 +1316,21 @@
         <div
           class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-sm mb-8">
           <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
-          <span class="text-xs text-stone-600 font-bold uppercase tracking-widest">The Workflow</span>
+          <span class="text-xs text-stone-600 font-bold uppercase tracking-widest">Core Technology</span>
         </div>
         <h2 class="text-5xl md:text-7xl font-bold tracking-tight text-stone-900 mb-8 font-display">
-          From Chaos to <br>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Clarity</span>
+          The Intelligence<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500">Behind
+            SeleneX</span>
         </h2>
         <p class="text-xl text-stone-500 max-w-2xl mx-auto leading-relaxed">
-          A meticulously engineered pipeline that transforms complex multimodal data into life-saving clinical
-          insights.
+          Five foundational pillars that power our mission: precision, transparency, privacy, and real clinical impact.
         </p>
       </div>
 
-      <!-- Step 1: Ingestion -->
+      <!-- ═══════════════════════════════════════════════════════════════════════════
+           PILLAR 1: Multimodal Intelligence
+           ═══════════════════════════════════════════════════════════════════════════ -->
       <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center mb-32 group">
         <!-- Spine Node -->
         <div class="hidden lg:flex spine-node">
@@ -1293,113 +1338,147 @@
         </div>
 
         <!-- Left Content (Text) -->
-        <div class="text-right lg:pr-12 step-card reveal-on-scroll left-aligned">
+        <div class="text-right lg:pr-12 pillar-card reveal-on-scroll left-aligned">
           <span class="number-watermark">01</span>
           <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-100 text-purple-700 text-xs font-bold uppercase tracking-wider mb-6">
-            Ingestion
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-50 border border-purple-100 text-purple-700 text-xs font-bold uppercase tracking-wider mb-6">
+            <iconify-icon icon="lucide:brain" class="text-base"></iconify-icon>
+            Multimodal Intelligence
           </div>
-          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Multimodal Intake</h3>
+          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Data and Methods, Fused</h3>
           <p class="text-lg text-stone-500 leading-relaxed mb-6">
-            SeleneX seamlessly ingests data from disparate sources—PACS servers, genomic databases, and EHR
-            systems. Our universal adapter handles DICOM, HL7, and raw sequencing data natively.
+            Combining imaging, omics, clinical notes, and social data with diverse AI paradigms—deep learning, NLP,
+            statistical models, and generative AI—for unified, high-resolution understanding.
           </p>
           <ul class="inline-block text-left space-y-3">
             <li class="flex items-center gap-3 text-stone-600">
-              <iconify-icon icon="lucide:check-circle-2" class="text-green-500 text-xl"></iconify-icon>
-              <span>DICOM &amp; HL7 FHIR Compatible</span>
+              <iconify-icon icon="lucide:layers" class="text-purple-500 text-xl"></iconify-icon>
+              <span>Multi-source data integration</span>
             </li>
             <li class="flex items-center gap-3 text-stone-600">
-              <iconify-icon icon="lucide:check-circle-2" class="text-green-500 text-xl"></iconify-icon>
-              <span>Real-time Stream Processing</span>
+              <iconify-icon icon="lucide:git-merge" class="text-purple-500 text-xl"></iconify-icon>
+              <span>Cross-modal fusion transformers</span>
+            </li>
+            <li class="flex items-center gap-3 text-stone-600">
+              <iconify-icon icon="lucide:sparkles" class="text-purple-500 text-xl"></iconify-icon>
+              <span>Generative AI enhancement</span>
             </li>
           </ul>
         </div>
 
         <!-- Right Content (Visual) -->
         <div
-          class="visual-container h-80 lg:h-96 w-full shadow-2xl shadow-purple-900/5 rotate-1 hover:rotate-0 transition-transform duration-500 flex items-center justify-center border border-purple-100 reveal-on-scroll">
-          <div class="relative w-32 h-32">
-            <div class="absolute inset-0 bg-purple-600 rounded-2xl opacity-10 animate-ping"></div>
-            <div class="absolute inset-0 bg-purple-600 rounded-2xl opacity-20 transform rotate-12"></div>
-            <div
-              class="absolute inset-0 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-purple-50">
-              <iconify-icon icon="lucide:database" width="48" class="text-purple-600"></iconify-icon>
+          class="pillar-visual h-80 lg:h-96 w-full shadow-2xl shadow-purple-900/10 rotate-1 hover:rotate-0 transition-all duration-500 flex items-center justify-center border border-purple-100 reveal-on-scroll">
+          <div class="relative">
+            <!-- Layered data visualization -->
+            <div class="relative w-40 h-40">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-3xl opacity-10 animate-ping"
+                style="animation-duration: 3s;"></div>
+              <div
+                class="absolute inset-2 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-2xl opacity-20 transform rotate-6">
+              </div>
+              <div
+                class="absolute inset-4 bg-gradient-to-br from-purple-300 to-indigo-400 rounded-xl opacity-30 transform -rotate-3">
+              </div>
+              <div
+                class="absolute inset-0 bg-white rounded-3xl shadow-xl flex items-center justify-center border border-purple-100">
+                <iconify-icon icon="lucide:brain" width="64" class="text-purple-600 icon-float"></iconify-icon>
+              </div>
             </div>
-            <!-- Flying icons -->
-            <iconify-icon icon="lucide:image" class="absolute -top-8 -left-8 text-stone-300 text-3xl animate-bounce"
-              style="animation-delay: 0s"></iconify-icon>
-            <iconify-icon icon="lucide:dna" class="absolute -bottom-8 -right-8 text-stone-300 text-3xl animate-bounce"
-              style="animation-delay: 0.5s"></iconify-icon>
+            <!-- Orbiting data types -->
+            <iconify-icon icon="lucide:scan"
+              class="absolute -top-6 left-1/2 -translate-x-1/2 text-purple-400 text-2xl icon-float stagger-1"></iconify-icon>
+            <iconify-icon icon="lucide:dna"
+              class="absolute top-1/2 -right-8 -translate-y-1/2 text-indigo-400 text-2xl icon-float stagger-2"></iconify-icon>
+            <iconify-icon icon="lucide:file-text"
+              class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-purple-400 text-2xl icon-float stagger-3"></iconify-icon>
+            <iconify-icon icon="lucide:activity"
+              class="absolute top-1/2 -left-8 -translate-y-1/2 text-indigo-400 text-2xl icon-float stagger-4"></iconify-icon>
           </div>
         </div>
       </div>
 
-      <!-- Step 2: Processing -->
+      <!-- ═══════════════════════════════════════════════════════════════════════════
+           PILLAR 2: Generative Simulation & Personalization
+           ═══════════════════════════════════════════════════════════════════════════ -->
       <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center mb-32 group">
         <!-- Spine Node -->
         <div class="hidden lg:flex spine-node">
-          <div class="spine-node-inner bg-indigo-500"></div>
+          <div class="spine-node-inner bg-cyan-500"></div>
         </div>
 
         <!-- Left Content (Visual) -->
         <div
-          class="visual-container h-80 lg:h-96 w-full shadow-2xl shadow-indigo-900/5 -rotate-1 hover:rotate-0 transition-transform duration-500 flex items-center justify-center border border-indigo-100 reveal-on-scroll lg:order-1 order-2">
+          class="pillar-visual h-80 lg:h-96 w-full shadow-2xl shadow-cyan-900/10 -rotate-1 hover:rotate-0 transition-all duration-500 flex items-center justify-center border border-cyan-100 reveal-on-scroll lg:order-1 order-2"
+          style="background: linear-gradient(145deg, rgba(236,254,255,0.9) 0%, rgba(255,255,255,0.7) 100%);">
           <div class="relative">
-            <!-- Neural Network visual abstract -->
-            <div class="grid grid-cols-3 gap-4">
-              <div class="w-3 h-3 rounded-full bg-indigo-400 animate-pulse"></div>
-              <div class="w-3 h-3 rounded-full bg-indigo-300"></div>
-              <div class="w-3 h-3 rounded-full bg-indigo-400 animate-pulse"></div>
-              <div class="w-3 h-3 rounded-full bg-indigo-300"></div>
-              <div
-                class="w-12 h-12 rounded-xl bg-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/30 col-span-1 row-span-1 mx-auto relative z-10">
-                <iconify-icon icon="lucide:brain-circuit" width="24" class="text-white"></iconify-icon>
+            <!-- Digital Twin Visual -->
+            <div class="flex items-center gap-6">
+              <!-- Left figure (patient) -->
+              <div class="relative">
+                <div
+                  class="w-20 h-32 bg-gradient-to-b from-cyan-200 to-cyan-300 rounded-t-full rounded-b-2xl opacity-60">
+                </div>
+                <iconify-icon icon="lucide:user"
+                  class="absolute top-4 left-1/2 -translate-x-1/2 text-cyan-700 text-3xl"></iconify-icon>
               </div>
-              <div class="w-3 h-3 rounded-full bg-indigo-300"></div>
-              <div class="w-3 h-3 rounded-full bg-indigo-400 animate-pulse"></div>
-              <div class="w-3 h-3 rounded-full bg-indigo-300"></div>
-              <div class="w-3 h-3 rounded-full bg-indigo-400 animate-pulse"></div>
+              <!-- Arrow connection -->
+              <div class="flex flex-col items-center gap-2">
+                <iconify-icon icon="lucide:arrow-right-left" class="text-cyan-500 text-2xl icon-float"></iconify-icon>
+                <span class="text-[10px] text-cyan-600 font-medium uppercase tracking-wider">Sync</span>
+              </div>
+              <!-- Right figure (digital twin) -->
+              <div class="relative">
+                <div
+                  class="w-20 h-32 bg-gradient-to-b from-cyan-400 to-cyan-600 rounded-t-full rounded-b-2xl shadow-lg shadow-cyan-500/30">
+                  <div
+                    class="absolute inset-0 bg-[linear-gradient(0deg,transparent_50%,rgba(255,255,255,0.1)_50%)] bg-[length:4px_4px] rounded-t-full rounded-b-2xl">
+                  </div>
+                </div>
+                <iconify-icon icon="lucide:cpu"
+                  class="absolute top-4 left-1/2 -translate-x-1/2 text-white text-3xl"></iconify-icon>
+                <div
+                  class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-cyan-600 text-white text-[8px] px-2 py-0.5 rounded-full font-bold">
+                  TWIN</div>
+              </div>
             </div>
-            <!-- Connecting lines svg -->
-            <svg class="absolute inset-0 w-full h-full -z-0 opacity-20" style="transform: scale(3);">
-              <path d="M10 10 L50 50 L90 10" stroke="#4f46e5" stroke-width="2" fill="none" />
-              <path d="M10 90 L50 50 L90 90" stroke="#4f46e5" stroke-width="2" fill="none" />
-            </svg>
           </div>
         </div>
 
         <!-- Right Content (Text) -->
-        <div class="lg:pl-12 step-card reveal-on-scroll right-aligned lg:order-2 order-1">
+        <div class="lg:pl-12 pillar-card reveal-on-scroll right-aligned lg:order-2 order-1">
           <span class="number-watermark">02</span>
           <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-bold uppercase tracking-wider mb-6">
-            Processing
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-100 text-cyan-700 text-xs font-bold uppercase tracking-wider mb-6">
+            <iconify-icon icon="lucide:dna" class="text-base"></iconify-icon>
+            Generative Simulation
           </div>
-          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Fusion Engine</h3>
+          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Digital Twins That Adapt</h3>
           <p class="text-lg text-stone-500 leading-relaxed mb-6">
-            The core of SeleneX. Specialized sub-agents analyze specific modalities in parallel before our
-            Fusion Transformer synthesizes the findings. This replicates the consensus process of a
-            multi-disciplinary tumor board.
+            Simulating disease progression and treatment response across personalized profiles—factoring in biology,
+            clinical history, and access to care.
           </p>
           <ul class="space-y-3">
             <li class="flex items-center gap-3 text-stone-600">
-              <div
-                class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center text-xs font-bold text-indigo-600">
-                A</div>
-              <span>Parallel Feature Extraction</span>
+              <iconify-icon icon="lucide:user-cog" class="text-cyan-500 text-xl"></iconify-icon>
+              <span>Personalized patient models</span>
             </li>
             <li class="flex items-center gap-3 text-stone-600">
-              <div
-                class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center text-xs font-bold text-indigo-600">
-                B</div>
-              <span>Cross-Modal Attention Mechanisms</span>
+              <iconify-icon icon="lucide:trending-up" class="text-cyan-500 text-xl"></iconify-icon>
+              <span>Trajectory prediction</span>
+            </li>
+            <li class="flex items-center gap-3 text-stone-600">
+              <iconify-icon icon="lucide:flask-conical" class="text-cyan-500 text-xl"></iconify-icon>
+              <span>Treatment response simulation</span>
             </li>
           </ul>
         </div>
       </div>
 
-      <!-- Step 3: Analysis -->
+      <!-- ═══════════════════════════════════════════════════════════════════════════
+           PILLAR 3: Explainable, Transparent AI
+           ═══════════════════════════════════════════════════════════════════════════ -->
       <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center mb-32 group">
         <!-- Spine Node -->
         <div class="hidden lg:flex spine-node">
@@ -1407,63 +1486,75 @@
         </div>
 
         <!-- Left Content (Text) -->
-        <div class="text-right lg:pr-12 step-card reveal-on-scroll left-aligned">
+        <div class="text-right lg:pr-12 pillar-card reveal-on-scroll left-aligned">
           <span class="number-watermark">03</span>
           <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 border border-rose-100 text-rose-700 text-xs font-bold uppercase tracking-wider mb-6">
-            Validation
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-50 border border-rose-100 text-rose-700 text-xs font-bold uppercase tracking-wider mb-6">
+            <iconify-icon icon="lucide:search" class="text-base"></iconify-icon>
+            Explainable AI
           </div>
-          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Explainable Output</h3>
+          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Built for Trust, Not Black Boxes</h3>
           <p class="text-lg text-stone-500 leading-relaxed mb-6">
-            Black boxes have no place in oncology. SeleneX generates heatmaps, cites specific genomic markers,
-            and provides natural language justifications for every prediction.
+            Every prediction and treatment suggestion is traceable, auditable, and human-readable—supporting clinicians
+            with clarity and confidence.
           </p>
           <ul class="inline-block text-left space-y-3">
             <li class="flex items-center gap-3 text-stone-600">
-              <iconify-icon icon="lucide:scan-eye" class="text-rose-500 text-xl"></iconify-icon>
-              <span>Pixel-level Segmentation Maps</span>
+              <iconify-icon icon="lucide:eye" class="text-rose-500 text-xl"></iconify-icon>
+              <span>Visual attention maps</span>
             </li>
             <li class="flex items-center gap-3 text-stone-600">
-              <iconify-icon icon="lucide:book-open-check" class="text-rose-500 text-xl"></iconify-icon>
-              <span>Citation of Clinical Guidelines</span>
+              <iconify-icon icon="lucide:file-check" class="text-rose-500 text-xl"></iconify-icon>
+              <span>Full decision audit trails</span>
+            </li>
+            <li class="flex items-center gap-3 text-stone-600">
+              <iconify-icon icon="lucide:message-square" class="text-rose-500 text-xl"></iconify-icon>
+              <span>Natural language explanations</span>
             </li>
           </ul>
         </div>
 
         <!-- Right Content (Visual) -->
         <div
-          class="visual-container h-80 lg:h-96 w-full shadow-2xl shadow-rose-900/5 rotate-1 hover:rotate-0 transition-transform duration-500 flex items-center justify-center border border-rose-100 reveal-on-scroll">
-          <div class="relative bg-white p-6 rounded-xl shadow-lg border border-stone-100 max-w-xs w-full">
+          class="pillar-visual h-80 lg:h-96 w-full shadow-2xl shadow-rose-900/10 rotate-1 hover:rotate-0 transition-all duration-500 flex items-center justify-center border border-rose-100 reveal-on-scroll"
+          style="background: linear-gradient(145deg, rgba(255,241,242,0.9) 0%, rgba(255,255,255,0.7) 100%);">
+          <div class="relative bg-white p-6 rounded-2xl shadow-lg border border-rose-100 max-w-xs w-full">
             <div class="flex items-center gap-3 mb-4">
-              <div class="w-8 h-8 rounded-full bg-rose-100 flex items-center justify-center">
-                <iconify-icon icon="lucide:alert-circle" class="text-rose-600"></iconify-icon>
+              <div class="w-10 h-10 rounded-xl bg-rose-100 flex items-center justify-center">
+                <iconify-icon icon="lucide:scan-search" class="text-rose-600 text-xl"></iconify-icon>
               </div>
               <div>
-                <div class="h-2 w-24 bg-stone-200 rounded mb-1"></div>
-                <div class="h-2 w-16 bg-stone-100 rounded"></div>
+                <div class="text-sm font-semibold text-stone-800">Analysis Report</div>
+                <div class="text-xs text-stone-400">Transparency Level: Full</div>
               </div>
             </div>
-            <div class="space-y-2">
+            <div class="space-y-3">
               <div
-                class="h-20 bg-rose-50 rounded-lg border border-rose-100 relative overflow-hidden group-hover:bg-rose-100 transition-colors">
-                <div
-                  class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] opacity-20">
-                </div>
-                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-rose-300">
-                  SCANNING...
+                class="h-16 bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl border border-rose-100 relative overflow-hidden flex items-center justify-center">
+                <div class="grid grid-cols-4 gap-1 p-2">
+                  <div class="w-3 h-3 bg-rose-200 rounded"></div>
+                  <div class="w-3 h-3 bg-rose-400 rounded"></div>
+                  <div class="w-3 h-3 bg-rose-500 rounded animate-pulse"></div>
+                  <div class="w-3 h-3 bg-rose-300 rounded"></div>
+                  <div class="w-3 h-3 bg-rose-100 rounded"></div>
+                  <div class="w-3 h-3 bg-rose-300 rounded"></div>
+                  <div class="w-3 h-3 bg-rose-400 rounded"></div>
+                  <div class="w-3 h-3 bg-rose-200 rounded"></div>
                 </div>
               </div>
-              <div class="flex justify-between items-center text-xs text-stone-400 font-mono mt-2">
-                <span>Confidence</span>
-                <span class="text-rose-600 font-bold">98.4%</span>
+              <div class="flex items-center gap-2 text-xs text-stone-500 bg-stone-50 p-2 rounded-lg">
+                <iconify-icon icon="lucide:info" class="text-rose-400"></iconify-icon>
+                <span>"High confidence in region A3 due to cellular density patterns..."</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Step 4: Delivery -->
-      <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center group">
+      <!-- ═══════════════════════════════════════════════════════════════════════════
+           PILLAR 4: Privacy-by-Design
+           ═══════════════════════════════════════════════════════════════════════════ -->
+      <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center mb-32 group">
         <!-- Spine Node -->
         <div class="hidden lg:flex spine-node">
           <div class="spine-node-inner bg-emerald-500"></div>
@@ -1471,49 +1562,168 @@
 
         <!-- Left Content (Visual) -->
         <div
-          class="visual-container h-80 lg:h-96 w-full shadow-2xl shadow-emerald-900/5 -rotate-1 hover:rotate-0 transition-transform duration-500 flex items-center justify-center border border-emerald-100 reveal-on-scroll lg:order-1 order-2">
-          <div class="relative w-full max-w-xs bg-white rounded-xl shadow-lg overflow-hidden border border-stone-100">
-            <div class="bg-emerald-50 px-4 py-3 border-b border-emerald-100 flex justify-between items-center">
-              <div class="flex gap-1.5">
-                <div class="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-                <div class="w-2.5 h-2.5 rounded-full bg-emerald-300"></div>
-              </div>
-              <div class="text-[10px] text-emerald-700 font-bold tracking-wider">REPORT_FINAL.PDF</div>
-            </div>
-            <div class="p-4 space-y-3">
-              <div class="h-2 w-3/4 bg-stone-100 rounded"></div>
-              <div class="h-2 w-full bg-stone-100 rounded"></div>
-              <div class="h-2 w-5/6 bg-stone-100 rounded"></div>
+          class="pillar-visual h-80 lg:h-96 w-full shadow-2xl shadow-emerald-900/10 -rotate-1 hover:rotate-0 transition-all duration-500 flex items-center justify-center border border-emerald-100 reveal-on-scroll lg:order-1 order-2"
+          style="background: linear-gradient(145deg, rgba(236,253,245,0.9) 0%, rgba(255,255,255,0.7) 100%);">
+          <div class="relative">
+            <!-- Federated learning visual -->
+            <div class="flex flex-col items-center">
+              <!-- Central model -->
               <div
-                class="h-24 bg-stone-50 rounded border border-dashed border-stone-200 flex items-center justify-center text-stone-300 text-xs">
-                Visualization Embed
+                class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl shadow-lg shadow-emerald-500/30 flex items-center justify-center mb-6 relative z-10">
+                <iconify-icon icon="lucide:shield-check" class="text-white text-3xl icon-float"></iconify-icon>
               </div>
-              <div class="flex gap-2 mt-2">
-                <div class="h-8 w-full bg-emerald-600 rounded text-center text-white text-xs leading-8 font-medium">
-                  Download</div>
+              <!-- Hospital nodes -->
+              <div class="flex gap-8">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-10 h-10 bg-white rounded-xl shadow border border-emerald-100 flex items-center justify-center">
+                    <iconify-icon icon="lucide:building-2" class="text-emerald-600"></iconify-icon>
+                  </div>
+                  <div class="w-px h-8 bg-gradient-to-b from-emerald-400 to-transparent -mt-2 -mb-2"></div>
+                  <div class="text-[8px] text-emerald-600 font-medium">Hospital A</div>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-10 h-10 bg-white rounded-xl shadow border border-emerald-100 flex items-center justify-center">
+                    <iconify-icon icon="lucide:building-2" class="text-emerald-600"></iconify-icon>
+                  </div>
+                  <div class="w-px h-8 bg-gradient-to-b from-emerald-400 to-transparent -mt-2 -mb-2"></div>
+                  <div class="text-[8px] text-emerald-600 font-medium">Hospital B</div>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-10 h-10 bg-white rounded-xl shadow border border-emerald-100 flex items-center justify-center">
+                    <iconify-icon icon="lucide:building-2" class="text-emerald-600"></iconify-icon>
+                  </div>
+                  <div class="w-px h-8 bg-gradient-to-b from-emerald-400 to-transparent -mt-2 -mb-2"></div>
+                  <div class="text-[8px] text-emerald-600 font-medium">Hospital C</div>
+                </div>
+              </div>
+              <!-- Zero data label -->
+              <div
+                class="mt-4 px-3 py-1 bg-emerald-100 rounded-full text-[10px] text-emerald-700 font-bold uppercase tracking-wider">
+                Zero Raw Data Transferred
               </div>
             </div>
           </div>
         </div>
 
         <!-- Right Content (Text) -->
-        <div class="lg:pl-12 step-card reveal-on-scroll right-aligned lg:order-2 order-1">
+        <div class="lg:pl-12 pillar-card reveal-on-scroll right-aligned lg:order-2 order-1">
           <span class="number-watermark">04</span>
           <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-6">
-            Value
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-6">
+            <iconify-icon icon="lucide:lock" class="text-base"></iconify-icon>
+            Privacy-by-Design
           </div>
-          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Actionable Intelligence</h3>
+          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Federated Learning, Zero Exposure</h3>
           <p class="text-lg text-stone-500 leading-relaxed mb-6">
-            The final output is not just a label, but a comprehensive clinical dossier. Integrated directly into
-            hospital workflows, it empowers tumor boards to make decisions hours—not weeks—after diagnosis.
+            Models learn without patient data ever leaving the hospital—preserving privacy, supporting compliance, and
+            enabling global collaboration.
           </p>
-          <button
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-stone-900 text-white font-medium hover:bg-stone-800 transition-colors group">
-            <span>View Sample Report</span>
-            <iconify-icon icon="lucide:arrow-right"
-              class="group-hover:translate-x-1 transition-transform"></iconify-icon>
-          </button>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-stone-600">
+              <iconify-icon icon="lucide:server" class="text-emerald-500 text-xl"></iconify-icon>
+              <span>On-premise deployment</span>
+            </li>
+            <li class="flex items-center gap-3 text-stone-600">
+              <iconify-icon icon="lucide:shield" class="text-emerald-500 text-xl"></iconify-icon>
+              <span>HIPAA & GDPR compliant</span>
+            </li>
+            <li class="flex items-center gap-3 text-stone-600">
+              <iconify-icon icon="lucide:globe" class="text-emerald-500 text-xl"></iconify-icon>
+              <span>Global federated learning network</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════════════════════
+           PILLAR 5: Built from the Ground Up
+           ═══════════════════════════════════════════════════════════════════════════ -->
+      <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center group">
+        <!-- Spine Node -->
+        <div class="hidden lg:flex spine-node">
+          <div class="spine-node-inner bg-amber-500"></div>
+        </div>
+
+        <!-- Left Content (Text) -->
+        <div class="text-right lg:pr-12 pillar-card reveal-on-scroll left-aligned">
+          <span class="number-watermark">05</span>
+          <div
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-100 text-amber-700 text-xs font-bold uppercase tracking-wider mb-6">
+            <iconify-icon icon="lucide:settings" class="text-base"></iconify-icon>
+            Ground-Up Engineering
+          </div>
+          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Not Just a Wrapper—Real Tech</h3>
+          <p class="text-lg text-stone-500 leading-relaxed mb-6">
+            A foundational AI and data-native platform, engineered by leading AI engineers and top physicians in
+            oncology, radiology, and public health. Designed for performance, precision, and clinical impact.
+          </p>
+          <ul class="inline-block text-left space-y-3">
+            <li class="flex items-center gap-3 text-stone-600">
+              <iconify-icon icon="lucide:code-2" class="text-amber-500 text-xl"></iconify-icon>
+              <span>Custom-built AI infrastructure</span>
+            </li>
+            <li class="flex items-center gap-3 text-stone-600">
+              <iconify-icon icon="lucide:stethoscope" class="text-amber-500 text-xl"></iconify-icon>
+              <span>Physician-led development</span>
+            </li>
+            <li class="flex items-center gap-3 text-stone-600">
+              <iconify-icon icon="lucide:zap" class="text-amber-500 text-xl"></iconify-icon>
+              <span>Optimized for clinical workflows</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Content (Visual) -->
+        <div
+          class="pillar-visual h-80 lg:h-96 w-full shadow-2xl shadow-amber-900/10 rotate-1 hover:rotate-0 transition-all duration-500 flex items-center justify-center border border-amber-100 reveal-on-scroll"
+          style="background: linear-gradient(145deg, rgba(255,251,235,0.9) 0%, rgba(255,255,255,0.7) 100%);">
+          <div class="relative">
+            <!-- Foundation blocks visual -->
+            <div class="flex flex-col items-center">
+              <!-- Top layer - AI -->
+              <div
+                class="w-32 h-12 bg-gradient-to-r from-amber-400 to-orange-400 rounded-t-2xl shadow-lg flex items-center justify-center mb-1">
+                <span class="text-white text-sm font-bold">AI Engine</span>
+              </div>
+              <!-- Middle layer -->
+              <div
+                class="w-40 h-12 bg-gradient-to-r from-amber-500 to-orange-500 shadow-lg flex items-center justify-center mb-1">
+                <span class="text-white text-sm font-bold">Data Platform</span>
+              </div>
+              <!-- Bottom layer -->
+              <div
+                class="w-48 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-b-2xl shadow-lg flex items-center justify-center">
+                <span class="text-white text-sm font-bold">Clinical Foundation</span>
+              </div>
+              <!-- Team icons -->
+              <div class="flex gap-4 mt-6">
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-10 h-10 rounded-full bg-amber-100 border-2 border-amber-300 flex items-center justify-center">
+                    <iconify-icon icon="lucide:cpu" class="text-amber-600"></iconify-icon>
+                  </div>
+                  <span class="text-[9px] text-amber-700 mt-1 font-medium">AI Team</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-10 h-10 rounded-full bg-amber-100 border-2 border-amber-300 flex items-center justify-center">
+                    <iconify-icon icon="lucide:stethoscope" class="text-amber-600"></iconify-icon>
+                  </div>
+                  <span class="text-[9px] text-amber-700 mt-1 font-medium">Physicians</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div
+                    class="w-10 h-10 rounded-full bg-amber-100 border-2 border-amber-300 flex items-center justify-center">
+                    <iconify-icon icon="lucide:microscope" class="text-amber-600"></iconify-icon>
+                  </div>
+                  <span class="text-[9px] text-amber-700 mt-1 font-medium">Research</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
