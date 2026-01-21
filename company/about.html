@@ -3411,15 +3411,11 @@
 
     <!-- Enhanced Animation Styles -->
     <style>
-      
-      
-      
-      
       /* Glow effects for highlight cards */
       .glow-emerald {
         position: relative;
       }
-      
+
       .glow-emerald::before {
         content: '';
         position: absolute;
@@ -3431,16 +3427,16 @@
         z-index: -1;
         transition: opacity 1s ease, filter 1s ease;
       }
-      
+
       .glow-emerald:hover::before {
         opacity: 0.9;
         filter: blur(30px);
       }
-      
+
       .glow-pink {
         position: relative;
       }
-      
+
       .glow-pink::before {
         content: '';
         position: absolute;
@@ -3452,16 +3448,16 @@
         z-index: -1;
         transition: opacity 1s ease, filter 1s ease;
       }
-      
+
       .glow-pink:hover::before {
         opacity: 0.9;
         filter: blur(30px);
       }
-      
+
       .glow-blue {
         position: relative;
       }
-      
+
       .glow-blue::before {
         content: '';
         position: absolute;
@@ -3473,16 +3469,16 @@
         z-index: -1;
         transition: opacity 1s ease, filter 1s ease;
       }
-      
+
       .glow-blue:hover::before {
         opacity: 0.8;
         filter: blur(30px);
       }
-      
+
       .glow-violet {
         position: relative;
       }
-      
+
       .glow-violet::before {
         content: '';
         position: absolute;
@@ -3494,7 +3490,7 @@
         z-index: -1;
         transition: opacity 1s ease, filter 1s ease;
       }
-      
+
       .glow-violet:hover::before {
         opacity: 0.9;
         filter: blur(30px);
@@ -3503,29 +3499,29 @@
 
       /* Light theme smooth cards */
       .smooth-card-light {
-        transition: 
+        transition:
           transform 1s cubic-bezier(0.19, 1, 0.22, 1),
           box-shadow 1s cubic-bezier(0.19, 1, 0.22, 1),
           border-color 0.8s ease,
           background-color 0.8s ease;
       }
-      
+
       .smooth-card-light:hover {
         transform: translateY(-6px) scale(1.005);
-        box-shadow: 
+        box-shadow:
           0 20px 40px -15px rgba(0, 0, 0, 0.1),
           0 0 0 1px rgba(0, 0, 0, 0.03);
         border-color: rgba(0, 0, 0, 0.1);
         background-color: rgba(255, 255, 255, 0.95);
       }
-      
+
       /* Icon hover for all sections */
       .icon-hover {
-        transition: 
+        transition:
           transform 0.8s cubic-bezier(0.19, 1, 0.22, 1),
           box-shadow 0.8s ease;
       }
-      
+
       .group:hover .icon-hover {
         transform: translateY(-3px) scale(1.05);
       }
@@ -3533,46 +3529,46 @@
 
       /* Ultra-Smooth Card Interactions */
       .smooth-card {
-        transition: 
+        transition:
           transform 1s cubic-bezier(0.19, 1, 0.22, 1),
           box-shadow 1s cubic-bezier(0.19, 1, 0.22, 1),
           border-color 0.8s ease,
           background-color 0.8s ease;
       }
-      
+
       .smooth-card:hover {
         transform: translateY(-8px) scale(1.01);
-        box-shadow: 
+        box-shadow:
           0 25px 50px -12px rgba(0, 0, 0, 0.4),
           0 0 0 1px rgba(255, 255, 255, 0.1),
           inset 0 1px 0 rgba(255, 255, 255, 0.05);
         border-color: rgba(255, 255, 255, 0.2);
         background-color: rgba(23, 23, 23, 0.8);
       }
-      
+
       /* Glowing orb that expands on hover */
       .card-orb {
-        transition: 
+        transition:
           transform 1.5s cubic-bezier(0.19, 1, 0.22, 1),
           opacity 1s ease;
       }
-      
+
       .group:hover .card-orb {
         transform: translate(30%, -30%) scale(1.3);
         opacity: 0.8;
       }
-      
+
       .card-orb-emerald {
-        transition: 
+        transition:
           transform 1.5s cubic-bezier(0.19, 1, 0.22, 1),
           opacity 1s ease;
       }
-      
+
       .group:hover .card-orb-emerald {
         transform: translate(30%, -30%) scale(1.3);
         opacity: 0.8;
       }
-      
+
       /* Inner glow effect */
       .inner-glow::before {
         content: '';
@@ -3584,11 +3580,11 @@
         transition: opacity 1s ease;
         pointer-events: none;
       }
-      
+
       .group:hover .inner-glow::before {
         opacity: 1;
       }
-      
+
       .inner-glow-emerald::before {
         content: '';
         position: absolute;
@@ -3599,39 +3595,39 @@
         transition: opacity 1s ease;
         pointer-events: none;
       }
-      
+
       .group:hover .inner-glow-emerald::before {
         opacity: 1;
       }
-      
+
       /* Icon float effect */
       .icon-float {
-        transition: 
+        transition:
           transform 0.8s cubic-bezier(0.19, 1, 0.22, 1),
           box-shadow 0.8s ease;
       }
-      
+
       .group:hover .icon-float {
         transform: translateY(-4px) scale(1.05);
         box-shadow: 0 8px 20px -8px rgba(139, 92, 246, 0.4);
       }
-      
+
       .icon-float-emerald {
-        transition: 
+        transition:
           transform 0.8s cubic-bezier(0.19, 1, 0.22, 1),
           box-shadow 0.8s ease;
       }
-      
+
       .group:hover .icon-float-emerald {
         transform: translateY(-4px) scale(1.05);
         box-shadow: 0 8px 20px -8px rgba(16, 185, 129, 0.4);
       }
-      
+
       /* Text reveal animation - subtle */
       .text-reveal {
         transition: color 0.6s ease, text-shadow 0.6s ease;
       }
-      
+
       .group:hover .text-reveal {
         text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
       }
@@ -3639,68 +3635,69 @@
 
       /* Elegant Animation Classes */
       .elegant-lift {
-        transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), 
-                    box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1),
-                    border-color 0.8s ease;
+        transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+          box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+          border-color 0.8s ease;
       }
-      
+
       .elegant-lift:hover {
         transform: translateY(-6px);
         box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
       }
-      
+
       .elegant-glow {
         transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
       }
-      
+
       .elegant-glow:hover {
         box-shadow: 0 0 40px -10px rgba(139, 92, 246, 0.3);
       }
-      
+
       .elegant-glow-emerald:hover {
         box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.3);
       }
-      
+
       .elegant-glow-blue:hover {
         box-shadow: 0 0 40px -10px rgba(59, 130, 246, 0.3);
       }
-      
+
       .elegant-scale {
         transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
       }
-      
+
       .elegant-scale:hover {
         transform: scale(1.02);
       }
-      
+
       .elegant-border {
         transition: border-color 0.6s ease, background-color 0.6s ease;
       }
-      
+
       .elegant-border:hover {
         border-color: rgba(255, 255, 255, 0.25);
       }
-      
+
       .elegant-fade-in {
         animation: elegantFadeIn 1.5s ease-out forwards;
       }
-      
+
       @keyframes elegantFadeIn {
         from {
           opacity: 0;
           transform: translateY(20px);
         }
+
         to {
           opacity: 1;
           transform: translateY(0);
         }
       }
-      
+
       .elegant-shimmer {
         position: relative;
         overflow: hidden;
       }
-      
+
       .elegant-shimmer::after {
         content: '';
         position: absolute;
@@ -3708,15 +3705,22 @@
         left: -100%;
         width: 50%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
         animation: elegantShimmer 8s ease-in-out infinite;
       }
-      
+
       @keyframes elegantShimmer {
-        0%, 100% { left: -100%; }
-        50% { left: 150%; }
+
+        0%,
+        100% {
+          left: -100%;
+        }
+
+        50% {
+          left: 150%;
+        }
       }
-      
+
       .text-gradient-subtle {
         background: linear-gradient(135deg, #a78bfa 0%, #c4b5fd 50%, #a78bfa 100%);
         background-size: 200% 200%;
@@ -3725,84 +3729,178 @@
         -webkit-text-fill-color: transparent;
         animation: subtleGradient 8s ease infinite;
       }
-      
+
       @keyframes subtleGradient {
-        0%, 100% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
+
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
       }
 
       /* Advanced Keyframe Animations */
       @keyframes float {
-        0%, 100% { transform: translateY(0) rotate(0deg); }
-        50% { transform: translateY(-10px) rotate(0.5deg); }
+
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+
+        50% {
+          transform: translateY(-10px) rotate(0.5deg);
+        }
       }
-      
+
       @keyframes floatReverse {
-        0%, 100% { transform: translateY(0) rotate(0deg); }
-        50% { transform: translateY(10px) rotate(-0.5deg); }
+
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+
+        50% {
+          transform: translateY(10px) rotate(-0.5deg);
+        }
       }
-      
+
       @keyframes gradientShift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
       }
-      
+
       @keyframes shimmer {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(100%); }
+        0% {
+          transform: translateX(-100%);
+        }
+
+        100% {
+          transform: translateX(100%);
+        }
       }
-      
+
       @keyframes glow {
-        0%, 100% { opacity: 0.5; filter: blur(40px); }
-        50% { opacity: 0.8; filter: blur(60px); }
+
+        0%,
+        100% {
+          opacity: 0.5;
+          filter: blur(40px);
+        }
+
+        50% {
+          opacity: 0.8;
+          filter: blur(60px);
+        }
       }
-      
+
       @keyframes borderGlow {
-        0%, 100% { border-color: rgba(139, 92, 246, 0.2); box-shadow: 0 0 20px rgba(139, 92, 246, 0.1); }
-        50% { border-color: rgba(139, 92, 246, 0.4); box-shadow: 0 0 40px rgba(139, 92, 246, 0.2); }
+
+        0%,
+        100% {
+          border-color: rgba(139, 92, 246, 0.2);
+          box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+        }
+
+        50% {
+          border-color: rgba(139, 92, 246, 0.4);
+          box-shadow: 0 0 40px rgba(139, 92, 246, 0.2);
+        }
       }
-      
+
       @keyframes spin3d {
-        0% { transform: rotateY(0deg) rotateX(0deg); }
-        100% { transform: rotateY(360deg) rotateX(360deg); }
+        0% {
+          transform: rotateY(0deg) rotateX(0deg);
+        }
+
+        100% {
+          transform: rotateY(360deg) rotateX(360deg);
+        }
       }
-      
+
       @keyframes morphBlob {
-        0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-        25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-        50% { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; }
-        75% { border-radius: 60% 40% 60% 40% / 60% 30% 50% 70%; }
+
+        0%,
+        100% {
+          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+
+        25% {
+          border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        }
+
+        50% {
+          border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+        }
+
+        75% {
+          border-radius: 60% 40% 60% 40% / 60% 30% 50% 70%;
+        }
       }
-      
+
       @keyframes pulseGlow {
-        0%, 100% { 
-          box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 
-                      0 0 40px rgba(139, 92, 246, 0.2), 
-                      0 0 60px rgba(139, 92, 246, 0.1);
+
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(139, 92, 246, 0.3),
+            0 0 40px rgba(139, 92, 246, 0.2),
+            0 0 60px rgba(139, 92, 246, 0.1);
         }
-        50% { 
-          box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), 
-                      0 0 60px rgba(139, 92, 246, 0.3), 
-                      0 0 90px rgba(139, 92, 246, 0.2);
+
+        50% {
+          box-shadow: 0 0 30px rgba(139, 92, 246, 0.5),
+            0 0 60px rgba(139, 92, 246, 0.3),
+            0 0 90px rgba(139, 92, 246, 0.2);
         }
       }
-      
+
       @keyframes orbFloat {
-        0% { transform: translate(0, 0) scale(1); }
-        25% { transform: translate(10px, -15px) scale(1.05); }
-        50% { transform: translate(-5px, -25px) scale(1); }
-        75% { transform: translate(-15px, -10px) scale(0.95); }
-        100% { transform: translate(0, 0) scale(1); }
+        0% {
+          transform: translate(0, 0) scale(1);
+        }
+
+        25% {
+          transform: translate(10px, -15px) scale(1.05);
+        }
+
+        50% {
+          transform: translate(-5px, -25px) scale(1);
+        }
+
+        75% {
+          transform: translate(-15px, -10px) scale(0.95);
+        }
+
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
       }
-      
+
       /* Animation Classes */
-      .animate-float { animation: float 12s ease-in-out infinite; }
-      .animate-float-reverse { animation: floatReverse 14s ease-in-out infinite; }
-      .animate-gradient { 
-        background-size: 200% 200%;
-        animation: gradientShift 20s ease infinite; 
+      .animate-float {
+        animation: float 12s ease-in-out infinite;
       }
+
+      .animate-float-reverse {
+        animation: floatReverse 14s ease-in-out infinite;
+      }
+
+      .animate-gradient {
+        background-size: 200% 200%;
+        animation: gradientShift 20s ease infinite;
+      }
+
       .animate-shimmer::after {
         content: '';
         position: absolute;
@@ -3810,48 +3908,63 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
         animation: shimmer 8s infinite;
       }
-      .animate-glow { animation: glow 8s ease-in-out infinite; }
-      .animate-border-glow { animation: borderGlow 6s ease-in-out infinite; }
-      .animate-morph { animation: morphBlob 20s ease-in-out infinite; }
-      .animate-pulse-glow { animation: pulseGlow 6s ease-in-out infinite; }
-      .animate-orb { animation: orbFloat 25s ease-in-out infinite; }
-      
+
+      .animate-glow {
+        animation: glow 8s ease-in-out infinite;
+      }
+
+      .animate-border-glow {
+        animation: borderGlow 6s ease-in-out infinite;
+      }
+
+      .animate-morph {
+        animation: morphBlob 20s ease-in-out infinite;
+      }
+
+      .animate-pulse-glow {
+        animation: pulseGlow 6s ease-in-out infinite;
+      }
+
+      .animate-orb {
+        animation: orbFloat 25s ease-in-out infinite;
+      }
+
       /* Glassmorphism Enhancement */
       .glass-card {
-        background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255,255,255,0.1);
-        box-shadow: 
-          0 8px 32px rgba(0,0,0,0.3),
-          inset 0 1px 0 rgba(255,255,255,0.1),
-          inset 0 -1px 0 rgba(0,0,0,0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow:
+          0 8px 32px rgba(0, 0, 0, 0.3),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1),
+          inset 0 -1px 0 rgba(0, 0, 0, 0.2);
       }
-      
+
       .glass-card:hover {
-        background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
-        border-color: rgba(255,255,255,0.2);
-        box-shadow: 
-          0 16px 48px rgba(0,0,0,0.4),
-          0 0 60px rgba(139,92,246,0.15),
-          inset 0 1px 0 rgba(255,255,255,0.15);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow:
+          0 16px 48px rgba(0, 0, 0, 0.4),
+          0 0 60px rgba(139, 92, 246, 0.15),
+          inset 0 1px 0 rgba(255, 255, 255, 0.15);
         transform: translateY(-4px);
       }
-      
+
       .glass-card-intense {
-        background: linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(59,130,246,0.05) 50%, rgba(16,185,129,0.05) 100%);
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 50%, rgba(16, 185, 129, 0.05) 100%);
         backdrop-filter: blur(24px);
         -webkit-backdrop-filter: blur(24px);
-        border: 1px solid rgba(139,92,246,0.2);
-        box-shadow: 
-          0 8px 32px rgba(0,0,0,0.4),
-          0 0 40px rgba(139,92,246,0.1),
-          inset 0 1px 0 rgba(255,255,255,0.1);
+        border: 1px solid rgba(139, 92, 246, 0.2);
+        box-shadow:
+          0 8px 32px rgba(0, 0, 0, 0.4),
+          0 0 40px rgba(139, 92, 246, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
       }
-      
+
       /* Gradient Text Animation */
       .gradient-text-animated {
         background: linear-gradient(90deg, #8b5cf6, #ec4899, #3b82f6, #10b981, #8b5cf6);
@@ -3861,7 +3974,7 @@
         -webkit-text-fill-color: transparent;
         animation: gradientShift 6s ease infinite;
       }
-      
+
       /* Floating Orbs */
       .floating-orb {
         position: absolute;
@@ -3870,54 +3983,71 @@
         opacity: 0.6;
         animation: orbFloat 30s ease-in-out infinite;
       }
-      
+
       /* Stagger Animation Delays */
-      .stagger-1 { animation-delay: 0.1s; }
-      .stagger-2 { animation-delay: 0.2s; }
-      .stagger-3 { animation-delay: 0.3s; }
-      .stagger-4 { animation-delay: 0.4s; }
-      .stagger-5 { animation-delay: 0.5s; }
-      .stagger-6 { animation-delay: 0.6s; }
-      
+      .stagger-1 {
+        animation-delay: 0.1s;
+      }
+
+      .stagger-2 {
+        animation-delay: 0.2s;
+      }
+
+      .stagger-3 {
+        animation-delay: 0.3s;
+      }
+
+      .stagger-4 {
+        animation-delay: 0.4s;
+      }
+
+      .stagger-5 {
+        animation-delay: 0.5s;
+      }
+
+      .stagger-6 {
+        animation-delay: 0.6s;
+      }
+
       /* Hover Glow Effects */
       .hover-glow:hover {
-        box-shadow: 
-          0 0 20px rgba(139,92,246,0.4),
-          0 0 40px rgba(139,92,246,0.2),
-          0 0 60px rgba(139,92,246,0.1);
+        box-shadow:
+          0 0 20px rgba(139, 92, 246, 0.4),
+          0 0 40px rgba(139, 92, 246, 0.2),
+          0 0 60px rgba(139, 92, 246, 0.1);
       }
-      
+
       .hover-glow-emerald:hover {
-        box-shadow: 
-          0 0 20px rgba(16,185,129,0.4),
-          0 0 40px rgba(16,185,129,0.2),
-          0 0 60px rgba(16,185,129,0.1);
+        box-shadow:
+          0 0 20px rgba(16, 185, 129, 0.4),
+          0 0 40px rgba(16, 185, 129, 0.2),
+          0 0 60px rgba(16, 185, 129, 0.1);
       }
-      
+
       .hover-glow-pink:hover {
-        box-shadow: 
-          0 0 20px rgba(236,72,153,0.4),
-          0 0 40px rgba(236,72,153,0.2),
-          0 0 60px rgba(236,72,153,0.1);
+        box-shadow:
+          0 0 20px rgba(236, 72, 153, 0.4),
+          0 0 40px rgba(236, 72, 153, 0.2),
+          0 0 60px rgba(236, 72, 153, 0.1);
       }
-      
+
       .hover-glow-blue:hover {
-        box-shadow: 
-          0 0 20px rgba(59,130,246,0.4),
-          0 0 40px rgba(59,130,246,0.2),
-          0 0 60px rgba(59,130,246,0.1);
+        box-shadow:
+          0 0 20px rgba(59, 130, 246, 0.4),
+          0 0 40px rgba(59, 130, 246, 0.2),
+          0 0 60px rgba(59, 130, 246, 0.1);
       }
-      
+
       /* 3D Card Transform */
       .card-3d {
         transform-style: preserve-3d;
         transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
       }
-      
+
       .card-3d:hover {
         transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateZ(20px);
       }
-      
+
       /* Noise Texture Overlay */
       .noise-texture::before {
         content: '';
@@ -3934,25 +4064,42 @@
       <!-- Advanced Animated Background -->
       <div class="absolute inset-0 pointer-events-none overflow-hidden">
         <!-- Morphing Gradient Blobs -->
-        <div class="floating-orb animate-orb w-[700px] h-[700px] bg-gradient-to-br from-violet-600/20 via-purple-500/15 to-fuchsia-500/10 top-0 left-0 animate-morph"></div>
-        <div class="floating-orb animate-orb w-[600px] h-[600px] bg-gradient-to-tr from-blue-600/15 via-cyan-500/10 to-teal-500/8 bottom-0 right-0 animate-morph stagger-3"></div>
-        <div class="floating-orb animate-orb w-[500px] h-[500px] bg-gradient-to-bl from-emerald-600/12 via-green-500/8 to-teal-500/6 top-1/3 right-1/4 animate-morph stagger-5"></div>
-        <div class="floating-orb animate-orb w-[400px] h-[400px] bg-gradient-to-r from-pink-600/10 via-rose-500/8 to-orange-500/6 bottom-1/4 left-1/3 animate-morph stagger-2"></div>
-        
+        <div
+          class="floating-orb animate-orb w-[700px] h-[700px] bg-gradient-to-br from-violet-600/20 via-purple-500/15 to-fuchsia-500/10 top-0 left-0 animate-morph">
+        </div>
+        <div
+          class="floating-orb animate-orb w-[600px] h-[600px] bg-gradient-to-tr from-blue-600/15 via-cyan-500/10 to-teal-500/8 bottom-0 right-0 animate-morph stagger-3">
+        </div>
+        <div
+          class="floating-orb animate-orb w-[500px] h-[500px] bg-gradient-to-bl from-emerald-600/12 via-green-500/8 to-teal-500/6 top-1/3 right-1/4 animate-morph stagger-5">
+        </div>
+        <div
+          class="floating-orb animate-orb w-[400px] h-[400px] bg-gradient-to-r from-pink-600/10 via-rose-500/8 to-orange-500/6 bottom-1/4 left-1/3 animate-morph stagger-2">
+        </div>
+
         <!-- Animated Gradient Mesh -->
-        <div class="absolute inset-0 opacity-30 animate-gradient" style="background: radial-gradient(ellipse at 20% 30%, rgba(139,92,246,0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 70%, rgba(59,130,246,0.12) 0%, transparent 50%), radial-gradient(ellipse at 50% 50%, rgba(16,185,129,0.08) 0%, transparent 50%);"></div>
+        <div class="absolute inset-0 opacity-30 animate-gradient"
+          style="background: radial-gradient(ellipse at 20% 30%, rgba(139,92,246,0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 70%, rgba(59,130,246,0.12) 0%, transparent 50%), radial-gradient(ellipse at 50% 50%, rgba(16,185,129,0.08) 0%, transparent 50%);">
+        </div>
       </div>
-      
+
       <!-- Enhanced Grid Pattern with Glow -->
       <div class="absolute inset-0 noise-texture"></div>
       <div class="absolute inset-0 opacity-[0.03]">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(139,92,246,0.8) 1px, transparent 0); background-size: 50px 50px;"></div>
+        <div class="absolute inset-0"
+          style="background-image: radial-gradient(circle at 1px 1px, rgba(139,92,246,0.8) 1px, transparent 0); background-size: 50px 50px;">
+        </div>
       </div>
       <!-- Floating Light Particles -->
       <div class="absolute top-20 left-20 w-2 h-2 bg-violet-400 rounded-full animate-float opacity-40 blur-[1px]"></div>
-      <div class="absolute top-40 right-32 w-1.5 h-1.5 bg-blue-400 rounded-full animate-float-reverse opacity-30 blur-[1px]" style="animation-delay: 1s;"></div>
-      <div class="absolute bottom-32 left-1/3 w-2 h-2 bg-emerald-400 rounded-full animate-float opacity-35 blur-[1px]" style="animation-delay: 2s;"></div>
-      <div class="absolute top-1/2 right-20 w-1 h-1 bg-pink-400 rounded-full animate-float-reverse opacity-40 blur-[1px]" style="animation-delay: 3s;"></div>
+      <div
+        class="absolute top-40 right-32 w-1.5 h-1.5 bg-blue-400 rounded-full animate-float-reverse opacity-30 blur-[1px]"
+        style="animation-delay: 1s;"></div>
+      <div class="absolute bottom-32 left-1/3 w-2 h-2 bg-emerald-400 rounded-full animate-float opacity-35 blur-[1px]"
+        style="animation-delay: 2s;"></div>
+      <div
+        class="absolute top-1/2 right-20 w-1 h-1 bg-pink-400 rounded-full animate-float-reverse opacity-40 blur-[1px]"
+        style="animation-delay: 3s;"></div>
 
       <div class="relative z-10 max-w-6xl mx-auto">
 
@@ -3970,40 +4117,61 @@
           <!-- Vision Cards - Dark Glass -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
             <!-- Origin Card -->
-            <div class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-8 md:p-10 relative overflow-hidden smooth-card inner-glow">
+            <div
+              class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-8 md:p-10 relative overflow-hidden smooth-card inner-glow">
               <!-- Animated gradient orb -->
-              <div class="card-orb absolute top-0 right-0 w-72 h-72 bg-gradient-to-bl from-violet-500/25 via-purple-500/15 to-transparent rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl opacity-60"></div>
+              <div
+                class="card-orb absolute top-0 right-0 w-72 h-72 bg-gradient-to-bl from-violet-500/25 via-purple-500/15 to-transparent rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl opacity-60">
+              </div>
               <!-- Subtle top edge highlight -->
-              <div class="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-violet-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+              <div
+                class="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-violet-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+              </div>
               <div class="relative">
-                <div class="icon-float w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-500/20 to-violet-600/10 border border-violet-500/20 flex items-center justify-center mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-violet-400">
+                <div
+                  class="icon-float w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-500/20 to-violet-600/10 border border-violet-500/20 flex items-center justify-center mb-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="text-violet-400">
                     <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
                     <path d="M2 17l10 5 10-5"></path>
                     <path d="M2 12l10 5 10-5"></path>
                   </svg>
                 </div>
                 <p class="text-neutral-300 text-lg leading-relaxed font-light text-reveal">
-                  SeleneX was born from a shared conviction: that <span class="font-medium text-white">high-quality, personalized healthcare should not be a privilege</span> of access, geography, or institution — and that AI, when designed with care and clinical depth, can radically expand the reach and equity of diagnostics and treatment.
+                  SeleneX was born from a shared conviction: that <span class="font-medium text-white">high-quality,
+                    personalized healthcare should not be a privilege</span> of access, geography, or institution — and
+                  that AI, when designed with care and clinical depth, can radically expand the reach and equity of
+                  diagnostics and treatment.
                 </p>
               </div>
             </div>
 
             <!-- Mission Card -->
-            <div class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-8 md:p-10 relative overflow-hidden smooth-card inner-glow-emerald">
+            <div
+              class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-8 md:p-10 relative overflow-hidden smooth-card inner-glow-emerald">
               <!-- Animated gradient orb -->
-              <div class="card-orb-emerald absolute top-0 right-0 w-72 h-72 bg-gradient-to-bl from-emerald-500/25 via-teal-500/15 to-transparent rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl opacity-60"></div>
+              <div
+                class="card-orb-emerald absolute top-0 right-0 w-72 h-72 bg-gradient-to-bl from-emerald-500/25 via-teal-500/15 to-transparent rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl opacity-60">
+              </div>
               <!-- Subtle top edge highlight -->
-              <div class="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+              <div
+                class="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+              </div>
               <div class="relative">
-                <div class="icon-float-emerald w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/20 flex items-center justify-center mb-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-400">
+                <div
+                  class="icon-float-emerald w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/20 flex items-center justify-center mb-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="text-emerald-400">
                     <circle cx="12" cy="12" r="10"></circle>
                     <path d="m9 12 2 2 4-4"></path>
                   </svg>
                 </div>
                 <p class="text-neutral-300 text-lg leading-relaxed font-light text-reveal">
-                  Founded in 2025, SeleneX brings together a <span class="font-medium text-white">multidisciplinary, globally distributed team</span> united by a clear mission to transform early cancer detection through AI.
+                  Founded in 2025, SeleneX brings together a <span class="font-medium text-white">multidisciplinary,
+                    globally distributed team</span> united by a clear mission to transform early cancer detection
+                  through AI.
                 </p>
               </div>
             </div>
@@ -4011,13 +4179,22 @@
 
           <!-- Mission Statement - Glowing Card -->
           <div class="relative group">
-            <div class="absolute -inset-0.5 bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-blue-500/10 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-            <div class="relative rounded-2xl border border-white/10 bg-gradient-to-br from-neutral-900 via-neutral-900 to-neutral-950 p-10 md:p-14 text-center overflow-hidden">
-              <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.15),transparent_50%)]"></div>
-              <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(16,185,129,0.08),transparent_50%)]"></div>
+            <div
+              class="absolute -inset-0.5 bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-blue-500/10 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500">
+            </div>
+            <div
+              class="relative rounded-2xl border border-white/10 bg-gradient-to-br from-neutral-900 via-neutral-900 to-neutral-950 p-10 md:p-14 text-center overflow-hidden">
+              <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.15),transparent_50%)]">
+              </div>
+              <div
+                class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(16,185,129,0.08),transparent_50%)]">
+              </div>
               <div class="relative">
                 <p class="text-xl md:text-2xl font-light text-white leading-relaxed max-w-4xl mx-auto">
-                  To build the AI systems that will power <span class="font-medium bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">intelligent, personalized, and autonomous care pathways</span> — grounded in real-world clinical data, rigorous science, and human trust.
+                  To build the AI systems that will power <span
+                    class="font-medium bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">intelligent,
+                    personalized, and autonomous care pathways</span> — grounded in real-world clinical data, rigorous
+                  science, and human trust.
                 </p>
               </div>
             </div>
@@ -4033,63 +4210,99 @@
             Meet the Founders
           </h3>
           <p class="text-lg text-neutral-400 max-w-2xl mx-auto leading-relaxed">
-            Together, they bring a rare combination of AI systems engineering, global health policy, and deep regulatory awareness.
+            Together, they bring a rare combination of AI systems engineering, global health policy, and deep regulatory
+            awareness.
           </p>
         </div>
 
         <!-- Founder Cards - STACKED, DARK GLASS -->
         <div class="flex flex-col gap-10 mb-20">
-          
+
           <!-- Tatev Aslanyan -->
           <div class="group relative">
-            <div class="absolute -inset-0.5 bg-gradient-to-r from-violet-500/10 via-purple-500/5 to-transparent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-            <div class="relative rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md overflow-hidden smooth-card glow-violet">
+            <div
+              class="absolute -inset-0.5 bg-gradient-to-r from-violet-500/10 via-purple-500/5 to-transparent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+            </div>
+            <div
+              class="relative rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md overflow-hidden smooth-card glow-violet">
               <div class="flex flex-col lg:flex-row">
                 <!-- Photo -->
                 <div class="lg:w-[35%] relative overflow-hidden aspect-[4/5] lg:aspect-auto lg:min-h-[650px]">
-                  <img src="../assets/team/tatev-aslanyan.png" alt="Tatev Aslanyan" class="w-full h-full object-cover group-hover:scale-[1.015] transition-transform duration-[1500ms] ease-out absolute inset-0">
-                  <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/30 to-transparent opacity-80"></div>
-                  <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-neutral-950/50 hidden lg:block"></div>
+                  <img src="../assets/team/tatev-aslanyan.png" alt="Tatev Aslanyan"
+                    class="w-full h-full object-cover group-hover:scale-[1.015] transition-transform duration-[1500ms] ease-out absolute inset-0">
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/30 to-transparent opacity-80">
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-neutral-950/50 hidden lg:block">
+                  </div>
                 </div>
                 <!-- Info -->
                 <div class="lg:w-[65%] p-8 md:p-12 lg:p-14 flex flex-col justify-between">
                   <div>
                     <!-- Header -->
                     <div class="flex flex-wrap items-center gap-3 mb-3">
-                      <h4 class="text-2xl md:text-3xl font-semibold text-white group-hover:text-violet-300 transition-colors duration-700">Tatev Aslanyan</h4>
+                      <h4
+                        class="text-2xl md:text-3xl font-semibold text-white group-hover:text-violet-300 transition-colors duration-700">
+                        Tatev Aslanyan</h4>
                     </div>
-                    
+
                     <!-- Flags -->
                     <div class="flex flex-wrap gap-2 mb-5">
-                      <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇳🇱 Netherlands</span>
-                      <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇦🇲 Armenia</span>
-                      <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇮🇹 Italy</span>
-                      <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇨🇦 Canada</span>
-                      <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇺🇸 United States</span>
-                      <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇬🇧 UK</span>
-                      <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇫🇷 France</span>
+                      <span
+                        class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇳🇱
+                        Netherlands</span>
+                      <span
+                        class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇦🇲
+                        Armenia</span>
+                      <span
+                        class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇮🇹
+                        Italy</span>
+                      <span
+                        class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇨🇦
+                        Canada</span>
+                      <span
+                        class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇺🇸
+                        United States</span>
+                      <span
+                        class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇬🇧
+                        UK</span>
+                      <span
+                        class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇫🇷
+                        France</span>
                     </div>
-                    
+
                     <div class="inline-flex items-center gap-2 mb-8">
                       <span class="w-2 h-2 rounded-full bg-violet-400 animate-pulse"></span>
-                      <span class="text-violet-400 font-semibold text-sm uppercase tracking-wider">CEO & Co-Founder · Principal Investigator · Chief AI Architect</span>
+                      <span class="text-violet-400 font-semibold text-sm uppercase tracking-wider">CEO & Co-Founder ·
+                        Principal Investigator · Chief AI Architect</span>
                     </div>
-                    
+
                     <!-- Bio Content -->
                     <div class="space-y-5 text-neutral-400 text-base leading-relaxed">
                       <p>
-                        Tatev Aslanyan leads SeleneX's execution, vision, scientific direction, and AI system architecture. She brings <span class="font-semibold text-white">10+ years of experience</span> in AI engineering, data science, and applied machine learning across healthcare, energy, and large-scale enterprise systems.
+                        Tatev Aslanyan leads SeleneX's execution, vision, scientific direction, and AI system
+                        architecture. She brings <span class="font-semibold text-white">10+ years of experience</span>
+                        in AI engineering, data science, and applied machine learning across healthcare, energy, and
+                        large-scale enterprise systems.
                       </p>
                       <p>
-                        She holds Bachelor's and Master's degrees in <span class="text-neutral-200">Econometrics and Applied & Advanced Statistics</span> from top-tier universities and is a first author of peer-reviewed publications in AI and machine learning. Her expertise spans multimodal ML, generative AI, Agentic AI, and large-scale data systems.
+                        She holds Bachelor's and Master's degrees in <span class="text-neutral-200">Econometrics and
+                          Applied & Advanced Statistics</span> from top-tier universities and is a first author of
+                        peer-reviewed publications in AI and machine learning. Her expertise spans multimodal ML,
+                        generative AI, Agentic AI, and large-scale data systems.
                       </p>
                       <p>
-                        Beyond SeleneX, she founded <span class="text-neutral-200">LunarTech</span>, a global AI education platform reaching <span class="font-semibold text-white">50,000+ learners across 124 countries</span>, ranked top 5% worldwide and featured in Forbes.
+                        Beyond SeleneX, she founded <span class="text-neutral-200">LunarTech</span>, a global AI
+                        education platform reaching <span class="font-semibold text-white">50,000+ learners across 124
+                          countries</span>, ranked top 5% worldwide and featured in Forbes.
                       </p>
-                      
+
                       <!-- Education -->
-                      <div class="flex items-center gap-2 text-neutral-500 text-sm mt-6 pt-5 border-t border-white/[0.06]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-neutral-600">
+                      <div
+                        class="flex items-center gap-2 text-neutral-500 text-sm mt-6 pt-5 border-t border-white/[0.06]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" class="text-neutral-600">
                           <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                           <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                         </svg>
@@ -4097,16 +4310,28 @@
                       </div>
                     </div>
                   </div>
-                  
+
                   <!-- Skills Tags - Glass Pills -->
                   <div class="mt-10 pt-6 border-t border-white/[0.06]">
                     <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1.5 rounded-full bg-violet-500/15 border border-violet-500/30 text-[10px] font-bold text-violet-300 uppercase tracking-wider">AI Engineering</span>
-                      <span class="px-3 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-[10px] font-bold text-emerald-300 uppercase tracking-wider">Data Science</span>
-                      <span class="px-3 py-1.5 rounded-full bg-blue-500/15 border border-blue-500/30 text-[10px] font-bold text-blue-300 uppercase tracking-wider">ML Ops</span>
-                      <span class="px-3 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-[10px] font-bold text-amber-300 uppercase tracking-wider">Deep Learning</span>
-                      <span class="px-3 py-1.5 rounded-full bg-pink-500/15 border border-pink-500/30 text-[10px] font-bold text-pink-300 uppercase tracking-wider">Generative AI</span>
-                      <span class="px-3 py-1.5 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-[10px] font-bold text-cyan-300 uppercase tracking-wider">Causal Inference</span>
+                      <span
+                        class="px-3 py-1.5 rounded-full bg-violet-500/15 border border-violet-500/30 text-[10px] font-bold text-violet-300 uppercase tracking-wider">AI
+                        Engineering</span>
+                      <span
+                        class="px-3 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-[10px] font-bold text-emerald-300 uppercase tracking-wider">Data
+                        Science</span>
+                      <span
+                        class="px-3 py-1.5 rounded-full bg-blue-500/15 border border-blue-500/30 text-[10px] font-bold text-blue-300 uppercase tracking-wider">ML
+                        Ops</span>
+                      <span
+                        class="px-3 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-[10px] font-bold text-amber-300 uppercase tracking-wider">Deep
+                        Learning</span>
+                      <span
+                        class="px-3 py-1.5 rounded-full bg-pink-500/15 border border-pink-500/30 text-[10px] font-bold text-pink-300 uppercase tracking-wider">Generative
+                        AI</span>
+                      <span
+                        class="px-3 py-1.5 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-[10px] font-bold text-cyan-300 uppercase tracking-wider">Causal
+                        Inference</span>
                     </div>
                   </div>
                 </div>
@@ -4116,68 +4341,108 @@
 
           <!-- Vahe Aslanyan -->
           <div class="group relative">
-            <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-500/10 via-cyan-500/5 to-transparent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-            <div class="relative rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md overflow-hidden smooth-card glow-violet">
+            <div
+              class="absolute -inset-0.5 bg-gradient-to-r from-blue-500/10 via-cyan-500/5 to-transparent rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500">
+            </div>
+            <div
+              class="relative rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md overflow-hidden smooth-card glow-violet">
               <div class="flex flex-col lg:flex-row">
                 <!-- Photo -->
                 <div class="lg:w-[35%] relative overflow-hidden aspect-[4/5] lg:aspect-auto lg:min-h-[650px]">
-                  <img src="../assets/team/vahe-aslanyan.jpg" alt="Vahe Aslanyan" class="w-full h-full object-cover group-hover:scale-[1.015] transition-transform duration-[1500ms] ease-out absolute inset-0">
-                  <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/30 to-transparent opacity-80"></div>
-                  <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-neutral-950/50 hidden lg:block"></div>
+                  <img src="../assets/team/vahe-aslanyan.jpg" alt="Vahe Aslanyan"
+                    class="w-full h-full object-cover group-hover:scale-[1.015] transition-transform duration-[1500ms] ease-out absolute inset-0">
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/30 to-transparent opacity-80">
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-neutral-950/50 hidden lg:block">
+                  </div>
                 </div>
                 <!-- Info -->
                 <div class="lg:w-[65%] p-8 md:p-12 lg:p-14 flex flex-col justify-between">
                   <div>
                     <!-- Header -->
                     <div class="flex flex-wrap items-center gap-3 mb-3">
-                      <h4 class="text-2xl md:text-3xl font-semibold text-white group-hover:text-blue-300 transition-colors duration-700">Vahe Aslanyan</h4>
+                      <h4
+                        class="text-2xl md:text-3xl font-semibold text-white group-hover:text-blue-300 transition-colors duration-700">
+                        Vahe Aslanyan</h4>
                     </div>
-                    
+
                     <!-- Flags -->
                     <div class="flex flex-wrap gap-2 mb-5">
-                      <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇳🇱 Netherlands</span>
-                      <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇨🇦 Canada</span>
-                      <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇺🇸 United States</span>
-                      <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇦🇲 Armenia</span>
+                      <span
+                        class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇳🇱
+                        Netherlands</span>
+                      <span
+                        class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇨🇦
+                        Canada</span>
+                      <span
+                        class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇺🇸
+                        United States</span>
+                      <span
+                        class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300 hover:bg-white/[0.08] transition-colors">🇦🇲
+                        Armenia</span>
                     </div>
-                    
+
                     <div class="inline-flex items-center gap-2 mb-8">
                       <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                      <span class="text-blue-400 font-semibold text-sm uppercase tracking-wider">CTO & Co-Founder · System Architecture & Secure Infrastructure Lead</span>
+                      <span class="text-blue-400 font-semibold text-sm uppercase tracking-wider">CTO & Co-Founder ·
+                        System Architecture & Secure Infrastructure Lead</span>
                     </div>
-                    
+
                     <!-- Bio Content -->
                     <div class="space-y-5 text-neutral-400 text-base leading-relaxed">
                       <p>
-                        Vahe Aslanyan leads SeleneX's <span class="font-semibold text-white">technology execution, system architecture, and secure infrastructure design</span>. He brings 9+ years of experience in cutting-edge AI, including AI agents, RAG systems, cloud-native platforms, and cybersecurity.
+                        Vahe Aslanyan leads SeleneX's <span class="font-semibold text-white">technology execution,
+                          system architecture, and secure infrastructure design</span>. He brings 9+ years of experience
+                        in high-growth startups, specializing in advanced AI/ML system architecture, large-scale agent
+                        deployment, and robust cybersecurity practices.
                       </p>
                       <p>
-                        He holds a Bachelor's degree in Computer Science from the <span class="text-neutral-200">University of British Columbia</span> and completed <span class="text-neutral-200">Executive Education at Harvard Business School</span>, combining technical foundations with business thinking.
+                        He studied Computer Science at the <span class="text-neutral-200">University of British
+                          Columbia</span> as a Dean's Honours Student and completed <span
+                          class="text-neutral-200">Executive Education at Harvard Business School</span>, combining deep
+                        technical foundations with strategic business thinking.
                       </p>
                       <p>
-                        As CTO, he translates complex AI designs into production-grade systems, ensuring <span class="text-neutral-200">privacy-by-design, auditability, and compliance</span> with GDPR, the EU AI Act, and healthcare data-governance standards.
+                        As CTO, he translates complex AI designs into production-grade systems—architecting multi-modal
+                        RAG systems, deploying 300+ autonomous AI agents at scale, and ensuring <span
+                          class="text-neutral-200">privacy-by-design, auditability, and compliance</span> with GDPR, the
+                        EU AI Act, and healthcare data-governance standards.
                       </p>
-                      
+
                       <!-- Education -->
-                      <div class="flex items-center gap-2 text-neutral-500 text-sm mt-6 pt-5 border-t border-white/[0.06]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-neutral-600">
+                      <div
+                        class="flex items-center gap-2 text-neutral-500 text-sm mt-6 pt-5 border-t border-white/[0.06]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" class="text-neutral-600">
                           <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                           <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                         </svg>
-                        <span>BSc Computer Science (UBC) · Harvard Business School Exec Ed</span>
+                        <span>Studied Computer Science (UBC, Dean's Honours) · Harvard Business School Exec Ed</span>
                       </div>
                     </div>
                   </div>
-                  
+
                   <!-- Skills Tags - Glass Pills -->
                   <div class="mt-10 pt-6 border-t border-white/[0.06]">
                     <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1.5 rounded-full bg-blue-500/15 border border-blue-500/30 text-[10px] font-bold text-blue-300 uppercase tracking-wider">Software Engineering</span>
-                      <span class="px-3 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-[10px] font-bold text-amber-300 uppercase tracking-wider">Infrastructure</span>
-                      <span class="px-3 py-1.5 rounded-full bg-violet-500/15 border border-violet-500/30 text-[10px] font-bold text-violet-300 uppercase tracking-wider">AI Systems</span>
-                      <span class="px-3 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-[10px] font-bold text-emerald-300 uppercase tracking-wider">Cybersecurity</span>
-                      <span class="px-3 py-1.5 rounded-full bg-pink-500/15 border border-pink-500/30 text-[10px] font-bold text-pink-300 uppercase tracking-wider">RAG Systems</span>
-                      <span class="px-3 py-1.5 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-[10px] font-bold text-cyan-300 uppercase tracking-wider">Cloud Native</span>
+                      <span
+                        class="px-3 py-1.5 rounded-full bg-blue-500/15 border border-blue-500/30 text-[10px] font-bold text-blue-300 uppercase tracking-wider">Software
+                        Engineering</span>
+                      <span
+                        class="px-3 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-[10px] font-bold text-amber-300 uppercase tracking-wider">Infrastructure</span>
+                      <span
+                        class="px-3 py-1.5 rounded-full bg-violet-500/15 border border-violet-500/30 text-[10px] font-bold text-violet-300 uppercase tracking-wider">AI
+                        Systems</span>
+                      <span
+                        class="px-3 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-[10px] font-bold text-emerald-300 uppercase tracking-wider">Cybersecurity</span>
+                      <span
+                        class="px-3 py-1.5 rounded-full bg-pink-500/15 border border-pink-500/30 text-[10px] font-bold text-pink-300 uppercase tracking-wider">RAG
+                        Systems</span>
+                      <span
+                        class="px-3 py-1.5 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-[10px] font-bold text-cyan-300 uppercase tracking-wider">Cloud
+                        Native</span>
                     </div>
                   </div>
                 </div>
@@ -4191,7 +4456,8 @@
           <blockquote class="relative">
             <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-4xl text-violet-500/15 font-serif">"</div>
             <p class="text-lg md:text-xl text-neutral-400 leading-relaxed italic">
-              Tatev and Vahe Aslanyan founded SeleneX with a singular conviction: that decoding biology requires not just data, but a fundamental rethinking of how intelligence scales.
+              Tatev and Vahe Aslanyan founded SeleneX with a singular conviction: that decoding biology requires not
+              just data, but a fundamental rethinking of how intelligence scales.
             </p>
             <footer class="mt-8">
               <p class="text-sm text-neutral-500 uppercase tracking-widest">Born from a Shared Purpose</p>
@@ -4207,9 +4473,9 @@
     <section class="relative py-32 px-6 overflow-hidden bg-neutral-900">
       <!-- Subtle Background -->
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.05),transparent_60%)]"></div>
-      
+
       <div class="relative z-10 max-w-6xl mx-auto">
-        
+
         <!-- Section Header -->
         <div class="text-center mb-20">
           <p class="text-emerald-400 text-sm font-medium uppercase tracking-[0.25em] mb-4">
@@ -4219,108 +4485,160 @@
             Technical & Scientific <span class="gradient-text-animated">Expertise</span>
           </h2>
           <p class="text-lg text-neutral-400 max-w-3xl mx-auto leading-relaxed">
-            SeleneX is powered by a <span class="text-white font-medium">high-calibre, multidisciplinary in-house execution team</span> with deep expertise across artificial intelligence, data science, bioinformatics, and healthcare-grade software engineering. The team is built to deliver <span class="text-white font-medium">real, production-ready systems</span>, not prototypes.
+            SeleneX is powered by a <span class="text-white font-medium">high-calibre, multidisciplinary in-house
+              execution team</span> with deep expertise across artificial intelligence, data science, bioinformatics,
+            and healthcare-grade software engineering. The team is built to deliver <span
+              class="text-white font-medium">real, production-ready systems</span>, not prototypes.
           </p>
         </div>
 
         <!-- Expertise Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          
+
           <!-- AI Engineering -->
-          <div class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 relative overflow-hidden smooth-card">
-            <div class="w-11 h-11 rounded-xl bg-violet-500/15 flex items-center justify-center mb-5 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-violet-400">
+          <div
+            class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 relative overflow-hidden smooth-card">
+            <div
+              class="w-11 h-11 rounded-xl bg-violet-500/15 flex items-center justify-center mb-5 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" class="text-violet-400">
                 <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
                 <path d="M12 2a10 10 0 0 1 10 10"></path>
                 <circle cx="12" cy="12" r="6"></circle>
               </svg>
             </div>
             <h3 class="text-lg font-semibold text-white mb-2">AI Engineering & Advanced ML</h3>
-            <p class="text-neutral-400 text-sm leading-relaxed">Multimodal learning, generative AI, AI agents, deep learning, model optimisation</p>
+            <p class="text-neutral-400 text-sm leading-relaxed">Multimodal learning, generative AI, AI agents, deep
+              learning, model optimisation</p>
           </div>
 
           <!-- Data Science -->
-          <div class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 relative overflow-hidden smooth-card">
-            <div class="w-11 h-11 rounded-xl bg-emerald-500/15 flex items-center justify-center mb-5 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-400">
+          <div
+            class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 relative overflow-hidden smooth-card">
+            <div
+              class="w-11 h-11 rounded-xl bg-emerald-500/15 flex items-center justify-center mb-5 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" class="text-emerald-400">
                 <path d="M3 3v18h18"></path>
                 <path d="m19 9-5 5-4-4-3 3"></path>
               </svg>
             </div>
             <h3 class="text-lg font-semibold text-white mb-2">Data Science & Statistical Modelling</h3>
-            <p class="text-neutral-400 text-sm leading-relaxed">Applied statistics, causal inference, large-scale analytical systems</p>
+            <p class="text-neutral-400 text-sm leading-relaxed">Applied statistics, causal inference, large-scale
+              analytical systems</p>
           </div>
 
           <!-- Bioinformatics -->
-          <div class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 relative overflow-hidden smooth-card">
-            <div class="w-11 h-11 rounded-xl bg-pink-500/15 flex items-center justify-center mb-5 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-pink-400">
+          <div
+            class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 relative overflow-hidden smooth-card">
+            <div
+              class="w-11 h-11 rounded-xl bg-pink-500/15 flex items-center justify-center mb-5 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" class="text-pink-400">
                 <circle cx="12" cy="12" r="10"></circle>
                 <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
                 <path d="M2 12h20"></path>
               </svg>
             </div>
             <h3 class="text-lg font-semibold text-white mb-2">Bioinformatics & Multi-Omics</h3>
-            <p class="text-neutral-400 text-sm leading-relaxed">Genomics, biomarker-driven modelling, translational oncology data</p>
+            <p class="text-neutral-400 text-sm leading-relaxed">Genomics, biomarker-driven modelling, translational
+              oncology data</p>
           </div>
 
           <!-- Software Engineering -->
-          <div class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 relative overflow-hidden smooth-card">
-            <div class="w-11 h-11 rounded-xl bg-blue-500/15 flex items-center justify-center mb-5 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-400">
+          <div
+            class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 relative overflow-hidden smooth-card">
+            <div
+              class="w-11 h-11 rounded-xl bg-blue-500/15 flex items-center justify-center mb-5 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" class="text-blue-400">
                 <polyline points="16 18 22 12 16 6"></polyline>
                 <polyline points="8 6 2 12 8 18"></polyline>
               </svg>
             </div>
             <h3 class="text-lg font-semibold text-white mb-2">Software Engineering & Cloud</h3>
-            <p class="text-neutral-400 text-sm leading-relaxed">Scalable architectures, secure data pipelines, MLOps, GDPR-compliant infrastructure</p>
+            <p class="text-neutral-400 text-sm leading-relaxed">Scalable architectures, secure data pipelines, MLOps,
+              GDPR-compliant infrastructure</p>
           </div>
 
           <!-- UX & Decision Support -->
-          <div class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 relative overflow-hidden smooth-card">
-            <div class="w-11 h-11 rounded-xl bg-amber-500/15 flex items-center justify-center mb-5 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber-400">
+          <div
+            class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 relative overflow-hidden smooth-card">
+            <div
+              class="w-11 h-11 rounded-xl bg-amber-500/15 flex items-center justify-center mb-5 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" class="text-amber-400">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                 <line x1="3" y1="9" x2="21" y2="9"></line>
                 <line x1="9" y1="21" x2="9" y2="9"></line>
               </svg>
             </div>
             <h3 class="text-lg font-semibold text-white mb-2">UX & Decision-Support Design</h3>
-            <p class="text-neutral-400 text-sm leading-relaxed">Clinician-centred interfaces, explainability, care-pathway usability</p>
+            <p class="text-neutral-400 text-sm leading-relaxed">Clinician-centred interfaces, explainability,
+              care-pathway usability</p>
           </div>
 
           <!-- Academic Backgrounds -->
-          <div class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 relative overflow-hidden smooth-card">
-            <div class="w-11 h-11 rounded-xl bg-purple-500/15 flex items-center justify-center mb-5 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-purple-400">
+          <div
+            class="group rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 relative overflow-hidden smooth-card">
+            <div
+              class="w-11 h-11 rounded-xl bg-purple-500/15 flex items-center justify-center mb-5 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" class="text-purple-400">
                 <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                 <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
               </svg>
             </div>
             <h3 class="text-lg font-semibold text-white mb-2">Academic & Professional</h3>
-            <p class="text-neutral-400 text-sm leading-relaxed">BSc, MSc, PhD in Computer Science, AI, Bioinformatics, Statistics, Engineering</p>
+            <p class="text-neutral-400 text-sm leading-relaxed">BSc, MSc, PhD in Computer Science, AI, Bioinformatics,
+              Statistics, Engineering</p>
           </div>
         </div>
 
         <!-- Global Presence -->
-        <div class="rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-md p-8 md:p-10 mb-16 smooth-card">
+        <div
+          class="rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-md p-8 md:p-10 mb-16 smooth-card">
           <div class="text-center mb-8">
             <h3 class="text-xl font-semibold text-white mb-3">🌍 Global In-House Presence</h3>
             <p class="text-neutral-400 text-sm">International engineering & scientific team</p>
           </div>
           <div class="flex flex-wrap justify-center gap-2">
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇦🇲 Armenia</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇳🇱 Netherlands</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇩🇪 Germany</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇵🇹 Portugal</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇪🇸 Spain</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇺🇦 Ukraine</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇨🇦 Canada</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇺🇸 United States</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇲🇽 Mexico</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇧🇷 Brazil</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇰🇪 Kenya</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇮🇳 India</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇦🇲
+              Armenia</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇳🇱
+              Netherlands</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇩🇪
+              Germany</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇵🇹
+              Portugal</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇪🇸
+              Spain</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇺🇦
+              Ukraine</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇨🇦
+              Canada</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇺🇸
+              United States</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇲🇽
+              Mexico</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇧🇷
+              Brazil</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇰🇪
+              Kenya</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇮🇳
+              India</span>
           </div>
         </div>
 
@@ -4328,7 +4646,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-md p-8 smooth-card">
             <h3 class="text-lg font-semibold text-white mb-4">How the Team Operates</h3>
-            <p class="text-neutral-400 text-sm leading-relaxed mb-4">SeleneX follows an <span class="text-white font-medium">execution-first model</span>: engineering and scientific leadership are embedded directly into daily work.</p>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-4">SeleneX follows an <span
+                class="text-white font-medium">execution-first model</span>: engineering and scientific leadership are
+              embedded directly into daily work.</p>
             <ul class="space-y-2">
               <li class="flex items-start gap-3">
                 <div class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 flex-shrink-0"></div>
@@ -4348,11 +4668,16 @@
               </li>
             </ul>
           </div>
-          
-          <div class="rounded-2xl border border-emerald-500/25 bg-gradient-to-br from-emerald-500/10 via-emerald-500/5 to-teal-500/8 backdrop-blur-md p-8 relative overflow-hidden smooth-card glow-emerald">
+
+          <div
+            class="rounded-2xl border border-emerald-500/25 bg-gradient-to-br from-emerald-500/10 via-emerald-500/5 to-teal-500/8 backdrop-blur-md p-8 relative overflow-hidden smooth-card glow-emerald">
             <h3 class="text-lg font-semibold text-white mb-4">Why This Matters</h3>
             <p class="text-neutral-300 text-sm leading-relaxed">
-              This team structure allows SeleneX to combine <span class="text-white font-medium">deep technical execution</span> with <span class="text-white font-medium">international perspective and scientific credibility</span>—a rare combination in health tech. It ensures that innovation is not only technically advanced, but also <span class="text-emerald-400 font-medium">clinically relevant, explainable, and deployable</span> in real healthcare environments.
+              This team structure allows SeleneX to combine <span class="text-white font-medium">deep technical
+                execution</span> with <span class="text-white font-medium">international perspective and scientific
+                credibility</span>—a rare combination in health tech. It ensures that innovation is not only technically
+              advanced, but also <span class="text-emerald-400 font-medium">clinically relevant, explainable, and
+                deployable</span> in real healthcare environments.
             </p>
           </div>
         </div>
@@ -4362,11 +4687,13 @@
     <!-- Subject Matter Experts Section -->
     <section class="relative py-32 px-6 overflow-hidden bg-neutral-950">
       <!-- Background -->
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(236,72,153,0.08),transparent_50%)]"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(139,92,246,0.06),transparent_50%)]"></div>
-      
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(236,72,153,0.08),transparent_50%)]">
+      </div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(139,92,246,0.06),transparent_50%)]">
+      </div>
+
       <div class="relative z-10 max-w-6xl mx-auto">
-        
+
         <!-- Section Header -->
         <div class="text-center mb-20">
           <p class="text-pink-400 text-sm font-medium uppercase tracking-[0.25em] mb-4">
@@ -4376,25 +4703,31 @@
             Clinical, Scientific & Commercial <span class="gradient-text-animated">SMEs</span>
           </h2>
           <p class="text-lg text-neutral-400 max-w-3xl mx-auto leading-relaxed">
-            SeleneX is supported by an exceptional international network of senior subject matter experts who provide deep clinical, scientific, regulatory, and commercial insight—ensuring technology that is <span class="text-white font-medium">biologically credible, clinically realistic, and market-ready</span>.
+            SeleneX is supported by an exceptional international network of senior subject matter experts who provide
+            deep clinical, scientific, regulatory, and commercial insight—ensuring technology that is <span
+              class="text-white font-medium">biologically credible, clinically realistic, and market-ready</span>.
           </p>
         </div>
 
         <!-- Stats Banner -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          <div class="rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 text-center smooth-card">
+          <div
+            class="rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 text-center smooth-card">
             <p class="text-2xl md:text-3xl font-semibold text-white mb-1">15+</p>
             <p class="text-neutral-500 text-xs uppercase tracking-wider">PhD-Level Experts</p>
           </div>
-          <div class="rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 text-center smooth-card">
+          <div
+            class="rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 text-center smooth-card">
             <p class="text-2xl md:text-3xl font-semibold text-white mb-1">2</p>
             <p class="text-neutral-500 text-xs uppercase tracking-wider">Professors</p>
           </div>
-          <div class="rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 text-center smooth-card">
+          <div
+            class="rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 text-center smooth-card">
             <p class="text-2xl md:text-3xl font-semibold text-white mb-1">100+</p>
             <p class="text-neutral-500 text-xs uppercase tracking-wider">Years Experience</p>
           </div>
-          <div class="rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 text-center smooth-card">
+          <div
+            class="rounded-2xl border border-white/10 bg-neutral-900/60 backdrop-blur-md p-6 text-center smooth-card">
             <p class="text-2xl md:text-3xl font-semibold text-white mb-1">8</p>
             <p class="text-neutral-500 text-xs uppercase tracking-wider">Countries</p>
           </div>
@@ -4402,7 +4735,7 @@
 
         <!-- Expertise Coverage -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          
+
           <!-- Column 1 -->
           <div class="space-y-4">
             <div class="rounded-xl border border-white/10 bg-neutral-900/50 backdrop-blur-sm p-5 smooth-card">
@@ -4410,7 +4743,8 @@
                 <div class="w-2 h-2 rounded-full bg-pink-400 mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 class="text-white font-medium mb-1">Oncology & Early Cancer Diagnosis</h4>
-                  <p class="text-neutral-500 text-sm">Gastrointestinal oncology, ovarian cancer, oncogynecology, urology, pediatric oncology</p>
+                  <p class="text-neutral-500 text-sm">Gastrointestinal oncology, ovarian cancer, oncogynecology,
+                    urology, pediatric oncology</p>
                 </div>
               </div>
             </div>
@@ -4419,7 +4753,8 @@
                 <div class="w-2 h-2 rounded-full bg-violet-400 mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 class="text-white font-medium mb-1">Radiology & Medical Imaging</h4>
-                  <p class="text-neutral-500 text-sm">Diagnostic imaging, radiomics, multimodal imaging standards, imaging governance</p>
+                  <p class="text-neutral-500 text-sm">Diagnostic imaging, radiomics, multimodal imaging standards,
+                    imaging governance</p>
                 </div>
               </div>
             </div>
@@ -4428,7 +4763,8 @@
                 <div class="w-2 h-2 rounded-full bg-emerald-400 mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 class="text-white font-medium mb-1">Bioinformatics & Molecular Medicine</h4>
-                  <p class="text-neutral-500 text-sm">Genomics, biomarkers, multi-omics integration, translational oncology</p>
+                  <p class="text-neutral-500 text-sm">Genomics, biomarkers, multi-omics integration, translational
+                    oncology</p>
                 </div>
               </div>
             </div>
@@ -4437,7 +4773,8 @@
                 <div class="w-2 h-2 rounded-full bg-blue-400 mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 class="text-white font-medium mb-1">Clinical Research & Trials</h4>
-                  <p class="text-neutral-500 text-sm">Phase II–III oncology trials, GCP/ICH compliance, patient safety</p>
+                  <p class="text-neutral-500 text-sm">Phase II–III oncology trials, GCP/ICH compliance, patient safety
+                  </p>
                 </div>
               </div>
             </div>
@@ -4450,7 +4787,8 @@
                 <div class="w-2 h-2 rounded-full bg-amber-400 mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 class="text-white font-medium mb-1">Regulatory Affairs & AI Governance</h4>
-                  <p class="text-neutral-500 text-sm">EU MDR, EU AI Act, FDA, Health Canada, GDPR, audit-ready processes</p>
+                  <p class="text-neutral-500 text-sm">EU MDR, EU AI Act, FDA, Health Canada, GDPR, audit-ready processes
+                  </p>
                 </div>
               </div>
             </div>
@@ -4459,7 +4797,8 @@
                 <div class="w-2 h-2 rounded-full bg-cyan-400 mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 class="text-white font-medium mb-1">Health-System Strategy & Policy</h4>
-                  <p class="text-neutral-500 text-sm">Screening implementation, adoption readiness, reimbursement, equity</p>
+                  <p class="text-neutral-500 text-sm">Screening implementation, adoption readiness, reimbursement,
+                    equity</p>
                 </div>
               </div>
             </div>
@@ -4482,22 +4821,44 @@
             <p class="text-neutral-400 text-sm">International SME representation</p>
           </div>
           <div class="flex flex-wrap justify-center gap-2">
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇦🇲 Armenia</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇺🇦 Ukraine</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇳🇱 Netherlands</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇩🇪 Germany</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇪🇸 Spain</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇵🇹 Portugal</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇨🇦 Canada</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇺🇸 United States</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇦🇲
+              Armenia</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇺🇦
+              Ukraine</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇳🇱
+              Netherlands</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇩🇪
+              Germany</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇪🇸
+              Spain</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇵🇹
+              Portugal</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇨🇦
+              Canada</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white/[0.04] border border-white/[0.08] px-3 py-1.5 text-xs text-neutral-300">🇺🇸
+              United States</span>
           </div>
         </div>
 
         <!-- Why This Matters -->
-        <div class="rounded-2xl border border-pink-500/25 bg-gradient-to-br from-pink-500/10 via-rose-500/5 to-fuchsia-500/8 backdrop-blur-md p-8 md:p-10 relative overflow-hidden smooth-card glow-pink">
+        <div
+          class="rounded-2xl border border-pink-500/25 bg-gradient-to-br from-pink-500/10 via-rose-500/5 to-fuchsia-500/8 backdrop-blur-md p-8 md:p-10 relative overflow-hidden smooth-card glow-pink">
           <h3 class="text-xl font-semibold text-white mb-4">Why This Matters</h3>
           <p class="text-neutral-300 leading-relaxed">
-            Most health-AI startups rely on limited advisory input. SeleneX is different. By embedding <span class="text-white font-medium">senior clinical, bioinformatics, regulatory, and commercialization expertise directly into development and validation</span>, SeleneX bridges the gap between advanced AI research and <span class="text-pink-400 font-medium">real-world healthcare deployment</span>. This expert network is a critical reason SeleneX can move confidently from innovation to <span class="text-pink-400 font-medium">implementation, adoption, and impact</span>.
+            Most health-AI startups rely on limited advisory input. SeleneX is different. By embedding <span
+              class="text-white font-medium">senior clinical, bioinformatics, regulatory, and commercialization
+              expertise directly into development and validation</span>, SeleneX bridges the gap between advanced AI
+            research and <span class="text-pink-400 font-medium">real-world healthcare deployment</span>. This expert
+            network is a critical reason SeleneX can move confidently from innovation to <span
+              class="text-pink-400 font-medium">implementation, adoption, and impact</span>.
           </p>
         </div>
       </div>
@@ -4507,61 +4868,82 @@
     <section class="relative py-32 px-6 overflow-hidden bg-white">
       <!-- Subtle Background -->
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(59,130,246,0.04),transparent_50%)]"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,92,246,0.03),transparent_50%)]"></div>
-      
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,92,246,0.03),transparent_50%)]">
+      </div>
+
       <div class="relative z-10 max-w-6xl mx-auto">
-        
+
         <!-- Section Header -->
         <div class="text-center mb-20">
           <p class="text-blue-600 text-sm font-medium uppercase tracking-[0.25em] mb-4">
             Partnerships
           </p>
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-medium text-neutral-900 mb-6 tracking-tight">
-            Institutional <span class="bg-gradient-to-r from-blue-600 via-violet-600 to-blue-600 bg-clip-text text-transparent">Partners</span>
+            Institutional <span
+              class="bg-gradient-to-r from-blue-600 via-violet-600 to-blue-600 bg-clip-text text-transparent">Partners</span>
           </h2>
           <p class="text-lg text-neutral-500 max-w-3xl mx-auto leading-relaxed">
-            SeleneX collaborates with a carefully selected network of academic, clinical, regulatory, and health-system institutions across Europe and North America—ensuring technology developed with <span class="text-neutral-800 font-medium">real-world healthcare constraints and adoption pathways in mind</span>.
+            SeleneX collaborates with a carefully selected network of academic, clinical, regulatory, and health-system
+            institutions across Europe and North America—ensuring technology developed with <span
+              class="text-neutral-800 font-medium">real-world healthcare constraints and adoption pathways in
+              mind</span>.
           </p>
         </div>
 
         <!-- Areas of Collaboration -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          
-          <div class="group rounded-2xl border border-neutral-200 bg-white/90 backdrop-blur-md p-8 shadow-sm smooth-card-light">
-            <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-6 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-600">
+
+          <div
+            class="group rounded-2xl border border-neutral-200 bg-white/90 backdrop-blur-md p-8 shadow-sm smooth-card-light">
+            <div
+              class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-6 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" class="text-blue-600">
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
               </svg>
             </div>
             <h3 class="text-lg font-semibold text-neutral-900 mb-3">Clinical Validation & Real-World Pathways</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed">Ensuring alignment with actual diagnostic workflows, care pathways, and clinical decision-making environments.</p>
+            <p class="text-neutral-500 text-sm leading-relaxed">Ensuring alignment with actual diagnostic workflows,
+              care pathways, and clinical decision-making environments.</p>
           </div>
 
-          <div class="group rounded-2xl border border-neutral-200 bg-white/90 backdrop-blur-md p-8 shadow-sm smooth-card-light">
-            <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-6 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-600">
+          <div
+            class="group rounded-2xl border border-neutral-200 bg-white/90 backdrop-blur-md p-8 shadow-sm smooth-card-light">
+            <div
+              class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-6 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" class="text-emerald-600">
                 <circle cx="12" cy="12" r="10"></circle>
                 <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
               </svg>
             </div>
             <h3 class="text-lg font-semibold text-neutral-900 mb-3">Health-System Innovation & Policy Alignment</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed">Supporting adoption frameworks, sustainability planning, and alignment with national and European healthcare priorities.</p>
+            <p class="text-neutral-500 text-sm leading-relaxed">Supporting adoption frameworks, sustainability planning,
+              and alignment with national and European healthcare priorities.</p>
           </div>
 
-          <div class="group rounded-2xl border border-neutral-200 bg-white/90 backdrop-blur-md p-8 shadow-sm smooth-card-light">
-            <div class="w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center mb-6 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-violet-600">
+          <div
+            class="group rounded-2xl border border-neutral-200 bg-white/90 backdrop-blur-md p-8 shadow-sm smooth-card-light">
+            <div
+              class="w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center mb-6 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" class="text-violet-600">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
             <h3 class="text-lg font-semibold text-neutral-900 mb-3">AI Governance, Data Protection & Ethics</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed">Providing guidance on GDPR-compliant architectures, auditability, transparency, and responsible AI implementation.</p>
+            <p class="text-neutral-500 text-sm leading-relaxed">Providing guidance on GDPR-compliant architectures,
+              auditability, transparency, and responsible AI implementation.</p>
           </div>
 
-          <div class="group rounded-2xl border border-neutral-200 bg-white/90 backdrop-blur-md p-8 shadow-sm smooth-card-light">
-            <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center mb-6 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber-600">
+          <div
+            class="group rounded-2xl border border-neutral-200 bg-white/90 backdrop-blur-md p-8 shadow-sm smooth-card-light">
+            <div
+              class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center mb-6 group-hover:scale-[1.08] transition-transform duration-700 ease-out">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" class="text-amber-600">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 <polyline points="14 2 14 8 20 8"></polyline>
                 <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -4570,49 +4952,87 @@
               </svg>
             </div>
             <h3 class="text-lg font-semibold text-neutral-900 mb-3">Regulatory & Market-Readiness Support</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed">Strengthening alignment with EU MDR, EU AI Act, and international regulatory expectations for clinical pilots and commercialization.</p>
+            <p class="text-neutral-500 text-sm leading-relaxed">Strengthening alignment with EU MDR, EU AI Act, and
+              international regulatory expectations for clinical pilots and commercialization.</p>
           </div>
         </div>
 
         <!-- Geographic Reach -->
-        <div class="rounded-2xl border border-neutral-200 bg-white/80 backdrop-blur-md p-8 md:p-10 mb-16 smooth-card-light">
+        <div
+          class="rounded-2xl border border-neutral-200 bg-white/80 backdrop-blur-md p-8 md:p-10 mb-16 smooth-card-light">
           <div class="text-center mb-8">
             <h3 class="text-xl font-semibold text-neutral-900 mb-3">🌍 Geographic Reach</h3>
             <p class="text-neutral-500 text-sm">Institutional presence across healthcare systems</p>
           </div>
           <div class="flex flex-wrap justify-center gap-2">
-            <span class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-4 py-2 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">🇩🇪 Germany</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-4 py-2 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">🇪🇸 Spain</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-4 py-2 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">🇺🇦 Ukraine</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-4 py-2 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">🇨🇦 Canada</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-4 py-2 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">🇺🇸 United States</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-4 py-2 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">🇳🇱 Netherlands</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-4 py-2 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">🇩🇪
+              Germany</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-4 py-2 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">🇪🇸
+              Spain</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-4 py-2 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">🇺🇦
+              Ukraine</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-4 py-2 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">🇨🇦
+              Canada</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-4 py-2 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">🇺🇸
+              United States</span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-4 py-2 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">🇳🇱
+              Netherlands</span>
           </div>
         </div>
 
         <!-- How Partners Contribute -->
-        <div class="rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 via-white to-violet-50 p-8 md:p-10 shadow-lg shadow-blue-500/5 smooth-card-light glow-blue">
-          <h3 class="text-xl font-semibold text-neutral-900 mb-4">How Institutional Partners Contribute</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-neutral-600 text-sm">
-            <div class="flex items-start gap-3">
-              <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-              <span>Clinical and operational validation of assumptions</span>
+        <div
+          class="rounded-3xl border border-blue-100/80 bg-gradient-to-br from-blue-50/50 via-white to-violet-50/30 p-8 md:p-10 shadow-xl shadow-blue-100/20 hover:shadow-2xl hover:shadow-blue-100/30 transition-all duration-700 ease-out reveal-on-scroll group">
+          <h3
+            class="text-xl font-semibold text-neutral-900 mb-6 group-hover:text-blue-800 transition-colors duration-500">
+            How Institutional Partners Contribute</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-neutral-600 text-sm">
+            <div
+              class="flex items-start gap-3 p-3 rounded-xl hover:bg-blue-50/50 transition-all duration-300 ease-out cursor-default group/item">
+              <div
+                class="w-2 h-2 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 mt-1.5 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300">
+              </div>
+              <span class="group-hover/item:text-neutral-800 transition-colors duration-300">Clinical and operational
+                validation of assumptions</span>
             </div>
-            <div class="flex items-start gap-3">
-              <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-              <span>Governance and regulatory guidance</span>
+            <div
+              class="flex items-start gap-3 p-3 rounded-xl hover:bg-blue-50/50 transition-all duration-300 ease-out cursor-default group/item"
+              style="transition-delay: 50ms;">
+              <div
+                class="w-2 h-2 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 mt-1.5 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300">
+              </div>
+              <span class="group-hover/item:text-neutral-800 transition-colors duration-300">Governance and regulatory
+                guidance</span>
             </div>
-            <div class="flex items-start gap-3">
-              <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-              <span>Policy translation and health-system feasibility</span>
+            <div
+              class="flex items-start gap-3 p-3 rounded-xl hover:bg-blue-50/50 transition-all duration-300 ease-out cursor-default group/item"
+              style="transition-delay: 100ms;">
+              <div
+                class="w-2 h-2 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 mt-1.5 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300">
+              </div>
+              <span class="group-hover/item:text-neutral-800 transition-colors duration-300">Policy translation and
+                health-system feasibility</span>
             </div>
-            <div class="flex items-start gap-3">
-              <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-              <span>Dissemination, engagement, and adoption pathways</span>
+            <div
+              class="flex items-start gap-3 p-3 rounded-xl hover:bg-blue-50/50 transition-all duration-300 ease-out cursor-default group/item"
+              style="transition-delay: 150ms;">
+              <div
+                class="w-2 h-2 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 mt-1.5 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300">
+              </div>
+              <span class="group-hover/item:text-neutral-800 transition-colors duration-300">Dissemination, engagement,
+                and adoption pathways</span>
             </div>
           </div>
-          <p class="mt-6 text-neutral-500 text-sm leading-relaxed border-t border-neutral-200 pt-6">
-            These contributions ensure that SeleneX's outputs are <span class="text-blue-600 font-medium">not only scientifically sound, but institutionally credible and implementation-ready</span>.
+          <p class="mt-8 text-neutral-500 text-sm leading-relaxed border-t border-blue-100/60 pt-6">
+            These contributions ensure that SeleneX's outputs are <span
+              class="text-blue-600 font-medium bg-blue-50/50 px-1.5 py-0.5 rounded">not only
+              scientifically sound, but institutionally credible and implementation-ready</span>.
           </p>
         </div>
       </div>
