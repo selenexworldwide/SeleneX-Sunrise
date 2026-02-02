@@ -149,7 +149,7 @@ Make a 1-row horizontal pipeline with 5 boxes:
 
 **What you show**
 
-Use the screenshot like the last one you sent: top-level `LunarTech-SeleneX` GitHub view with folders:
+Use the screenshot like the last one you sent: top-level `SeleneX` GitHub view with folders:
 
 - `LargestOpenSourceCancerDataSet/`
 - `Ovarian Ultrasound + Biomarker Diagnostic Mini-Prototype/`
@@ -158,7 +158,7 @@ Use the screenshot like the last one you sent: top-level `LunarTech-SeleneX` G
 - `Privacy-Preserving Federated Learning …/`
 - `Synthetic Ovarian Cancer Cohort/`
 - `src/`
-- plus the **main README** which already explains SeleneX + SDGE. main. TatevKaren:LunarTech-Sele…
+- plus the **main README** which already explains SeleneX + SDGE. main. - plus the **main README** which already explains SeleneX + SDGE.…
 
 ![Screenshot 2025-12-03 at 4.14.44 PM.png](attachment:e742e560-b2b0-44eb-b55d-789b4579d311:Screenshot_2025-12-03_at_4.14.44_PM.png)
 
@@ -236,153 +236,108 @@ Use **3–4 screenshots maximum**.
 
 **5. Audit** the entire dataset for bias, clinical plausibility, and calibration.
 
-**6. Export** in CSV, JSON, FHIR/OMOP or DICOM format for clinicians, researchers,  etc.
+**6. Export** in CSV, JSON, FHIR/OMOP or DICOM format for clinicians, researchers, etc.
 
 ## SLIDE 8 - TEAM and Partnerships
 
 ## Block A – Core SeleneX SDG Team
 
-*(grant-funded, hands-on build team)*
+_(grant-funded, hands-on build team)_
 
 **Founders (top row – make these visually bigger)**
 
 - 🇦🇲🇺🇸 **Tatev Aslanyan – CEO, Chief AI Architect & Co-Founder**
-    
-    9+ yrs AI & data science 🇳🇱 🇬🇧 🇮🇹 🇨🇦 🇺🇸
-    
-    Leads AI architecture, data science, overall team and strategic partnerships.
-    
-    MSc Econometrics & Operations Research (Erasmus University Rotterdam & Tilburg University).
-    
+  9+ yrs AI & data science 🇳🇱 🇬🇧 🇮🇹 🇨🇦 🇺🇸
+  Leads AI architecture, data science, overall team and strategic partnerships.
+  MSc Econometrics & Operations Research (Erasmus University Rotterdam & Tilburg University).
 - 🇦🇲🇳🇱🇨🇦 **Vahe Aslanyan – CTO & Co-Founder**
-    
-    9+ yrs ML systems & infra.
-    
-    Manages the tech team and technical roadmap, from architecture to deployment.
-    
-    BSc Computer Science (University of British Columbia), executive education at Harvard Business School.
-    
+  9+ yrs ML systems & infra.
+  Manages the tech team and technical roadmap, from architecture to deployment.
+  BSc Computer Science (University of British Columbia), executive education at Harvard Business School.
 
 ---
 
 **Product & UX**
 
 - 🇪🇸🇲🇽 **Bernardo Torres Santillana – Product & UX/UI Designer**
-    
-    Product & UX/UI Designer (complex digital & health products, UX flows, design systems).
-    
-    ![PHOTO-2025-12-04-19-36-46.jpg](attachment:9da92afe-8a4b-4495-b22b-5eddb3e8a278:PHOTO-2025-12-04-19-36-46.jpg)
-    
+  Product & UX/UI Designer (complex digital & health products, UX flows, design systems).
+  ![PHOTO-2025-12-04-19-36-46.jpg](attachment:9da92afe-8a4b-4495-b22b-5eddb3e8a278:PHOTO-2025-12-04-19-36-46.jpg)
 
 ---
 
 **Engineering & Data**
 
 - 🇦🇲 **Seryozha Hovsepyan – AI Engineer**
-    
-    AI Engineer (DL, NLP, CV, LLMs, embedded/edge deployment).
-    
-    ![7ac6fd75-24b5-43f5-b3d3-b4786a1b6585.JPG](attachment:5759e6b0-f37e-4999-b5a7-77b678c4c18f:7ac6fd75-24b5-43f5-b3d3-b4786a1b6585.jpg)
-    
+  AI Engineer (DL, NLP, CV, LLMs, embedded/edge deployment).
+  ![7ac6fd75-24b5-43f5-b3d3-b4786a1b6585.JPG](attachment:5759e6b0-f37e-4999-b5a7-77b678c4c18f:7ac6fd75-24b5-43f5-b3d3-b4786a1b6585.jpg)
 - 🇦🇲 **Vahagn Tovmasyan – AI Engineer**
-    
-    AI Engineer (model training, evaluation, experimentation).
-    
-    ![1679662978827.jpeg](attachment:94938a0a-56b8-4b9a-85ae-460018e319a2:1679662978827.jpeg)
-    
+  AI Engineer (model training, evaluation, experimentation).
+  ![1679662978827.jpeg](attachment:94938a0a-56b8-4b9a-85ae-460018e319a2:1679662978827.jpeg)
 - 🇺🇸🇮🇳 **Latha Shree K. P. – Full-Stack Engineer**
-    
-    Full-Stack Engineer (APIs, dashboards, SDG tooling – Angular, TypeScript, NodeJS, MongoDB).
-    
+  Full-Stack Engineer (APIs, dashboards, SDG tooling – Angular, TypeScript, NodeJS, MongoDB).
 - 🇨🇦 **Farnia GhanizadehSeraj – AI Engineer / Data Scientist**
-    
-    AI Engineer / Data Scientist (ML & DS workflows, data prep, metrics, dashboards).
-    
+  AI Engineer / Data Scientist (ML & DS workflows, data prep, metrics, dashboards).
 
 **Footer for Block A (small text):**
 
 > UNICEF funds this lean core team that builds and maintains the open-source synthetic data engine and dataset.
-> 
 
 ---
 
 ## Block B – Clinical & Scientific Expert Council
 
-*(advisory / MoUs – not full-time payroll)*
+_(advisory / MoUs – not full-time payroll)_
 
 **Paediatrics & infectious disease (UNICEF-relevant)**
 
 - 🇦🇲🇳🇱 **Dr Susanna Khachaturyan – Pediatrician & Infectious Disease Specialist**
-    
-    15+ yrs paediatrics & infections; paediatric oncology exposure.
-    
+  15+ yrs paediatrics & infections; paediatric oncology exposure.
 
 ---
 
 **Oncology, surgery & women’s health**
 
 - 🇺🇦🇨🇦 **Dr Oksana Korolova, MD PhD – Oncologist & Clinical Research Lead**
-    
-    20+ yrs clinical, research & leadership in oncology / neurology / immunology; clinical trials & regulatory-driven studies.
-    
-    ![1754117825604.jpeg](attachment:0dff2990-f552-4414-96f0-fcb7125ea529:1754117825604.jpeg)
-    
+  20+ yrs clinical, research & leadership in oncology / neurology / immunology; clinical trials & regulatory-driven studies.
+  ![1754117825604.jpeg](attachment:0dff2990-f552-4414-96f0-fcb7125ea529:1754117825604.jpeg)
 - 🇺🇦 **Dr Nadiia Voronkova, MD – Gynecologist & Onco-Gynecology Specialist**
-    
-    20+ yrs gyn/onc; focus on ovarian & other gynecological cancers.
-    
-    ![869380d8-272c-4f47-8bcb-ecf8dab32b99.JPG](attachment:feb5a46f-dde2-43c8-b125-8b8e5da05f8f:869380d8-272c-4f47-8bcb-ecf8dab32b99.jpg)
-    
+  20+ yrs gyn/onc; focus on ovarian & other gynecological cancers.
+  ![869380d8-272c-4f47-8bcb-ecf8dab32b99.JPG](attachment:feb5a46f-dde2-43c8-b125-8b8e5da05f8f:869380d8-272c-4f47-8bcb-ecf8dab32b99.jpg)
 - 🇺🇦 **Dr Anton Hlebov, MD PhD – CEO & Onco-Urologist, D-Clinic**
-    
-    15+ yrs urology & onco-urology; PCA3 early-diagnostics pioneer.
-    
-    ![1aca6f5a-041d-47e1-bf00-79391a27ce88.JPG](attachment:e364dcf4-2a7f-4679-8cbd-64988c78469e:1aca6f5a-041d-47e1-bf00-79391a27ce88.jpg)
-    
+  15+ yrs urology & onco-urology; PCA3 early-diagnostics pioneer.
+  ![1aca6f5a-041d-47e1-bf00-79391a27ce88.JPG](attachment:e364dcf4-2a7f-4679-8cbd-64988c78469e:1aca6f5a-041d-47e1-bf00-79391a27ce88.jpg)
 
 ### Oncology & Bioinformatics *(goes inside Block B)*
 
 - 🇺🇸 **Dr Christopher Morris-Radston – Oncology, Omics & AI Expert**
-    
-    Oncology, omics & AI; PhD in oncology-related data science and published author working with complex cancer datasets.
-    
+  Oncology, omics & AI; PhD in oncology-related data science and published author working with complex cancer datasets.
 - 🇵🇹 **Dr Tiago Moreira – Bioinformatics & Oncology AI Specialist**
-    
-    Bioinformatics and oncology-focused AI; multimodal data fusion across clinical, molecular and imaging data.
-    
-    ![1589212530772.jpeg](attachment:c4cc973f-ba69-4cc2-bae7-0c61f81d2f5d:1589212530772.jpeg)
-    
+  Bioinformatics and oncology-focused AI; multimodal data fusion across clinical, molecular and imaging data.
+  ![1589212530772.jpeg](attachment:c4cc973f-ba69-4cc2-bae7-0c61f81d2f5d:1589212530772.jpeg)
 
 ---
 
 **Radiology & imaging**
 
 - 🇦🇲 **Dr Kostan Galumyan, MD PhD – Head Radiologist of Armenia**
-    
-    20+ yrs diagnostic & oncologic imaging; national radiology leadership.
-    
-    ![Screenshot 2025-12-04 at 7.36.18 PM.png](attachment:11a41521-f88e-494e-8d29-00fa18c2c741:Screenshot_2025-12-04_at_7.36.18_PM.png)
-    
+  20+ yrs diagnostic & oncologic imaging; national radiology leadership.
+  ![Screenshot 2025-12-04 at 7.36.18 PM.png](attachment:11a41521-f88e-494e-8d29-00fa18c2c741:Screenshot_2025-12-04_at_7.36.18_PM.png)
 
 ---
 
 **Clinical trials & AI/ML regulation**
 
 - 🇨🇦🇺🇸 **Dr Alaknanda Dhotre, MD MBA – Clinical Trials & Regulatory Expert**
-    
-    10+ yrs oncology trials & regulatory strategy; AI/ML medical-device and digital-health products.
-    
-    ![1758471159941.jpeg](attachment:d702ec9c-81a0-4d67-b257-ecc1c74e8ecf:1758471159941.jpeg)
-    
+  10+ yrs oncology trials & regulatory strategy; AI/ML medical-device and digital-health products.
+  ![1758471159941.jpeg](attachment:d702ec9c-81a0-4d67-b257-ecc1c74e8ecf:1758471159941.jpeg)
 
 **Footer for Block B:**
 
 > Senior clinicians for oncology, paediatrics, imaging & trials, engaged via MoUs / consulting, not as FTEs.
-> 
 
 ## Block C – Business, Governance & Institutional Partners
 
-*(MoUs / advisory – give reach & credibility, not full-time)*
+_(MoUs / advisory – give reach & credibility, not full-time)_
 
 ![1697576304269.jpeg](attachment:56229266-1f89-4cc5-a283-1f255fe15ece:1697576304269.jpeg)
 
@@ -393,49 +348,31 @@ Use **3–4 screenshots maximum**.
 ![insightarcs_logo.jpeg](attachment:70e36f0d-31d0-4d93-95ca-179949e5ba97:insightarcs_logo.jpeg)
 
 - 🇩🇪 **Andreas Behrens – Co-Founder & Managing Director, Insight Arcs GmbH**
-    
-    15+ yrs digital-health & data programmes; data governance & AI policy.
-    
-    ![1681805584674.jpeg](attachment:1008f9cf-1dd7-408c-a799-b324777e584b:1681805584674.jpeg)
-    
+  15+ yrs digital-health & data programmes; data governance & AI policy.
+  ![1681805584674.jpeg](attachment:1008f9cf-1dd7-408c-a799-b324777e584b:1681805584674.jpeg)
 - 🇩🇪 **Danielle Jeffery – Senior Consultant & Data Scientist, Insight Arcs GmbH**
-    
-    7+ yrs analytics & ML projects; KPI & governance.
-    
-    ![1583250502006.jpeg](attachment:b2deca83-0193-4121-9265-1d35b6fe4a8b:1583250502006.jpeg)
-    
+  7+ yrs analytics & ML projects; KPI & governance.
+  ![1583250502006.jpeg](attachment:b2deca83-0193-4121-9265-1d35b6fe4a8b:1583250502006.jpeg)
 - 🇵🇹🇩🇪 **Júlio Reis – Tech Lead & Data/Software Engineer, Insight Arcs GmbH**
-    
-    10+ yrs data infra, ETL & BI; healthcare data integration.
-    
+  10+ yrs data infra, ETL & BI; healthcare data integration.
 
 ---
 
 **Institutional partners**
 
 - 🇪🇸 **IESE Business School – CRHIM (Spain)**
-    
-    Health-innovation & management; business models, impact & scale-up.
-    
+  Health-innovation & management; business models, impact & scale-up.
 - 🇺🇦 **D-Clinic (Kyiv, Ukraine)**
-    
-    Onco-urology / onco-gyn clinic; clinical validation site & patient pathways.
-    
-    ![383ebd56-e6d3-4e7a-b5e3-7ba9e90ea579.JPG](attachment:9fbf34a1-38b2-45ec-8051-77b2d9c235e9:383ebd56-e6d3-4e7a-b5e3-7ba9e90ea579.jpg)
-    
+  Onco-urology / onco-gyn clinic; clinical validation site & patient pathways.
+  ![383ebd56-e6d3-4e7a-b5e3-7ba9e90ea579.JPG](attachment:9fbf34a1-38b2-45ec-8051-77b2d9c235e9:383ebd56-e6d3-4e7a-b5e3-7ba9e90ea579.jpg)
 - 🇨🇦🇺🇸 **ANDglobal Solutions (Canada/US)**
-    
-    Oncology, clinical & RWE, AI med-device, regulatory & market access expertise.
-    
+  Oncology, clinical & RWE, AI med-device, regulatory & market access expertise.
 - 🇺🇸 **University of Texas (US, MoU in progress)**
-    
-    Academic partner for oncology & AI in health; research & validation network extension.
-    
+  Academic partner for oncology & AI in health; research & validation network extension.
 
 **Footer for Block C:**
 
 > These partners support SeleneX via MoUs and advisory agreements, providing access, validation and regulatory depth without adding full-time cost to the UNICEF grant.
-> 
 
 **Script**
 
@@ -447,7 +384,7 @@ In the second section, you see that we are **not a small team in expertise**. A
 
 In the third section, you see our **institutional partners**: a Ukrainian cancer clinic, German experts in data protection and the AI Act, Canadian and US partners in oncology, regulation and business, one of the most recognised Spanish business schools in health innovation and digital health, and an MoU in preparation with the University of Texas.
 
-We also already have a visible LunarTech and SeleneX brand and community, which helps us share the open-source engine widely, attract more users, partners and funding, and make UNICEF’s investment visible and impactful far beyond this project.”
+We also already have a visible SeleneX brand and community, which helps us share the open-source engine widely, attract more users, partners and funding, and make UNICEF’s investment visible and impactful far beyond this project.”
 
 **Version 2:**
 
@@ -489,14 +426,14 @@ These partners provide validation sites, governance expertise, and pathways for 
 ### **Revenue Streams**
 
 1. **Hosted SDGE & Support**
-    - Managed deployments for hospitals / NGOs
-    - SLAs, monitoring, updates, security
+   - Managed deployments for hospitals / NGOs
+   - SLAs, monitoring, updates, security
 2. **Customisation & Integrations**
-    - Country- / hospital-specific schemas & bias audits
-    - EHR / PACS / federated-learning integrations
+   - Country- / hospital-specific schemas & bias audits
+   - EHR / PACS / federated-learning integrations
 3. **Advanced Modules & Training**
-    - Imaging & omics diffusion, multimodal simulators
-    - Training & certification for local technical teams
+   - Imaging & omics diffusion, multimodal simulators
+   - Training & certification for local technical teams
 4. **SeleneX full platform including SDGE** = commercial clinical product
 
 ---
