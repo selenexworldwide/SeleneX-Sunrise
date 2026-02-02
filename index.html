@@ -1827,7 +1827,7 @@
                 next-generation diagnosis, personalized interventions, and long-term care.
               </p>
               <button
-                class="flex items-center gap-3 bg-neutral-900 text-white px-8 py-4 rounded-full text-sm font-medium hover:bg-brand-600 transition-all group">
+                class="flex items-center gap-3 bg-neutral-900 text-white px-8 py-4 rounded-full text-sm font-medium hover:bg-neutral-800 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 group">
                 VIEW PLATFORM
                 <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
               </button>
@@ -1856,197 +1856,431 @@
           </p>
         </div>
 
-        <!-- Bento Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <!-- Card 1: Scanning UI -->
-          <div class="group flex flex-col gap-6">
-            <div
-              class="bg-neutral-950/50 border border-white/10 rounded-[2rem] h-[450px] relative overflow-hidden flex items-center justify-center p-8 shadow-2xl backdrop-blur-sm">
-              <!-- Gradient Glow -->
+        <!-- Carousel Container -->
+        <div class="relative overflow-hidden">
+          <div id="tech-carousel" class="flex gap-8 transition-transform duration-700 ease-out" style="transform: translateX(0);">
+            <!-- Card 1: Scanning UI -->
+            <div class="group flex flex-col gap-6 w-[calc((100%-4rem)/3)] flex-shrink-0">
               <div
-                class="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-brand-500/10 to-transparent pointer-events-none">
-              </div>
+                class="bg-neutral-950/50 border border-white/10 rounded-[2rem] h-[450px] relative overflow-hidden flex items-center justify-center p-8 shadow-2xl backdrop-blur-sm">
+                <!-- Gradient Glow -->
+                <div
+                  class="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-brand-500/10 to-transparent pointer-events-none">
+                </div>
 
-              <!-- Mockup -->
-              <div
-                class="w-[280px] bg-neutral-900 rounded-[24px] border border-white/10 overflow-hidden shadow-2xl relative flex flex-col">
-                <div class="px-5 py-4 border-b border-white/5 flex justify-between items-center bg-neutral-800/50">
-                  <span class="text-[10px] font-normal text-neutral-400">
-                    Live Inference v2.1
-                  </span>
-                  <div class="flex gap-1.5">
-                    <div class="w-2 h-2 rounded-full bg-red-500/50"></div>
-                    <div class="w-2 h-2 rounded-full bg-yellow-500/50"></div>
-                  </div>
-                </div>
+                <!-- Mockup -->
                 <div
-                  class="p-5 flex-1 relative bg-[url('https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&amp;w=1000&amp;auto=format&amp;fit=crop')] bg-cover bg-center grayscale opacity-60">
-                  <!-- Scan Line -->
-                  <div
-                    class="absolute top-0 left-0 right-0 h-1 bg-brand-500/50 shadow-[0_0_15px_rgba(124,58,237,0.8)] animate-[float_3s_linear_infinite]"
-                    style="animation: scan 3s linear infinite;"></div>
-                  <!-- ROI Box -->
-                  <div
-                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 border border-brand-400/80 rounded-lg shadow-[0_0_20px_rgba(124,58,237,0.3)]">
-                    <div class="absolute -top-6 left-0 bg-brand-600 text-white text-[9px] px-2 py-0.5 rounded-full">
-                      Risk: 94%
-                    </div>
-                  </div>
-                </div>
-                <div class="p-4 bg-neutral-900 border-t border-white/5 flex justify-between items-center">
-                  <div class="text-[10px] text-neutral-400">
-                    Processing...
-                  </div>
-                  <i data-lucide="loader" class="w-3 h-3 text-brand-500 animate-spin"></i>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-lg font-normal leading-relaxed">
-                <span class="text-white font-bold text-xl mb-4 block">1. Autonomous Risk Localization</span>
-                <span class="text-white/50">
-                  Continuous, real-time segmentation and diagnostic scoring
-                  during scans — powered by self-improving models trained on generative synthetic cohorts.
-                </span>
-              </h3>
-            </div>
-          </div>
-
-          <!-- Card 2: 3D Data Layers -->
-          <div class="group flex flex-col gap-6">
-            <div
-              class="bg-neutral-950/50 border border-white/10 rounded-[2rem] h-[450px] relative overflow-hidden flex flex-col items-center justify-center shadow-2xl backdrop-blur-sm perspective-1000">
-              <div
-                class="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-brand-500/10 to-transparent pointer-events-none">
-              </div>
-
-              <!-- 3D Layers -->
-              <div
-                class="relative w-48 h-60 transform-style-3d group-hover:rotate-y-12 transition-transform duration-700">
-                <!-- Layer 1 -->
-                <div
-                  class="absolute inset-0 bg-neutral-900 border border-white/10 rounded-xl shadow-xl flex items-center justify-center translate-z-[-40px] opacity-40 scale-90">
-                  <i data-lucide="file-text" class="w-12 h-12 text-neutral-600"></i>
-                </div>
-                <!-- Layer 2 -->
-                <div
-                  class="absolute inset-0 bg-neutral-800 border border-white/10 rounded-xl shadow-xl flex items-center justify-center translate-z-[-20px] opacity-70 scale-95">
-                  <i data-lucide="dna" class="w-12 h-12 text-brand-800"></i>
-                </div>
-                <!-- Layer 3 (Top) -->
-                <div
-                  class="absolute inset-0 bg-gradient-to-br from-neutral-800 to-neutral-900 border border-brand-500/30 rounded-xl shadow-2xl flex items-center justify-center translate-z-10">
-                  <div class="text-center">
-                    <div
-                      class="w-16 h-16 bg-brand-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-brand-500/30">
-                      <i data-lucide="brain-circuit" class="w-8 h-8 text-brand-400"></i>
-                    </div>
-                    <span class="text-xs font-normal text-white">
-                      Unified Model
+                  class="w-[280px] bg-neutral-900 rounded-[24px] border border-white/10 overflow-hidden shadow-2xl relative flex flex-col">
+                  <div class="px-5 py-4 border-b border-white/5 flex justify-between items-center bg-neutral-800/50">
+                    <span class="text-[10px] font-normal text-neutral-400">
+                      Live Inference v2.1
                     </span>
+                    <div class="flex gap-1.5">
+                      <div class="w-2 h-2 rounded-full bg-red-500/50"></div>
+                      <div class="w-2 h-2 rounded-full bg-yellow-500/50"></div>
+                    </div>
+                  </div>
+                  <div
+                    class="h-40 relative bg-[url('https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center grayscale opacity-60">
+                    <!-- Scan Line -->
+                    <div
+                      class="absolute top-0 left-0 right-0 h-1 bg-brand-500/50 shadow-[0_0_15px_rgba(124,58,237,0.8)]"
+                      style="animation: scan 3s linear infinite;"></div>
+                    <!-- ROI Box -->
+                    <div
+                      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 border-2 border-brand-400/80 rounded-lg shadow-[0_0_20px_rgba(124,58,237,0.3)]">
+                      <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-brand-600 text-white text-[9px] px-2 py-0.5 rounded-full whitespace-nowrap">
+                        Risk: 94%
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-4 bg-neutral-900 border-t border-white/5 flex justify-between items-center">
+                    <div class="text-[10px] text-neutral-400">
+                      Processing...
+                    </div>
+                    <i data-lucide="loader" class="w-3 h-3 text-brand-500 animate-spin"></i>
                   </div>
                 </div>
               </div>
-            </div>
-            <div>
-              <h3 class="text-lg font-normal leading-relaxed">
-                <span class="text-white font-bold text-xl mb-4 block">2. Multi-modal Predictive Fusion</span>
-                <span class="text-white/50">
-                  Combining imaging, biomarkers, genomics, and clinical history into a
-                  unified latent space — enabling highly personalized and explainable diagnostic decisions.
-                </span>
-              </h3>
-            </div>
-          </div>
-
-          <!-- Card 3: Code/Data -->
-          <div class="group flex flex-col gap-6">
-            <div
-              class="bg-neutral-950/50 border border-white/10 rounded-[2rem] h-[450px] relative overflow-hidden flex items-center justify-center p-8 shadow-2xl backdrop-blur-sm">
-              <div
-                class="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-brand-500/10 to-transparent pointer-events-none">
-              </div>
-
-              <div class="w-[280px] bg-neutral-900 rounded-[24px] border border-white/10 overflow-hidden shadow-2xl">
-                <div class="px-5 py-4 border-b border-white/5 flex justify-between items-center bg-neutral-800/50">
-                  <span class="text-[10px] font-normal text-neutral-400">
-                    Patient Data JSON
+              <div>
+                <h3 class="text-lg font-normal leading-relaxed">
+                  <span class="text-white font-bold text-xl mb-4 block">1. Autonomous Risk Localization</span>
+                  <span class="text-white/50">
+                    Continuous, real-time segmentation and diagnostic scoring
+                    during scans — powered by self-improving models trained on generative synthetic cohorts.
                   </span>
-                  <i data-lucide="code-2" class="w-3 h-3 text-neutral-600"></i>
+                </h3>
+              </div>
+            </div>
+
+            <!-- Card 2: 3D Data Layers -->
+            <div class="group flex flex-col gap-6 w-[calc((100%-4rem)/3)] flex-shrink-0">
+              <div
+                class="bg-neutral-950/50 border border-white/10 rounded-[2rem] h-[450px] relative overflow-hidden flex flex-col items-center justify-center shadow-2xl backdrop-blur-sm perspective-1000">
+                <div
+                  class="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-brand-500/10 to-transparent pointer-events-none">
                 </div>
-                <div class="p-5 font-mono text-[10px] leading-relaxed text-neutral-400">
-                  <div class="flex">
-                    <span class="text-brand-400 w-4">1</span>
-                    <span class="text-purple-300">patient_id</span>
-                    :
-                    <span class="text-green-300">"SX-9821"</span>
-                    ,
+
+                <!-- 3D Layers -->
+                <div
+                  class="relative w-48 h-60 transform-style-3d group-hover:rotate-y-12 transition-transform duration-700">
+                  <!-- Layer 1 -->
+                  <div
+                    class="absolute inset-0 bg-neutral-900 border border-white/10 rounded-xl shadow-xl flex items-center justify-center translate-z-[-40px] opacity-40 scale-90">
+                    <i data-lucide="file-text" class="w-12 h-12 text-neutral-600"></i>
                   </div>
-                  <div class="flex">
-                    <span class="text-brand-400 w-4">2</span>
-                    <span class="text-purple-300">biomarkers</span>
-                    : {
+                  <!-- Layer 2 -->
+                  <div
+                    class="absolute inset-0 bg-neutral-800 border border-white/10 rounded-xl shadow-xl flex items-center justify-center translate-z-[-20px] opacity-70 scale-95">
+                    <i data-lucide="dna" class="w-12 h-12 text-brand-800"></i>
                   </div>
-                  <div class="flex pl-4">
-                    <span class="text-brand-400 w-4">3</span>
-                    <span class="text-blue-300">"EGFR"</span>
-                    :
-                    <span class="text-orange-300">true</span>
-                    ,
-                  </div>
-                  <div class="flex pl-4">
-                    <span class="text-brand-400 w-4">4</span>
-                    <span class="text-blue-300">"KRAS"</span>
-                    :
-                    <span class="text-orange-300">false</span>
-                  </div>
-                  <div class="flex">
-                    <span class="text-brand-400 w-4">5</span>
-                    },
-                  </div>
-                  <div class="flex">
-                    <span class="text-brand-400 w-4">6</span>
-                    <span class="text-purple-300">history_risk</span>
-                    :
-                    <span class="text-green-300">0.82</span>
-                    ,
-                  </div>
-                  <div class="flex">
-                    <span class="text-brand-400 w-4">7</span>
-                    <span class="text-purple-300">status</span>
-                    :
-                    <span class="text-green-300">"analyzing"</span>
-                  </div>
-                  <div class="flex mt-2 text-brand-500/50">
-                    ... stream active
+                  <!-- Layer 3 (Top) -->
+                  <div
+                    class="absolute inset-0 bg-gradient-to-br from-neutral-800 to-neutral-900 border border-brand-500/30 rounded-xl shadow-2xl flex items-center justify-center translate-z-10">
+                    <div class="text-center">
+                      <div
+                        class="w-16 h-16 bg-brand-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-brand-500/30">
+                        <i data-lucide="brain-circuit" class="w-8 h-8 text-brand-400"></i>
+                      </div>
+                      <span class="text-xs font-normal text-white">
+                        Unified Model
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div>
+                <h3 class="text-lg font-normal leading-relaxed">
+                  <span class="text-white font-bold text-xl mb-4 block">2. Multi-modal Predictive Fusion</span>
+                  <span class="text-white/50">
+                    Combining imaging, biomarkers, genomics, and clinical history into a
+                    unified latent space — enabling highly personalized and explainable diagnostic decisions.
+                  </span>
+                </h3>
+              </div>
             </div>
-            <div>
-              <h3 class="text-lg font-normal leading-relaxed">
-                <span class="text-white font-bold text-xl mb-4 block">3. Structured Clinical Intelligence</span>
-                <span class="text-white/50">
-                  Transforming raw clinical notes, EHR records, and biomarker profiles into interpretable,
-                  machine-readable vectors for longitudinal modeling and
-                  adaptive care.
-                </span>
-              </h3>
+
+            <!-- Card 3: Code/Data -->
+            <div class="group flex flex-col gap-6 w-[calc((100%-4rem)/3)] flex-shrink-0">
+              <div
+                class="bg-neutral-950/50 border border-white/10 rounded-[2rem] h-[450px] relative overflow-hidden flex items-center justify-center p-8 shadow-2xl backdrop-blur-sm">
+                <div
+                  class="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-brand-500/10 to-transparent pointer-events-none">
+                </div>
+
+                <div class="w-[280px] bg-neutral-900 rounded-[24px] border border-white/10 overflow-hidden shadow-2xl">
+                  <div class="px-5 py-4 border-b border-white/5 flex justify-between items-center bg-neutral-800/50">
+                    <span class="text-[10px] font-normal text-neutral-400">
+                      Patient Data JSON
+                    </span>
+                    <i data-lucide="code-2" class="w-3 h-3 text-neutral-600"></i>
+                  </div>
+                  <div class="p-5 font-mono text-[10px] leading-relaxed text-neutral-400">
+                    <div class="flex">
+                      <span class="text-brand-400 w-4">1</span>
+                      <span class="text-purple-300">patient_id</span>
+                      :
+                      <span class="text-green-300">"SX-9821"</span>
+                      ,
+                    </div>
+                    <div class="flex">
+                      <span class="text-brand-400 w-4">2</span>
+                      <span class="text-purple-300">biomarkers</span>
+                      : {
+                    </div>
+                    <div class="flex pl-4">
+                      <span class="text-brand-400 w-4">3</span>
+                      <span class="text-blue-300">"EGFR"</span>
+                      :
+                      <span class="text-orange-300">true</span>
+                      ,
+                    </div>
+                    <div class="flex pl-4">
+                      <span class="text-brand-400 w-4">4</span>
+                      <span class="text-blue-300">"KRAS"</span>
+                      :
+                      <span class="text-orange-300">false</span>
+                    </div>
+                    <div class="flex">
+                      <span class="text-brand-400 w-4">5</span>
+                      },
+                    </div>
+                    <div class="flex">
+                      <span class="text-brand-400 w-4">6</span>
+                      <span class="text-purple-300">history_risk</span>
+                      :
+                      <span class="text-green-300">0.82</span>
+                      ,
+                    </div>
+                    <div class="flex">
+                      <span class="text-brand-400 w-4">7</span>
+                      <span class="text-purple-300">status</span>
+                      :
+                      <span class="text-green-300">"analyzing"</span>
+                    </div>
+                    <div class="flex mt-2 text-brand-500/50">
+                      ... stream active
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-lg font-normal leading-relaxed">
+                  <span class="text-white font-bold text-xl mb-4 block">3. Structured Clinical Intelligence</span>
+                  <span class="text-white/50">
+                    Transforming raw clinical notes, EHR records, and biomarker profiles into interpretable,
+                    machine-readable vectors for longitudinal modeling and
+                    adaptive care.
+                  </span>
+                </h3>
+              </div>
+            </div>
+
+            <!-- Card 4: Global Care Network -->
+            <div class="group flex flex-col gap-6 w-[calc((100%-4rem)/3)] flex-shrink-0">
+              <div
+                class="bg-neutral-950/50 border border-white/10 rounded-[2rem] h-[450px] relative overflow-hidden flex items-center justify-center p-8 shadow-2xl backdrop-blur-sm">
+                <div
+                  class="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-cyan-500/10 to-transparent pointer-events-none">
+                </div>
+
+                <!-- Globe Network Visualization -->
+                <div class="relative w-52 h-52">
+                  <!-- Outer rotating ring -->
+                  <div class="absolute inset-0 rounded-full border border-cyan-500/20 animate-[spin_20s_linear_infinite]">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-cyan-500 rounded-full shadow-[0_0_12px_rgba(6,182,212,0.8)]"></div>
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-2 h-2 bg-cyan-400 rounded-full shadow-[0_0_8px_rgba(6,182,212,0.6)]"></div>
+                  </div>
+                  <!-- Middle pulsing ring -->
+                  <div class="absolute inset-4 rounded-full border border-cyan-500/30 animate-pulse"></div>
+                  <!-- Inner globe -->
+                  <div class="absolute inset-8 rounded-full bg-gradient-to-br from-neutral-800 to-neutral-900 border border-cyan-500/40 flex items-center justify-center shadow-2xl">
+                    <div class="text-center">
+                      <i data-lucide="globe" class="w-10 h-10 text-cyan-400 mx-auto mb-2"></i>
+                      <span class="text-[10px] text-cyan-300 font-medium">7 Regions</span>
+                    </div>
+                  </div>
+                  <!-- Floating nodes -->
+                  <div class="absolute top-4 right-2 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
+                  <div class="absolute bottom-8 left-0 w-2 h-2 bg-yellow-400 rounded-full animate-ping" style="animation-delay: 0.5s;"></div>
+                  <div class="absolute top-1/2 right-0 w-2 h-2 bg-brand-400 rounded-full animate-ping" style="animation-delay: 1s;"></div>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-lg font-normal leading-relaxed">
+                  <span class="text-white font-bold text-xl mb-4 block">4. Global Care Network</span>
+                  <span class="text-white/50">
+                    Federated learning across distributed clinical sites enables collaborative model improvement
+                    while maintaining strict data sovereignty and regional compliance.
+                  </span>
+                </h3>
+              </div>
+            </div>
+
+            <!-- Card 5: Predictive Analytics Dashboard -->
+            <div class="group flex flex-col gap-6 w-[calc((100%-4rem)/3)] flex-shrink-0">
+              <div
+                class="bg-neutral-950/50 border border-white/10 rounded-[2rem] h-[450px] relative overflow-hidden flex items-center justify-center p-8 shadow-2xl backdrop-blur-sm">
+                <div
+                  class="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-emerald-500/10 to-transparent pointer-events-none">
+                </div>
+
+                <!-- Analytics Mockup -->
+                <div class="w-[280px] bg-neutral-900 rounded-[24px] border border-white/10 overflow-hidden shadow-2xl">
+                  <div class="px-5 py-4 border-b border-white/5 flex justify-between items-center bg-neutral-800/50">
+                    <span class="text-[10px] font-normal text-neutral-400">
+                      Outcome Prediction
+                    </span>
+                    <div class="flex gap-1.5 items-center">
+                      <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                      <span class="text-[9px] text-emerald-400">LIVE</span>
+                    </div>
+                  </div>
+                  <div class="p-5 space-y-4">
+                    <!-- Progress bars with animation -->
+                    <div>
+                      <div class="flex justify-between text-[9px] mb-1">
+                        <span class="text-neutral-500">Remission Likelihood</span>
+                        <span class="text-emerald-400">87%</span>
+                      </div>
+                      <div class="h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-emerald-600 to-emerald-400 rounded-full w-[87%] animate-[pulse_2s_ease-in-out_infinite]"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-[9px] mb-1">
+                        <span class="text-neutral-500">Treatment Response</span>
+                        <span class="text-cyan-400">92%</span>
+                      </div>
+                      <div class="h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-cyan-600 to-cyan-400 rounded-full w-[92%] animate-[pulse_2s_ease-in-out_infinite]" style="animation-delay: 0.3s;"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between text-[9px] mb-1">
+                        <span class="text-neutral-500">5-Year Survival</span>
+                        <span class="text-brand-400">78%</span>
+                      </div>
+                      <div class="h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-brand-600 to-brand-400 rounded-full w-[78%] animate-[pulse_2s_ease-in-out_infinite]" style="animation-delay: 0.6s;"></div>
+                      </div>
+                    </div>
+                    <!-- Trend indicator -->
+                    <div class="flex items-center gap-2 pt-2 border-t border-white/5">
+                      <i data-lucide="trending-up" class="w-4 h-4 text-emerald-400"></i>
+                      <span class="text-[9px] text-neutral-400">+12% improvement vs. baseline</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-lg font-normal leading-relaxed">
+                  <span class="text-white font-bold text-xl mb-4 block">5. Predictive Analytics Engine</span>
+                  <span class="text-white/50">
+                    Real-time outcome modeling that continuously adapts treatment pathways based on
+                    response data, optimizing care decisions with probabilistic precision.
+                  </span>
+                </h3>
+              </div>
+            </div>
+
+            <!-- Card 6: Secure Infrastructure -->
+            <div class="group flex flex-col gap-6 w-[calc((100%-4rem)/3)] flex-shrink-0">
+              <div
+                class="bg-neutral-950/50 border border-white/10 rounded-[2rem] h-[450px] relative overflow-hidden flex items-center justify-center p-8 shadow-2xl backdrop-blur-sm">
+                <div
+                  class="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-amber-500/10 to-transparent pointer-events-none">
+                </div>
+
+                <!-- Security Visualization -->
+                <div class="relative">
+                  <!-- Shield container -->
+                  <div class="w-40 h-48 relative">
+                    <!-- Outer shield glow -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-amber-500/20 to-transparent rounded-t-full rounded-b-[40%] blur-xl animate-pulse"></div>
+                    <!-- Shield shape -->
+                    <div class="absolute inset-2 bg-gradient-to-b from-neutral-800 to-neutral-900 rounded-t-full rounded-b-[40%] border border-amber-500/30 flex flex-col items-center justify-center shadow-2xl">
+                      <i data-lucide="shield-check" class="w-12 h-12 text-amber-400 mb-3"></i>
+                      <span class="text-[10px] text-amber-300 font-medium">HIPAA</span>
+                      <span class="text-[8px] text-neutral-500">Compliant</span>
+                    </div>
+                    <!-- Rotating lock icons -->
+                    <div class="absolute -left-6 top-1/3 animate-bounce" style="animation-duration: 2s;">
+                      <i data-lucide="lock" class="w-4 h-4 text-amber-500/60"></i>
+                    </div>
+                    <div class="absolute -right-6 top-1/2 animate-bounce" style="animation-duration: 2.5s;">
+                      <i data-lucide="key" class="w-4 h-4 text-amber-500/60"></i>
+                    </div>
+                  </div>
+                  <!-- Encryption indicators -->
+                  <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                    <div class="px-2 py-1 bg-neutral-800 rounded text-[8px] text-neutral-400 border border-white/5">AES-256</div>
+                    <div class="px-2 py-1 bg-neutral-800 rounded text-[8px] text-neutral-400 border border-white/5">E2E</div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-lg font-normal leading-relaxed">
+                  <span class="text-white font-bold text-xl mb-4 block">6. Secure Data Infrastructure</span>
+                  <span class="text-white/50">
+                    End-to-end encryption, zero-trust architecture, and comprehensive audit trails
+                    ensure patient data remains protected across every touchpoint.
+                  </span>
+                </h3>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Nav Controls -->
-        <div class="flex justify-end gap-2 pr-2">
-          <button
-            class="w-10 h-10 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-white hover:bg-neutral-700 transition">
+        <div class="flex justify-end gap-2 pr-2 mt-8">
+          <button id="carousel-prev"
+            class="w-10 h-10 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-white hover:bg-neutral-700 hover:scale-110 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed" disabled>
             <i data-lucide="arrow-left" class="w-4 h-4"></i>
           </button>
-          <button
-            class="w-10 h-10 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-white hover:bg-neutral-700 transition">
+          <button id="carousel-next"
+            class="w-10 h-10 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-white hover:bg-neutral-700 hover:scale-110 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed">
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </button>
         </div>
+
+        <!-- Carousel Indicators -->
+        <div class="flex justify-center gap-2 mt-6">
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/80 transition-all duration-300" data-index="0"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300" data-index="1"></button>
+        </div>
+      </div>
+
+      <!-- Carousel JavaScript -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const carousel = document.getElementById('tech-carousel');
+          const prevBtn = document.getElementById('carousel-prev');
+          const nextBtn = document.getElementById('carousel-next');
+          const dots = document.querySelectorAll('.carousel-dot');
+          
+          if (!carousel || !prevBtn || !nextBtn) return;
+          
+          let currentSlide = 0;
+          const totalSlides = 2;
+
+          function updateCarousel() {
+            // Get the container width and calculate slide distance
+            const containerWidth = carousel.parentElement.offsetWidth;
+            const gap = 32; // 2rem = 32px
+            // Each slide shows 3 cards, so we move by container width + gap
+            const slideDistance = containerWidth + gap;
+            
+            carousel.style.transform = `translateX(-${currentSlide * slideDistance}px)`;
+            
+            // Update button states
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+            
+            // Update button opacity for visual feedback
+            prevBtn.style.opacity = currentSlide === 0 ? '0.3' : '1';
+            nextBtn.style.opacity = currentSlide === totalSlides - 1 ? '0.3' : '1';
+            
+            // Update dots
+            dots.forEach((dot, i) => {
+              if (i === currentSlide) {
+                dot.classList.remove('bg-white/30');
+                dot.classList.add('bg-white/80');
+              } else {
+                dot.classList.remove('bg-white/80');
+                dot.classList.add('bg-white/30');
+              }
+            });
+          }
+
+          prevBtn.addEventListener('click', function() {
+            if (currentSlide > 0) {
+              currentSlide--;
+              updateCarousel();
+            }
+          });
+
+          nextBtn.addEventListener('click', function() {
+            if (currentSlide < totalSlides - 1) {
+              currentSlide++;
+              updateCarousel();
+            }
+          });
+
+          dots.forEach(function(dot) {
+            dot.addEventListener('click', function() {
+              currentSlide = parseInt(this.dataset.index);
+              updateCarousel();
+            });
+          });
+
+          // Handle resize
+          window.addEventListener('resize', updateCarousel);
+          
+          // Initial state
+          updateCarousel();
+        });
+      </script>
       </div>
     </section>
 
