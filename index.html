@@ -987,37 +987,38 @@
     footer .glow-btn,
     #footer-waitlist-btn.glow-btn,
     footer #footer-waitlist-btn.glow-btn {
-      border: 1px solid rgba(255, 255, 255, 0.2) !important;
-      background: rgba(255, 255, 255, 0.1) !important;
+      border: 1px solid rgba(255, 255, 255, 0.25) !important;
+      background: rgba(255, 255, 255, 0.08) !important;
       color: #ffffff !important;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      box-shadow: none !important;
+      transition: background 0.2s ease, border-color 0.2s ease;
     }
 
     footer .glow-btn:hover,
     #footer-waitlist-btn.glow-btn:hover,
     footer #footer-waitlist-btn.glow-btn:hover {
       background: rgba(255, 255, 255, 0.15) !important;
-      border-color: rgba(255, 255, 255, 0.3) !important;
+      border-color: rgba(255, 255, 255, 0.4) !important;
       color: #ffffff !important;
+      transform: none !important;
+      box-shadow: none !important;
     }
 
-    footer .glow-btn::before {
-      background:
-        radial-gradient(90px 90px at var(--x) var(--y),
-          rgba(255, 255, 255, 0.4) 0%,
-          rgba(255, 255, 255, 0.1) 45%,
-          transparent 70%),
-        radial-gradient(140px 140px at var(--x) var(--y),
-          rgba(192, 132, 252, 0.4) 0%,
-          transparent 75%);
-      mix-blend-mode: screen;
-    }
-
-    footer .glow-btn::after {
-      background: radial-gradient(200px 200px at var(--x) var(--y),
-          rgba(192, 132, 252, 0.3) 0%,
-          transparent 80%);
+    /* Completely disable pseudo-elements in footer to prevent backdrop-filter interference */
+    footer .glow-btn::before,
+    footer .glow-btn::after,
+    footer .glow-btn:hover::before,
+    footer .glow-btn:hover::after,
+    #footer-waitlist-btn.glow-btn::before,
+    #footer-waitlist-btn.glow-btn::after,
+    #footer-waitlist-btn.glow-btn:hover::before,
+    #footer-waitlist-btn.glow-btn:hover::after {
+      content: none !important;
+      display: none !important;
+      opacity: 0 !important;
+      filter: none !important;
+      mix-blend-mode: normal !important;
+      background: none !important;
     }
 
     @keyframes scan {
@@ -5796,6 +5797,30 @@
     });
 
     // Navbar theme is now permanently set via CSS classes - no JavaScript needed
+  </script>
+
+  <!-- Glow Button Mouse Tracking -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all glow-btn elements
+      const glowButtons = document.querySelectorAll('.glow-btn');
+      
+      glowButtons.forEach(function(btn) {
+        btn.addEventListener('mousemove', function(e) {
+          const rect = btn.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          btn.style.setProperty('--x', x + 'px');
+          btn.style.setProperty('--y', y + 'px');
+        });
+        
+        btn.addEventListener('mouseleave', function() {
+          // Reset to center on mouse leave
+          btn.style.setProperty('--x', '50%');
+          btn.style.setProperty('--y', '50%');
+        });
+      });
+    });
   </script>
 </body>
 
