@@ -1838,9 +1838,152 @@
       </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════════════════════════════
+         VIDEO SHOWCASE SECTION — Cinematic YouTube Player
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="relative py-24 md:py-36 overflow-hidden" data-navbar-theme="dark"
+      style="background: linear-gradient(180deg, #0a0a0f 0%, #0d0d14 50%, #0a0a0f 100%);">
+
+      <!-- Ambient Grain Texture -->
+      <div class="opacity-15 absolute inset-0 pointer-events-none mix-blend-overlay"
+        style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22 opacity=%220.5%22/%3E%3C/svg%3E');">
+      </div>
+
+      <!-- Ambient Glow Orbs -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-[0.07] pointer-events-none"
+        style="background: radial-gradient(circle, rgba(124, 58, 237, 0.5) 0%, transparent 70%);"></div>
+      <div class="absolute top-0 right-0 w-[400px] h-[400px] rounded-full opacity-[0.04] pointer-events-none"
+        style="background: radial-gradient(circle, rgba(139, 92, 246, 0.6) 0%, transparent 70%);"></div>
+
+      <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+
+        <!-- Section Header -->
+        <div class="text-center mb-16 md:mb-20">
+          <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/[0.06] border border-white/[0.08] mb-8 backdrop-blur-sm">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+            <span class="text-sm text-white/70 font-medium tracking-wide">Watch Our Story</span>
+          </div>
+          <h2 class="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight text-white mb-6 leading-[1.1]">
+            See SeleneX
+            <span class="bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent"> in Action</span>
+          </h2>
+          <p class="text-white/50 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+            Discover how we're transforming healthcare through autonomous AI — one breakthrough at a time.
+          </p>
+        </div>
+
+        <!-- Cinematic Video Container -->
+        <div class="relative max-w-5xl mx-auto">
+          <!-- Outer Glow Frame -->
+          <div class="absolute -inset-1 rounded-[2rem] opacity-50 blur-xl pointer-events-none"
+            style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(139, 92, 246, 0.08), rgba(124, 58, 237, 0.15));"></div>
+
+          <!-- Video Player Wrapper -->
+          <div id="video-player-container" class="relative rounded-[1.75rem] overflow-hidden border border-white/[0.08] shadow-2xl"
+            style="aspect-ratio: 16/9; background: #000;">
+
+            <!-- Thumbnail State -->
+            <div id="video-thumbnail" class="absolute inset-0 cursor-pointer group z-10" onclick="launchVideo()">
+              <!-- YouTube Thumbnail -->
+              <img src="https://img.youtube.com/vi/6t889Q6y0HM/maxresdefault.jpg"
+                alt="SeleneX WorldWide Trailer"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                onerror="this.src='https://img.youtube.com/vi/6t889Q6y0HM/hqdefault.jpg'" />
+
+              <!-- Dark Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40 transition-opacity duration-500 group-hover:from-black/60 group-hover:via-black/10 group-hover:to-black/30"></div>
+
+              <!-- Animated Play Button -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <!-- Pulse Ring -->
+                <div class="absolute w-28 h-28 md:w-32 md:h-32 rounded-full border-2 border-white/20 animate-ping" style="animation-duration: 2.5s;"></div>
+                <div class="absolute w-24 h-24 md:w-28 md:h-28 rounded-full border border-white/10 animate-ping" style="animation-duration: 3s; animation-delay: 0.5s;"></div>
+
+                <!-- Play Button -->
+                <div class="relative w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_60px_rgba(124,58,237,0.4)]"
+                  style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.9), rgba(139, 92, 246, 0.8)); backdrop-filter: blur(20px);">
+                  <!-- Glass Sheen -->
+                  <div class="absolute inset-0 rounded-full opacity-30"
+                    style="background: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, transparent 50%);"></div>
+                  <!-- Triangle Icon -->
+                  <svg class="w-8 h-8 md:w-10 md:h-10 text-white ml-1 drop-shadow-lg relative z-10" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5.14v14l11-7-11-7z" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Bottom Info Bar -->
+              <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 flex items-end justify-between">
+                <div>
+                  <p class="text-white text-base md:text-lg font-medium mb-1">SeleneX WorldWide Trailer</p>
+                  <p class="text-white/50 text-sm">Click to play</p>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.08] border border-white/[0.08] backdrop-blur-sm">
+                  <svg class="w-4 h-4 text-red-500" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
+                  </svg>
+                  <span class="text-white/70 text-xs font-medium">YouTube</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- YouTube Iframe (loaded on click) -->
+            <div id="video-iframe-wrapper" class="absolute inset-0 opacity-0 transition-opacity duration-700" style="pointer-events: none;">
+            </div>
+          </div>
+
+          <!-- Reflection / Bottom Fade -->
+          <div class="absolute -bottom-12 left-[5%] right-[5%] h-24 rounded-[2rem] opacity-30 blur-2xl pointer-events-none"
+            style="background: linear-gradient(180deg, rgba(124, 58, 237, 0.2), transparent);"></div>
+        </div>
+
+        <!-- Bottom Progress Dots (decorative) -->
+        <div class="flex items-center justify-center gap-3 mt-12 md:mt-16">
+          <div class="w-8 h-1 rounded-full bg-brand-500"></div>
+          <div class="w-2 h-1 rounded-full bg-white/20"></div>
+          <div class="w-2 h-1 rounded-full bg-white/20"></div>
+        </div>
+      </div>
+
+      <style>
+        @keyframes video-glow-pulse {
+          0%, 100% { box-shadow: 0 0 30px rgba(124, 58, 237, 0.1), 0 0 60px rgba(124, 58, 237, 0.05); }
+          50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.2), 0 0 80px rgba(124, 58, 237, 0.1); }
+        }
+        #video-player-container {
+          animation: video-glow-pulse 4s ease-in-out infinite;
+        }
+        #video-player-container:hover {
+          box-shadow: 0 0 50px rgba(124, 58, 237, 0.25), 0 0 100px rgba(124, 58, 237, 0.12);
+        }
+      </style>
+
+      <script>
+        function launchVideo() {
+          const thumbnail = document.getElementById('video-thumbnail');
+          const iframeWrapper = document.getElementById('video-iframe-wrapper');
+
+          // Create the iframe
+          iframeWrapper.innerHTML = '<iframe src="https://www.youtube.com/embed/6t889Q6y0HM?autoplay=1&vq=hd1080&rel=0&modestbranding=1&showinfo=0&color=white" class="w-full h-full absolute inset-0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+
+          // Animate transition
+          thumbnail.style.opacity = '0';
+          thumbnail.style.pointerEvents = 'none';
+          thumbnail.style.transition = 'opacity 0.6s ease';
+
+          iframeWrapper.style.opacity = '1';
+          iframeWrapper.style.pointerEvents = 'auto';
+
+          // Stop the glow pulse while playing
+          document.getElementById('video-player-container').style.animation = 'none';
+          document.getElementById('video-player-container').style.boxShadow = '0 0 60px rgba(124, 58, 237, 0.15), 0 25px 80px rgba(0, 0, 0, 0.5)';
+        }
+      </script>
+    </section>
+
     <!-- Dark Dashboard / Features Section -->
     <section id="technology" data-navbar-theme="dark"
-      class="bg-neutral-900 text-white py-24 md:py-32 rounded-[3rem] mx-2 md:mx-4 mb-20 overflow-hidden relative">
+      class="bg-[#0a0a0f] text-white pb-24 md:pb-32 pt-12 md:pt-20 rounded-b-[3rem] mb-20 overflow-hidden relative">
       <!-- Grain Texture -->
       <div class="opacity-20 absolute inset-0 pointer-events-none mix-blend-overlay"
         style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22 opacity=%220.5%22/%3E%3C/svg%3E');">
